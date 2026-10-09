@@ -1,0 +1,56 @@
+{
+  "cid": "fault-1791160617-59b8bc",
+  "traceId": "714313802b004f3bbea6738e3aaa898d",
+  "capturedAt": "2026-10-05T00:40:04.802699+00:00",
+  "artifacts": {
+    "audit_records.jsonl": {
+      "count": 30,
+      "sha256": "f3f3aadd62e8610914f0b98de5fe88aa1012da003e79de251104a0513dc23656"
+    },
+    "timeline.txt": {
+      "bytes": 9565,
+      "sha256": "397c9775748759c749acaa9ae84c56b7fb1686635d76d2cbdccd9b0f1895e774"
+    },
+    "modaas_evidence.jsonl": {
+      "count": 24,
+      "group": "/modaas/evidence",
+      "sha256": "88836103203375f74ed4bd26fa16980362a03a9fef9b244a9f1189ce819e515b"
+    },
+    "gateway_run.log": {
+      "count": 30,
+      "sha256": "76d84d82073933ba7e381d7b77408441885018938fef115c6251b83d243574dc",
+      "note": "trace-filtered kvlog"
+    },
+    "agentcore_customer.jsonl": {
+      "count": 12,
+      "group": "/aws/bedrock-agentcore/runtimes/customer_experience_agent-FoE4C35iYV-DEFAULT",
+      "sha256": "1d7ff439f9bbf2c41709e2dd539e130f8aaf5f1c2e19f05d6bed8fe053e5f52d"
+    },
+    "agentcore_it.jsonl": {
+      "count": 12,
+      "group": "/aws/bedrock-agentcore/runtimes/it_resolution_agent-OxT4r3BXvu-DEFAULT",
+      "sha256": "6cf45f3afe295108ffbd6bd3ae6df1f5602d53a02dd39ad5fea4959837111c83"
+    },
+    "agentcore_network.jsonl": {
+      "count": 27,
+      "group": "/aws/bedrock-agentcore/runtimes/network_resolution_agent-5uSMf0CrfV-DEFAULT",
+      "sha256": "11e3af18385c406ff8c132d0660c1b79fb61f865ce6d0dd8ef02e47798b9d890"
+    },
+    "aws_spans_cid.jsonl": {
+      "count": 24,
+      "group": "aws/spans",
+      "sha256": "4689bfdff9a44f338a87576e8c9c41341458623132f417e71cd3d2d2d404a22d"
+    },
+    "aws_spans_trace.jsonl": {
+      "count": 45,
+      "group": "aws/spans",
+      "sha256": "8f69f6db8ac33fbf72a0d319a0ee7026689bdad2fcffbf33edff978442dc6def"
+    },
+    "measurement.json": {
+      "sha256": "629673143c169e7bc7f84060f90e86375895e4d2e554a29d7e03167ca80f802c"
+    },
+    "score.txt": {
+      "sha256": "bf4e8052fae1250ab395e40105e57a17f06911303341ac81841408e152bdeaf8"
+    }
+  }
+}

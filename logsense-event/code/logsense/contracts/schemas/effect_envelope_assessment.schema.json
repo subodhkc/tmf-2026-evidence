@@ -1,0 +1,112 @@
+{
+  "$id": "https://logsense.local/schemas/effect_envelope_assessment.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessmentId": {
+      "type": "string"
+    },
+    "authorityEstablished": {
+      "type": "boolean"
+    },
+    "boundProvenanceRef": {
+      "type": "string"
+    },
+    "boundRef": {
+      "type": "string"
+    },
+    "canonicalOperation": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "string"
+    },
+    "envelopeDigest": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "envelopeRef": {
+      "type": "string"
+    },
+    "envelopeVersion": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "expectedLimit": {},
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "observedDelta": {},
+    "principalRef": {
+      "type": "string"
+    },
+    "property": {
+      "type": "string"
+    },
+    "reasonCode": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "WITHIN_ENVELOPE",
+        "EXCEEDED",
+        "NOT_COMPARABLE",
+        "NOT_ASSESSED",
+        "CONTRADICTED"
+      ],
+      "type": "string"
+    },
+    "targetId": {
+      "type": "string"
+    },
+    "targetKey": {
+      "type": "string"
+    },
+    "transitionRef": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "assessmentId",
+    "envelopeRef",
+    "boundRef",
+    "boundProvenanceRef",
+    "principalRef",
+    "canonicalOperation",
+    "targetKey",
+    "targetId",
+    "property",
+    "direction",
+    "expectedLimit",
+    "observedDelta",
+    "transitionRef",
+    "authorityEstablished",
+    "state",
+    "reasonCode",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Effect Envelope Assessment",
+  "type": "object"
+}

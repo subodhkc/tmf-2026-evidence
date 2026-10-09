@@ -1,0 +1,132 @@
+{
+  "data": [
+    {
+      "uuid": "d9f08951-e0ec-4d6e-83c7-e2265aab2d8d",
+      "type": "web",
+      "token_id": "d57e8ece-38b8-43cb-91bb-9511e02592b7",
+      "team_id": null,
+      "ip": "44.200.251.111",
+      "country": "United States of America",
+      "country_code": "US",
+      "region": "Virginia",
+      "city": "Ashburn",
+      "hostname": "webhook.site",
+      "protocol": "http/1.1",
+      "method": "POST",
+      "user_agent": "HAIEC-Alerting/1.0",
+      "content": "{\"alertId\":\"alert-test-5e7f7b96-1608-4b17-b8d3-2fc8c5fae291\",\"timestamp\":\"2026-10-05T09:51:24.243Z\",\"trigger\":\"THRESHOLD_VIOLATION\",\"findingId\":\"test-finding\",\"registryId\":\"TEST\",\"severity\":\"HIGH\",\"canonicalFact\":\"TEST ALERT \u2014 synthetic notification fired by /api/alerts/test. Not an observed fact.\",\"evidenceRefs\":[\"test:alert-self-test\"],\"tenantId\":\"bdf37694-49f8-4003-ae2b-43580ff6a60e\",\"organizationId\":\"bdf37694-49f8-4003-ae2b-43580ff6a60e\",\"limitations\":[\"TEST_ALERT\",\"SYNTHETIC_NOT_OBSERVED\"]}",
+      "query": null,
+      "headers": {
+        "content-length": [
+          "502"
+        ],
+        "accept-encoding": [
+          "br, gzip, deflate"
+        ],
+        "sec-fetch-mode": [
+          "cors"
+        ],
+        "accept-language": [
+          "*"
+        ],
+        "accept": [
+          "*/*"
+        ],
+        "x-invocation-id": [
+          "cle1::8n2dm-1791193884097-18c463bd99da"
+        ],
+        "x-vercel-id": [
+          "cle1::8n2dm-1791193884097-18c463bd99da"
+        ],
+        "x-haiec-alert-id": [
+          "alert-test-5e7f7b96-1608-4b17-b8d3-2fc8c5fae291"
+        ],
+        "user-agent": [
+          "HAIEC-Alerting/1.0"
+        ],
+        "content-type": [
+          "application/json"
+        ],
+        "host": [
+          "webhook.site"
+        ]
+      },
+      "url": "https://webhook.site/d57e8ece-38b8-43cb-91bb-9511e02592b7",
+      "size": 502,
+      "files": [],
+      "created_at": "2026-10-05 09:51:24",
+      "updated_at": "2026-10-05 09:51:24",
+      "sorting": 1791193884596654,
+      "custom_action_output": [],
+      "custom_action_errors": [],
+      "time": 0.0013370513916015625
+    },
+    {
+      "uuid": "70867615-d272-4dbd-8aa6-7aea804160e2",
+      "type": "web",
+      "token_id": "d57e8ece-38b8-43cb-91bb-9511e02592b7",
+      "team_id": null,
+      "ip": "32.194.160.246",
+      "country": "United States of America",
+      "country_code": "US",
+      "region": "Virginia",
+      "city": "Ashburn",
+      "hostname": "webhook.site",
+      "protocol": "http/1.1",
+      "method": "POST",
+      "user_agent": "HAIEC-Alerting/1.0",
+      "content": "{\"alertId\":\"alert-test-50018638-828f-4f19-ba4b-fa601d3945ee\",\"timestamp\":\"2026-10-05T09:26:29.658Z\",\"trigger\":\"THRESHOLD_VIOLATION\",\"findingId\":\"test-finding\",\"registryId\":\"TEST\",\"severity\":\"HIGH\",\"canonicalFact\":\"TEST ALERT \u2014 synthetic notification fired by /api/alerts/test. Not an observed fact.\",\"evidenceRefs\":[\"test:alert-self-test\"],\"tenantId\":\"bdf37694-49f8-4003-ae2b-43580ff6a60e\",\"organizationId\":\"bdf37694-49f8-4003-ae2b-43580ff6a60e\",\"limitations\":[\"TEST_ALERT\",\"SYNTHETIC_NOT_OBSERVED\"]}",
+      "query": null,
+      "headers": {
+        "content-length": [
+          "502"
+        ],
+        "accept-encoding": [
+          "br, gzip, deflate"
+        ],
+        "sec-fetch-mode": [
+          "cors"
+        ],
+        "accept-language": [
+          "*"
+        ],
+        "accept": [
+          "*/*"
+        ],
+        "x-invocation-id": [
+          "cle1::drs56-1791192389456-693f9e84f713"
+        ],
+        "x-vercel-id": [
+          "cle1::drs56-1791192389456-693f9e84f713"
+        ],
+        "x-haiec-alert-id": [
+          "alert-test-50018638-828f-4f19-ba4b-fa601d3945ee"
+        ],
+        "user-agent": [
+          "HAIEC-Alerting/1.0"
+        ],
+        "content-type": [
+          "application/json"
+        ],
+        "host": [
+          "webhook.site"
+        ]
+      },
+      "url": "https://webhook.site/d57e8ece-38b8-43cb-91bb-9511e02592b7",
+      "size": 502,
+      "files": [],
+      "created_at": "2026-10-05 09:26:29",
+      "updated_at": "2026-10-05 09:26:29",
+      "sorting": 1791192389975380,
+      "custom_action_output": [],
+      "custom_action_errors": [],
+      "time": 0.0013930797576904297
+    }
+  ],
+  "total": 2,
+  "per_page": 5,
+  "current_page": 1,
+  "is_last_page": true,
+  "from": 1,
+  "to": 2
+}

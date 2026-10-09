@@ -1,0 +1,114 @@
+{
+  "$defs": {
+    "AdapterParseMode": {
+      "enum": [
+        "STREAMING",
+        "BATCH",
+        "EITHER"
+      ],
+      "title": "AdapterParseMode",
+      "type": "string"
+    },
+    "SourceRole": {
+      "enum": [
+        "AGENT_TRACE",
+        "MODEL_TRACE",
+        "TOOL_TRACE",
+        "MCP_TRACE",
+        "A2A_TRACE",
+        "API_TRANSACTION",
+        "POLICY",
+        "GUARDRAIL",
+        "IDENTITY_IAM",
+        "CONFIGURATION",
+        "APPLICATION_LOG",
+        "PLATFORM_LOG",
+        "AUDIT_LOG",
+        "NETWORK_LOG",
+        "K8S_AUDIT",
+        "ALARM",
+        "KPI_METRIC",
+        "STATE_SNAPSHOT",
+        "TOPOLOGY",
+        "SUPPLY_CHAIN",
+        "STATIC_SCAN",
+        "SOURCE_CODE_ARCHIVE",
+        "DOCUMENTATION",
+        "SCENARIO_SPECIFICATION",
+        "UNKNOWN"
+      ],
+      "title": "SourceRole",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "adapterId": {
+      "title": "Adapterid",
+      "type": "string"
+    },
+    "adapterVersion": {
+      "title": "Adapterversion",
+      "type": "string"
+    },
+    "formats": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Formats",
+      "type": "array"
+    },
+    "mediaTypes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Mediatypes",
+      "type": "array"
+    },
+    "fileExtensions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Fileextensions",
+      "type": "array"
+    },
+    "sourceRoles": {
+      "items": {
+        "$ref": "#/$defs/SourceRole"
+      },
+      "title": "Sourceroles",
+      "type": "array"
+    },
+    "parseMode": {
+      "$ref": "#/$defs/AdapterParseMode"
+    },
+    "canAutoDetect": {
+      "default": false,
+      "title": "Canautodetect",
+      "type": "boolean"
+    },
+    "preservesRawArtifact": {
+      "const": true,
+      "default": true,
+      "title": "Preservesrawartifact",
+      "type": "boolean"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "adapterId",
+    "adapterVersion",
+    "formats",
+    "parseMode"
+  ],
+  "title": "AdapterCapability",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/adapter_capability.schema.json"
+}

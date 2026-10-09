@@ -1,0 +1,2 @@
+timestamp,request_id,actor,operation,target,status
+2026-10-04T10:00:02Z,a-001,agent-ran,changeTilt,cell-17,200

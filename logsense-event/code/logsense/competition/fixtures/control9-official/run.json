@@ -1,0 +1,12 @@
+{
+  "runId": "C9-OFFICIAL",
+  "label": "Control 9 \u2014 official worked example (ILLUSTRATIVE)",
+  "traceIds": [
+    "trace-c9-official"
+  ],
+  "sessionIds": [
+    "sess-c9-official"
+  ],
+  "notes": "Bundled deterministic fixture: Ten source-windowed KPI observations of example.performance_score; W10 reports 0.792 against a 0.900 fixed-reference baseline: (0.900-0.792)/0.900 = 0.12 = 12% relative degradation. Measurement fixture only \u2014 no threshold verdict.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

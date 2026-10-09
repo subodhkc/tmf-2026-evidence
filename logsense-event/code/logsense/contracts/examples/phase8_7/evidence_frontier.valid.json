@@ -1,0 +1,16 @@
+{
+  "createdFromSnapshot": "snap-1",
+  "currentEvidenceRefs": [
+    "e-1"
+  ],
+  "frontierId": "f-1",
+  "missingFact": "Applied state change",
+  "priority": "HIGH",
+  "proposedTestRef": "t-1",
+  "state": "TEST_DEFINED",
+  "subjectRefs": [
+    "a-1"
+  ],
+  "verificationRequirement": "Observe authoritative state transition",
+  "whyNeeded": "Close effect proof"
+}

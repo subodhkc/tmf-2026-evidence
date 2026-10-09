@@ -1,0 +1,575 @@
+{
+  "catalogId": "logsense-relation-condition-catalog",
+  "version": "0.1.0",
+  "conditions": [
+    {
+      "conditionId": "ANCHOR_MANIFEST_OR_DIGEST_MEMBERSHIP",
+      "description": "Anchor Manifest Or Digest Membership",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "ATTESTATION_PRESENT",
+      "description": "Attestation Present",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "ATTESTATION_VALID_FOR_IDENTITY",
+      "description": "Attestation Valid For Identity",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "AUTHORIZATION_DECISION_BOUND_TO_ACTION",
+      "description": "Authorization Decision Bound To Action",
+      "evaluatorKind": "REFERENCE_STATE",
+      "inputObjectTypes": [
+        "ActionGroup",
+        "SourceQualificationResult"
+      ],
+      "failureGapType": "AUTHORIZATION_EVIDENCE_MISSING",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "CASE_MEMBERSHIP_EXPLICIT",
+      "description": "Case Membership Explicit",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "CHILD_SCOPE_SUBSET_OR_EQUAL_PARENT_SCOPE",
+      "description": "Child Scope Subset Or Equal Parent Scope",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "COMPARABLE_STATE_FACET",
+      "description": "Comparable State Facet",
+      "evaluatorKind": "COMPARABILITY_CHECK",
+      "inputObjectTypes": [
+        "StateTransition"
+      ],
+      "failureGapType": "STATE_FACET_UNKNOWN",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "DECLARED_REDUCTION",
+      "description": "Declared Reduction",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "DELEGATED_TASK_OR_SCOPE_BOUND",
+      "description": "Delegated Task Or Scope Bound",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "DELEGATION_CHAIN_EXACT",
+      "description": "Delegation Chain Exact",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "DERIVATION_PARENT_EXPLICIT",
+      "description": "Derivation Parent Explicit",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "DIRECTION_PRESERVED",
+      "description": "Direction Preserved",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EVIDENCE_REFS_PRESENT",
+      "description": "Evidence Refs Present",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_AGENT_BINDING",
+      "description": "Exact Agent Binding",
+      "evaluatorKind": "IDENTITY_CHECK",
+      "inputObjectTypes": [
+        "IdentityResolutionResult"
+      ],
+      "failureGapType": "IDENTITY_UNRESOLVED",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_AUTHORITY_SCOPE",
+      "description": "Exact Authority Scope",
+      "evaluatorKind": "SCOPE_CHECK",
+      "inputObjectTypes": [
+        "SourceQualificationResult",
+        "ActionIdentity"
+      ],
+      "failureGapType": "SOURCE_CLAIM_NOT_QUALIFIED",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_BUILD_OR_DEPLOYMENT_IDENTITY",
+      "description": "Exact Build Or Deployment Identity",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_CELL_IDENTITY",
+      "description": "Exact Cell Identity",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_INVOCATION_OR_ACCESS_RECORD_FOR_RUNTIME_CLAIM",
+      "description": "Exact Invocation Or Access Record For Runtime Claim",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_MODEL_TURN",
+      "description": "Exact Model Turn",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_PACKAGE_NAME_VERSION",
+      "description": "Exact Package Name Version",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_SBI_TRANSACTION_IDENTITY",
+      "description": "Exact Sbi Transaction Identity",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_SUBJECT_MATCH",
+      "description": "Exact Subject Match",
+      "evaluatorKind": "IDENTITY_CHECK",
+      "inputObjectTypes": [
+        "IdentityResolutionResult"
+      ],
+      "failureGapType": "IDENTITY_UNRESOLVED",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_TURN_OR_DECISION_BINDING",
+      "description": "Exact Turn Or Decision Binding",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXACT_UE_OR_SESSION_IDENTITY",
+      "description": "Exact Ue Or Session Identity",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXPLICIT_CLIENT_TO_AGENT_MAPPING",
+      "description": "Explicit Client To Agent Mapping",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXPLICIT_DELEGATION_SEMANTIC",
+      "description": "Explicit Delegation Semantic",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXPLICIT_HANDOFF_SEMANTIC",
+      "description": "Explicit Handoff Semantic",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXPLICIT_LINEAGE_HOPS",
+      "description": "Explicit Lineage Hops",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXPLICIT_PROVENANCE_LINK",
+      "description": "Explicit Provenance Link",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXPLICIT_SECRET_REFERENCE",
+      "description": "Explicit Secret Reference",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "EXPLICIT_VERSION_OR_EFFECTIVE_ORDER",
+      "description": "Explicit Version Or Effective Order",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "INCOMPATIBLE_CLAIMS",
+      "description": "Incompatible Claims",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "MATERIALLY_INDEPENDENT_LINEAGE",
+      "description": "Materially Independent Lineage",
+      "evaluatorKind": "LINEAGE_CHECK",
+      "inputObjectTypes": [
+        "SourceDescriptor",
+        "DuplicateGroup"
+      ],
+      "failureGapType": "SOURCE_LINEAGE_UNKNOWN",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "ORDERING_BASIS_EXPLICIT",
+      "description": "Ordering Basis Explicit",
+      "evaluatorKind": "ORDERING_CHECK",
+      "inputObjectTypes": [
+        "TimelineEvent",
+        "TemporalNormalization"
+      ],
+      "failureGapType": "TEMPORAL_ALIGNMENT_UNCERTAIN",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "QUALIFIED_CAUSE_RULE_OUTPUT",
+      "description": "Qualified Cause Rule Output",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "QUALIFIED_OPERATION_STATE_BINDING",
+      "description": "Qualified Operation State Binding",
+      "evaluatorKind": "REFERENCE_STATE",
+      "inputObjectTypes": [
+        "StateTransition"
+      ],
+      "failureGapType": "RELATION_UNESTABLISHED",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "QUALIFIED_PRE_POST_STATE",
+      "description": "Qualified Pre Post State",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "RUNTIME_OR_BOUNDARY_ENFORCEMENT_EVIDENCE",
+      "description": "Runtime Or Boundary Enforcement Evidence",
+      "evaluatorKind": "SOURCE_QUALIFICATION_CHECK",
+      "inputObjectTypes": [
+        "SourceQualificationResult"
+      ],
+      "failureGapType": "SOURCE_CLAIM_NOT_QUALIFIED",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "SAME_CLAIM_OR_ARTIFACT_LINEAGE",
+      "description": "Same Claim Or Artifact Lineage",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "SAME_CLAIM_SCOPE",
+      "description": "Same Claim Scope",
+      "evaluatorKind": "COMPARABILITY_CHECK",
+      "inputObjectTypes": [
+        "InvestigationRelation"
+      ],
+      "failureGapType": "RELATION_UNESTABLISHED",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "SAME_COMPARABLE_CLAIM_SCOPE",
+      "description": "Same Comparable Claim Scope",
+      "evaluatorKind": "COMPARABILITY_CHECK",
+      "inputObjectTypes": [
+        "ForensicContradiction"
+      ],
+      "failureGapType": "RELATION_UNESTABLISHED",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "SAME_LOGICAL_ACTION",
+      "description": "Same Logical Action",
+      "evaluatorKind": "REFERENCE_STATE",
+      "inputObjectTypes": [
+        "ActionGroup"
+      ],
+      "failureGapType": "ACTION_IDENTITY_INCOMPLETE",
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "SCENARIO_SCOPE_COMPATIBLE",
+      "description": "Scenario Scope Compatible",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "STRUCTURED_ACTION_BINDING",
+      "description": "Structured Action Binding",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    },
+    {
+      "conditionId": "VULNERABILITY_MATCH",
+      "description": "Vulnerability Match",
+      "evaluatorKind": "CUSTOM_DETERMINISTIC",
+      "inputObjectTypes": [],
+      "failureGapType": null,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation.ts"
+      ],
+      "notes": []
+    }
+  ],
+  "digest": "9ac8ecc1f5f94509ec091a32423298957fda3a7613c1aa2cf1680cf806eb6614"
+}

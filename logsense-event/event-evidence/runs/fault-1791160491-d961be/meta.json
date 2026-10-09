@@ -1,0 +1,56 @@
+{
+  "cid": "fault-1791160491-d961be",
+  "traceId": "4e8691aeb1fc424790de8fae80558fe9",
+  "capturedAt": "2026-10-05T00:39:11.909941+00:00",
+  "artifacts": {
+    "audit_records.jsonl": {
+      "count": 31,
+      "sha256": "112377439d4556ad79cba454c8df3d11876e3ad5b243679b0a10a96632c3c645"
+    },
+    "timeline.txt": {
+      "bytes": 9903,
+      "sha256": "57755538ccbec270daa55c72a4ea59ba0b8104f200c392c7af611b9083f48250"
+    },
+    "modaas_evidence.jsonl": {
+      "count": 25,
+      "group": "/modaas/evidence",
+      "sha256": "0f57421b89c4e18b686622366a7c9d8277e0db14fb424562f1cae08f28b65374"
+    },
+    "gateway_run.log": {
+      "count": 31,
+      "sha256": "fd9d944d5697838b7b4398814178d10387c7711a1a25ba5e92f21e4b6c89f3db",
+      "note": "trace-filtered kvlog"
+    },
+    "agentcore_customer.jsonl": {
+      "count": 12,
+      "group": "/aws/bedrock-agentcore/runtimes/customer_experience_agent-FoE4C35iYV-DEFAULT",
+      "sha256": "888b550a187b22edccb05d29f0eaf46a60defc8f7911d38c6e77ea94bfe4524f"
+    },
+    "agentcore_it.jsonl": {
+      "count": 12,
+      "group": "/aws/bedrock-agentcore/runtimes/it_resolution_agent-OxT4r3BXvu-DEFAULT",
+      "sha256": "dad88ad7315a83bffa060a0eb27fb6565dfd5e4badb85962ebc96085271c8727"
+    },
+    "agentcore_network.jsonl": {
+      "count": 28,
+      "group": "/aws/bedrock-agentcore/runtimes/network_resolution_agent-5uSMf0CrfV-DEFAULT",
+      "sha256": "c0a106f7bb61d7d83734d2ab674d22615bbc4fceb3d5c4073070a042c4ff3070"
+    },
+    "aws_spans_cid.jsonl": {
+      "count": 25,
+      "group": "aws/spans",
+      "sha256": "21e99f5e8eb8db9a4ba6d9cb6e809f1cd146098c09de49a2ba1d396ed38d782b"
+    },
+    "aws_spans_trace.jsonl": {
+      "count": 46,
+      "group": "aws/spans",
+      "sha256": "02195dd16c7e6e31bfbf0a2d37eb57bdde5e3a817442ad08b19826c00578339e"
+    },
+    "measurement.json": {
+      "sha256": "1a35bbdda418d521ba4a9b8d4f717c83fa47ae26dfbeae5a5af3edb4573251f5"
+    },
+    "score.txt": {
+      "sha256": "12e2624f22052e266516a2824f2281c574f5545d4fb02ab8978c9208d9ed3092"
+    }
+  }
+}

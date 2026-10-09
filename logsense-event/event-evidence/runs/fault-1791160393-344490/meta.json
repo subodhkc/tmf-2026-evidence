@@ -1,0 +1,56 @@
+{
+  "cid": "fault-1791160393-344490",
+  "traceId": "de30ec9ff8154ae48e9e8344c57f03a5",
+  "capturedAt": "2026-10-05T00:38:02.650090+00:00",
+  "artifacts": {
+    "audit_records.jsonl": {
+      "count": 34,
+      "sha256": "286c62521b039be0e4be9202fe1f6049e23b6891a2f12f1b05fa1506f1d04641"
+    },
+    "timeline.txt": {
+      "bytes": 10921,
+      "sha256": "e3ee8ed2cff9a5b3cb24bd8990f13ae8eeb182d276ee2e0f9d7533a4f2f52cfb"
+    },
+    "modaas_evidence.jsonl": {
+      "count": 28,
+      "group": "/modaas/evidence",
+      "sha256": "1251b0acaf3d36c1798327e3e3f99048b43e30e575258b8e00965b88668c459f"
+    },
+    "gateway_run.log": {
+      "count": 34,
+      "sha256": "5268c0ca9b392e990c933597f7c3d54df17b6a0ef49f9e2299cbd247275c5d65",
+      "note": "trace-filtered kvlog"
+    },
+    "agentcore_customer.jsonl": {
+      "count": 22,
+      "group": "/aws/bedrock-agentcore/runtimes/customer_experience_agent-FoE4C35iYV-DEFAULT",
+      "sha256": "6a9a173a26917f5788e03a01263ee2d431fdfe36618e6b477d3b7cccc0ffe658"
+    },
+    "agentcore_it.jsonl": {
+      "count": 12,
+      "group": "/aws/bedrock-agentcore/runtimes/it_resolution_agent-OxT4r3BXvu-DEFAULT",
+      "sha256": "77f6bb5be1f15c385badc02c5873132a4e3268e4397ecdeaf121c2b61166ca05"
+    },
+    "agentcore_network.jsonl": {
+      "count": 27,
+      "group": "/aws/bedrock-agentcore/runtimes/network_resolution_agent-5uSMf0CrfV-DEFAULT",
+      "sha256": "6a72fc165e3f92ca3fc73f3ff751068cfc2002924a42880c30e67569157e1d08"
+    },
+    "aws_spans_cid.jsonl": {
+      "count": 28,
+      "group": "aws/spans",
+      "sha256": "c94f86c4548476ce83af803c16145a08479870dd77e5fe165c91395c93e04ed8"
+    },
+    "aws_spans_trace.jsonl": {
+      "count": 51,
+      "group": "aws/spans",
+      "sha256": "c2792ab2da0b7dafe8d9babc7af825fb4ec43edca3aa7fca3b07485eb9318131"
+    },
+    "measurement.json": {
+      "sha256": "68b40c43e6cc1b4abab51409f3b35e307cc222e1bac6f1e1c4e3c815cddcc2b2"
+    },
+    "score.txt": {
+      "sha256": "e9764ca08424fc11a07e7574071b19c13eecfe5b646ea93f4995d52ca50ce8cf"
+    }
+  }
+}

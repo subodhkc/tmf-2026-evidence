@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/cause-predicate.schema.json",
+  "title": "Cause Predicate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "predicateId",
+    "kind",
+    "operator",
+    "description",
+    "params"
+  ],
+  "properties": {
+    "predicateId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "EVENT",
+        "RELATION",
+        "STATE",
+        "AUTHORITY",
+        "IDENTITY",
+        "ORDERING",
+        "EXPECTED_STATE",
+        "COMPLETENESS",
+        "LINEAGE",
+        "DETECTION_SIGNAL",
+        "DELTA",
+        "COVERAGE",
+        "BASELINE",
+        "CONTRADICTION",
+        "SOURCE",
+        "GUARDRAIL",
+        "CUSTOM"
+      ]
+    },
+    "operator": {
+      "type": "string",
+      "enum": [
+        "SIGNAL_PRESENT",
+        "EVENT_MATCH",
+        "RELATION_STATE",
+        "ACTION_PHASE_STATE",
+        "FIVE_PLANE_STATE",
+        "DELTA_MATCH",
+        "EXPECTED_STATE_COMPARE",
+        "STATE_COMPARE",
+        "IDENTITY_STATE",
+        "ORDER_BEFORE",
+        "COMPLETENESS_STATE",
+        "LINEAGE_COUNT",
+        "GAP_STATE",
+        "BASELINE_COMPATIBILITY",
+        "CONTRADICTION_CLASS",
+        "ATTRIBUTE_COMPARE",
+        "MEASUREMENT_COMPARE",
+        "SOURCE_ROLE_PRESENT",
+        "SOURCE_AUTHORITY_ROLE",
+        "GUARDRAIL_LADDER",
+        "COUNT_COMPARE"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "params": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

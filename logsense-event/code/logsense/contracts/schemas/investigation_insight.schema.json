@@ -1,0 +1,121 @@
+{
+  "$id": "https://logsense.local/schemas/investigation_insight.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "affectedRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "classification": {
+      "enum": [
+        "FINDING",
+        "INSIGHT"
+      ],
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "insightId": {
+      "type": "string"
+    },
+    "insightKind": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "requiredAction": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "semanticDescriptors": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "snapshotRef": {
+      "type": "string"
+    },
+    "sourceLocations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "state": {
+      "enum": [
+        "ESTABLISHED",
+        "PARTIAL",
+        "CONTRADICTED",
+        "UNKNOWN",
+        "NOT_ASSESSED"
+      ],
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "supportingRuleCodes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "timeBasis": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "whatEstablished": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "whatNotEstablished": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "insightId",
+    "classification",
+    "insightKind",
+    "title",
+    "statement",
+    "state",
+    "semanticDescriptors",
+    "affectedRefs",
+    "evidenceRefs",
+    "sourceLocations",
+    "supportingRuleCodes",
+    "whatEstablished",
+    "whatNotEstablished",
+    "requiredAction",
+    "limitations",
+    "timeBasis",
+    "snapshotRef"
+  ],
+  "title": "Investigation Insight",
+  "type": "object"
+}

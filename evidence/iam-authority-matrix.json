@@ -1,0 +1,121 @@
+{
+ "composedAt": "2026-10-05",
+ "principals": {
+  "WSParticipantRole/Participant": {
+   "iamAllow": [
+    "bedrock-agentcore:InvokeAgentRuntime on all runtimes",
+    "team-* resource mgmt (lambda,sqs,sns,dynamodb,secrets,ecr,events,cw-alarms)",
+    "iam read-only",
+    "logs/cw/xray read",
+    "eks/cfn/ec2 describe"
+   ],
+   "iamDeny": [
+    "bedrock:InvokeModel* (all)",
+    "bedrock-agentcore:InvokeGateway",
+    "sts:AssumeRole on *ModaasOperatorRole*",
+    "iam mutations",
+    "guardrail mutations"
+   ],
+   "resourcePolicy": "none blocking on workshop svc (token-gated at app layer)",
+   "cedar": "invocations routed via gateway policies; agent audits show PDP denials (S3 restricted change)",
+   "gateway": "rate limit 100 req/Min; token limit 2.5M tok/Hr (observed NOT enforced - anomaly)",
+   "networkObserved": "all 1104x200 + documented 403 denials + transient 5xx; can invoke any runtime directly (peer-invoke IAM-permitted)"
+  },
+  "a-01-eks-cluster-agentcore-runtime": {
+   "iamAllow": [
+    "bedrock-agentcore:InvokeAgentRuntime on runtime/* (PEER INVOKE PERMITTED)",
+    "ecr pull",
+    "logs/cw/xray write",
+    "GetWorkloadAccessToken*"
+   ],
+   "iamDeny": [
+    "bedrock:InvokeModel*",
+    "bedrock-agentcore:InvokeGateway"
+   ],
+   "cedar": "tool-level PDP: MalformedToolCall terminal denial in runaway run",
+   "gateway": "egress via agentgateway listener llm",
+   "networkObserved": "agents never invoked peer runtime in 1182 spans across all runs (IAM allows; code path absent)"
+  },
+  "WSModaasOperatorRole": {
+   "assumeFromParticipant": "EXPLICITLY DENIED (deny statement)"
+  },
+  "sh-role-* lambdas / eks-service / workshop-ide-role / lambdaroles / AICT-readonly / modaas-operator-judge3-prompt-role": {
+   "inspection": "NOT_AUDITED - names seen in CloudTrail only"
+  }
+ },
+ "findings": {
+  "HIGH_CONFIDENCE": [
+   {
+    "id": "AUTH-01",
+    "claim": "Cross-agent runtime invocation is IAM-PERMITTED for both participant and agent-runtime roles (bedrock-agentcore:InvokeAgentRuntime on runtime/*), yet zero peer-agent calls observed in 1182 spans and no negotiation records exist. C7 gap is code/tool-exposure level, not IAM.",
+    "refs": [
+     "calibration/iam_policies_snapshot.json",
+     "calibration/*/agentcore_*.jsonl (1182 spans, 5 tools only)"
+    ]
+   },
+   {
+    "id": "ANOM-01",
+    "claim": "agentgateway token limit 2.5M/Hr confirmed configured but runaway consumed 2.83M tokens with zero token-429s - enforcement absent.",
+    "refs": [
+     "evidence/finding-token-ceiling.md (prior)"
+    ]
+   },
+   {
+    "id": "ANOM-02",
+    "claim": "Runaway loop: network agent 91 calls, 298,485ms duration, terminal Cedar MalformedToolCall denial.",
+    "refs": [
+     "evidence/runaway-loop.json (prior)"
+    ]
+   },
+   {
+    "id": "EXPO-01",
+    "claim": "Generic internet-style scanner traffic reaching gateway: GET /favicon.ico, /admin, /manager/text/list, CONNECT / (26+ probes) - load balancer receives unsolicited probes; unrelated to agent traffic.",
+    "refs": [
+     "calibration/gw_*.log 404/CONNECT entries"
+    ]
+   },
+   {
+    "id": "DRIFT-01",
+    "claim": "AgentConfig CR spec digest diverged from reconciled/running image digest - desired state ahead of runtime; unapproved pending image.",
+    "refs": [
+     "prior approval-runtime evidence"
+    ]
+   }
+  ],
+  "HIGH_VALUE_CANDIDATES": [
+   {
+    "id": "CAND-01",
+    "claim": "186 x HTTP 405 GET /mcp/{tool} - MCP endpoints probed with wrong method at scale; consistent with health-check/scanner traffic, but worth confirming not agent retry misbehavior.",
+    "refs": [
+     "gw_*.log"
+    ]
+   },
+   {
+    "id": "CAND-02",
+    "claim": "Participant namespace team-* SNS/SQS is IAM-sanctioned - could host a REAL C9 alert queue (team-c9-alerts) if a breach ever fires; current policy recipient string is a name, not a live channel.",
+    "refs": [
+     "iam_policies_snapshot.json participant-permissions-policy-1"
+    ]
+   }
+  ],
+  "DISPROVEN": [
+   {
+    "id": "DISP-01",
+    "claim": "'Participant cannot invoke agents directly' - FALSE: InvokeAgentRuntime explicitly allowed on all runtimes."
+   },
+   {
+    "id": "DISP-02",
+    "claim": "'C7 gap is an IAM/permission block' - FALSE: IAM permits peer invoke; absence is agent-code/tool level."
+   },
+   {
+    "id": "DISP-03",
+    "claim": "'186x405 are agent tool-call failures' - FALSE: all observed tool calls returned 200-path tool results; 405s are GET probes to POST-only MCP endpoints."
+   }
+  ],
+  "OPEN_QUESTIONS": [
+   "6 x 503 gateway errors - overload windows or upstream faults? (transient, seen in both calibration and assessed runs)",
+   "11 CONNECT / attempts on '/' - scanner tunnel attempts; confirm gateway has no CONNECT handling",
+   "Who holds ModaasOperatorRole? Participant explicitly denied AssumeRole - operator-only path confirmed but internal use unaudited"
+  ]
+ }
+}

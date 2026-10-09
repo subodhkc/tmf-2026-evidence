@@ -1,0 +1,167 @@
+{
+  "$id": "https://logsense.local/schemas/execution_archetype_projection.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "facts": {
+      "items": {
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "properties": {
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "properties": {
+              "valueSet": {
+                "minItems": 1
+              }
+            }
+          }
+        ],
+        "properties": {
+          "coverage": {
+            "enum": [
+              "FULL",
+              "PARTIAL",
+              "SAMPLE",
+              "UNKNOWN"
+            ],
+            "type": "string"
+          },
+          "declaredChannels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "discoveredChannels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "evidenceBasis": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "evidenceRefs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "evidenceState": {
+            "enum": [
+              "ESTABLISHED",
+              "PARTIAL",
+              "CONTRADICTED",
+              "UNKNOWN",
+              "NOT_ASSESSED"
+            ],
+            "type": "string"
+          },
+          "facet": {
+            "enum": [
+              "HUMAN_INTERACTION_PATTERN",
+              "MODALITY",
+              "INITIATING_PRINCIPAL",
+              "TRIGGER_MECHANISM",
+              "EXECUTION_LIFECYCLE",
+              "DECISION_ROLE",
+              "CONTEXT_INFLUENCE",
+              "CAPABILITY_EXPOSURE_MECHANISM",
+              "CAPABILITY_SET_DYNAMICS",
+              "EFFECT_EXECUTION_TRANSPORT",
+              "IDENTITY_AUTHORITY_CONTEXT",
+              "HUMAN_CONTROL_MODEL",
+              "CONSEQUENCE_COMMIT_MODEL",
+              "MULTI_AGENT_TOPOLOGY",
+              "PERSISTENCE_TEMPORAL"
+            ],
+            "type": "string"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "observedChannels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "subjectRef": {
+            "type": "string"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "valueSet": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "facet",
+          "subjectRef",
+          "value",
+          "valueSet",
+          "evidenceState",
+          "coverage",
+          "evidenceBasis",
+          "evidenceRefs",
+          "declaredChannels",
+          "discoveredChannels",
+          "observedChannels",
+          "limitations"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "projectionId": {
+      "type": "string"
+    },
+    "snapshotRef": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "projectionId",
+    "snapshotRef",
+    "facts",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Execution Archetype Projection",
+  "type": "object"
+}

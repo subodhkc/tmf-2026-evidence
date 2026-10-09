@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Temporal Normalization",
+  "type": "object",
+  "properties": {
+    "normalizationId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "eventRef": {
+      "type": "string"
+    },
+    "clockDomainRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "nativeTimestamp": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "parsedTimestamp": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "normalizedEventTime": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timezoneAssumption": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "offsetAppliedMs": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "basis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "EXACT",
+        "NORMALIZED",
+        "APPROXIMATE",
+        "MISSING",
+        "CONTRADICTED"
+      ]
+    },
+    "reversible": {
+      "type": "boolean"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "normalizationId",
+    "analysisRunId",
+    "eventRef",
+    "basis",
+    "state",
+    "reversible",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/temporal_normalization.schema.json"
+}

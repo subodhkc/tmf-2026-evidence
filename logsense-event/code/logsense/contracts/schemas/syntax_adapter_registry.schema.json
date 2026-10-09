@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/syntax_adapter_registry.schema.json",
+  "title": "Syntax Adapter Registry",
+  "type": "object",
+  "properties": {
+    "registryId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "adapters": {
+      "type": "array",
+      "items": {
+        "$ref": "https://logsense.local/schemas/adapter_capability.schema.json"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "registryId",
+    "version",
+    "adapters",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

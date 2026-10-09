@@ -1,0 +1,7 @@
+{
+  "runId": "C16-DENIED",
+  "label": "Control 16 denied-before-execution run",
+  "traceIds": ["trace-c16-denied"],
+  "sessionIds": ["sess-c16-denied"],
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

@@ -1,0 +1,32 @@
+{
+  "canonicalOwner": "ActionGroup",
+  "claimClass": "ACTION_ATTRIBUTION",
+  "claimId": "c-1",
+  "closeWith": [
+    "state transition evidence"
+  ],
+  "currentness": "FRESH",
+  "dispositiveSource": null,
+  "evidenceRefs": [
+    "e-1"
+  ],
+  "evidenceState": "PARTIAL",
+  "evidenceStrength": "MODERATE",
+  "independentSourceFamilyCount": 1,
+  "limitations": [
+    "effect not established"
+  ],
+  "notClaimed": [
+    "ACTION_APPLIED"
+  ],
+  "provenance": {},
+  "scopeCompleteness": "PARTIAL",
+  "snapshotRef": "snap-1",
+  "statement": "Action attribution is partial.",
+  "strengthBasis": [
+    "qualified source"
+  ],
+  "subjectRefs": [
+    "a-1"
+  ]
+}

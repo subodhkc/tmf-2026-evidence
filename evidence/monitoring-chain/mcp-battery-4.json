@@ -1,0 +1,246 @@
+{
+  "system_evidence": {
+    "schemaVersion": "system-evidence-facets-1",
+    "systemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+    "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+    "facets": [
+      {
+        "key": "supply_chain",
+        "label": "Supply Chain",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "declaredVersion",
+          "observedVersion",
+          "inSbom",
+          "hasKnownVulnerability",
+          "vexContradictsVulnerability",
+          "artifactHash",
+          "recordedArtifactHash",
+          "signed",
+          "registry",
+          "approvedRegistries",
+          "publisherChanged",
+          "newNetworkPermissions",
+          "changeRequestRef"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "model_integrity",
+        "label": "Model Integrity",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "modelVersion",
+          "approvedVersion",
+          "modelHash",
+          "approvedHash",
+          "featureDrift",
+          "outputKlDivergence",
+          "trainingDataSource",
+          "approvedTrainingSources",
+          "inputFingerprint",
+          "outputFingerprint"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "model_usage",
+        "label": "Model Usage & Consumption",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "queryRate",
+          "queryRateThreshold",
+          "consumerId",
+          "consumerRegistered",
+          "predictionVariance",
+          "oodScore"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "infrastructure",
+        "label": "Infrastructure",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "resourceName",
+          "namespace",
+          "verb",
+          "decision"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "api_network",
+        "label": "API / Network",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "method",
+          "path",
+          "statusCode",
+          "destDomain",
+          "queryName"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "iam",
+        "label": "Identity / IAM",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "agentId",
+          "knownToRegistry",
+          "spiffeId",
+          "attestationPresent",
+          "attestationValid",
+          "chainIntact",
+          "declaredScopes",
+          "observedScopes"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "data_access",
+        "label": "Data & Secrets",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "secretName",
+          "accessedBy",
+          "rotationDue",
+          "table",
+          "operation"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "runtime",
+        "label": "Runtime / Telemetry",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "governance",
+        "label": "Governance / Policy",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "policyType",
+          "candidateOperation",
+          "nativeOperation"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "provenance",
+        "label": "Evidence Provenance",
+        "status": "PRESENT_TYPED",
+        "records": [],
+        "typedRecordCount": 2,
+        "producers": [
+          "saas-inventory"
+        ],
+        "latestObservedAt": "2026-10-05T10:09:36.637Z",
+        "missing": [],
+        "basis": "Every bound evidence row carries producer identity + semantic digest; counts reflect persisted envelope metadata.",
+        "limitations": [
+          "DIGEST != CONTENT \u2014 provenance proves identity/integrity, not truth of content.",
+          "Distinct producer runs: 2"
+        ]
+      }
+    ],
+    "unclassifiedCount": 2,
+    "totalRecordCount": 2,
+    "historicalRecordCount": 0,
+    "basisNote": "Current persisted evidence bound to this system (DIRECT_SYSTEM + asset-bound, incl. historical). Not an evaluated snapshot; evaluationIds per record give exact membership.",
+    "links": {
+      "evidenceFacets": "https://www.haiec.com/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/action-map?view=evidence"
+    },
+    "semantics": [
+      "ABSENT_FACET != ZERO_EVENTS \u2014 absence means no typed records persisted, not that nothing happened.",
+      "NORMALIZED_RECORD_FACT != VERIFIED_FACT \u2014 typed fields are caller-declared source content.",
+      "CURRENT_FACET != EVALUATION_SNAPSHOT \u2014 evaluationIds give exact membership; facets are current persisted state.",
+      "UNCLASSIFIED_RECORD != NO_EVIDENCE \u2014 unmarked records exist but carry no typed facet."
+    ]
+  },
+  "master_report": {
+    "raw": "Input validation error: Invalid arguments for tool haiec_get_master_report: evaluationId: Invalid input: expected string, received undefined",
+    "err": null,
+    "body": ""
+  },
+  "investigations": {
+    "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+    "investigations": [],
+    "discoveredCount": 0,
+    "scanBounded": false,
+    "limit": 10,
+    "offset": 0,
+    "limitations": [],
+    "semantics": [
+      "INVESTIGATION identity = persisted explicit ScenarioBinding only \u2014 never timestamps, proximity, or conversational memory.",
+      "MOST_RECENTLY_OBSERVED_INVESTIGATION != ACTIVE_INVESTIGATION.",
+      "SCENARIO_STATE != ASSURANCE_DISPOSITION."
+    ]
+  }
+}

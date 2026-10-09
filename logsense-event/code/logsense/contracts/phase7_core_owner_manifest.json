@@ -1,0 +1,63 @@
+{
+  "exampleToSchema": {
+    "action_group.change_tilt.json": "action_group.schema.json",
+    "cause_evaluation.policy_deny_not_enforced.json": "cause_evaluation.schema.json",
+    "evidence_set.al0.json": "evidence_set.schema.json",
+    "five_plane_coverage.change_tilt.json": "five_plane_coverage.schema.json",
+    "investigation_snapshot.al2.json": "investigation_snapshot.schema.json",
+    "relation_evaluation.agent_uses_tool.established.json": "relation_evaluation.schema.json",
+    "source_qualification.application_telemetry.json": "source_qualification_result.schema.json"
+  },
+  "nonGoals": [
+    "no runtime owner implementation",
+    "no report schema",
+    "no arbitration",
+    "no AI/LLM",
+    "no Phase 20 adapters"
+  ],
+  "phase7TotalSchemaCount": 78,
+  "repositoryTransportNote": "GitHub text writes may normalize line endings. selectedSchemas pins original Phase 7 raw-byte SHA-256; selectedSchemaCanonicalJsonSha256 is the repository-verifiable semantic digest.",
+  "selectedSchemaCanonicalJsonSha256": {
+    "action_group.schema.json": "e4905662a1826131380f12e0fb9e34a2298f575cb397ccbc720dbd4bbf6673b9",
+    "action_identity.schema.json": "2f5cc62cdc7ddcb670940cb928397325eba12f0d7aee718f4f7d8c472e2ab77c",
+    "action_lifecycle_coverage.schema.json": "76efa829b8205d991528855e808082a675f0abadcb04b966ba9571967334fe65",
+    "cause_candidate.schema.json": "c79a2d945fcd35aa9ea52ba1bf8dc1e7d007fd72d0eb7593b0175e4352cd3a1a",
+    "cause_evaluation.schema.json": "593c2724df6aa3536a835e8aefbd426c01aeb70f7f817183a72cf803a0542219",
+    "contradiction.schema.json": "ce62e7832ab4a7cf7a07f1b90767e952a26de99a9f10de429f01c02338f0efa0",
+    "divergence.schema.json": "b800b0695badec1a64e11741afcfd265fe8e4add4fe281e517a8c3b574312f19",
+    "entity_ref.schema.json": "a4ee84389545dcb4d7dcd9890a7fd040a0e7467b1d59b56ff6d4d06126f3f6ca",
+    "evidence_set.schema.json": "e825a7b9ab5d6e7484b64a758d662837b3e51f88445415e5c501752c4f22a28a",
+    "five_plane_coverage.schema.json": "ccdd4536e33843b9bc8ff5f84acf0aeb95fa3f024948934fae86e326761d11e6",
+    "forensic_test.schema.json": "9e49c434d9a77e7294b62971ec22721e3651a88568a48251a27c8b1dbdeae756",
+    "gap_finding.schema.json": "d7efa034d51c616de1211054bcc20204d6e6f50a11ffd3f98d790dd2c54b8341",
+    "investigation_snapshot.schema.json": "eec53c871c7c9831787ac3f038194954c046435bacd6bc10dfa876bcc2a2c4c5",
+    "relation_evaluation.schema.json": "4cc4cf8d195f725bc8a9acd65115a17a61e38425449bd284019fd58600eb4c50",
+    "source_descriptor.schema.json": "855c540c6980684271c9528320ff61d6d1f33581cc87b912057353e0767cff04",
+    "source_qualification_result.schema.json": "238619397fb845e0162429574c48ba5cbd1785b9827b125a3c468db4cfa6d896",
+    "state_transition.schema.json": "ecd3eafdd70f1ac332c1aa9a074c577f4f0866f58ca2ba80f739af34ce98c1d8"
+  },
+  "selectedSchemaCount": 17,
+  "selectedSchemas": {
+    "action_group.schema.json": "1d4fe3899d92ed7a753bcd8306a4c5e8bac26b00deb36dd309313a5a93ba0655",
+    "action_identity.schema.json": "19520b0950b5a0d10b05813faecacdec925eb12738d48b00c8b90143835854e1",
+    "action_lifecycle_coverage.schema.json": "491c805c475750aa987c43ad03bdd661c35f3757cd8645f5e5b3942634be01ac",
+    "cause_candidate.schema.json": "f9a6e15ea656d9acbf04848128fcce4f8b70820493f4ea815a2ae607d3ade994",
+    "cause_evaluation.schema.json": "38595f5c328a38210b336f23f114bd5e181770e98e57fed94112f668ba9e4d6b",
+    "contradiction.schema.json": "6c4375a338295224850a564140daeca6d8e791de74dc356c0cdd029cad31e5a5",
+    "divergence.schema.json": "0fba2177a0937a33aa342007652e0fd8af28b57d604840e4db3a12d7e83c96a2",
+    "entity_ref.schema.json": "392e583be3a716d288e0a3c0150c9233f69080e1839bca34844b50cc45832d24",
+    "evidence_set.schema.json": "028bd6d6cce5a73259b7a751c5dbb6c683a4299d7f58a654cfef2d10f7e58107",
+    "five_plane_coverage.schema.json": "1abbc89353c8ad3d8d7ba0d76d527732569e6a16cd5a30d85d48883a6778f3b0",
+    "forensic_test.schema.json": "2e032037abed31fecb2132c361ea26d635568b3016c8d02ae5afc2574f9d16f2",
+    "gap_finding.schema.json": "99f40d084834fc8d9d55eb7ee5ac7cca725756401081cae6f754560c75708b16",
+    "investigation_snapshot.schema.json": "45d12a0aa99d278cb442c76db9ed460966417c5c4e4905daa627bf8b4b2b8888",
+    "relation_evaluation.schema.json": "b827f19c619d83273684a5a515dd9e56109167efba749ee622363b525cb39ed1",
+    "source_descriptor.schema.json": "aef66a46e9cfef94f75ff42d731cd1ed5298baf413fbd091795b74c31b6d5672",
+    "source_qualification_result.schema.json": "d1c7c2fbefbd56b0d8acce2ec23a68654a79595a12e3139fc815623d661c29e1",
+    "state_transition.schema.json": "cea49fed5e3612f5329b233d4928d68adc5ddba2c0d07bf68e9dc9ed604b731d"
+  },
+  "semanticAuthority": "Phase 8.7/8.8; these Phase 7 schemas are the physical Phase 2-7 owner baseline.",
+  "slice": "R2-2B_CORE_OWNER_CONTRACTS",
+  "source": "LogSense Phase 7 Adapter Fixture Pack v0.1",
+  "sourceZipSha256": "d210e30ef71501b3a281268bf3202fdc3f055f8622377c5bc765ff8054da7d66"
+}

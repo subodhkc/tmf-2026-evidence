@@ -1,0 +1,30 @@
+[
+ {
+  "cid": "fault-1791164501-143372",
+  "file": "bundle.json",
+  "resultId": "ctr-a20c0527ed3b9e36393a8e640f7b7ca1ec097ec5",
+  "verdict": "NOT_SATISFIED",
+  "ingestionId": "ing-72ef00da6e579708fba6b472051db8bd0c7a4b13a4b9c6df"
+ },
+ {
+  "cid": "fault-1791164501-143372",
+  "file": "c16.bundle.json",
+  "resultId": "ctr-3dc981a99ba695036e6fdd6755be733d6cc26efb",
+  "verdict": "NOT_EVALUATED",
+  "ingestionId": "ing-031a30682df98de3b0f52df8a9716d05bc15181075cc574f"
+ },
+ {
+  "cid": "fault-1791164605-3348a2",
+  "file": "bundle.json",
+  "resultId": "ctr-eb05cfe0dd1416ca69f802622fc24222d6930d1c",
+  "verdict": "NOT_SATISFIED",
+  "ingestionId": "ing-ff01a779c542c0d7eddbef6c40432a63d56652e415cb0123"
+ },
+ {
+  "cid": "fault-1791164605-3348a2",
+  "file": "c16.bundle.json",
+  "resultId": "ctr-b7881450faa5c3c98d21c86352c7fc2c60006b1c",
+  "verdict": "SATISFIED",
+  "ingestionId": "ing-f0f327bdc7e19c21080b237853b38f01d716bb5f06c5a0e7"
+ }
+]

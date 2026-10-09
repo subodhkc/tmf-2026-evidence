@@ -1,0 +1,12 @@
+{
+  "runId": "C9-ZERO",
+  "label": "Control 9 \u2014 zero baseline (ILLUSTRATIVE)",
+  "traceIds": [
+    "trace-c9-zero"
+  ],
+  "sessionIds": [
+    "sess-c9-zero"
+  ],
+  "notes": "Bundled deterministic fixture: Baseline fixed reference value 0 with live observations 5 and 3. Expected: absoluteDelta preserved (5 / 3), relativeDegradation null, windows ZERO_BASELINE_RELATIVE_UNAVAILABLE \u2014 no epsilon, no clamp.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

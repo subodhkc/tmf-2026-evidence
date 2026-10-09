@@ -1,0 +1,75 @@
+{
+  "$defs": {
+    "ImportBatchState": {
+      "enum": [
+        "COMPLETE",
+        "PARTIAL",
+        "FAILED"
+      ],
+      "title": "ImportBatchState",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "importBatchId": {
+      "title": "Importbatchid",
+      "type": "string"
+    },
+    "caseId": {
+      "title": "Caseid",
+      "type": "string"
+    },
+    "evidenceSetId": {
+      "title": "Evidencesetid",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "title": "Createdat",
+      "type": "string"
+    },
+    "artifactRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Artifactrefs",
+      "type": "array"
+    },
+    "ingestResultRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Ingestresultrefs",
+      "type": "array"
+    },
+    "state": {
+      "$ref": "#/$defs/ImportBatchState"
+    },
+    "datasetDigest": {
+      "title": "Datasetdigest",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "importBatchId",
+    "caseId",
+    "evidenceSetId",
+    "createdAt",
+    "artifactRefs",
+    "ingestResultRefs",
+    "state",
+    "datasetDigest"
+  ],
+  "title": "EvidenceImportBatch",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/evidence_import_batch.schema.json"
+}

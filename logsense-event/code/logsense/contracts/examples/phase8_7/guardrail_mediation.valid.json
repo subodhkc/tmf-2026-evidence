@@ -1,0 +1,21 @@
+{
+  "actionGroupRef": "a-1",
+  "actionTimeRef": "e-3",
+  "approvedArgumentDigest": "sha256:a",
+  "argumentIdentityPreserved": true,
+  "confirmationCompleted": true,
+  "confirmationPresented": true,
+  "decision": "APPROVE",
+  "decisionTimeRef": "e-2",
+  "denyBranchBlockedAction": null,
+  "executedArgumentDigest": "sha256:a",
+  "guardrailRef": "g-1",
+  "limitations": [],
+  "mediationEvidenceRefs": [
+    "e-2",
+    "e-3"
+  ],
+  "mediationId": "m-1",
+  "ordering": "BEFORE_EFFECT",
+  "requirementDeclared": true
+}

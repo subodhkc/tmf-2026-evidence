@@ -1,0 +1,130 @@
+{
+  "version": "0.1.1-phase55",
+  "generatedFrom": "cause-rules-v0.1.json predicate union",
+  "relations": {
+    "A1_NON_RT_RIC_TO_NEAR_RT_RIC": [
+      "CR-TEL-A1-001"
+    ],
+    "ACTION_CLAIM_AUTHORIZED_BY": [
+      "CR-AUTH-001",
+      "CR-POLICY-002"
+    ],
+    "AGENTIC_IDENTITY_BELONGS_TO": [
+      "CR-ID-005"
+    ],
+    "AGENT_DELEGATES_TO": [
+      "CR-DELEG-001",
+      "CR-DELEG-002",
+      "CR-DELEG-004"
+    ],
+    "AGENT_HANDS_OFF_TO": [
+      "CR-DELEG-002"
+    ],
+    "AGENT_INVOKES_MCP_SERVER": [
+      "CR-MCP-001",
+      "CR-MCP-003"
+    ],
+    "AGENT_READS_MEMORY": [
+      "CR-MEM-001",
+      "CR-MEM-002"
+    ],
+    "AGENT_USES_TOOL": [
+      "CR-DATA-003",
+      "CR-MCP-003",
+      "CR-TOOL-001"
+    ],
+    "AGENT_WRITES_MEMORY": [
+      "CR-MEM-001"
+    ],
+    "AUTHORITY_NARROWING_CHAIN": [
+      "CR-AUTH-002",
+      "CR-DELEG-003"
+    ],
+    "CALLS": [
+      "CR-DATA-003",
+      "CR-INFRA-001"
+    ],
+    "CAPABILITY_BOUND_TO": [
+      "CR-AUTH-003",
+      "CR-TOOL-002"
+    ],
+    "CELL_PART_OF_SITE": [
+      "CR-TEL-TOWER-001"
+    ],
+    "CHANGES": [
+      "CR-AUTH-001",
+      "CR-STATE-001",
+      "CR-STATE-003"
+    ],
+    "CONNECTED_TO": [
+      "CR-INFRA-001"
+    ],
+    "DELEGATION_CHAIN_CONTAINS": [
+      "CR-DELEG-002"
+    ],
+    "DELEGATION_SOURCE_TO_TARGET": [
+      "CR-DELEG-001",
+      "CR-DELEG-004"
+    ],
+    "DELIVERS_TO": [
+      "CR-INFRA-002"
+    ],
+    "DEPENDS_ON": [
+      "CR-INFRA-001"
+    ],
+    "EXECUTION_ENVELOPE_BOUNDED_BY": [
+      "CR-AUTH-002"
+    ],
+    "INVOKES": [
+      "CR-TOOL-001"
+    ],
+    "LINEAGE_CHAIN_TRACKS": [
+      "CR-DELEG-002",
+      "CR-ID-005"
+    ],
+    "MODEL_GENERATES_ACTION": [
+      "CR-PROMPT-001",
+      "CR-PROMPT-002",
+      "CR-RAG-001"
+    ],
+    "PROMPT_INFLUENCES_DECISION": [
+      "CR-PROMPT-001",
+      "CR-PROMPT-002",
+      "CR-RAG-001"
+    ],
+    "PUBLISHES": [
+      "CR-INFRA-002"
+    ],
+    "QOS_FLOW_USES_SLICE": [
+      "CR-TEL-SLICE-001"
+    ],
+    "SBI_CALL_CONSUMER_TO_PRODUCER": [
+      "CR-TEL-SBI-001"
+    ],
+    "SCOPE_REDUCTION_ENFORCED": [
+      "CR-DELEG-003"
+    ],
+    "SCP_ROUTES_TO": [
+      "CR-TEL-SBI-001"
+    ],
+    "SLICE_PROTECTED_BY_ISOLATION": [
+      "CR-TEL-SLICE-001"
+    ],
+    "SPIFFE_ID_ATTESTED_BY": [
+      "CR-ID-004"
+    ],
+    "SUBSCRIBES_TO": [
+      "CR-INFRA-002"
+    ],
+    "TARGETS": [
+      "CR-STATE-003"
+    ],
+    "TASK_ENVELOPE_CONTAINS": [
+      "CR-AUTH-003",
+      "CR-DELEG-001"
+    ],
+    "UE_SERVED_BY_CELL": [
+      "CR-TEL-TOWER-001"
+    ]
+  }
+}

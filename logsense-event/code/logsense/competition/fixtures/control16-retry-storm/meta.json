@@ -1,0 +1,24 @@
+{
+  "fixtureId": "control16-retry-storm",
+  "control": "ACN-COST-001",
+  "label": "Control 16 \u2014 retry storm",
+  "description": "Four genuine provider-executed attempts of one logical model call. Expected: every attempt counted, explicit retry lineage visible, exact total. Measurement fixture only.",
+  "evidenceFiles": [
+    "usage.jsonl"
+  ],
+  "runFile": "run.json",
+  "expectedAgentIds": [
+    "executor-agent"
+  ],
+  "tokenAccountingProfile": {
+    "profileId": "fixture-token-accounting/c16-v1",
+    "version": "1.0",
+    "inputTokenSourceField": "inputTokens",
+    "outputTokenSourceField": "outputTokens",
+    "totalTokenSourceField": "totalTokens",
+    "basis": "FIXTURE_DECLARED_CANONICAL_TOKEN_FIELDS",
+    "limitations": [
+      "SYNTHETIC_CONTROLLED_EVIDENCE"
+    ]
+  }
+}

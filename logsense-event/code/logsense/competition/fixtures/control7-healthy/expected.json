@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "competition-expected-events/0.1",
+  "manifestId": "control7-healthy",
+  "label": "Control 7 healthy reference run",
+  "runId": "C7-HEALTHY",
+  "timing": {
+    "declaredGapLimitMs": 60000,
+    "thresholdSource": "COMPETITION_FIXTURE",
+    "thresholdVersionRef": "control7-healthy/0.1",
+    "declaredGapComparator": "LTE"
+  },
+  "events": [
+    {
+      "expectedEventId": "E01",
+      "ordinal": 1,
+      "eventType": "REQUEST_RECEIVED",
+      "actorId": "customer-agent",
+      "operation": "receive_request",
+      "required": true,
+      "match": {
+        "eventType": "REQUEST_RECEIVED",
+        "actorId": "customer-agent"
+      }
+    },
+    {
+      "expectedEventId": "E02",
+      "ordinal": 2,
+      "eventType": "CONTEXT_LOADED",
+      "actorId": "customer-agent",
+      "operation": "load_context",
+      "required": true,
+      "match": {
+        "eventType": "CONTEXT_LOADED",
+        "actorId": "customer-agent"
+      }
+    },
+    {
+      "expectedEventId": "E03",
+      "ordinal": 3,
+      "eventType": "POLICY_CHECKED",
+      "actorId": "customer-agent",
+      "operation": "check_policy",
+      "required": true,
+      "match": {
+        "eventType": "POLICY_CHECKED",
+        "actorId": "customer-agent"
+      }
+    },
+    {
+      "expectedEventId": "E04",
+      "ordinal": 4,
+      "eventType": "AUTHORIZATION_EVALUATED",
+      "actorId": "customer-agent",
+      "operation": "evaluate_authorization",
+      "required": true,
+      "match": {
+        "eventType": "AUTHORIZATION_EVALUATED",
+        "actorId": "customer-agent"
+      }
+    },
+    {
+      "expectedEventId": "E05",
+      "ordinal": 5,
+      "eventType": "TOOL_REQUESTED",
+      "actorId": "customer-agent",
+      "operation": "request_tool",
+      "required": true,
+      "match": {
+        "eventType": "TOOL_REQUESTED",
+        "actorId": "customer-agent"
+      }
+    },
+    {
+      "expectedEventId": "E06",
+      "ordinal": 6,
+      "eventType": "TOOL_EXECUTED",
+      "actorId": "billing-tool",
+      "operation": "execute_tool",
+      "required": true,
+      "match": {
+        "eventType": "TOOL_EXECUTED",
+        "actorId": "billing-tool"
+      }
+    },
+    {
+      "expectedEventId": "E07",
+      "ordinal": 7,
+      "eventType": "RESULT_OBSERVED",
+      "actorId": "billing-tool",
+      "operation": "observe_result",
+      "required": true,
+      "match": {
+        "eventType": "RESULT_OBSERVED",
+        "actorId": "billing-tool"
+      }
+    },
+    {
+      "expectedEventId": "E08",
+      "ordinal": 8,
+      "eventType": "RESPONSE_COMPOSED",
+      "actorId": "customer-agent",
+      "operation": "compose_response",
+      "required": true,
+      "match": {
+        "eventType": "RESPONSE_COMPOSED",
+        "actorId": "customer-agent"
+      }
+    },
+    {
+      "expectedEventId": "E09",
+      "ordinal": 9,
+      "eventType": "RESPONSE_SENT",
+      "actorId": "customer-agent",
+      "operation": "send_response",
+      "required": true,
+      "match": {
+        "eventType": "RESPONSE_SENT",
+        "actorId": "customer-agent"
+      }
+    },
+    {
+      "expectedEventId": "E10",
+      "ordinal": 10,
+      "eventType": "TELEMETRY_EMITTED",
+      "actorId": "customer-agent",
+      "operation": "emit_telemetry",
+      "required": true,
+      "match": {
+        "eventType": "TELEMETRY_EMITTED",
+        "actorId": "customer-agent"
+      }
+    }
+  ]
+}

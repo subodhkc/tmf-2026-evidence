@@ -1,0 +1,100 @@
+{
+  "$id": "https://logsense.local/schemas/trust_break_candidate.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alternativeCandidateRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "candidateClass": {
+      "enum": [
+        "STATE_OBSERVATION",
+        "EVIDENCE_MEMBERSHIP",
+        "TARGET_IDENTITY",
+        "CORRELATION",
+        "AUTHORITY_CONTEXT",
+        "MEDIATION",
+        "ANALYSIS_PERIMETER"
+      ],
+      "type": "string"
+    },
+    "candidateId": {
+      "type": "string"
+    },
+    "comparisonBasis": {
+      "type": "string"
+    },
+    "divergenceRef": {
+      "type": "string"
+    },
+    "earliestSupportedBoundary": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "proofRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "sourceAuthorityAfter": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sourceAuthorityBefore": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "state": {
+      "enum": [
+        "ESTABLISHED_DIVERGENCE",
+        "CANDIDATE_CAUSE",
+        "MULTIPLE_CANDIDATES",
+        "INCOMPARABLE"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidateId",
+    "divergenceRef",
+    "candidateClass",
+    "proofRefs",
+    "sourceAuthorityBefore",
+    "sourceAuthorityAfter",
+    "comparisonBasis",
+    "earliestSupportedBoundary",
+    "alternativeCandidateRefs",
+    "state",
+    "limitations"
+  ],
+  "title": "Trust Break Candidate",
+  "type": "object"
+}

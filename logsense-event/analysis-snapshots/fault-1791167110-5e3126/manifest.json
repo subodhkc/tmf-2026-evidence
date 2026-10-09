@@ -1,0 +1,132 @@
+{
+ "manifestId": "fault-1791167110-5e3126-c7",
+ "label": "declared events for fault-1791167110-5e3126",
+ "timing": {
+  "declaredGapLimitMs": 30000,
+  "thresholdSource": "TEAM",
+  "thresholdVersionRef": "c7-thresholds-v1",
+  "declaredGapComparator": "LT"
+ },
+ "events": [
+  {
+   "expectedEventId": "E01",
+   "ordinal": 1,
+   "eventType": "INTENT",
+   "actorId": "customer-experience-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "INTENT",
+    "actorId": "customer-experience-agent"
+   }
+  },
+  {
+   "expectedEventId": "E02",
+   "ordinal": 2,
+   "eventType": "INVOCATION",
+   "actorId": "customer-experience-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "INVOCATION",
+    "actorId": "customer-experience-agent"
+   }
+  },
+  {
+   "expectedEventId": "E03",
+   "ordinal": 3,
+   "eventType": "RESULT-INSPECTION",
+   "actorId": "customer-experience-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "RESULT-INSPECTION",
+    "actorId": "customer-experience-agent"
+   }
+  },
+  {
+   "expectedEventId": "E04",
+   "ordinal": 4,
+   "eventType": "INTENT",
+   "actorId": "it-resolution-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "INTENT",
+    "actorId": "it-resolution-agent"
+   }
+  },
+  {
+   "expectedEventId": "E05",
+   "ordinal": 5,
+   "eventType": "INVOCATION",
+   "actorId": "it-resolution-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "INVOCATION",
+    "actorId": "it-resolution-agent"
+   }
+  },
+  {
+   "expectedEventId": "E06",
+   "ordinal": 6,
+   "eventType": "RESULT-INSPECTION",
+   "actorId": "it-resolution-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "RESULT-INSPECTION",
+    "actorId": "it-resolution-agent"
+   }
+  },
+  {
+   "expectedEventId": "E07",
+   "ordinal": 7,
+   "eventType": "INTENT",
+   "actorId": "network-resolution-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "INTENT",
+    "actorId": "network-resolution-agent"
+   }
+  },
+  {
+   "expectedEventId": "E08",
+   "ordinal": 8,
+   "eventType": "INVOCATION",
+   "actorId": "network-resolution-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "INVOCATION",
+    "actorId": "network-resolution-agent"
+   }
+  },
+  {
+   "expectedEventId": "E09",
+   "ordinal": 9,
+   "eventType": "RESULT-INSPECTION",
+   "actorId": "network-resolution-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "RESULT-INSPECTION",
+    "actorId": "network-resolution-agent"
+   }
+  },
+  {
+   "expectedEventId": "E10",
+   "ordinal": 10,
+   "eventType": "NEGOTIATION",
+   "actorId": "network-resolution-agent",
+   "operation": "governed_event",
+   "required": true,
+   "match": {
+    "eventType": "NEGOTIATION",
+    "actorId": "network-resolution-agent"
+   }
+  }
+ ]
+}

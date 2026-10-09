@@ -1,0 +1,4079 @@
+{
+  "projection": {
+    "generatedAt": "2026-10-05T10:09:02.337Z",
+    "telemetryStatus": "CONFIGURED_ACTIVE",
+    "baselines": [],
+    "thresholds": [
+      {
+        "policyId": "action-chain-depth-default",
+        "policyVersion": "e2-1",
+        "metric": "action_chain_depth",
+        "percentile": 99,
+        "window": "PT5M",
+        "minimumSamples": 1,
+        "depthThreshold": 8,
+        "appliesTo": [
+          "AR-16"
+        ],
+        "effectiveFrom": "2026-01-01T00:00:00.000Z",
+        "effectiveUntil": null,
+        "channel": "NONE",
+        "provenance": "CONTRACT"
+      },
+      {
+        "policyId": "provider-cost-default",
+        "policyVersion": "e2-1",
+        "metric": "provider_cost",
+        "percentile": 99,
+        "window": "PT5M",
+        "minimumSamples": 30,
+        "appliesTo": [
+          "AR-14"
+        ],
+        "effectiveFrom": "2026-01-01T00:00:00.000Z",
+        "effectiveUntil": null,
+        "channel": "NONE",
+        "provenance": "CONTRACT"
+      },
+      {
+        "policyId": "retry-rate-default",
+        "policyVersion": "e2-1",
+        "metric": "retry_rate",
+        "percentile": 99,
+        "window": "PT5M",
+        "minimumSamples": 30,
+        "appliesTo": [
+          "AR-11"
+        ],
+        "effectiveFrom": "2026-01-01T00:00:00.000Z",
+        "effectiveUntil": null,
+        "channel": "NONE",
+        "provenance": "CONTRACT"
+      },
+      {
+        "policyId": "service-latency-default",
+        "policyVersion": "e2-1",
+        "metric": "service_latency",
+        "percentile": 95,
+        "window": "PT5M",
+        "minimumSamples": 30,
+        "appliesTo": [
+          "AR-15"
+        ],
+        "effectiveFrom": "2026-01-01T00:00:00.000Z",
+        "effectiveUntil": null,
+        "channel": "NONE",
+        "provenance": "CONTRACT"
+      },
+      {
+        "policyId": "tool-frequency-default",
+        "policyVersion": "example-1",
+        "metric": "tool_call_frequency",
+        "percentile": 99,
+        "window": "PT5M",
+        "minimumSamples": 30,
+        "appliesTo": [
+          "AR-10"
+        ],
+        "effectiveFrom": "2026-01-01T00:00:00.000Z",
+        "effectiveUntil": null,
+        "channel": "NONE",
+        "provenance": "EXAMPLE"
+      },
+      {
+        "policyId": "tool-frequency-strict-rApp",
+        "policyVersion": "example-1",
+        "metric": "tool_call_frequency",
+        "percentile": 95,
+        "window": "PT5M",
+        "minimumSamples": 10,
+        "appliesTo": [
+          "AR-10",
+          "RAPP"
+        ],
+        "effectiveFrom": "2026-01-01T00:00:00.000Z",
+        "effectiveUntil": null,
+        "channel": "WEBHOOK",
+        "provenance": "EXAMPLE"
+      }
+    ],
+    "riskRegistry": [],
+    "sources": [
+      {
+        "sourceRef": "a135efe9-e9bd-4a59-9d10-66182c0edb35",
+        "authority": "APPLICATION_TELEMETRY",
+        "coverage": "OTLP signals are ingested as OBSERVED telemetry records; coverage is UNKNOWN unless the source supplies deterministic continuity evidence.",
+        "status": "ACTIVE",
+        "evidenceRefs": [
+          "80b5764ca43d68dbde23b320856a0b07dc04320ff0ede0c253e657c67a17bf6d"
+        ],
+        "adapterHealth": {
+          "adapterId": "otlp-http@otlp-receiver-1.0.0",
+          "collectorStatus": "CONFIGURED",
+          "backpressure": "UNAVAILABLE",
+          "samplingRateActual": "UNAVAILABLE",
+          "samplingRateConfigured": "UNAVAILABLE",
+          "lastEventAt": "2026-10-05T10:07:12.383Z",
+          "throughputPerMinute": "UNAVAILABLE"
+        }
+      },
+      {
+        "sourceRef": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+        "authority": "APPLICATION_TELEMETRY",
+        "coverage": "OTLP signals are ingested as OBSERVED telemetry records; coverage is UNKNOWN unless the source supplies deterministic continuity evidence.",
+        "status": "ACTIVE",
+        "evidenceRefs": [
+          "09063153214388020f1f9460c16565c27a338c163828ce42502720cdd908edec",
+          "8483882155a9d4a0c56f23dec70a268ee89c572a01702328defa6b05188adcf2",
+          "79fc757636635af23f97954a1eed2947dec7f2b00516b5dfb5d5e509f333e435",
+          "c2e9487df68fb03c9b4ad281b2fcb9a3f8d37f449f08c352ef34bb8be8ce0b31",
+          "998508a652d81d4161f386fc6d1b3c2be59b11bddfbc4e046d134ab2e1b3abb8",
+          "d66c3e0b6df7f9f496bd53336a14d2da4eb73849189387e9585f3e170848038c",
+          "ba21e15c55fb1a1137ba4b8f139356353a82bb3e40bc8c2beeb2a209b13f423b",
+          "e2cb4d33693967b2c56fb17e0f3a0256cfa95a46fac8408aa20300cae420aefd",
+          "1e3dd39cc75701c3b83e8992a4d2831ad82b63aa4dea1894e907bad8f9b4bd12",
+          "36952324fed27eddfd216c86b1a29e5826733a352f327a1e2cd8f6221be105c1",
+          "4d5adbd94df3a49a15921a9c9f8bfba8e778fe9ecae51c3afb357456f2a07c6a",
+          "d01a538633facd0afea3237c682c0a18ff8a83a2a54f5c3901a81ac5cb33a72a",
+          "66879b0d71abc68ac1a2c7863f063138c773afa9784a30017e08f69dc7de14d6",
+          "83309709eac21c0009391292b63476ac007c1be6ce09d67a90c66675c7220d9a",
+          "8a61ae2de4ba59c0abc63e34d8a1f4d00df118629f34ba1a815588803e2e0600",
+          "56bf227d271d34e4f78103a968704769f50f43304fd6cd6f6cb74b82e1fb5ce1",
+          "1dc449004a644d2d53179caa74d65d70c0dd6c8a7add400021bd9c5940635bd5",
+          "f593200c0e0a9a6db1768b455ab4066b5c67abb5a368ed741803934789cbefd6",
+          "f6bee669cc78ccd2b27e8645d47b4e627b8f69679c90d7c77165000ede583281",
+          "c94c813dd8ba24d43a1d7cc5840a7216d0168b2c42ab4889a99b9f8870b131e7"
+        ],
+        "adapterHealth": {
+          "adapterId": "otlp-http@otlp-receiver-1.0.0",
+          "collectorStatus": "CONFIGURED",
+          "backpressure": "UNAVAILABLE",
+          "samplingRateActual": "UNAVAILABLE",
+          "samplingRateConfigured": "UNAVAILABLE",
+          "lastEventAt": "2026-10-05T06:57:54.090Z",
+          "throughputPerMinute": 199
+        }
+      },
+      {
+        "sourceRef": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+        "authority": "EXTERNAL_IMPORTED_RECORD",
+        "coverage": "Bundle measurement facts are producer-measured reconciliation output; HAIEC re-evaluates them against the frozen governing policy. Ingested bundles never self-prove completeness.",
+        "status": "CONFIGURED_INACTIVE",
+        "evidenceRefs": [],
+        "adapterHealth": {
+          "adapterId": "structured-event-adapter@1.0.0",
+          "collectorStatus": "CONFIGURED",
+          "backpressure": "UNAVAILABLE",
+          "samplingRateActual": "UNAVAILABLE",
+          "samplingRateConfigured": "UNAVAILABLE",
+          "lastEventAt": null,
+          "throughputPerMinute": "UNAVAILABLE"
+        }
+      },
+      {
+        "sourceRef": "e8235695-dc0e-4ebe-8967-415d737a4c29",
+        "authority": "EXTERNAL_IMPORTED_RECORD",
+        "coverage": "Bundle measurement facts are producer-measured reconciliation output; HAIEC re-evaluates them against the frozen governing policy. Ingested bundles never self-prove completeness.",
+        "status": "CONFIGURED_INACTIVE",
+        "evidenceRefs": [],
+        "adapterHealth": {
+          "adapterId": "structured-event-adapter@1.0.0",
+          "collectorStatus": "CONFIGURED",
+          "backpressure": "UNAVAILABLE",
+          "samplingRateActual": "UNAVAILABLE",
+          "samplingRateConfigured": "UNAVAILABLE",
+          "lastEventAt": null,
+          "throughputPerMinute": "UNAVAILABLE"
+        }
+      },
+      {
+        "sourceRef": "a01159b0-80f0-41c9-9e91-0d15131be59c",
+        "authority": "APPLICATION_TELEMETRY",
+        "coverage": "OTLP signals are ingested as OBSERVED telemetry records; coverage is UNKNOWN unless the source supplies deterministic continuity evidence.",
+        "status": "CONFIGURED_INACTIVE",
+        "evidenceRefs": [],
+        "adapterHealth": {
+          "adapterId": "otlp-http@otlp-receiver-1.0.0",
+          "collectorStatus": "CONFIGURED",
+          "backpressure": "UNAVAILABLE",
+          "samplingRateActual": "UNAVAILABLE",
+          "samplingRateConfigured": "UNAVAILABLE",
+          "lastEventAt": null,
+          "throughputPerMinute": "UNAVAILABLE"
+        }
+      }
+    ],
+    "envelopes": [],
+    "telemetryEvents": [
+      {
+        "eventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:bbbbbbbbbbbbbbbb",
+        "surfaceId": "tmf-detection-canary",
+        "eventType": "otlp_trace",
+        "occurredAt": "2026-10-05T10:07:12.383Z",
+        "evidenceRefs": [
+          "80b5764ca43d68dbde23b320856a0b07dc04320ff0ede0c253e657c67a17bf6d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:dc3909c1c18f9dc1",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "09063153214388020f1f9460c16565c27a338c163828ce42502720cdd908edec"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:77aaf405099353d9",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "8483882155a9d4a0c56f23dec70a268ee89c572a01702328defa6b05188adcf2"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:626ab3b4824b5a3e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "79fc757636635af23f97954a1eed2947dec7f2b00516b5dfb5d5e509f333e435"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a12ffcb9129dd561",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "c2e9487df68fb03c9b4ad281b2fcb9a3f8d37f449f08c352ef34bb8be8ce0b31"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e23b0dbc02566bd0",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "998508a652d81d4161f386fc6d1b3c2be59b11bddfbc4e046d134ab2e1b3abb8"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2eebab51a346c135",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "d66c3e0b6df7f9f496bd53336a14d2da4eb73849189387e9585f3e170848038c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:6635ab017e6446a4",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "ba21e15c55fb1a1137ba4b8f139356353a82bb3e40bc8c2beeb2a209b13f423b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:3f7c7c5840f07671",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "e2cb4d33693967b2c56fb17e0f3a0256cfa95a46fac8408aa20300cae420aefd"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:5bb438a74c498aa4",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "1e3dd39cc75701c3b83e8992a4d2831ad82b63aa4dea1894e907bad8f9b4bd12"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:8f694ab39f76dbd3",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "36952324fed27eddfd216c86b1a29e5826733a352f327a1e2cd8f6221be105c1"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:fb1958398d853d12",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "4d5adbd94df3a49a15921a9c9f8bfba8e778fe9ecae51c3afb357456f2a07c6a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:39fdf9bf95b184dd",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "d01a538633facd0afea3237c682c0a18ff8a83a2a54f5c3901a81ac5cb33a72a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a86bf312534b069d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "66879b0d71abc68ac1a2c7863f063138c773afa9784a30017e08f69dc7de14d6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4ed69a1b567171f2",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "83309709eac21c0009391292b63476ac007c1be6ce09d67a90c66675c7220d9a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e3d4608ff99ba8db",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "8a61ae2de4ba59c0abc63e34d8a1f4d00df118629f34ba1a815588803e2e0600"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:6ad30393792f104e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "56bf227d271d34e4f78103a968704769f50f43304fd6cd6f6cb74b82e1fb5ce1"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a527f9687898b55e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "1dc449004a644d2d53179caa74d65d70c0dd6c8a7add400021bd9c5940635bd5"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:11621ffd896b325e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "f593200c0e0a9a6db1768b455ab4066b5c67abb5a368ed741803934789cbefd6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f0a3d32e1a344289",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "f6bee669cc78ccd2b27e8645d47b4e627b8f69679c90d7c77165000ede583281"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:379615022bdd3ce7",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "c94c813dd8ba24d43a1d7cc5840a7216d0168b2c42ab4889a99b9f8870b131e7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:707dd36018290b7d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "6ca807ff5ca2cf1889f4b3931079af81a060069f26f7ff5f8f46ea3f8fcd5410"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:813f65a215fb25a6",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "6a989f6f22be7872d1b9987da1fadb81ed9005005aa3ba897797f5cab465421d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:814e82aa7527a1b6",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "21d02ffbe57afb8b2c71186e32ed312c6284f55c694e12b0f4e5af6e8a2bf530"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e0cb98ce1e32ff08",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "4fccb38818c771c8d7470b5e0b83660f376cde3072b05dc1c124ee0c333f9625"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:8ca3338a0486924a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "2823b8f6e9a7e012cbc54dd37540fbbc545bf9550f885a3744e53a6bd22a8348"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:58288613d4b0f8cf",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "4d6546a5754ea9610ceed14ddf8cb37973fb36a4f3dfbe2a76ad8084e423ecc2"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:fab22e6acad3701d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "d1d3bf3bcaa24e80664b640dd2c87f3c2237fc34d5f59787e4f9e42235c6b26e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f717194dafb0518a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "e067002d6e5c72d90ae5e6427279e10d3634bf378dbe08a8a6b2ae25779aaab7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:b461ba818648f2f3",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "65685b851897ce3a2f3f36a4720eb2905029e463169c3d9f6a42198a6b55a6e0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a2e900de8b85d8ce",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "7c3e345797a2da4d6711ef75ad467a72c66fc2aae8e0230bfbb8493a69743c4a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a57584e80ed95c0e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "4a183751d2b9e9e7acb42f92a237b1485a30a8b3d6f5483be69967b7e918f942"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:7545b31d548d3cb7",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "8808c2a77a1e9885f5dd12e42d09296d1a6eeb505d9957ebde6a84bce3252b5c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:02dc24f84e6f0a42",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "003627ce8dfd209428e337e6e0767ac0c3bbaa11d1da64b91604c6abf83fd3f7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:ec4c5a0ab76deeff",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "7a7aafbdf5ca0b0f123df0a737f917dc7b141f6c267b3b1bd4615d760ae8803a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:5f14b82b89ca151f",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "88371c4ae6326819bb0f7a89aff7b89b85cace01858e11d19aebf0d78e05d682"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:80e54a2d557e01f5",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "0d011e33b2de8f555f3dcc8680b179db65b5a238d4414b30ec44e5dea665ae3e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:de6455699a43b196",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "3b53062b83371b7c5bb6518e2e83c6b81f57c66ee66aaa99819171bd4dbb9793"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:b6f7cde118693ce2",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "310d6f0c74a21add9a60d39c599bde21ffdbc53180dc95681e288ec194baeb3a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:1081a99898cfcc37",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "f77afa6f638bdddaaf7ef1d2a7cb8328b892433e4feebe7882ffdbeec9c4f410"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:aebe5b9d853c6fba",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "ecac0653bc86fe42103dc11046f5f19a4b4f41e689c56ef9c5aadefbb0d3c4b7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:9f4a5d501c70dc7d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "cac9451dc5fe8ba006e5aa16d75d24a1a3a7c32af608918ae88a39a230a6f585"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:09863d1745c63019",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "7881d0db395b773b542e11ae5d3a0f1120a30c09894c586656ece4bbdfe31583"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:c0e05ba52ddd74aa",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "d03debbe94146ae33243b82ce926c83ef59e06e14ceb2b9fed337eaa333a8972"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:c86a104d5d3afd28",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "56559af8109ea4963e968130f970715612c39f13ef8df749483eca53b3dc340c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bd12eda80593a47c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "10ec94567a3a1b26d2fad05389497c0f6d891197dff6de90b7f6b5f8053a7a51"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:c3961e4fb9ba9a03",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "94d25d320d5c30bd12c16f6107eb9536db0fefd8c2414f4304098ed3663eb0a0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:94f0d006f5780421",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "2e6235adb25101464705a075dad547b4b585f136db64be37954bdaf71edb56f7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:90d7c33d7da3b5e0",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "3d1e707e409a34d8a40d971edf44c6b73c172111b3cfdfc892dd46cc780a466a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4cf1aad4fff71e8c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "25d9ab643a6d1040175512febc6c8090ad7388931798169805417d7a8106f6a3"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:b15e7024d2b4ab9d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "519ef44ea3eb75b941c901f5b255f27855f8b0dfa9a222e7b974e66b28006813"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:12e035a33fbcf5df",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "8ed3376e99dbd1731ad607da52e961c39b628031f8d92832bd2fcaa00a6a3b94"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4c373a121be5a45b",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "71f4f4946d36acc4e73a8048dbcde62ad3785b3d85446292d111bd3060262177"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:8a6e40d190f7c3ba",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "e88ee4693014c80aac58ae9d12872f2925e983b48054c939e4e4cd79e2e38d95"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:cd1bac21033b7f40",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "6ca719b3021b82dceac35ad7091740e87de0109cd68774a8d43e93e151064af5"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:ea62ade4688a43a8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "93dd2ec1e5f4fc3e2832cd1e728b4c02c6ae5bbfdb19c16cb2d36d95a0e228ec"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4fb8f1509351f97d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "e3b02b01afb8e4b6abdb6f4e0df9f55e689832564c65a3bc2a15a302f80aed05"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:3c0c4727f91e907f",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "f633c1eebc6b7c33ff48e05e5c70839b5a24bb88f41a55ce03629375cbe80aa5"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:7b8282c5a3204b70",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:54.090Z",
+        "evidenceRefs": [
+          "09ae62286d414a617f718968e00e591c7002564949113d64ff86b70e6fbaeda1"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4f187bfd135907d2",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "23605a25f528a411817ba71767e8dfcfb5c345d12131c29cdee85f60eca2d791"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:54369fd6ef176a20",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "dc0b04f94edbdd2d4d0be907aba49383b37be46407ff04edd6e3e0bc17a5535a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:909381984a753fa6",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "9aae754edf8a3bd97fec9cc8598212786057d13f5d1f397c89cc52ecd831ffb8"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:61bd8f2cba8715fe",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "429c07cc13ffd32252cb3aad125391fcd581ea420f3617198dd2a18c543567ab"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d80af84aae9f97c1",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "59fde8d307e9308385b88146a212008a328d3b03147f95ea57d011c8dc2657b4"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:94686e0397094796",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "4ba46a41afcaaf6e5200b1c189f046d8af0645c802c43404359197d7e29c000e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:607c947fc5d539fd",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "56be240e8a9a06530f4520cadfb1914079202cc5b842128d5e06b43c58bc7fae"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:99326ad4772707c6",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "3f46a833530734d9544fe4ac001108f7a853178a21e39b386c7fbcc3f71d6c23"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:94ff7e5f6f1cfc59",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "7436613df9c924fd7b59afab1e6cf4a1d516f8c15e67682a807053fa9b36240f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:c520c6173726c2f1",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "8d6ff5964c4e55f033df5ef32d080a47e9d9f40598e2645b6678b33b55a4f8f1"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:20bb0433651d3790",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "15468200d62971a73c82e6d30ba3c2bb9f09283a7ca0f2032074bb499ba02fa9"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:1c21de5f2e492272",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "2a2531f9a08f5458085e2c598d14298ba54b59224a3799d29890d20d1acd13ac"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:865721ca70bab1bc",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "969ca13ea3f65128aace306391aa0cf57e53b5202e268866b60dc6f8e7aef6c5"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:51a1d93cb3982241",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "706fb6781b746dc1f558735f202cabd6256079c2fe8c816d241add47664efd9c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:337cd92f87a84eff",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "daa9b64f80af2c3b3a78326f835db5d334cb8fdf4ad50299510dadcbb1e7c0cc"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:ab36dd9c7c08c141",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "0af35dbd084f67a6b3f9f83ba9980bfea3d939b2bdf57f9427c13ca084001703"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:8634646a48f18581",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "5a3f0c756976e7ed84c6f0a8539a96413b01c76af297171433ba43852ccad633"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:0abb863f8071f9d1",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "94c79d5456279e3ded286606627cb287388e99f4163eafc10fde25a5aea8ce95"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d1333baa311aabf8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "90538c82fd53d8e50aeced79ca2b4321d5234f2858f9cf258d990acf6872b8a0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:b071060c0ef17a7b",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "1279dbeb80ed97ba866e490ce81f9c0c3382d01916f83e15fb3e5bf279c5ffda"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d94413520f1d1066",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "40bf156cb21acd5994eea2da23d04a082f2174ec32e6702f216ae8da275a0e1a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2d834a7e77679565",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "40a774020b72e4813d534656cdd1f853e42a21427b892f7f22cc0b357f24105b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d5fddb232b1052ad",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "082a1fe43bdab23aec3ca1682b8194704289ca9b3ed76cf0c5c2a4895f4f04ef"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:b5f933738b43fc46",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "eb7810d6d8fe6f44e521eabfc691b3e45023bfba572fbeb96ce863b49138b08b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:c8aa6e380bce1283",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "0c86c95b7865cfda7b14cb9dbbcec0e351f78e27602bf93ae3ca5555506e02d6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:391917ec3b009786",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "5ae4869f5991491f1629bf145e37804572b2adc479d1c18ed69e8013c520e534"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:6b46538de0f996ef",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "e0c626c8f614d6c296056e765878c4da530648ded2bd97df89396e5013c4b41c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:6254d0b571799451",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "a51eecd5ddb40a72df29d2ec9ab63bbd9d92d844ee5407922aad92e20935a191"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:8e47dda9089159aa",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "a6991457acc9205abca795ed6b2beada6f19c37d265b74773ee4ba9c4fba46f6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e503f281fe1c4be7",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "95cfe8b18b2e34a128e4bd0dee677b315e16b858136a13ed1d7940abc4b9b41c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bba38d2a356c5688",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "e1a39e0bfa56d92a5fb2293ab391a283d8b3d590c2d00b85d6dda578e1606b16"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bb0a35cb66f0e31b",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "4833716c9ad00e546b38b745176c885ac155671bde3b9be6bb5dcac51d63aba0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:44c49ab38dfc46c3",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "fa8aef4791851b22770fc3b95cf515d7dea4d4eff1aa89e6f24cc0d3872b80b0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:68535ad3b83d7733",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "2b3a8a4795fd510cb6d9904edb2e5b914f8a4b74a82d845947a7f08265cff83f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:465fdac0a260f4e9",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "b3330abd7ada2e05b8f00c228454a27dc4e040403bf3c5f5f949943849c6605c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:52e95462ab363030",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "eb830f05b9bccc07cb40128768bb794fc27d9c2155b14284f2bc6676c2a4513f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:355d34ad6206c22c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "36b31f9891d9047da0bf9f31452a8ccaf19e65fa5f1cdf95189fe52b2a2a59be"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:cc1ceaf035bfe411",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "f7bd830f7f6418d736329ec0a6643533587ba1ac116b0794b3985919ec2d4b21"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:672aa9035451d39c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "65f87cfa216c2293196723a559018dbef75f76f32d6e6a2b53213174bf3cd64c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f3e56a1e4f737e72",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "956553c43d083260808b870633c07011593066283b6671472dba4a6ca0b9479b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:39f40fcd8bbf7176",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "c8a8708714709943c5e32659b1251ed1d6ac9ada2d207467dc2bad24dd22e244"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:09ba7b3def0a133a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "768a97db16fc2cf5bea6ea500515f68a8f403247693f64192992fe06a326ed9b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f6e335274a10264a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "668b92c33477027696f9118d6c06aa4bfe71b54730a46b395c795c68e4afc015"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2b8ae1d750d228ce",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "b855d2105facff5a7f2227dd2d367c8a7a0f2bf4c4ea6c4992462fe39bee40a6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bde470a4af13261f",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "8c8e5f9718e8d712b8206d690234a1acc81303518221fe1778c56fa99b701960"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:919fdec872b557f8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "ac8426e7ae5e60a809739d01f5af771419f1c1fad9444a575dcf197229308681"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:0b742ea41d99b419",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "82f1d63c7d3e329d05b5473b05f92b7384dc3b87bf1a88527c6f58528d84d6f5"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:05c2622f46434474",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "9128119226598f60e9dc7e3afa7c6e58642241f35ff6e6685df4333b84790b3c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:dc54660a227211c3",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "5c95e4260cb28ba446d52d2cfaef8807bc4a5f30ec394b41d575104b0ac00ae5"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:504e4ce0281aa012",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "e1c3225837e7c0cae2b37587c77f963573367f98e014f2a09e1983945a472efe"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:3b3908b6dff60b3a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "c3265c86d79ad8c8716ecbc92c1d9e32852ce1e29a9aa718c791c4ba07a59601"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:382262f0f6f53d4c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "d88bdb6bd9f3667f5220ceed5e7309ccb3d38914fd16394d11c901295113bd0f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:983a920955a6b3ec",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "18155983142a73547036600b3d845ffee5cae4b2f2744c34e8879326c724a7d7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:26ff491b311c0ec7",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "ea56030fde79178f6e545f277599a7fd0da483ab54aab6388c0c76ccbbe157a8"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2361f2db8bee2d79",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "c2df1b54bfee15f9b55b56dcd16a362805177183958ab695a06000070c995c97"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:68574e8733367b09",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "992ae4f8b4537f1f7d1965a3c5c9f2dce6451fd36ba528bb359f492fce88bc9f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e2648b0679bc3471",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "047d6196c332aeb8507c7f916f86c9ee521874e3b3e2c801269db1f908904aa9"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:7b812ef36d7f1469",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "7210d9e6b18c23a28b4ae464583bf32fd9ff384e2bc27766c8988ea1b642d53c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:542475170f62ea5c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "58e881ce349ac76b8488b250c363b76c112d63fc5a8aa38749d723785a0e7d01"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:97320ccfceffae19",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:53.652Z",
+        "evidenceRefs": [
+          "2453678fcf766ea7822b42d7ccee0ca7692fe19cf626ccb5094e928f36264d12"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2437be19d4550bf7",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "190f83941aeeb00c2c0eb7c40365f71035fe38221b44e01e09e77f54af125974"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:69dea1a2f56d1f26",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "278b585800ba15f7aab60bcacfebf11a542797714d333b19050f70fb0e45b92f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:163b61d680a674a2",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "c6ecd7e642f1729f6e80b31c722fa44a817d13b75b0d94c502e55071cec307d6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2ea37e7210599dd2",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "81514191468e6f9b862f25c736679db5d47f6009f3c1e9eb429ee311536f1c4a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:1ccc3f0f0e02cf12",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "90c9055fe418388a00c2ab02a9429bf8de0cab98e61d5cc7e98fb98410282941"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f980aebd244ae77f",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "a2f011f0d1d785c467f1231f228ebda01ce2a23cb9a6ba9b6007def4106e35a9"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:df081467e805fc6d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "fff422266374401be9bef6f1b44c96ded76dfd6cdd9b1c9f3d97f60c5e75b7a1"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:5963d6821eadd36d",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "bdba6b5a0593266cba17f11544c55ee47ca178831b3fc979b80215457e13bfa7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:9e5f62741950db6c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "6b19c1f47087d6ea70f8d3122ba79caa0f0a68195c3dfe4e8596acf4b29cbcd6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:7004bee24a377846",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "6a42373f2b42a8951674feec9e68da1b1706719f24c9665e82bf7de66b659999"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:7d9321c3867e371a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "687781a9eda65f133d53fcda51305f914cc1a13d57b39becea95a1a111481276"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:3c97881c08b49296",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "202be7e235049263dea905ddfa50925c23929402012a6b2c89f9d850f35515e5"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:5016c8b187864a9f",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "7dcee38fbb2b89aefb7e871138552fbec6d8f5e9685703e7a76d4c69162c6c86"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:cd1f9eddc639da4b",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "5982e7a776f830ba37f5f81117bc58cbb5b7cd8219cf6ba582c7f1a10e397521"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:8e2540676a89e4eb",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "221eace9f340b50c45d2b1328dd452ef164bff6cf75a30a569fd0e0cfa9ba8ba"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:46efb43ae7abf8f0",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "67a5d2289f269b52139a35503d01054affabdec48230514dc761191d224bc14c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:799c9c380aa51017",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "28f8f8df68743e3a1eeb2d8c91c1699010fa266bdf3996faf22f53bf3e32148b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:06c7673faa773af4",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "09805f428ff82ad4e762944a7d3450eb613da59a4c0f39a7497df9f3baf3ce4e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:da419a865256eac8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "dc6d83b84e84b9c1f6d6486e3c6735679c0b49a98590f45869f86aa08f4b7e9a"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:ca2f16e3471e88ca",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "429c2640bad624f13d730491561c2bafdde9cc74aaaf22a52d72dd6d8232b3d4"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:57fa2d0be9206abf",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "40fdeb8823b191ea447c064b378157d5bfe917aba310c599a2ee0029f9065161"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:fffe07694774ec20",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "d79958ca73b4f3003533ab6c2eff217eca134b3c949e5e83baadce625558c6f0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d518c21d8711a3f8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "ef77b88fbdbfda55b6e0170d51d041eaf38d4f8fa0cff03d78c4ebf430affa55"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:5e4c15a365648f69",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "c1fa5555e9e1e752c0f5317b11a6d3ba868d0d0e8f950b6fd3a5787a49d3ba6f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:41df14ec933a07d3",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "8a1dc829e4566857401cb7be0553c4f83664748e6b66923a786503f133ecbf1e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:7e100194527a51df",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "96fc92c1bb5fa09d250523aab81fc18e0a631524f0069f475b04770704ea965c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bc551a5d550f9a23",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "b0bbfb10a85e2d934227e4a82bc8061c340ece9eca54ef05495e227d3b68ebca"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:608a58ef9cd9e41c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "fea1d7f8b89f03894360810b9107b6d5fbf11e3321c54115e28cb0d38349c26b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:dea8f8d04cf3f4ed",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "90cbd2615af6c6917ea5d5722b81dbd9811a86b50c869ac1b5be39dc7faf6c08"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:3e4769a59a09d4e0",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "481012799b7b0b8a9ff55fb1fde51b4238bc873940dd424b23700a8ae0b8b69d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f59c105badfc7879",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "54ec24f89b4b56414478792c691995fd5b430d99a2ceef12f9d43a6b4dc3569f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:04d9b0e74eb246c8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "421dd8c79dfceb969db72b913d1a1fbc95c01d814350400c0afe0d90a7f2872b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e667d09bb238003f",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "085feda20a52550f10c2490cb7ee892cc40c436b6aae5692abd223e45bbe75df"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:96267b7392fde40b",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "c37249c2f399ebbb9c89b5151e656c2b5ea39dc4c8a8bbfd0b881ee373ea46de"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bb80a5ca1f4948a7",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "1e5c08022a467192f93c20de7947c8a91c2c7b0dada204d8d23b50dd26ee7a0b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:81e92ffe025996af",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "5fd841a2504cbc6f060c5966e810598ed91c3d183befc9aa27020786cf7ec300"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2b2594880e174304",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "b111e66435eeadda6ca0c205a23d276b15f7391874f8be29be136548410c53c7"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:cbb08f00813da168",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "5d6b538440ab5f2dc8757719add34c6ec20137af1ead5e33c4cabf1978bf5712"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d13bfc50673eba7e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "47b93ad9ab3444b3ce096e346de81577eb13cbcced6078e9689102af804347a4"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:59cc26c5e5a6549a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "c877d8f85383672e98a90efe52bc688e1290ba41cab5cd8010c1b13c94b7204d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:14b43cf20cdcd4a7",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "77ef2e2336a2d0fba757be3328dd53356ca71a5338c6c07850119c28df107328"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e88578d5c68bc473",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "bce4f8070c88e254a393d216e137a8d56ce04446dc446f8daf786c3da3df8433"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:932a55eb95a132f2",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "9870b6376781fbcb7474b3894d3f7bb7a35c0af3bc4c0c5106a819210c3e49da"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:b79e90465124cba5",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "cabf2300cb7b36bdaf5afc228f5709ae7bfbb60afdbdac1a2b271d9d5738fd05"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:967ebd35e93fd7ce",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "978567f36ac97bfb6fd42f95e0fb28f632b3c1b79e2e4982364704225e74cf3d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a4a98bebb86b319b",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "9edf2659e27b7214a5e05796fcb95c6a346c5de7951f1c29609abbebecdead15"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:1d719d760373843a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "456eb739f801a171412ab42017cda5cd3cf9839fccd362dd8dbd29ee9253385f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e449b0817e73f107",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "757f937f64ef2bdbcc0a0813bc76ab6f94d6cf2cfeeffb27157c2b06586d9dea"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:e11802eba883d5c1",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "24bb70bff48d15b74fae407d3dd54af29c4db14ce4135d9c2d9b33b156de165d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:cef2bc7aec941e54",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "2250c289a2d9645c88eb848d32d1f61f2d40a6ad126a10bc8300f74b3bd07935"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f45e111ea3f0d977",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "8c12befd3dac9199ffa0a23d1ba92929804cc444e533052fe451c6834ce44b6e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f9535f2e043b98c3",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "fed1ae87b86ad983ccc0e0b11be913caa1e1fc7e8e31e507a4833b1f549f1d90"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:c7930b0e54f47343",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "d74d17f41b18ca1d332eff2ab82b3a09a37438658211e44605df6013629c3236"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d35eb2612910b039",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "80b58a6b3b4a2b9cb26e14d7cb4d6300a46b8b8ead84a320817b445675872cf0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:f49d5e2e97359109",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "a87ca70e5a82a1ad933647844d3258b993347035e93f46a1136df326d422ce15"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a3dbcf567fc8a68c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "3ec2e93cf6121ce0dc306b6f17335067991f1fe011394759b8854cb0c60d404d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:7a218fef095e2d78",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "15f9e664773375e23beaab2053fa1af0b19edcfbc72fd841205afc358dc4d2f4"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:5f1cd4033131d253",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:18.250Z",
+        "evidenceRefs": [
+          "6785cda7bac8860cb89d6a6543b265e85a7778f3b2e64a6f69cf2294f9a49864"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4309b470ded2098e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "8d4086e62ee47fc436f16e4e63fe061553e5cdb54eec1e0806118a01bd3a678c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:5e633e3cfb710de0",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "7c9ed91ef6d67d5ae6c66114895024797fc8444e4082fcb4669539b647efaead"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a4e4e48b1e25373c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "e614a65e7c77edf494470e0f945cf9571a22220c6e0c639b06a6ac211300e51e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4478d0ae57089014",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "db0c265eed8093dca25c868e70f3aa0864f2b7a224123d56406c13db81880539"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:6175f557764ab9b8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "72d3f8c297c5410c64ae0bce64f94a3face44265813a0d465a4b39223140ca2d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a4c6e3366969ec7e",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "819819e6197a551a60052942434779da7dd1a93970913f02bf3b0dd4bbe32702"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2b1fd810861ac272",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "32e1e4de1e91ad85becf098587d8e42f4779c942c5ca2cc5f2be23f8c6c9bbff"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:924255ba28a1b208",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "5c752beb462ee1d46cab51a7f418d2aa39806776ac8a4d4d1d7aeff52f7b5f40"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:0c76cbab283ee5c6",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "b285bc71372d8f44a6199f27e887826da4c0027392f63fd086c143980851ef3c"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:b1b7b4a02d8fe2c8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "b315d850ab1f164710dda4fa34f0be698978683c3154cabc2123f44c59b87770"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:83d192c5a2a80a17",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "696323df9c4c17b26c37cc05a6fed214f5b92f1e8354d4e7027a7faa8b978de8"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:4ad4ba2e76c5cca8",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "13bb58ba6089ece42b65b1fdeb9e924c1cb786de63bf42f76fce03dc7a544ec6"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:ad15ba10a9374c3a",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "a9b2155faa170099f04f98d7eee6e72a4fb956a639560a0293c917550ebdb4fa"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:0e29b4db6ef8f256",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "b3c01a3b22230048666cabbc7042b622617d26597806146bac8bd4f3d72e529d"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2bc13a17844fb3a0",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "d0b628db94c555a229932ebb8235d21e3d9e32e7df65bb03a7fff07bd0dfe0da"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bc5013db5b071979",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "84e113e3fdea324759417925f98d4ef3b5e1f5f735c6792fd04f5928d8e7b99e"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:d3f24eecd37075d2",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "0b007ed54eea89c70c7ead73314c6f8765da84ffb1231f6ee3e054dca1f0dd4f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2d0a47f2f296da57",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "b335747c627538cc4d6ea990dae09173bd9b29051b61395a66a0ba800baf3217"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:bc4adcf5c260a309",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "0323c67db9397361a63f486ec435825b40a747da443f0af818d54ebfc824c08f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:a123719ace82d9dd",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "bb40363214378115051dca709fe09c67717aef0adc035959696add1cc0fbd5a0"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:ee4e47663de2c00c",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "d854eae19e3f696238dae7325640fd26f01ef6a020c2ff84a012f1cb32666f8b"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2c398420a1d8cc36",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "5d465f4cec6cee66d4051c33d7cc764b9f6f584fcaddc02c19ed307f1eb7503f"
+        ]
+      },
+      {
+        "eventId": "trace-unscoped:2d77d8957ef57402",
+        "surfaceId": "haiec-tmf-live-forwarder",
+        "eventType": "log.body",
+        "occurredAt": "2026-10-05T06:57:14.719Z",
+        "evidenceRefs": [
+          "8af75112d7a460c7aeafc354e5eff18b2e8b485557474a82fc367d2676078275"
+        ]
+      }
+    ],
+    "quarantineEvents": [],
+    "joernExtractions": [],
+    "detectionFindings": [
+      {
+        "asOf": "2026-10-05T10:07:12.383Z",
+        "severity": "HIGH",
+        "tenantId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+        "findingId": "arf-5da00f32d5a27a06be1f48446f608a44",
+        "surfaceId": "tmf-detection-canary",
+        "provenance": {
+          "sourceRef": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:bbbbbbbbbbbbbbbb",
+          "synthetic": false,
+          "provenanceOrigin": "EVENT_PROVIDED"
+        },
+        "registryId": "AR-26",
+        "limitations": [
+          "UNDECLARED_TOOL != MALICIOUS; SCHEMA_CHANGE != ATTACK",
+          "PATTERN_MATCHED != INTENT_ESTABLISHED",
+          "NOT_AN_ASSURANCE_DISPOSITION"
+        ],
+        "evidenceRefs": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:bbbbbbbbbbbbbbbb"
+        ],
+        "canonicalFact": "Tool \"tmf_canary_undeclared_probe\" was invoked but is not in the declared tool registry",
+        "registerState": "OPEN",
+        "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+        "detectionFamily": "MCP_TOOL",
+        "detectionRuleId": "MCP-001",
+        "registryVersion": "ar-registry-1.0.0",
+        "baselineStateRef": null,
+        "frameworkMappings": {
+          "stix": {
+            "objectType": "Indicator"
+          },
+          "atlas": {
+            "tacticId": "AML.T0056",
+            "techniqueIds": [
+              "AML.T0056",
+              "AML.T0057",
+              "AML.T0060"
+            ]
+          },
+          "nistRmf": {
+            "functions": [
+              "MAP",
+              "MANAGE"
+            ],
+            "subcategoryIds": []
+          },
+          "owaspAsi": {
+            "ids": [
+              "ASI02",
+              "ASI04"
+            ]
+          }
+        },
+        "owaspReferenceRef": "ASI02",
+        "thresholdPolicyRef": null,
+        "owaspReferenceVersion": "asi-2025",
+        "detectionResponsibility": "RUNTIME_CORRELATION",
+        "thresholdComparisonState": "NOT_APPLICABLE"
+      }
+    ],
+    "registerOnlyDetections": [
+      {
+        "ruleId": "CERT-001",
+        "family": "CERT",
+        "reason": "No certificate telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CERT-002",
+        "family": "CERT",
+        "reason": "No certificate telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CERT-003",
+        "family": "CERT",
+        "reason": "No certificate telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CERT-004",
+        "family": "CERT",
+        "reason": "No certificate telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CERT-005",
+        "family": "CERT",
+        "reason": "No certificate telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "TIME-001",
+        "family": "TIME",
+        "reason": "No time-source telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "TIME-002",
+        "family": "TIME",
+        "reason": "No time-source telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "TIME-003",
+        "family": "TIME",
+        "reason": "No time-source telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "TIME-004",
+        "family": "TIME",
+        "reason": "No time-source telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "TIME-005",
+        "family": "TIME",
+        "reason": "No time-source telemetry producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "AI-001",
+        "family": "AI_AGENT",
+        "reason": "This exact check has no producer yet; the adjacent agent-family producers (AR-22..AR-29) cover related cases \u2014 full producer planned post-event."
+      },
+      {
+        "ruleId": "AI-006",
+        "family": "AI_AGENT",
+        "reason": "This exact check has no producer yet; the adjacent agent-family producers (AR-22..AR-29) cover related cases \u2014 full producer planned post-event."
+      },
+      {
+        "ruleId": "AI-009",
+        "family": "AI_AGENT",
+        "reason": "This exact check has no producer yet; the adjacent agent-family producers (AR-22..AR-29) cover related cases \u2014 full producer planned post-event."
+      },
+      {
+        "ruleId": "AI-010",
+        "family": "AI_AGENT",
+        "reason": "This exact check has no producer yet; the adjacent agent-family producers (AR-22..AR-29) cover related cases \u2014 full producer planned post-event."
+      },
+      {
+        "ruleId": "CICD-001",
+        "family": "CICD",
+        "reason": "No pipeline/deploy-record producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CICD-002",
+        "family": "CICD",
+        "reason": "No pipeline/deploy-record producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CICD-003",
+        "family": "CICD",
+        "reason": "No pipeline/deploy-record producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CICD-004",
+        "family": "CICD",
+        "reason": "No pipeline/deploy-record producer exists in the detection batch \u2014 producer planned post-event."
+      },
+      {
+        "ruleId": "CICD-005",
+        "family": "CICD",
+        "reason": "No pipeline/deploy-record producer exists in the detection batch \u2014 producer planned post-event."
+      }
+    ]
+  },
+  "telemetryStatus": "CONFIGURED_ACTIVE",
+  "telemetryEvents": [
+    {
+      "eventId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:bbbbbbbbbbbbbbbb",
+      "surfaceId": "tmf-detection-canary",
+      "eventType": "otlp_trace",
+      "occurredAt": "2026-10-05T10:07:12.383Z",
+      "evidenceRefs": [
+        "80b5764ca43d68dbde23b320856a0b07dc04320ff0ede0c253e657c67a17bf6d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:dc3909c1c18f9dc1",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "09063153214388020f1f9460c16565c27a338c163828ce42502720cdd908edec"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:77aaf405099353d9",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "8483882155a9d4a0c56f23dec70a268ee89c572a01702328defa6b05188adcf2"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:626ab3b4824b5a3e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "79fc757636635af23f97954a1eed2947dec7f2b00516b5dfb5d5e509f333e435"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a12ffcb9129dd561",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "c2e9487df68fb03c9b4ad281b2fcb9a3f8d37f449f08c352ef34bb8be8ce0b31"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e23b0dbc02566bd0",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "998508a652d81d4161f386fc6d1b3c2be59b11bddfbc4e046d134ab2e1b3abb8"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2eebab51a346c135",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "d66c3e0b6df7f9f496bd53336a14d2da4eb73849189387e9585f3e170848038c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:6635ab017e6446a4",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "ba21e15c55fb1a1137ba4b8f139356353a82bb3e40bc8c2beeb2a209b13f423b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:3f7c7c5840f07671",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "e2cb4d33693967b2c56fb17e0f3a0256cfa95a46fac8408aa20300cae420aefd"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:5bb438a74c498aa4",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "1e3dd39cc75701c3b83e8992a4d2831ad82b63aa4dea1894e907bad8f9b4bd12"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:8f694ab39f76dbd3",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "36952324fed27eddfd216c86b1a29e5826733a352f327a1e2cd8f6221be105c1"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:fb1958398d853d12",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "4d5adbd94df3a49a15921a9c9f8bfba8e778fe9ecae51c3afb357456f2a07c6a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:39fdf9bf95b184dd",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "d01a538633facd0afea3237c682c0a18ff8a83a2a54f5c3901a81ac5cb33a72a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a86bf312534b069d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "66879b0d71abc68ac1a2c7863f063138c773afa9784a30017e08f69dc7de14d6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4ed69a1b567171f2",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "83309709eac21c0009391292b63476ac007c1be6ce09d67a90c66675c7220d9a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e3d4608ff99ba8db",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "8a61ae2de4ba59c0abc63e34d8a1f4d00df118629f34ba1a815588803e2e0600"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:6ad30393792f104e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "56bf227d271d34e4f78103a968704769f50f43304fd6cd6f6cb74b82e1fb5ce1"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a527f9687898b55e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "1dc449004a644d2d53179caa74d65d70c0dd6c8a7add400021bd9c5940635bd5"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:11621ffd896b325e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "f593200c0e0a9a6db1768b455ab4066b5c67abb5a368ed741803934789cbefd6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f0a3d32e1a344289",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "f6bee669cc78ccd2b27e8645d47b4e627b8f69679c90d7c77165000ede583281"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:379615022bdd3ce7",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "c94c813dd8ba24d43a1d7cc5840a7216d0168b2c42ab4889a99b9f8870b131e7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:707dd36018290b7d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "6ca807ff5ca2cf1889f4b3931079af81a060069f26f7ff5f8f46ea3f8fcd5410"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:813f65a215fb25a6",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "6a989f6f22be7872d1b9987da1fadb81ed9005005aa3ba897797f5cab465421d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:814e82aa7527a1b6",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "21d02ffbe57afb8b2c71186e32ed312c6284f55c694e12b0f4e5af6e8a2bf530"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e0cb98ce1e32ff08",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "4fccb38818c771c8d7470b5e0b83660f376cde3072b05dc1c124ee0c333f9625"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:8ca3338a0486924a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "2823b8f6e9a7e012cbc54dd37540fbbc545bf9550f885a3744e53a6bd22a8348"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:58288613d4b0f8cf",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "4d6546a5754ea9610ceed14ddf8cb37973fb36a4f3dfbe2a76ad8084e423ecc2"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:fab22e6acad3701d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "d1d3bf3bcaa24e80664b640dd2c87f3c2237fc34d5f59787e4f9e42235c6b26e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f717194dafb0518a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "e067002d6e5c72d90ae5e6427279e10d3634bf378dbe08a8a6b2ae25779aaab7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:b461ba818648f2f3",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "65685b851897ce3a2f3f36a4720eb2905029e463169c3d9f6a42198a6b55a6e0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a2e900de8b85d8ce",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "7c3e345797a2da4d6711ef75ad467a72c66fc2aae8e0230bfbb8493a69743c4a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a57584e80ed95c0e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "4a183751d2b9e9e7acb42f92a237b1485a30a8b3d6f5483be69967b7e918f942"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:7545b31d548d3cb7",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "8808c2a77a1e9885f5dd12e42d09296d1a6eeb505d9957ebde6a84bce3252b5c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:02dc24f84e6f0a42",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "003627ce8dfd209428e337e6e0767ac0c3bbaa11d1da64b91604c6abf83fd3f7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:ec4c5a0ab76deeff",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "7a7aafbdf5ca0b0f123df0a737f917dc7b141f6c267b3b1bd4615d760ae8803a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:5f14b82b89ca151f",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "88371c4ae6326819bb0f7a89aff7b89b85cace01858e11d19aebf0d78e05d682"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:80e54a2d557e01f5",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "0d011e33b2de8f555f3dcc8680b179db65b5a238d4414b30ec44e5dea665ae3e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:de6455699a43b196",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "3b53062b83371b7c5bb6518e2e83c6b81f57c66ee66aaa99819171bd4dbb9793"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:b6f7cde118693ce2",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "310d6f0c74a21add9a60d39c599bde21ffdbc53180dc95681e288ec194baeb3a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:1081a99898cfcc37",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "f77afa6f638bdddaaf7ef1d2a7cb8328b892433e4feebe7882ffdbeec9c4f410"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:aebe5b9d853c6fba",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "ecac0653bc86fe42103dc11046f5f19a4b4f41e689c56ef9c5aadefbb0d3c4b7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:9f4a5d501c70dc7d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "cac9451dc5fe8ba006e5aa16d75d24a1a3a7c32af608918ae88a39a230a6f585"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:09863d1745c63019",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "7881d0db395b773b542e11ae5d3a0f1120a30c09894c586656ece4bbdfe31583"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:c0e05ba52ddd74aa",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "d03debbe94146ae33243b82ce926c83ef59e06e14ceb2b9fed337eaa333a8972"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:c86a104d5d3afd28",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "56559af8109ea4963e968130f970715612c39f13ef8df749483eca53b3dc340c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bd12eda80593a47c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "10ec94567a3a1b26d2fad05389497c0f6d891197dff6de90b7f6b5f8053a7a51"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:c3961e4fb9ba9a03",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "94d25d320d5c30bd12c16f6107eb9536db0fefd8c2414f4304098ed3663eb0a0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:94f0d006f5780421",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "2e6235adb25101464705a075dad547b4b585f136db64be37954bdaf71edb56f7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:90d7c33d7da3b5e0",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "3d1e707e409a34d8a40d971edf44c6b73c172111b3cfdfc892dd46cc780a466a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4cf1aad4fff71e8c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "25d9ab643a6d1040175512febc6c8090ad7388931798169805417d7a8106f6a3"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:b15e7024d2b4ab9d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "519ef44ea3eb75b941c901f5b255f27855f8b0dfa9a222e7b974e66b28006813"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:12e035a33fbcf5df",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "8ed3376e99dbd1731ad607da52e961c39b628031f8d92832bd2fcaa00a6a3b94"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4c373a121be5a45b",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "71f4f4946d36acc4e73a8048dbcde62ad3785b3d85446292d111bd3060262177"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:8a6e40d190f7c3ba",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "e88ee4693014c80aac58ae9d12872f2925e983b48054c939e4e4cd79e2e38d95"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:cd1bac21033b7f40",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "6ca719b3021b82dceac35ad7091740e87de0109cd68774a8d43e93e151064af5"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:ea62ade4688a43a8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "93dd2ec1e5f4fc3e2832cd1e728b4c02c6ae5bbfdb19c16cb2d36d95a0e228ec"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4fb8f1509351f97d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "e3b02b01afb8e4b6abdb6f4e0df9f55e689832564c65a3bc2a15a302f80aed05"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:3c0c4727f91e907f",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "f633c1eebc6b7c33ff48e05e5c70839b5a24bb88f41a55ce03629375cbe80aa5"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:7b8282c5a3204b70",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:54.090Z",
+      "evidenceRefs": [
+        "09ae62286d414a617f718968e00e591c7002564949113d64ff86b70e6fbaeda1"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4f187bfd135907d2",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "23605a25f528a411817ba71767e8dfcfb5c345d12131c29cdee85f60eca2d791"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:54369fd6ef176a20",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "dc0b04f94edbdd2d4d0be907aba49383b37be46407ff04edd6e3e0bc17a5535a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:909381984a753fa6",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "9aae754edf8a3bd97fec9cc8598212786057d13f5d1f397c89cc52ecd831ffb8"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:61bd8f2cba8715fe",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "429c07cc13ffd32252cb3aad125391fcd581ea420f3617198dd2a18c543567ab"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d80af84aae9f97c1",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "59fde8d307e9308385b88146a212008a328d3b03147f95ea57d011c8dc2657b4"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:94686e0397094796",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "4ba46a41afcaaf6e5200b1c189f046d8af0645c802c43404359197d7e29c000e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:607c947fc5d539fd",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "56be240e8a9a06530f4520cadfb1914079202cc5b842128d5e06b43c58bc7fae"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:99326ad4772707c6",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "3f46a833530734d9544fe4ac001108f7a853178a21e39b386c7fbcc3f71d6c23"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:94ff7e5f6f1cfc59",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "7436613df9c924fd7b59afab1e6cf4a1d516f8c15e67682a807053fa9b36240f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:c520c6173726c2f1",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "8d6ff5964c4e55f033df5ef32d080a47e9d9f40598e2645b6678b33b55a4f8f1"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:20bb0433651d3790",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "15468200d62971a73c82e6d30ba3c2bb9f09283a7ca0f2032074bb499ba02fa9"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:1c21de5f2e492272",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "2a2531f9a08f5458085e2c598d14298ba54b59224a3799d29890d20d1acd13ac"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:865721ca70bab1bc",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "969ca13ea3f65128aace306391aa0cf57e53b5202e268866b60dc6f8e7aef6c5"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:51a1d93cb3982241",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "706fb6781b746dc1f558735f202cabd6256079c2fe8c816d241add47664efd9c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:337cd92f87a84eff",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "daa9b64f80af2c3b3a78326f835db5d334cb8fdf4ad50299510dadcbb1e7c0cc"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:ab36dd9c7c08c141",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "0af35dbd084f67a6b3f9f83ba9980bfea3d939b2bdf57f9427c13ca084001703"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:8634646a48f18581",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "5a3f0c756976e7ed84c6f0a8539a96413b01c76af297171433ba43852ccad633"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:0abb863f8071f9d1",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "94c79d5456279e3ded286606627cb287388e99f4163eafc10fde25a5aea8ce95"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d1333baa311aabf8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "90538c82fd53d8e50aeced79ca2b4321d5234f2858f9cf258d990acf6872b8a0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:b071060c0ef17a7b",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "1279dbeb80ed97ba866e490ce81f9c0c3382d01916f83e15fb3e5bf279c5ffda"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d94413520f1d1066",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "40bf156cb21acd5994eea2da23d04a082f2174ec32e6702f216ae8da275a0e1a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2d834a7e77679565",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "40a774020b72e4813d534656cdd1f853e42a21427b892f7f22cc0b357f24105b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d5fddb232b1052ad",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "082a1fe43bdab23aec3ca1682b8194704289ca9b3ed76cf0c5c2a4895f4f04ef"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:b5f933738b43fc46",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "eb7810d6d8fe6f44e521eabfc691b3e45023bfba572fbeb96ce863b49138b08b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:c8aa6e380bce1283",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "0c86c95b7865cfda7b14cb9dbbcec0e351f78e27602bf93ae3ca5555506e02d6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:391917ec3b009786",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "5ae4869f5991491f1629bf145e37804572b2adc479d1c18ed69e8013c520e534"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:6b46538de0f996ef",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "e0c626c8f614d6c296056e765878c4da530648ded2bd97df89396e5013c4b41c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:6254d0b571799451",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "a51eecd5ddb40a72df29d2ec9ab63bbd9d92d844ee5407922aad92e20935a191"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:8e47dda9089159aa",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "a6991457acc9205abca795ed6b2beada6f19c37d265b74773ee4ba9c4fba46f6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e503f281fe1c4be7",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "95cfe8b18b2e34a128e4bd0dee677b315e16b858136a13ed1d7940abc4b9b41c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bba38d2a356c5688",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "e1a39e0bfa56d92a5fb2293ab391a283d8b3d590c2d00b85d6dda578e1606b16"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bb0a35cb66f0e31b",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "4833716c9ad00e546b38b745176c885ac155671bde3b9be6bb5dcac51d63aba0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:44c49ab38dfc46c3",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "fa8aef4791851b22770fc3b95cf515d7dea4d4eff1aa89e6f24cc0d3872b80b0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:68535ad3b83d7733",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "2b3a8a4795fd510cb6d9904edb2e5b914f8a4b74a82d845947a7f08265cff83f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:465fdac0a260f4e9",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "b3330abd7ada2e05b8f00c228454a27dc4e040403bf3c5f5f949943849c6605c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:52e95462ab363030",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "eb830f05b9bccc07cb40128768bb794fc27d9c2155b14284f2bc6676c2a4513f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:355d34ad6206c22c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "36b31f9891d9047da0bf9f31452a8ccaf19e65fa5f1cdf95189fe52b2a2a59be"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:cc1ceaf035bfe411",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "f7bd830f7f6418d736329ec0a6643533587ba1ac116b0794b3985919ec2d4b21"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:672aa9035451d39c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "65f87cfa216c2293196723a559018dbef75f76f32d6e6a2b53213174bf3cd64c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f3e56a1e4f737e72",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "956553c43d083260808b870633c07011593066283b6671472dba4a6ca0b9479b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:39f40fcd8bbf7176",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "c8a8708714709943c5e32659b1251ed1d6ac9ada2d207467dc2bad24dd22e244"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:09ba7b3def0a133a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "768a97db16fc2cf5bea6ea500515f68a8f403247693f64192992fe06a326ed9b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f6e335274a10264a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "668b92c33477027696f9118d6c06aa4bfe71b54730a46b395c795c68e4afc015"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2b8ae1d750d228ce",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "b855d2105facff5a7f2227dd2d367c8a7a0f2bf4c4ea6c4992462fe39bee40a6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bde470a4af13261f",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "8c8e5f9718e8d712b8206d690234a1acc81303518221fe1778c56fa99b701960"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:919fdec872b557f8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "ac8426e7ae5e60a809739d01f5af771419f1c1fad9444a575dcf197229308681"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:0b742ea41d99b419",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "82f1d63c7d3e329d05b5473b05f92b7384dc3b87bf1a88527c6f58528d84d6f5"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:05c2622f46434474",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "9128119226598f60e9dc7e3afa7c6e58642241f35ff6e6685df4333b84790b3c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:dc54660a227211c3",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "5c95e4260cb28ba446d52d2cfaef8807bc4a5f30ec394b41d575104b0ac00ae5"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:504e4ce0281aa012",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "e1c3225837e7c0cae2b37587c77f963573367f98e014f2a09e1983945a472efe"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:3b3908b6dff60b3a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "c3265c86d79ad8c8716ecbc92c1d9e32852ce1e29a9aa718c791c4ba07a59601"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:382262f0f6f53d4c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "d88bdb6bd9f3667f5220ceed5e7309ccb3d38914fd16394d11c901295113bd0f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:983a920955a6b3ec",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "18155983142a73547036600b3d845ffee5cae4b2f2744c34e8879326c724a7d7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:26ff491b311c0ec7",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "ea56030fde79178f6e545f277599a7fd0da483ab54aab6388c0c76ccbbe157a8"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2361f2db8bee2d79",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "c2df1b54bfee15f9b55b56dcd16a362805177183958ab695a06000070c995c97"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:68574e8733367b09",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "992ae4f8b4537f1f7d1965a3c5c9f2dce6451fd36ba528bb359f492fce88bc9f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e2648b0679bc3471",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "047d6196c332aeb8507c7f916f86c9ee521874e3b3e2c801269db1f908904aa9"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:7b812ef36d7f1469",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "7210d9e6b18c23a28b4ae464583bf32fd9ff384e2bc27766c8988ea1b642d53c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:542475170f62ea5c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "58e881ce349ac76b8488b250c363b76c112d63fc5a8aa38749d723785a0e7d01"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:97320ccfceffae19",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:53.652Z",
+      "evidenceRefs": [
+        "2453678fcf766ea7822b42d7ccee0ca7692fe19cf626ccb5094e928f36264d12"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2437be19d4550bf7",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "190f83941aeeb00c2c0eb7c40365f71035fe38221b44e01e09e77f54af125974"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:69dea1a2f56d1f26",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "278b585800ba15f7aab60bcacfebf11a542797714d333b19050f70fb0e45b92f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:163b61d680a674a2",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "c6ecd7e642f1729f6e80b31c722fa44a817d13b75b0d94c502e55071cec307d6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2ea37e7210599dd2",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "81514191468e6f9b862f25c736679db5d47f6009f3c1e9eb429ee311536f1c4a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:1ccc3f0f0e02cf12",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "90c9055fe418388a00c2ab02a9429bf8de0cab98e61d5cc7e98fb98410282941"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f980aebd244ae77f",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "a2f011f0d1d785c467f1231f228ebda01ce2a23cb9a6ba9b6007def4106e35a9"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:df081467e805fc6d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "fff422266374401be9bef6f1b44c96ded76dfd6cdd9b1c9f3d97f60c5e75b7a1"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:5963d6821eadd36d",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "bdba6b5a0593266cba17f11544c55ee47ca178831b3fc979b80215457e13bfa7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:9e5f62741950db6c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "6b19c1f47087d6ea70f8d3122ba79caa0f0a68195c3dfe4e8596acf4b29cbcd6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:7004bee24a377846",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "6a42373f2b42a8951674feec9e68da1b1706719f24c9665e82bf7de66b659999"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:7d9321c3867e371a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "687781a9eda65f133d53fcda51305f914cc1a13d57b39becea95a1a111481276"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:3c97881c08b49296",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "202be7e235049263dea905ddfa50925c23929402012a6b2c89f9d850f35515e5"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:5016c8b187864a9f",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "7dcee38fbb2b89aefb7e871138552fbec6d8f5e9685703e7a76d4c69162c6c86"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:cd1f9eddc639da4b",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "5982e7a776f830ba37f5f81117bc58cbb5b7cd8219cf6ba582c7f1a10e397521"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:8e2540676a89e4eb",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "221eace9f340b50c45d2b1328dd452ef164bff6cf75a30a569fd0e0cfa9ba8ba"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:46efb43ae7abf8f0",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "67a5d2289f269b52139a35503d01054affabdec48230514dc761191d224bc14c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:799c9c380aa51017",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "28f8f8df68743e3a1eeb2d8c91c1699010fa266bdf3996faf22f53bf3e32148b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:06c7673faa773af4",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "09805f428ff82ad4e762944a7d3450eb613da59a4c0f39a7497df9f3baf3ce4e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:da419a865256eac8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "dc6d83b84e84b9c1f6d6486e3c6735679c0b49a98590f45869f86aa08f4b7e9a"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:ca2f16e3471e88ca",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "429c2640bad624f13d730491561c2bafdde9cc74aaaf22a52d72dd6d8232b3d4"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:57fa2d0be9206abf",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "40fdeb8823b191ea447c064b378157d5bfe917aba310c599a2ee0029f9065161"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:fffe07694774ec20",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "d79958ca73b4f3003533ab6c2eff217eca134b3c949e5e83baadce625558c6f0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d518c21d8711a3f8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "ef77b88fbdbfda55b6e0170d51d041eaf38d4f8fa0cff03d78c4ebf430affa55"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:5e4c15a365648f69",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "c1fa5555e9e1e752c0f5317b11a6d3ba868d0d0e8f950b6fd3a5787a49d3ba6f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:41df14ec933a07d3",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "8a1dc829e4566857401cb7be0553c4f83664748e6b66923a786503f133ecbf1e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:7e100194527a51df",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "96fc92c1bb5fa09d250523aab81fc18e0a631524f0069f475b04770704ea965c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bc551a5d550f9a23",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "b0bbfb10a85e2d934227e4a82bc8061c340ece9eca54ef05495e227d3b68ebca"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:608a58ef9cd9e41c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "fea1d7f8b89f03894360810b9107b6d5fbf11e3321c54115e28cb0d38349c26b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:dea8f8d04cf3f4ed",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "90cbd2615af6c6917ea5d5722b81dbd9811a86b50c869ac1b5be39dc7faf6c08"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:3e4769a59a09d4e0",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "481012799b7b0b8a9ff55fb1fde51b4238bc873940dd424b23700a8ae0b8b69d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f59c105badfc7879",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "54ec24f89b4b56414478792c691995fd5b430d99a2ceef12f9d43a6b4dc3569f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:04d9b0e74eb246c8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "421dd8c79dfceb969db72b913d1a1fbc95c01d814350400c0afe0d90a7f2872b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e667d09bb238003f",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "085feda20a52550f10c2490cb7ee892cc40c436b6aae5692abd223e45bbe75df"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:96267b7392fde40b",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "c37249c2f399ebbb9c89b5151e656c2b5ea39dc4c8a8bbfd0b881ee373ea46de"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bb80a5ca1f4948a7",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "1e5c08022a467192f93c20de7947c8a91c2c7b0dada204d8d23b50dd26ee7a0b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:81e92ffe025996af",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "5fd841a2504cbc6f060c5966e810598ed91c3d183befc9aa27020786cf7ec300"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2b2594880e174304",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "b111e66435eeadda6ca0c205a23d276b15f7391874f8be29be136548410c53c7"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:cbb08f00813da168",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "5d6b538440ab5f2dc8757719add34c6ec20137af1ead5e33c4cabf1978bf5712"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d13bfc50673eba7e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "47b93ad9ab3444b3ce096e346de81577eb13cbcced6078e9689102af804347a4"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:59cc26c5e5a6549a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "c877d8f85383672e98a90efe52bc688e1290ba41cab5cd8010c1b13c94b7204d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:14b43cf20cdcd4a7",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "77ef2e2336a2d0fba757be3328dd53356ca71a5338c6c07850119c28df107328"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e88578d5c68bc473",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "bce4f8070c88e254a393d216e137a8d56ce04446dc446f8daf786c3da3df8433"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:932a55eb95a132f2",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "9870b6376781fbcb7474b3894d3f7bb7a35c0af3bc4c0c5106a819210c3e49da"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:b79e90465124cba5",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "cabf2300cb7b36bdaf5afc228f5709ae7bfbb60afdbdac1a2b271d9d5738fd05"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:967ebd35e93fd7ce",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "978567f36ac97bfb6fd42f95e0fb28f632b3c1b79e2e4982364704225e74cf3d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a4a98bebb86b319b",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "9edf2659e27b7214a5e05796fcb95c6a346c5de7951f1c29609abbebecdead15"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:1d719d760373843a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "456eb739f801a171412ab42017cda5cd3cf9839fccd362dd8dbd29ee9253385f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e449b0817e73f107",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "757f937f64ef2bdbcc0a0813bc76ab6f94d6cf2cfeeffb27157c2b06586d9dea"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:e11802eba883d5c1",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "24bb70bff48d15b74fae407d3dd54af29c4db14ce4135d9c2d9b33b156de165d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:cef2bc7aec941e54",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "2250c289a2d9645c88eb848d32d1f61f2d40a6ad126a10bc8300f74b3bd07935"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f45e111ea3f0d977",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "8c12befd3dac9199ffa0a23d1ba92929804cc444e533052fe451c6834ce44b6e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f9535f2e043b98c3",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "fed1ae87b86ad983ccc0e0b11be913caa1e1fc7e8e31e507a4833b1f549f1d90"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:c7930b0e54f47343",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "d74d17f41b18ca1d332eff2ab82b3a09a37438658211e44605df6013629c3236"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d35eb2612910b039",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "80b58a6b3b4a2b9cb26e14d7cb4d6300a46b8b8ead84a320817b445675872cf0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:f49d5e2e97359109",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "a87ca70e5a82a1ad933647844d3258b993347035e93f46a1136df326d422ce15"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a3dbcf567fc8a68c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "3ec2e93cf6121ce0dc306b6f17335067991f1fe011394759b8854cb0c60d404d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:7a218fef095e2d78",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "15f9e664773375e23beaab2053fa1af0b19edcfbc72fd841205afc358dc4d2f4"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:5f1cd4033131d253",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:18.250Z",
+      "evidenceRefs": [
+        "6785cda7bac8860cb89d6a6543b265e85a7778f3b2e64a6f69cf2294f9a49864"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4309b470ded2098e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "8d4086e62ee47fc436f16e4e63fe061553e5cdb54eec1e0806118a01bd3a678c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:5e633e3cfb710de0",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "7c9ed91ef6d67d5ae6c66114895024797fc8444e4082fcb4669539b647efaead"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a4e4e48b1e25373c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "e614a65e7c77edf494470e0f945cf9571a22220c6e0c639b06a6ac211300e51e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4478d0ae57089014",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "db0c265eed8093dca25c868e70f3aa0864f2b7a224123d56406c13db81880539"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:6175f557764ab9b8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "72d3f8c297c5410c64ae0bce64f94a3face44265813a0d465a4b39223140ca2d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a4c6e3366969ec7e",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "819819e6197a551a60052942434779da7dd1a93970913f02bf3b0dd4bbe32702"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2b1fd810861ac272",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "32e1e4de1e91ad85becf098587d8e42f4779c942c5ca2cc5f2be23f8c6c9bbff"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:924255ba28a1b208",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "5c752beb462ee1d46cab51a7f418d2aa39806776ac8a4d4d1d7aeff52f7b5f40"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:0c76cbab283ee5c6",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "b285bc71372d8f44a6199f27e887826da4c0027392f63fd086c143980851ef3c"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:b1b7b4a02d8fe2c8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "b315d850ab1f164710dda4fa34f0be698978683c3154cabc2123f44c59b87770"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:83d192c5a2a80a17",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "696323df9c4c17b26c37cc05a6fed214f5b92f1e8354d4e7027a7faa8b978de8"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:4ad4ba2e76c5cca8",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "13bb58ba6089ece42b65b1fdeb9e924c1cb786de63bf42f76fce03dc7a544ec6"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:ad15ba10a9374c3a",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "a9b2155faa170099f04f98d7eee6e72a4fb956a639560a0293c917550ebdb4fa"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:0e29b4db6ef8f256",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "b3c01a3b22230048666cabbc7042b622617d26597806146bac8bd4f3d72e529d"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2bc13a17844fb3a0",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "d0b628db94c555a229932ebb8235d21e3d9e32e7df65bb03a7fff07bd0dfe0da"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bc5013db5b071979",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "84e113e3fdea324759417925f98d4ef3b5e1f5f735c6792fd04f5928d8e7b99e"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:d3f24eecd37075d2",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "0b007ed54eea89c70c7ead73314c6f8765da84ffb1231f6ee3e054dca1f0dd4f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2d0a47f2f296da57",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "b335747c627538cc4d6ea990dae09173bd9b29051b61395a66a0ba800baf3217"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:bc4adcf5c260a309",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "0323c67db9397361a63f486ec435825b40a747da443f0af818d54ebfc824c08f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:a123719ace82d9dd",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "bb40363214378115051dca709fe09c67717aef0adc035959696add1cc0fbd5a0"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:ee4e47663de2c00c",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "d854eae19e3f696238dae7325640fd26f01ef6a020c2ff84a012f1cb32666f8b"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2c398420a1d8cc36",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "5d465f4cec6cee66d4051c33d7cc764b9f6f584fcaddc02c19ed307f1eb7503f"
+      ]
+    },
+    {
+      "eventId": "trace-unscoped:2d77d8957ef57402",
+      "surfaceId": "haiec-tmf-live-forwarder",
+      "eventType": "log.body",
+      "occurredAt": "2026-10-05T06:57:14.719Z",
+      "evidenceRefs": [
+        "8af75112d7a460c7aeafc354e5eff18b2e8b485557474a82fc367d2676078275"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceRef": "a135efe9-e9bd-4a59-9d10-66182c0edb35",
+      "authority": "APPLICATION_TELEMETRY",
+      "coverage": "OTLP signals are ingested as OBSERVED telemetry records; coverage is UNKNOWN unless the source supplies deterministic continuity evidence.",
+      "status": "ACTIVE",
+      "evidenceRefs": [
+        "80b5764ca43d68dbde23b320856a0b07dc04320ff0ede0c253e657c67a17bf6d"
+      ],
+      "adapterHealth": {
+        "adapterId": "otlp-http@otlp-receiver-1.0.0",
+        "collectorStatus": "CONFIGURED",
+        "backpressure": "UNAVAILABLE",
+        "samplingRateActual": "UNAVAILABLE",
+        "samplingRateConfigured": "UNAVAILABLE",
+        "lastEventAt": "2026-10-05T10:07:12.383Z",
+        "throughputPerMinute": "UNAVAILABLE"
+      }
+    },
+    {
+      "sourceRef": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+      "authority": "APPLICATION_TELEMETRY",
+      "coverage": "OTLP signals are ingested as OBSERVED telemetry records; coverage is UNKNOWN unless the source supplies deterministic continuity evidence.",
+      "status": "ACTIVE",
+      "evidenceRefs": [
+        "09063153214388020f1f9460c16565c27a338c163828ce42502720cdd908edec",
+        "8483882155a9d4a0c56f23dec70a268ee89c572a01702328defa6b05188adcf2",
+        "79fc757636635af23f97954a1eed2947dec7f2b00516b5dfb5d5e509f333e435",
+        "c2e9487df68fb03c9b4ad281b2fcb9a3f8d37f449f08c352ef34bb8be8ce0b31",
+        "998508a652d81d4161f386fc6d1b3c2be59b11bddfbc4e046d134ab2e1b3abb8",
+        "d66c3e0b6df7f9f496bd53336a14d2da4eb73849189387e9585f3e170848038c",
+        "ba21e15c55fb1a1137ba4b8f139356353a82bb3e40bc8c2beeb2a209b13f423b",
+        "e2cb4d33693967b2c56fb17e0f3a0256cfa95a46fac8408aa20300cae420aefd",
+        "1e3dd39cc75701c3b83e8992a4d2831ad82b63aa4dea1894e907bad8f9b4bd12",
+        "36952324fed27eddfd216c86b1a29e5826733a352f327a1e2cd8f6221be105c1",
+        "4d5adbd94df3a49a15921a9c9f8bfba8e778fe9ecae51c3afb357456f2a07c6a",
+        "d01a538633facd0afea3237c682c0a18ff8a83a2a54f5c3901a81ac5cb33a72a",
+        "66879b0d71abc68ac1a2c7863f063138c773afa9784a30017e08f69dc7de14d6",
+        "83309709eac21c0009391292b63476ac007c1be6ce09d67a90c66675c7220d9a",
+        "8a61ae2de4ba59c0abc63e34d8a1f4d00df118629f34ba1a815588803e2e0600",
+        "56bf227d271d34e4f78103a968704769f50f43304fd6cd6f6cb74b82e1fb5ce1",
+        "1dc449004a644d2d53179caa74d65d70c0dd6c8a7add400021bd9c5940635bd5",
+        "f593200c0e0a9a6db1768b455ab4066b5c67abb5a368ed741803934789cbefd6",
+        "f6bee669cc78ccd2b27e8645d47b4e627b8f69679c90d7c77165000ede583281",
+        "c94c813dd8ba24d43a1d7cc5840a7216d0168b2c42ab4889a99b9f8870b131e7"
+      ],
+      "adapterHealth": {
+        "adapterId": "otlp-http@otlp-receiver-1.0.0",
+        "collectorStatus": "CONFIGURED",
+        "backpressure": "UNAVAILABLE",
+        "samplingRateActual": "UNAVAILABLE",
+        "samplingRateConfigured": "UNAVAILABLE",
+        "lastEventAt": "2026-10-05T06:57:54.090Z",
+        "throughputPerMinute": 199
+      }
+    },
+    {
+      "sourceRef": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+      "authority": "EXTERNAL_IMPORTED_RECORD",
+      "coverage": "Bundle measurement facts are producer-measured reconciliation output; HAIEC re-evaluates them against the frozen governing policy. Ingested bundles never self-prove completeness.",
+      "status": "CONFIGURED_INACTIVE",
+      "evidenceRefs": [],
+      "adapterHealth": {
+        "adapterId": "structured-event-adapter@1.0.0",
+        "collectorStatus": "CONFIGURED",
+        "backpressure": "UNAVAILABLE",
+        "samplingRateActual": "UNAVAILABLE",
+        "samplingRateConfigured": "UNAVAILABLE",
+        "lastEventAt": null,
+        "throughputPerMinute": "UNAVAILABLE"
+      }
+    },
+    {
+      "sourceRef": "e8235695-dc0e-4ebe-8967-415d737a4c29",
+      "authority": "EXTERNAL_IMPORTED_RECORD",
+      "coverage": "Bundle measurement facts are producer-measured reconciliation output; HAIEC re-evaluates them against the frozen governing policy. Ingested bundles never self-prove completeness.",
+      "status": "CONFIGURED_INACTIVE",
+      "evidenceRefs": [],
+      "adapterHealth": {
+        "adapterId": "structured-event-adapter@1.0.0",
+        "collectorStatus": "CONFIGURED",
+        "backpressure": "UNAVAILABLE",
+        "samplingRateActual": "UNAVAILABLE",
+        "samplingRateConfigured": "UNAVAILABLE",
+        "lastEventAt": null,
+        "throughputPerMinute": "UNAVAILABLE"
+      }
+    },
+    {
+      "sourceRef": "a01159b0-80f0-41c9-9e91-0d15131be59c",
+      "authority": "APPLICATION_TELEMETRY",
+      "coverage": "OTLP signals are ingested as OBSERVED telemetry records; coverage is UNKNOWN unless the source supplies deterministic continuity evidence.",
+      "status": "CONFIGURED_INACTIVE",
+      "evidenceRefs": [],
+      "adapterHealth": {
+        "adapterId": "otlp-http@otlp-receiver-1.0.0",
+        "collectorStatus": "CONFIGURED",
+        "backpressure": "UNAVAILABLE",
+        "samplingRateActual": "UNAVAILABLE",
+        "samplingRateConfigured": "UNAVAILABLE",
+        "lastEventAt": null,
+        "throughputPerMinute": "UNAVAILABLE"
+      }
+    }
+  ],
+  "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e"
+}

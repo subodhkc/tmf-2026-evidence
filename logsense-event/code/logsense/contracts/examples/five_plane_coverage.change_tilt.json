@@ -1,0 +1,54 @@
+{
+  "coverageId": "fiveplane-action-tilt-7",
+  "actionGroupRef": "action:tilt-7",
+  "requested": {
+    "state": "PRESENT",
+    "evidenceRefs": [
+      "agent:req-42"
+    ],
+    "gapRefs": [],
+    "limitations": []
+  },
+  "policyAuthorized": {
+    "state": "CONTRADICTED",
+    "evidenceRefs": [
+      "policy:deny-42"
+    ],
+    "gapRefs": [],
+    "limitations": [
+      "DENY_RECORDED"
+    ]
+  },
+  "effectivelyGranted": {
+    "state": "UNKNOWN",
+    "evidenceRefs": [],
+    "gapRefs": [
+      "gap-effective-grant"
+    ],
+    "limitations": []
+  },
+  "codeCapable": {
+    "state": "UNKNOWN",
+    "evidenceRefs": [],
+    "gapRefs": [
+      "gap-code-capability"
+    ],
+    "limitations": []
+  },
+  "observed": {
+    "state": "PARTIAL",
+    "evidenceRefs": [
+      "api:200-42"
+    ],
+    "gapRefs": [
+      "gap-effect-confirm"
+    ],
+    "limitations": [
+      "API_ACCEPTANCE_NOT_EFFECT"
+    ]
+  },
+  "localForensicLens": true,
+  "limitations": [
+    "NOT_A_HAIEC_ASSURANCE_VERDICT"
+  ]
+}

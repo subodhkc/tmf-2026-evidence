@@ -1,0 +1,47 @@
+{
+  "actionGroupId": "ag-bad",
+  "caseId": "case",
+  "evidenceSetId": "es",
+  "analysisRunId": "run",
+  "correlationGroupRefs": [
+    "cg-1"
+  ],
+  "actionIdentity": {
+    "actorRef": null,
+    "operationRef": null,
+    "nativeOperation": null,
+    "canonicalOperation": null,
+    "targetRef": null,
+    "resourceScope": null,
+    "actionCorrelationId": "trace-only",
+    "taskRef": null,
+    "workflowRef": null,
+    "buildDigest": null,
+    "profileReference": null,
+    "envelopeReference": null,
+    "evidenceSetId": "es",
+    "scenarioRunId": null,
+    "identityState": "EXACT",
+    "identityBasis": [
+      "TRACE_ID_ONLY"
+    ],
+    "logicalActionKey": "bad",
+    "evidenceRefs": [
+      "ev1"
+    ],
+    "limitations": []
+  },
+  "eventRefs": [
+    "e1"
+  ],
+  "sourceRefs": [
+    "s1"
+  ],
+  "requestedEventRefs": [],
+  "authorizationEventRefs": [],
+  "acceptedEventRefs": [],
+  "appliedEventRefs": [],
+  "confirmedEventRefs": [],
+  "establishmentState": "ESTABLISHED",
+  "limitations": []
+}

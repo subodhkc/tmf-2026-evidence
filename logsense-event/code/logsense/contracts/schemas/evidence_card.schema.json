@@ -1,0 +1,76 @@
+{
+  "$id": "https://logsense.local/schemas/evidence_card.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claimId": {
+      "type": "string"
+    },
+    "correlationBasis": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "frontierViolations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "lineageFamily": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "memberCount": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "membershipDigest": {
+      "type": "string"
+    },
+    "orphanCount": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "producerSourceIdentity": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "resolvedCount": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "resolvedEvidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "claimId",
+    "resolvedEvidenceRefs",
+    "producerSourceIdentity",
+    "lineageFamily",
+    "membershipDigest",
+    "memberCount",
+    "resolvedCount",
+    "orphanCount",
+    "correlationBasis",
+    "frontierViolations",
+    "limitations"
+  ],
+  "title": "Evidence Card",
+  "type": "object"
+}

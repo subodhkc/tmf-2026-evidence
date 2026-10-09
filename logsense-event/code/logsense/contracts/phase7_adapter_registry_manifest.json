@@ -1,0 +1,20 @@
+{
+  "assets": {
+    "adapters/adapter-detection-rules-v0.1.json": "73761e851ec6f80980ee7a70db3470a711618d666e6c57720a551b8d1b0637a0",
+    "adapters/syntax-adapters-v0.1.json": "bc6667b4b1f3de70ecbe26c2746ef1a551ef94d6134d9ed74655ca6465161471",
+    "schemas/adapter_capability.schema.json": "f7adfa4f192adb47c2e3ac8c6cf01a5352801bcfd4ea25e509120333d5f34d16",
+    "schemas/adapter_detection_rule.schema.json": "22d028f1bb45705b6a3af6d00807de4ff676d4c715232c231a6b73615b8be3b2",
+    "schemas/artifact_ingest_result.schema.json": "d20aa108847d3824525b3a900ab7983c17065622b8579e6b051db10d2873d79d",
+    "schemas/evidence_import_batch.schema.json": "0972e62d83721b9fc1b2c082dc57165a3691cf49e331bb5736e2693b9687afc6",
+    "schemas/schema_profile.schema.json": "d76dbd9178f6b2ffc26d8b7fdf42d9a57ceef6d175edcf159e2cdf9c95ffbec2",
+    "schemas/semantic_adapter_profile.schema.json": "bb31d5c60ee97e58b5b1a5422224da0d65933177b0c571e4acbea904eff10fdd",
+    "schemas/syntax_adapter_registry.schema.json": "399ebc61e997349cc1b8517a5d1563a388e380e177cca4f1b9727f23654cd1fe"
+  },
+  "detectionRuleCount": 9,
+  "semanticBoundary": "SYNTAX_ROUTING_ONLY_NO_FORENSIC_SEMANTICS",
+  "slice": "R2-3A_PHASE7_SYNTAX_ADAPTER_REGISTRY",
+  "sourcePhase": "7",
+  "sourceVersion": "0.1.0",
+  "sourceZipSha256": "d210e30ef71501b3a281268bf3202fdc3f055f8622377c5bc765ff8054da7d66",
+  "syntaxAdapterCount": 6
+}

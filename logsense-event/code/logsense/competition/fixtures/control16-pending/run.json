@@ -1,0 +1,7 @@
+{
+  "runId": "C16-PENDING",
+  "label": "Control 16 pending-timeout run",
+  "traceIds": ["trace-c16-pending"],
+  "sessionIds": ["sess-c16-pending"],
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

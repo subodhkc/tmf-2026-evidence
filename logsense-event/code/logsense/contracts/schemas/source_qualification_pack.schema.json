@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/source_qualification_pack.schema.json",
+  "title": "Source Qualification Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packId",
+    "version",
+    "profiles",
+    "haiecReference",
+    "digest"
+  ],
+  "properties": {
+    "packId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://logsense.local/schemas/source_qualification_profile.schema.json"
+      }
+    },
+    "haiecReference": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "digest": {
+      "type": "string"
+    }
+  }
+}

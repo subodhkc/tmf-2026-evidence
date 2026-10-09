@@ -1,0 +1,124 @@
+{
+ "profile": {
+  "profileSchemaVersion": "kpi-metric-profile/0.1",
+  "profileId": "agentcore-invokeagentruntime-duration",
+  "profileVersion": 1,
+  "profileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+  "metricId": "aws.bedrock-agentcore.duration_ms",
+  "displayName": "AgentCore InvokeAgentRuntime Duration (per-agent run mean, ms)",
+  "unit": "ms",
+  "direction": "LOWER_IS_BETTER",
+  "aggregation": "MEAN",
+  "governedScope": {
+   "type": "LOGICAL_ENTITY",
+   "id": "tmf-modaas-assessed-system",
+   "attributes": null
+  },
+  "valueSource": {
+   "field": "kpiValue",
+   "metricNameField": "kpiName",
+   "unitField": "unit",
+   "scopeTypeField": null,
+   "scopeIdField": "scopeId"
+  },
+  "timestampSource": "ts",
+  "windowDefinition": {
+   "mode": "SOURCE_WINDOWED",
+   "windowKeyField": "windowId",
+   "expectedWindowKeys": [
+    "customer_experience_agent",
+    "it_resolution_agent",
+    "network_resolution_agent"
+   ]
+  },
+  "mappingProfileRefs": [],
+  "producerRefs": [],
+  "zeroBaselineRule": "RELATIVE_UNAVAILABLE",
+  "createdAt": "2026-10-05T09:00:00Z",
+  "sourceBasis": "AWS_CLOUDWATCH_BEDROCK_AGENTCORE_DURATION",
+  "limitations": [
+   "MINUTE_LEVEL_SPIKES_MAY_NOT_MOVE_MEAN",
+   "PER_AGENT_RUN_MEAN_WINDOWS"
+  ],
+  "profileDigest": "sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9"
+ },
+ "baseline": {
+  "schemaVersion": "control9-baseline/0.1",
+  "baselineId": "c9-duration-baseline-tmf-modaas",
+  "baselineVersion": 1,
+  "baselineRef": "c9-baseline:c9-duration-baseline-tmf-modaas@v1",
+  "caseId": null,
+  "label": "c9-duration-baseline-tmf-modaas",
+  "createdAt": "2026-10-05T09:00:00Z",
+  "basis": "HISTORICAL_WINDOW",
+  "baselineMode": "MATCHED_WINDOWS",
+  "metricId": "aws.bedrock-agentcore.duration_ms",
+  "unit": "ms",
+  "direction": "LOWER_IS_BETTER",
+  "aggregation": "MEAN",
+  "governedScope": {
+   "type": "LOGICAL_ENTITY",
+   "id": "tmf-modaas-assessed-system"
+  },
+  "windowDefinition": {
+   "mode": "SOURCE_WINDOWED",
+   "windowKeyField": "windowId"
+  },
+  "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+  "metricProfileDigest": "sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9",
+  "value": null,
+  "windows": [
+   {
+    "windowKey": "customer_experience_agent",
+    "value": 6781.0,
+    "windowStart": null,
+    "windowEnd": null,
+    "evidenceRefs": [
+     "calibration:37-unique-normal-obs"
+    ]
+   },
+   {
+    "windowKey": "it_resolution_agent",
+    "value": 8917.0,
+    "windowStart": null,
+    "windowEnd": null,
+    "evidenceRefs": [
+     "calibration:37-unique-normal-obs"
+    ]
+   },
+   {
+    "windowKey": "network_resolution_agent",
+    "value": 12141.0,
+    "windowStart": null,
+    "windowEnd": null,
+    "evidenceRefs": [
+     "calibration:37-unique-normal-obs"
+    ]
+   }
+  ],
+  "valueBasis": "DERIVED_FROM_OBSERVATIONS",
+  "sourceRunId": "C9-CALIBRATION-2026-10-05",
+  "sourceAnalysisRunId": null,
+  "sourceSnapshotRef": null,
+  "sourceEvidenceSetId": null,
+  "evidenceRefs": [
+   "calibration:c9_duration_unique.json",
+   "calibration:c9_metric_calibration.json"
+  ],
+  "mappingProfileDigests": [
+   "mapping-profile:aws-bedrock-agentcore-metrics@v1"
+  ],
+  "artifactDigests": [],
+  "sourceBasis": "AWS_CLOUDWATCH_BEDROCK_AGENTCORE_DURATION",
+  "frozen": true,
+  "limitations": [
+   "CALIBRATION_ONLY_NOT_ASSESSED",
+   "EXCLUDES_OBSERVED_DEGRADED_MINUTES_GT_30S"
+  ],
+  "baselineDigest": "sha256:8b5c8300e61f48428313b773af33e0e305348ace9215353d21dfc9855089af6b"
+ },
+ "profileDigest": "sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9",
+ "baselineDigest": "sha256:8b5c8300e61f48428313b773af33e0e305348ace9215353d21dfc9855089af6b",
+ "profileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+ "baselineRef": "c9-baseline:c9-duration-baseline-tmf-modaas@v1"
+}

@@ -1,0 +1,12 @@
+{
+  "runId": "C9-INCOMPAT",
+  "label": "Control 9 \u2014 incompatible unit semantics (ILLUSTRATIVE)",
+  "traceIds": [
+    "trace-c9-incompat"
+  ],
+  "sessionIds": [
+    "sess-c9-incompat"
+  ],
+  "notes": "Bundled deterministic fixture: Baseline declares unit 's' but the metric profile and live observations use 'ratio'. Expected: NOT_MEASURED with INCOMPATIBLE UNIT \u2014 a unit difference is a comparability failure, never treated as system drift.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

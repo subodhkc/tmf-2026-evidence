@@ -1,0 +1,334 @@
+{
+ "schemaVersion": "competition-evidence-bundle/0.1",
+ "contractVersion": "logsense-haiec-shared-competition-data/1.0",
+ "bundleId": "ls-bundle:c907ca3eec089c858f657220",
+ "caseId": "case-fault-1791183213-228329",
+ "runId": "fault-1791183213-228329",
+ "runRole": "C9_INTENDED_BREACH",
+ "scenarioLabel": "S1-fronthaul-degradation",
+ "analysisRunId": "analysis-fault-1791183213-228329",
+ "evidenceSetRef": "evidence-set:fault-1791183213-228329",
+ "activeSnapshotRef": "snapshot:fault-1791183213-228329",
+ "runResolutionRef": "run-resolution:fault-1791183213-228329",
+ "createdAt": "2026-10-05T06:54:59.929584Z",
+ "measurementType": "AIA-ARC-006",
+ "measurementSchemaVersion": "control9-drift-measurement/0.1",
+ "measurementState": "MEASURED",
+ "measurements": {
+  "AIA-ARC-006": {
+   "schemaVersion": "control9-drift-measurement/0.1",
+   "controlCode": "AIA-ARC-006",
+   "measurementType": "AIA-ARC-006",
+   "runId": "fault-1791183213-228329",
+   "measurementState": "MEASURED",
+   "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+   "metricProfileDigest": "sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9",
+   "metricId": "aws.bedrock-agentcore.duration_ms",
+   "unit": "ms",
+   "direction": "LOWER_IS_BETTER",
+   "aggregation": "MEAN",
+   "baselineRef": "c9-baseline:c9-duration-baseline-tmf-modaas@v1",
+   "baselineDigest": "sha256:8b5c8300e61f48428313b773af33e0e305348ace9215353d21dfc9855089af6b",
+   "baselineMode": "MATCHED_WINDOWS",
+   "baselineBasis": "HISTORICAL_WINDOW",
+   "compatibility": {
+    "overallState": "COMPATIBLE",
+    "dimensions": [
+     {
+      "dimension": "METRIC_ID",
+      "baseline": "aws.bedrock-agentcore.duration_ms",
+      "live": "aws.bedrock-agentcore.duration_ms",
+      "state": "COMPATIBLE",
+      "detail": "metric identity"
+     },
+     {
+      "dimension": "UNIT",
+      "baseline": "ms",
+      "live": "ms",
+      "state": "COMPATIBLE",
+      "detail": "measurement unit"
+     },
+     {
+      "dimension": "DIRECTION",
+      "baseline": "LOWER_IS_BETTER",
+      "live": "LOWER_IS_BETTER",
+      "state": "COMPATIBLE",
+      "detail": "metric direction"
+     },
+     {
+      "dimension": "AGGREGATION",
+      "baseline": "MEAN",
+      "live": "MEAN",
+      "state": "COMPATIBLE",
+      "detail": "window aggregation"
+     },
+     {
+      "dimension": "GOVERNED_SCOPE",
+      "baseline": {
+       "type": "LOGICAL_ENTITY",
+       "id": "tmf-modaas-assessed-system"
+      },
+      "live": {
+       "type": "LOGICAL_ENTITY",
+       "id": "tmf-modaas-assessed-system"
+      },
+      "state": "COMPATIBLE",
+      "detail": "governed entity scope"
+     },
+     {
+      "dimension": "WINDOW_SEMANTICS",
+      "baseline": {
+       "mode": "SOURCE_WINDOWED",
+       "windowKeyField": "windowId"
+      },
+      "live": {
+       "mode": "SOURCE_WINDOWED",
+       "windowKeyField": "windowId"
+      },
+      "state": "COMPATIBLE",
+      "detail": "window mode / duration / alignment"
+     },
+     {
+      "dimension": "METRIC_PROFILE",
+      "baseline": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+      "live": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+      "state": "COMPATIBLE",
+      "detail": "baseline captured under this exact profile version"
+     },
+     {
+      "dimension": "MAPPING_PROFILE",
+      "baseline": [
+       "mapping-profile:aws-bedrock-agentcore-metrics@v1"
+      ],
+      "live": [
+       "mapping-profile:aws-bedrock-agentcore-metrics@v1"
+      ],
+      "state": "COMPATIBLE",
+      "detail": "approved mapping identity/digests"
+     },
+     {
+      "dimension": "SOURCE_BASIS",
+      "baseline": "AWS_CLOUDWATCH_BEDROCK_AGENTCORE_DURATION",
+      "live": "AWS_CLOUDWATCH_BEDROCK_AGENTCORE_DURATION",
+      "state": "COMPATIBLE",
+      "detail": "source semantic basis"
+     }
+    ],
+    "blockers": [],
+    "unknowns": []
+   },
+   "expectedWindows": 3,
+   "observedQualifiedWindows": 3,
+   "comparableMeasuredWindows": 3,
+   "missingWindows": {
+    "missingLive": [],
+    "missingBaseline": []
+   },
+   "incompatibleWindows": [],
+   "unqualifiedWindows": [],
+   "zeroBaselineWindows": [],
+   "coveragePercent": 100.0,
+   "windows": [
+    {
+     "windowKey": "customer_experience_agent",
+     "windowStart": null,
+     "windowEnd": null,
+     "baselineValue": 6781.0,
+     "liveValue": 6060.0,
+     "unit": "ms",
+     "direction": "LOWER_IS_BETTER",
+     "absoluteDelta": -721.0,
+     "relativeDegradation": -0.10632650051614806,
+     "relativeDegradationPercent": -10.632650051614807,
+     "comparisonState": "COMPARABLE",
+     "baselineEvidenceRefs": [
+      "calibration:37-unique-normal-obs"
+     ],
+     "liveEvidenceRefs": [
+      "ev-fault-1791183213-228329-k000"
+     ],
+     "liveObservationCount": 1,
+     "limitations": []
+    },
+    {
+     "windowKey": "it_resolution_agent",
+     "windowStart": null,
+     "windowEnd": null,
+     "baselineValue": 8917.0,
+     "liveValue": 11455.0,
+     "unit": "ms",
+     "direction": "LOWER_IS_BETTER",
+     "absoluteDelta": 2538.0,
+     "relativeDegradation": 0.2846248738364921,
+     "relativeDegradationPercent": 28.46248738364921,
+     "comparisonState": "COMPARABLE",
+     "baselineEvidenceRefs": [
+      "calibration:37-unique-normal-obs"
+     ],
+     "liveEvidenceRefs": [
+      "ev-fault-1791183213-228329-k001"
+     ],
+     "liveObservationCount": 1,
+     "limitations": []
+    },
+    {
+     "windowKey": "network_resolution_agent",
+     "windowStart": null,
+     "windowEnd": null,
+     "baselineValue": 12141.0,
+     "liveValue": 11673.0,
+     "unit": "ms",
+     "direction": "LOWER_IS_BETTER",
+     "absoluteDelta": -468.0,
+     "relativeDegradation": -0.0385470719051149,
+     "relativeDegradationPercent": -3.85470719051149,
+     "comparisonState": "COMPARABLE",
+     "baselineEvidenceRefs": [
+      "calibration:37-unique-normal-obs"
+     ],
+     "liveEvidenceRefs": [
+      "ev-fault-1791183213-228329-k002"
+     ],
+     "liveObservationCount": 1,
+     "limitations": []
+    }
+   ],
+   "kpiObservations": [
+    {
+     "observationSchemaVersion": "kpi-observation/0.1",
+     "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+     "metricId": "aws.bedrock-agentcore.duration_ms",
+     "value": 6060.0,
+     "unit": "ms",
+     "observedAt": "2026-10-05T01:53:00Z",
+     "windowKey": "customer_experience_agent",
+     "windowStart": null,
+     "windowEnd": null,
+     "scopeType": null,
+     "scopeId": "tmf-modaas-assessed-system",
+     "aggregation": "MEAN",
+     "producer": null,
+     "producerVersion": null,
+     "sourceArtifactId": null,
+     "sourceEventRef": "ev-fault-1791183213-228329-k000",
+     "mappingProfileRef": "mapping-profile:aws-bedrock-agentcore-metrics@v1",
+     "mappingQualification": "QUALIFIED",
+     "metricQualification": "QUALIFIED",
+     "limitations": []
+    },
+    {
+     "observationSchemaVersion": "kpi-observation/0.1",
+     "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+     "metricId": "aws.bedrock-agentcore.duration_ms",
+     "value": 11455.0,
+     "unit": "ms",
+     "observedAt": "2026-10-05T01:54:00Z",
+     "windowKey": "it_resolution_agent",
+     "windowStart": null,
+     "windowEnd": null,
+     "scopeType": null,
+     "scopeId": "tmf-modaas-assessed-system",
+     "aggregation": "MEAN",
+     "producer": null,
+     "producerVersion": null,
+     "sourceArtifactId": null,
+     "sourceEventRef": "ev-fault-1791183213-228329-k001",
+     "mappingProfileRef": "mapping-profile:aws-bedrock-agentcore-metrics@v1",
+     "mappingQualification": "QUALIFIED",
+     "metricQualification": "QUALIFIED",
+     "limitations": []
+    },
+    {
+     "observationSchemaVersion": "kpi-observation/0.1",
+     "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+     "metricId": "aws.bedrock-agentcore.duration_ms",
+     "value": 11673.0,
+     "unit": "ms",
+     "observedAt": "2026-10-05T01:54:00Z",
+     "windowKey": "network_resolution_agent",
+     "windowStart": null,
+     "windowEnd": null,
+     "scopeType": null,
+     "scopeId": "tmf-modaas-assessed-system",
+     "aggregation": "MEAN",
+     "producer": null,
+     "producerVersion": null,
+     "sourceArtifactId": null,
+     "sourceEventRef": "ev-fault-1791183213-228329-k002",
+     "mappingProfileRef": "mapping-profile:aws-bedrock-agentcore-metrics@v1",
+     "mappingQualification": "QUALIFIED",
+     "metricQualification": "QUALIFIED",
+     "limitations": []
+    }
+   ],
+   "worstRelativeDegradation": {
+    "windowKey": "it_resolution_agent",
+    "relativeDegradation": 0.2846248738364921,
+    "relativeDegradationPercent": 28.46248738364921
+   },
+   "mostImprovedWindow": {
+    "windowKey": "customer_experience_agent",
+    "relativeDegradation": -0.10632650051614806,
+    "relativeDegradationPercent": -10.632650051614807
+   },
+   "qualifiedObservationCount": 3,
+   "unqualifiedObservationCount": 0,
+   "monitoring": {
+    "alertId": null,
+    "owner": "subodh-kc (participant)",
+    "recipient": "sre-oncall@tmf-participant-team",
+    "requiredResponse": "acknowledge or remediate within the assessed window; silence is recorded",
+    "thresholdVersionRef": "c9-duration-thresholds-v2",
+    "response": {
+     "state": "NOT_REQUIRED",
+     "detail": "no violating window; no alert triggered"
+    }
+   },
+   "evidenceRefs": [
+    "calibration:c9_duration_unique.json",
+    "calibration:c9_metric_calibration.json",
+    "ev-fault-1791183213-228329-k000",
+    "ev-fault-1791183213-228329-k001",
+    "ev-fault-1791183213-228329-k002"
+   ],
+   "excludedEvidence": {
+    "ambiguousRunRefs": [],
+    "unresolvedRunRefs": [],
+    "unqualifiedObservationRefs": []
+   },
+   "limitations": [],
+   "verdict": null,
+   "verdictOwner": "HAIEC",
+   "runStartedAt": "2026-10-05T06:53:33Z",
+   "assessedActivityStartedAt": "2026-10-05T06:53:33Z",
+   "analysisRunId": "analysis-fault-1791183213-228329",
+   "evidenceSetRef": "evidence-set:fault-1791183213-228329",
+   "activeSnapshotRef": "snapshot:fault-1791183213-228329",
+   "runResolutionRef": "run-resolution:fault-1791183213-228329",
+   "runRole": "C9_INTENDED_BREACH",
+   "scenarioLabel": "S1-fronthaul-degradation"
+  }
+ },
+ "runActivity": {
+  "schemaVersion": "competition-run-activity/0.1",
+  "runId": "fault-1791183213-228329",
+  "startState": "ESTABLISHED",
+  "runStartedAt": "2026-10-05T06:53:33Z",
+  "evidenceRefs": [
+   "ev-fault-1791183213-228329-start"
+  ]
+ },
+ "runStartedAt": "2026-10-05T06:53:33Z",
+ "verdict": null,
+ "verdictOwner": "HAIEC",
+ "evidenceRefs": [
+  "ev-fault-1791183213-228329-start",
+  "ev-fault-1791183213-228329-k000",
+  "ev-fault-1791183213-228329-k001",
+  "ev-fault-1791183213-228329-k002"
+ ],
+ "limitations": [
+  "AGENT_LEVEL_RUN_MEAN_WINDOWS",
+  "BASELINE_FROM_CALIBRATION_NOT_ASSESSED"
+ ]
+}

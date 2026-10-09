@@ -1,0 +1,7 @@
+{
+  "runId": "C16-RETRY",
+  "label": "Control 16 retry-storm run",
+  "traceIds": ["trace-c16-retry"],
+  "sessionIds": ["sess-c16-retry"],
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

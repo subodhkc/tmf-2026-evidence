@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/cause-evaluation.schema.json",
+  "title": "Cause Rule Evaluation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evaluationId",
+    "ruleId",
+    "subjectRefs",
+    "actionGroupRefs",
+    "predicateResults",
+    "hardNegativesChecked",
+    "alternativeMechanismsConsidered",
+    "resultState",
+    "candidate",
+    "limitations",
+    "analysisRunId",
+    "evaluationVersion"
+  ],
+  "properties": {
+    "evaluationId": {
+      "type": "string"
+    },
+    "ruleId": {
+      "type": "string"
+    },
+    "subjectRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "actionGroupRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "predicateResults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "predicateId",
+          "state",
+          "evidenceRefs",
+          "gapRefs"
+        ],
+        "properties": {
+          "predicateId": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "SATISFIED",
+              "MISSING",
+              "CONTRADICTED",
+              "NOT_EVALUATED"
+            ]
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gapRefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "detail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "hardNegativesChecked": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "alternativeMechanismsConsidered": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resultState": {
+      "type": "string",
+      "enum": [
+        "ESTABLISHED",
+        "CORROBORATED",
+        "SUPPORTED_CANDIDATE",
+        "POSSIBLE",
+        "INSUFFICIENT_EVIDENCE",
+        "CONTRADICTED"
+      ]
+    },
+    "candidate": {
+      "$ref": "cause-candidate.schema.json"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "evaluationVersion": {
+      "type": "string"
+    }
+  }
+}

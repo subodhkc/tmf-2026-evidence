@@ -1,0 +1,124 @@
+{
+  "version": "0.1.0",
+  "operators": {
+    "SIGNAL_PRESENT": {
+      "requiredParams": [
+        "signalRefs"
+      ]
+    },
+    "EVENT_MATCH": {
+      "requiredParams": [
+        "eventClasses"
+      ]
+    },
+    "RELATION_STATE": {
+      "requiredParams": [
+        "relationTypes",
+        "states"
+      ]
+    },
+    "ACTION_PHASE_STATE": {
+      "requiredParams": [
+        "phase",
+        "states"
+      ]
+    },
+    "FIVE_PLANE_STATE": {
+      "requiredParams": [
+        "plane",
+        "states"
+      ]
+    },
+    "DELTA_MATCH": {
+      "requiredParams": [
+        "dimensions",
+        "kinds"
+      ]
+    },
+    "EXPECTED_STATE_COMPARE": {
+      "requiredParams": [
+        "comparison"
+      ]
+    },
+    "STATE_COMPARE": {
+      "requiredParams": [
+        "comparison"
+      ]
+    },
+    "IDENTITY_STATE": {
+      "requiredParams": [
+        "states"
+      ]
+    },
+    "ORDER_BEFORE": {
+      "requiredParams": [
+        "beforeRef",
+        "afterRef"
+      ]
+    },
+    "COMPLETENESS_STATE": {
+      "requiredParams": [
+        "states"
+      ]
+    },
+    "LINEAGE_COUNT": {
+      "requiredParams": [
+        "operator",
+        "value"
+      ]
+    },
+    "GAP_STATE": {
+      "requiredParams": [
+        "gapTypes",
+        "states"
+      ]
+    },
+    "BASELINE_COMPATIBILITY": {
+      "requiredParams": [
+        "states"
+      ]
+    },
+    "CONTRADICTION_CLASS": {
+      "requiredParams": [
+        "classes",
+        "states"
+      ]
+    },
+    "ATTRIBUTE_COMPARE": {
+      "requiredParams": [
+        "expression"
+      ]
+    },
+    "MEASUREMENT_COMPARE": {
+      "requiredParams": [
+        "comparison"
+      ]
+    },
+    "SOURCE_ROLE_PRESENT": {
+      "requiredParams": [
+        "sourceRoles"
+      ]
+    },
+    "SOURCE_AUTHORITY_ROLE": {
+      "requiredParams": [
+        "roles"
+      ]
+    },
+    "GUARDRAIL_LADDER": {
+      "requiredParams": [
+        "states"
+      ]
+    },
+    "COUNT_COMPARE": {
+      "requiredParams": [
+        "subject",
+        "operator",
+        "value"
+      ]
+    }
+  },
+  "notes": [
+    "Predicate operators are deterministic query intents over Phase 2/3A contracts.",
+    "Detection signals generate candidates; they do not independently establish causes."
+  ]
+}

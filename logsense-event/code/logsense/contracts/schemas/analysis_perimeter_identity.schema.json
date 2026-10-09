@@ -1,0 +1,135 @@
+{
+  "$id": "https://logsense.local/schemas/analysis_perimeter_identity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "analysisRunId": {
+      "type": "string"
+    },
+    "analyzerId": {
+      "type": "string"
+    },
+    "analyzerVersion": {
+      "type": "string"
+    },
+    "baselinePerimeterRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "buildIdentity": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "candidatePerimeterRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "changedAnalyzerDimensions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "commitSha": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "compatibilityState": {
+      "enum": [
+        "EXACT",
+        "COMPATIBLE",
+        "PARTIAL",
+        "INCOMPARABLE",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "evidenceSetIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "identityPolicyDigest": {
+      "type": "string"
+    },
+    "incompatibleDimensions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "investigationId": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "relationMatrixDigest": {
+      "type": "string"
+    },
+    "rulePackDigest": {
+      "type": "string"
+    },
+    "semanticProfileDigest": {
+      "type": "string"
+    },
+    "snapshotDigest": {
+      "type": "string"
+    },
+    "sourceQualificationDigest": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "investigationId",
+    "snapshotDigest",
+    "evidenceSetIds",
+    "analysisRunId",
+    "analyzerId",
+    "analyzerVersion",
+    "rulePackDigest",
+    "relationMatrixDigest",
+    "identityPolicyDigest",
+    "sourceQualificationDigest",
+    "semanticProfileDigest",
+    "createdAt",
+    "limitations",
+    "compatibilityState",
+    "incompatibleDimensions",
+    "changedAnalyzerDimensions"
+  ],
+  "title": "Analysis Perimeter Identity",
+  "type": "object"
+}

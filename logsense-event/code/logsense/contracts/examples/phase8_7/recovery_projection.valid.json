@@ -1,0 +1,34 @@
+{
+  "downstreamImpactResolvedRefs": [],
+  "evidenceRefs": [
+    "e-rq",
+    "e-done",
+    "e-state"
+  ],
+  "incidentSnapshotRef": "snap-1",
+  "limitations": [
+    "impact resolution not observed"
+  ],
+  "notClaimed": [
+    "IMPACT_RESOLVED"
+  ],
+  "recoveryActionRefs": [
+    "a-rollback"
+  ],
+  "recoveryId": "rec-1",
+  "replayOrCancelCapability": "UNKNOWN",
+  "rollbackCompletedRefs": [
+    "e-done"
+  ],
+  "rollbackRequestedRefs": [
+    "e-rq"
+  ],
+  "serviceHealthRestoredRefs": [],
+  "state": "PARTIAL",
+  "stateRestoredRefs": [
+    "e-state"
+  ],
+  "verificationTestRefs": [
+    "t-2"
+  ]
+}

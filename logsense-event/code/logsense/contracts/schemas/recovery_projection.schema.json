@@ -1,0 +1,103 @@
+{
+  "$id": "https://logsense.local/schemas/recovery_projection.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "downstreamImpactResolvedRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "incidentSnapshotRef": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "notClaimed": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "recoveryActionRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "recoveryId": {
+      "type": "string"
+    },
+    "replayOrCancelCapability": {
+      "type": "string"
+    },
+    "rollbackCompletedRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "rollbackRequestedRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "serviceHealthRestoredRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "state": {
+      "enum": [
+        "ESTABLISHED",
+        "PARTIAL",
+        "NOT_AVAILABLE",
+        "CONTRADICTED"
+      ],
+      "type": "string"
+    },
+    "stateRestoredRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "verificationTestRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "recoveryId",
+    "incidentSnapshotRef",
+    "recoveryActionRefs",
+    "rollbackRequestedRefs",
+    "rollbackCompletedRefs",
+    "stateRestoredRefs",
+    "serviceHealthRestoredRefs",
+    "downstreamImpactResolvedRefs",
+    "verificationTestRefs",
+    "replayOrCancelCapability",
+    "state",
+    "evidenceRefs",
+    "limitations",
+    "notClaimed"
+  ],
+  "title": "Recovery Projection",
+  "type": "object"
+}

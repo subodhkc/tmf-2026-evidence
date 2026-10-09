@@ -1,0 +1,102 @@
+{
+  "$defs": {
+    "CoverageCell": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "$ref": "#/$defs/CoverageState"
+        },
+        "evidenceRefs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidencerefs",
+          "type": "array"
+        },
+        "gapRefs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Gaprefs",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "CoverageCell",
+      "type": "object"
+    },
+    "CoverageState": {
+      "enum": [
+        "PRESENT",
+        "PARTIAL",
+        "MISSING",
+        "CONTRADICTED",
+        "NOT_APPLICABLE",
+        "UNKNOWN"
+      ],
+      "title": "CoverageState",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "coverageId": {
+      "title": "Coverageid",
+      "type": "string"
+    },
+    "actionGroupRef": {
+      "title": "Actiongroupref",
+      "type": "string"
+    },
+    "requested": {
+      "$ref": "#/$defs/CoverageCell"
+    },
+    "policyAuthorized": {
+      "$ref": "#/$defs/CoverageCell"
+    },
+    "effectivelyGranted": {
+      "$ref": "#/$defs/CoverageCell"
+    },
+    "codeCapable": {
+      "$ref": "#/$defs/CoverageCell"
+    },
+    "observed": {
+      "$ref": "#/$defs/CoverageCell"
+    },
+    "localForensicLens": {
+      "const": true,
+      "default": true,
+      "title": "Localforensiclens",
+      "type": "boolean"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "coverageId",
+    "actionGroupRef",
+    "requested",
+    "policyAuthorized",
+    "effectivelyGranted",
+    "codeCapable",
+    "observed"
+  ],
+  "title": "FivePlaneCoverage",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/five_plane_coverage.schema.json"
+}

@@ -1,0 +1,608 @@
+AUDIT TRAIL -- 196 records
+================================================================
+ 1. [2026-10-05T01:34:42Z] INTENT | actor=customer-experience-agent | step=1
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=6d4562d513524b8a9c9b8b7aae0a2cbc customer analysis via governed model 'nemotron-super-120b'; tool customer-records
+ 2. [2026-10-05T01:34:43Z] MODEL-REQUEST-INTENT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "8decb6dec5904f3c9dda6c757595a7c0", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "226a76b7f56c495d929e1b424f2d73cb", "path": "/v1/chat/completions", "
+ 3. [2026-10-05T01:34:47Z] MODEL-REQUEST-RESULT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "0bbf866b-4d40-4f09-bbcb-bcfc66d5da32", "action_id_present": true, "client_request_id": "8decb6dec5904f3c9dda6c757595a7c0", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+ 4. [2026-10-05T01:34:47Z] MODEL-REQUEST-INTENT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "22485c0bd7ed44abaa65f364817f93b2", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "b346dde116414b3c9b856d95cce8909a", "path": "/v1/chat/completions", "
+ 5. [2026-10-05T01:34:50Z] MODEL-REQUEST-RESULT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "e10ddab6-aaa8-4ba4-8987-c32590b5bf80", "action_id_present": true, "client_request_id": "22485c0bd7ed44abaa65f364817f93b2", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+ 6. [2026-10-05T01:34:50Z] TOOL-INVOCATION | actor=customer-experience-agent | step=1.5
+    correlation_id=fault-1791164066-bdd7e3
+    actor=customer-experience-agent tool=customer-records correlation_id=fault-1791164066-bdd7e3 trace_id=6d4562d513524b8a9c9b8b7aae0a2cbc result_summary=- Impacted customers: Meridian Logistics (CUST-100
+ 7. [2026-10-05T01:34:50Z] INVOCATION | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=6d4562d513524b8a9c9b8b7aae0a2cbc governed call via alias nemotron-super-120b: http_status=200
+ 8. [2026-10-05T01:34:50Z] RESULT-INSPECTION | actor=customer-experience-agent | step=3
+    correlation_id=fault-1791164066-bdd7e3
+    disposition=undetermined, decision='- Impacted customers: Meridian Logistics (CUST-1001), Aurora Health Group (CUST-1002), Northwind Retail (CUST-2087), Summit Energy (CUST-4455), Pacific Transit Auth
+ 9. [2026-10-05T01:35:08Z] INTENT | actor=it-resolution-agent | step=4
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=6a78a2ba1c8e42d5b12ca53745f5154c it analysis via governed model 'nemotron-nano-9b'; tool runbook-lookup
+10. [2026-10-05T01:35:09Z] MODEL-REQUEST-INTENT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "be44a316e9ec4e499ebf4ee6c3c24cd9", "method": "POST", "model_alias": "nemotron-nano-9b", "model_turn_id": "8bfb7e3f5c47465dbda09dcb519db9cc", "path": "/v1/chat/completions", "tra
+11. [2026-10-05T01:35:10Z] MODEL-REQUEST-RESULT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "9d68ee92-f05a-4a0b-9c11-366c3209a773", "action_id_present": true, "client_request_id": "be44a316e9ec4e499ebf4ee6c3c24cd9", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+12. [2026-10-05T01:35:18Z] MODEL-REQUEST-INTENT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "c8a8209c33244b70af371dc2bee34d2f", "method": "POST", "model_alias": "nemotron-nano-9b", "model_turn_id": "78df9e79a7444ca9b12ca2688b08a0a5", "path": "/v1/chat/completions", "tra
+13. [2026-10-05T01:35:20Z] MODEL-REQUEST-RESULT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "85b4388e-01f4-4151-ab82-011f9535a8b3", "action_id_present": true, "client_request_id": "c8a8209c33244b70af371dc2bee34d2f", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+14. [2026-10-05T01:35:20Z] TOOL-INVOCATION | actor=it-resolution-agent | step=4.5
+    correlation_id=fault-1791164066-bdd7e3
+    actor=it-resolution-agent tool=runbook-lookup correlation_id=fault-1791164066-bdd7e3 trace_id=6a78a2ba1c8e42d5b12ca53745f5154c result_summary=- **Incident disposition**: Undetermined (requires network
+15. [2026-10-05T01:35:20Z] INVOCATION | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=6a78a2ba1c8e42d5b12ca53745f5154c governed call via alias nemotron-nano-9b: http_status=200
+16. [2026-10-05T01:35:20Z] RESULT-INSPECTION | actor=it-resolution-agent | step=6
+    correlation_id=fault-1791164066-bdd7e3
+    disposition=escalate, decision='- **Incident disposition**: Undetermined (requires network team analysis of DU-DEN-12-A packet loss/latency).  \n- **Action per runbook**: Escalate to network team for 
+17. [2026-10-05T01:35:35Z] INTENT | actor=network-resolution-agent | step=7
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=3f58ecd4b8c24412a0a567f6dbb75dfe network analysis via governed model 'nemotron-super-120b'; tool network-twin
+18. [2026-10-05T01:35:36Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "9a5fd70bb8af40039a63653af4f8a746", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "23f5203bc47e4497a19c0e3d3f2b0d56", "path": "/v1/chat/completions", "
+19. [2026-10-05T01:35:38Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "07fc126c-90fc-4413-b21d-7411bd7a9142", "action_id_present": true, "client_request_id": "9a5fd70bb8af40039a63653af4f8a746", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+20. [2026-10-05T01:35:38Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "07c8e7fedcb94e08bc17e8a5244e0d6f", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "fcccb3d21dc4469a9bbf0c1880559abe", "path": "/v1/chat/completions", "
+21. [2026-10-05T01:35:40Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "c65eb2f7-d0e5-4968-8a33-7a629d2067bd", "action_id_present": true, "client_request_id": "07c8e7fedcb94e08bc17e8a5244e0d6f", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+22. [2026-10-05T01:35:40Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "78babebf30794a2787c945ac17ccdb78", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "70f82690e19349aaa9aa84b01f2cd7bf", "path": "/v1/chat/completions", "
+23. [2026-10-05T01:36:40Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "dd7d29ed90de42398fc27531bf750f86", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "70f82690e19349aaa9aa84b01f2cd7bf", "path": "/v1/chat/completions", "
+24. [2026-10-05T01:36:42Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "915549d4-71c7-4ceb-b604-d267dbd7af9d", "action_id_present": true, "client_request_id": "dd7d29ed90de42398fc27531bf750f86", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+25. [2026-10-05T01:36:42Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "01d086305950450ca35dcf8a5f60467c", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "711c838bed2c4fe69826288f172034c3", "path": "/v1/chat/completions", "
+26. [2026-10-05T01:36:44Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "60ea0530-765d-4c87-ae1c-76e1b2160183", "action_id_present": true, "client_request_id": "01d086305950450ca35dcf8a5f60467c", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+27. [2026-10-05T01:36:47Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "513f303b9295480b96660c5e75599607", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "13b92491137049edbc07bdcaff57a15e", "path": "/v1/chat/completions", "
+28. [2026-10-05T01:36:50Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "4a800aa3-6066-4ecc-a7fc-aaf9023081ad", "action_id_present": true, "client_request_id": "513f303b9295480b96660c5e75599607", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+29. [2026-10-05T01:36:50Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "7903017e62334556a91e1b6e9339875a", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "dbea662ddcf44a83bffa11613e35eb7e", "path": "/v1/chat/completions", "
+30. [2026-10-05T01:36:52Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "de809070-5251-4869-834f-8e0bff44fffe", "action_id_present": true, "client_request_id": "7903017e62334556a91e1b6e9339875a", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+31. [2026-10-05T01:36:53Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "a154c6ca6a4f4e22990bc85b509f5fa2", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "2f14e96a186f4578b9c8dcbb4b0cbbe1", "path": "/v1/chat/completions", "
+32. [2026-10-05T01:36:55Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "f94b65a0-f966-450d-beda-8d855c88aa28", "action_id_present": true, "client_request_id": "a154c6ca6a4f4e22990bc85b509f5fa2", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+33. [2026-10-05T01:36:55Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "d58b518a5cb54f718871793e680dc5ba", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "9b1ecf70eb774ed7a35d979ae345779a", "path": "/v1/chat/completions", "
+34. [2026-10-05T01:36:57Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "147eeaf5-0123-4b0d-95b9-11791655bd9d", "action_id_present": true, "client_request_id": "d58b518a5cb54f718871793e680dc5ba", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+35. [2026-10-05T01:36:58Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "be172159951145dd9c491e0134b73985", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "9a611d4929a142b4ba829d117fa81bed", "path": "/v1/chat/completions", "
+36. [2026-10-05T01:36:59Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "54e416a8-555e-40c1-afc5-463550cc184a", "action_id_present": true, "client_request_id": "be172159951145dd9c491e0134b73985", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+37. [2026-10-05T01:37:00Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "992555d8a0754f57a240a36acfd79d23", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "34ee6451c94c486eb7e99730c24fba79", "path": "/v1/chat/completions", "
+38. [2026-10-05T01:37:03Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "3a34bb19-cfdf-4887-acea-110ed5774dd2", "action_id_present": true, "client_request_id": "992555d8a0754f57a240a36acfd79d23", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+39. [2026-10-05T01:37:03Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "bab891520ad84780b2f7e9679c4cffd8", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "b278f0e952724ef38d43560b32cda833", "path": "/v1/chat/completions", "
+40. [2026-10-05T01:37:05Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "4d68b5bd-73a9-4b51-81d1-4cd96586dc23", "action_id_present": true, "client_request_id": "bab891520ad84780b2f7e9679c4cffd8", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+41. [2026-10-05T01:37:05Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ae80d595bc3f4af5be028c7dbc408ca6", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "562220aaafc34a8aace88a882af5fcfd", "path": "/v1/chat/completions", "
+42. [2026-10-05T01:37:07Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "6a7cc43c-a369-46f9-9967-93615223ec7d", "action_id_present": true, "client_request_id": "ae80d595bc3f4af5be028c7dbc408ca6", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+43. [2026-10-05T01:37:08Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "e0676e6fdd3646afba3e4951728b1a2b", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d77737a59fef4e10ad48e507d16b15eb", "path": "/v1/chat/completions", "
+44. [2026-10-05T01:37:11Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "095a4b8f-1967-42ab-af7c-d3665edff4be", "action_id_present": true, "client_request_id": "e0676e6fdd3646afba3e4951728b1a2b", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+45. [2026-10-05T01:37:11Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "5130fd512c03449cafc4adb4ae8f11dd", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "a01f2840da3844e7aeb5a73f5407c3fe", "path": "/v1/chat/completions", "
+46. [2026-10-05T01:37:13Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "b7d360cc-316e-4c39-acae-98686b8b2268", "action_id_present": true, "client_request_id": "5130fd512c03449cafc4adb4ae8f11dd", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+47. [2026-10-05T01:37:13Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "e2e6bd3ef0c64bae8692c59cc8839387", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d72f2c2724b149b8951eaba3ec4ea08c", "path": "/v1/chat/completions", "
+48. [2026-10-05T01:37:15Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "39ec22a7-d9aa-407f-9a9a-e22964087163", "action_id_present": true, "client_request_id": "e2e6bd3ef0c64bae8692c59cc8839387", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+49. [2026-10-05T01:37:15Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "f11b4c82aef5460ab784e2f57153c75b", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "9b96fe2ed58b45acb393ca8d78f3280d", "path": "/v1/chat/completions", "
+50. [2026-10-05T01:37:19Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "4c133185-5499-4354-bf7a-4db68ecd1045", "action_id_present": true, "client_request_id": "f11b4c82aef5460ab784e2f57153c75b", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+51. [2026-10-05T01:37:19Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "6e0e3b780f96458f9727bf99f084548e", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "554bde7ba538460399a2f70bb3b4254c", "path": "/v1/chat/completions", "
+52. [2026-10-05T01:37:21Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "a72fd1fe-66a4-48a5-a017-33197e58c040", "action_id_present": true, "client_request_id": "6e0e3b780f96458f9727bf99f084548e", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+53. [2026-10-05T01:37:22Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "de5a322763b047d0b953f5331c1ed533", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "9d83ee84416f4999a5bf91df004fce13", "path": "/v1/chat/completions", "
+54. [2026-10-05T01:37:24Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "d302c38f-cf22-4228-84fd-428cc1302196", "action_id_present": true, "client_request_id": "de5a322763b047d0b953f5331c1ed533", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+55. [2026-10-05T01:37:24Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "aee3dd2acebf43b4839db0a7067e3bf6", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "de2867827785411dacd1ec7d8ad3c4cf", "path": "/v1/chat/completions", "
+56. [2026-10-05T01:37:26Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "83e7ae74-7d75-4785-a57e-476ba812d570", "action_id_present": true, "client_request_id": "aee3dd2acebf43b4839db0a7067e3bf6", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+57. [2026-10-05T01:37:26Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "e52a42754ce8416482111a9d4fe3768d", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d624c2c60cbd4fb1a9e3fadaf03ed3a0", "path": "/v1/chat/completions", "
+58. [2026-10-05T01:37:28Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "2b2ad17e-041a-448a-92bb-332945ee3606", "action_id_present": true, "client_request_id": "e52a42754ce8416482111a9d4fe3768d", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+59. [2026-10-05T01:37:28Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "4b32b7f0c09c40a8ac5c5423342d0e87", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "36484db0bc4d4fd58028b4487ac81200", "path": "/v1/chat/completions", "
+60. [2026-10-05T01:37:30Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "a544f6e5-ddb5-4a41-8306-88c55b54120a", "action_id_present": true, "client_request_id": "4b32b7f0c09c40a8ac5c5423342d0e87", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+61. [2026-10-05T01:37:31Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ad4bc39b27794a6d95c6d64ec49c8c04", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "7785ac07cd5c452d83190192490f7c90", "path": "/v1/chat/completions", "
+62. [2026-10-05T01:37:32Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "f291c3e2-6eb5-4e80-927e-a34c218d30c7", "action_id_present": true, "client_request_id": "ad4bc39b27794a6d95c6d64ec49c8c04", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+63. [2026-10-05T01:37:33Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "9319570e06a24195ba849be8b158d8d9", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "3cd4e9e560774d0e881667a745dc6de6", "path": "/v1/chat/completions", "
+64. [2026-10-05T01:37:35Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "ed4d8c58-2d1b-4ce5-9dd1-50da7c7e263f", "action_id_present": true, "client_request_id": "9319570e06a24195ba849be8b158d8d9", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+65. [2026-10-05T01:37:35Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "976039f37d214f899b2157c4bce21026", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "42c76e6e1862432dae0edafd26332241", "path": "/v1/chat/completions", "
+66. [2026-10-05T01:37:37Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "a9feed8b-ad25-49a4-a6b6-faccdfe143a3", "action_id_present": true, "client_request_id": "976039f37d214f899b2157c4bce21026", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+67. [2026-10-05T01:37:37Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "e57eaef5bd4b4a2f921b86ab5d78d73a", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "325c5e988d45436cbecb458b25490a61", "path": "/v1/chat/completions", "
+68. [2026-10-05T01:37:40Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "0d80c4dd-c02d-44fe-9907-7b92a43b3d2a", "action_id_present": true, "client_request_id": "e57eaef5bd4b4a2f921b86ab5d78d73a", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+69. [2026-10-05T01:37:40Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "44b6b430342a4b52b34b8dc4054dedbf", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "7895147c1ccc495799876da6d69ed263", "path": "/v1/chat/completions", "
+70. [2026-10-05T01:37:42Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "c6445186-841c-4335-9cb6-a8a3c38e65a5", "action_id_present": true, "client_request_id": "44b6b430342a4b52b34b8dc4054dedbf", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+71. [2026-10-05T01:37:43Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "052de070c5914487b4e4ff6af6f0505c", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "3ea85f92f8614cce9a25d910a93ae0c8", "path": "/v1/chat/completions", "
+72. [2026-10-05T01:37:45Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "842b41a4-c93f-43cd-8ccb-367cc1d0bad5", "action_id_present": true, "client_request_id": "052de070c5914487b4e4ff6af6f0505c", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+73. [2026-10-05T01:37:45Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "a7d8afdb9d94429ba46cb08c0411146e", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "09cd35d6d98f4cc99103a8f19aedad4b", "path": "/v1/chat/completions", "
+74. [2026-10-05T01:37:48Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "4d4b1a4f-aaa5-4754-8790-fff140007265", "action_id_present": true, "client_request_id": "a7d8afdb9d94429ba46cb08c0411146e", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+75. [2026-10-05T01:37:48Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ddf0436e94964f88a9d501dbbd96242a", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "32184b447c2b4d8eb2108a5aff9ea169", "path": "/v1/chat/completions", "
+76. [2026-10-05T01:37:50Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "9f3f1b8b-4c86-494d-b3a3-bc8990d1acf7", "action_id_present": true, "client_request_id": "ddf0436e94964f88a9d501dbbd96242a", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+77. [2026-10-05T01:37:50Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ca558c57a246430f997d56bb7c7b5d9c", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "e580278f166148ffb5b2386280dedafc", "path": "/v1/chat/completions", "
+78. [2026-10-05T01:37:53Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "cf15e5fd-5f49-4ea9-9e40-57a34e96b23d", "action_id_present": true, "client_request_id": "ca558c57a246430f997d56bb7c7b5d9c", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+79. [2026-10-05T01:37:53Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "7cec80bc316547aa9b8d73ccf741623a", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "5bc3db856c574065b9c1a04eec42d5f6", "path": "/v1/chat/completions", "
+80. [2026-10-05T01:37:55Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "e5b9f87b-849e-49b9-9952-12e4b18fdff0", "action_id_present": true, "client_request_id": "7cec80bc316547aa9b8d73ccf741623a", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+81. [2026-10-05T01:37:56Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "e5110e19d5f84a64bb43fc3458a6c275", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "672d68c753e742cc9db2bd96f4e50bb4", "path": "/v1/chat/completions", "
+82. [2026-10-05T01:37:58Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "dc169588-19ca-475c-8ad7-82de6a8f9bd7", "action_id_present": true, "client_request_id": "e5110e19d5f84a64bb43fc3458a6c275", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+83. [2026-10-05T01:37:58Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "f5d2244cf13c4e41adfb5653d73a4bab", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "bef49cdbc83b457ba6917bb098d98f40", "path": "/v1/chat/completions", "
+84. [2026-10-05T01:38:01Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "28a29bb4-d736-4cd0-bce9-1e2e8a46a7b3", "action_id_present": true, "client_request_id": "f5d2244cf13c4e41adfb5653d73a4bab", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+85. [2026-10-05T01:38:01Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "cce60f8cbb18449bb6e21352d7a5dc7e", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "18abb562cf104699b8c39e38436ad8a4", "path": "/v1/chat/completions", "
+86. [2026-10-05T01:38:03Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "9d0fdd0c-47c2-4402-8066-f999a3916bcb", "action_id_present": true, "client_request_id": "cce60f8cbb18449bb6e21352d7a5dc7e", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+87. [2026-10-05T01:38:04Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "339f6fc342a24855b25421554eb0ae5d", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "90fe2352b113466898bb5ab83fb01671", "path": "/v1/chat/completions", "
+88. [2026-10-05T01:38:06Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "fdcf32ec-335d-431c-9752-241ad9f7faba", "action_id_present": true, "client_request_id": "339f6fc342a24855b25421554eb0ae5d", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+89. [2026-10-05T01:38:06Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "aed82f564d1d4d3780262fd23f844bec", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "e6471d43505841c387191c7dbd53ad94", "path": "/v1/chat/completions", "
+90. [2026-10-05T01:38:09Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "f9913536-f5c4-4697-9c72-91da3608bf9d", "action_id_present": true, "client_request_id": "aed82f564d1d4d3780262fd23f844bec", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+91. [2026-10-05T01:38:09Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "b054a5e26f944a39a57baf89cf6fb57f", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "182171e8811d4f93af307f059fce0e25", "path": "/v1/chat/completions", "
+92. [2026-10-05T01:38:11Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "44465484-f64d-470c-8880-683996dccdc3", "action_id_present": true, "client_request_id": "b054a5e26f944a39a57baf89cf6fb57f", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+93. [2026-10-05T01:38:11Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "193af5d2f1424fd79d6c19bdc359e8e4", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "267a43095d314529a392bb2aafa60c34", "path": "/v1/chat/completions", "
+94. [2026-10-05T01:38:14Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "c71f62f3-e3e0-4f89-86c5-488c32ab26ae", "action_id_present": true, "client_request_id": "193af5d2f1424fd79d6c19bdc359e8e4", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+95. [2026-10-05T01:38:14Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "1ad7073fde4d4d0685fb1df650e50232", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "ae11e25a39814f6caf4dc1a21a0fcfe3", "path": "/v1/chat/completions", "
+96. [2026-10-05T01:38:16Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "ca488b5c-fff8-4a13-add7-50ecbe1962d8", "action_id_present": true, "client_request_id": "1ad7073fde4d4d0685fb1df650e50232", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+97. [2026-10-05T01:38:16Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "65b754d4f928433db7c96e28e83178ef", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "63fa0d107fe743759d87cb39fef57a2a", "path": "/v1/chat/completions", "
+98. [2026-10-05T01:38:18Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "7988aac5-b858-4bb6-bfc9-dfe27103f423", "action_id_present": true, "client_request_id": "65b754d4f928433db7c96e28e83178ef", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+99. [2026-10-05T01:38:19Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "e463b16c68554027932339c8567ac8a9", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "df6444bfa69c4004b28bd74b39449961", "path": "/v1/chat/completions", "
+100. [2026-10-05T01:38:21Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "d248fb8f-0ff4-4d4c-883b-4fb3d4f2d2a6", "action_id_present": true, "client_request_id": "e463b16c68554027932339c8567ac8a9", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+101. [2026-10-05T01:38:21Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ee6d4ac0ad9040e8959e37f1a793772e", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "f949c201ac234481b35e6397a9d7637f", "path": "/v1/chat/completions", "
+102. [2026-10-05T01:38:24Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "98bec1f6-2c60-4ea1-a0c8-00b68428639d", "action_id_present": true, "client_request_id": "ee6d4ac0ad9040e8959e37f1a793772e", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+103. [2026-10-05T01:38:24Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "5f54e789dc334a2ea10d3ba8e2368551", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "b92fbd064fd744db909c035f0cb19251", "path": "/v1/chat/completions", "
+104. [2026-10-05T01:38:27Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "74d72b56-a7b4-4732-8af5-32bddf1c44b8", "action_id_present": true, "client_request_id": "5f54e789dc334a2ea10d3ba8e2368551", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+105. [2026-10-05T01:38:27Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "845d43dd9fd84f2d8899e543997df044", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "5df07e6a54d44c7d99ddddc7e15674a5", "path": "/v1/chat/completions", "
+106. [2026-10-05T01:38:30Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "ac5ba307-7c0c-4c00-b27f-f1e29982802f", "action_id_present": true, "client_request_id": "845d43dd9fd84f2d8899e543997df044", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+107. [2026-10-05T01:38:30Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "624b4d0f1ba14f23bfa58b3c9b245873", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "8df30957920d4cd3a8af7869e3a2a16b", "path": "/v1/chat/completions", "
+108. [2026-10-05T01:38:33Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "ee4b0667-e96c-4db5-b6a3-0b1f39fe1d0f", "action_id_present": true, "client_request_id": "624b4d0f1ba14f23bfa58b3c9b245873", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+109. [2026-10-05T01:38:33Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "c345739e8c7040e9ade06d6be94c1923", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "719a13dccc5d4e239a7cc347705631cc", "path": "/v1/chat/completions", "
+110. [2026-10-05T01:38:36Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "3deabb5f-2049-431b-a06f-af5655e538d4", "action_id_present": true, "client_request_id": "c345739e8c7040e9ade06d6be94c1923", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+111. [2026-10-05T01:38:36Z] INTENT | actor=network-resolution-agent | step=7
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=32ea5a95cac741fc8b51e952602cbbe6 network analysis via governed model 'nemotron-super-120b'; tool network-twin
+112. [2026-10-05T01:38:36Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "941d4513f30942f1b37902505068ed94", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "dfff0f5e810347ec8b5fc90c923ab655", "path": "/v1/chat/completions", "
+113. [2026-10-05T01:38:36Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "3ab78e7ed0bb493087290a89ba4c0e8f", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d65c6a79f7374d759d463414974e63ae", "path": "/v1/chat/completions", "
+114. [2026-10-05T01:38:39Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "1ad1808f-45c1-4465-af10-71ef32b5d252", "action_id_present": true, "client_request_id": "941d4513f30942f1b37902505068ed94", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+115. [2026-10-05T01:38:39Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "a5c57d1aec1e4faeaea268d99e20cc97", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "cdffcfd7998845b0a57684d98e2c6a5e", "path": "/v1/chat/completions", "
+116. [2026-10-05T01:38:39Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "dc41d9fa-3a92-47e4-a205-e85bebf68a13", "action_id_present": true, "client_request_id": "3ab78e7ed0bb493087290a89ba4c0e8f", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+117. [2026-10-05T01:38:40Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ccc67d6c1d024c5db6a3b12ec5e8bc9a", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "b6696e04a24842588dd0acea0397de59", "path": "/v1/chat/completions", "
+118. [2026-10-05T01:38:42Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "0ed66b60-2bf7-48f3-b0e3-85c485cdd1a1", "action_id_present": true, "client_request_id": "a5c57d1aec1e4faeaea268d99e20cc97", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+119. [2026-10-05T01:38:42Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "9306beda2cf649a796561877643e687d", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d58c9563e2ce4c029c9ca656a834c34e", "path": "/v1/chat/completions", "
+120. [2026-10-05T01:38:42Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "905c2a06-c723-4721-8ccf-8f481f6cc546", "action_id_present": true, "client_request_id": "ccc67d6c1d024c5db6a3b12ec5e8bc9a", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+121. [2026-10-05T01:38:42Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "5589f05a870b4939a0cff6078716e059", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "8a71be8c0b55488195c037f3718af06d", "path": "/v1/chat/completions", "
+122. [2026-10-05T01:38:44Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "8a86c1c5-10c3-408e-8f4a-93cf9f1d21dd", "action_id_present": true, "client_request_id": "5589f05a870b4939a0cff6078716e059", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+123. [2026-10-05T01:38:45Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "937dea69-a190-43c2-83c0-b9974f2ec4c8", "action_id_present": true, "client_request_id": "9306beda2cf649a796561877643e687d", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+124. [2026-10-05T01:38:45Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "8b9acd3765d24a6a9126de6b45f4f5b4", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "33216f9546264df690fc72cd0e7ed744", "path": "/v1/chat/completions", "
+125. [2026-10-05T01:38:45Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "6f33775ba44f4015bf26822eddbd9174", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "33587ccb9cba41cb91b394e0863690d8", "path": "/v1/chat/completions", "
+126. [2026-10-05T01:38:48Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "6c3cb83b-ac1a-4341-b2d0-a678c3bebca0", "action_id_present": true, "client_request_id": "8b9acd3765d24a6a9126de6b45f4f5b4", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+127. [2026-10-05T01:38:48Z] TOOL-INVOCATION | actor=network-resolution-agent | step=7.5
+    correlation_id=fault-1791164066-bdd7e3
+    actor=network-resolution-agent tool=network-twin correlation_id=fault-1791164066-bdd7e3 trace_id=32ea5a95cac741fc8b51e952602cbbe6 result_summary=…….”
+
+…….”
+
+…….”
+
+…….”
+
+…….”
+
+…….”
+
+…….”
+
+…….”
+
+…….”
+
+…
+128. [2026-10-05T01:38:48Z] INVOCATION | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=32ea5a95cac741fc8b51e952602cbbe6 governed call via alias nemotron-super-120b: http_status=200
+129. [2026-10-05T01:38:48Z] RESULT-INSPECTION | actor=network-resolution-agent | step=9
+    correlation_id=fault-1791164066-bdd7e3
+    disposition=auto-resolve, decision='…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”\n\n…….”
+130. [2026-10-05T01:38:48Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "2cbf3522-1abe-496f-9131-3a587f61a77b", "action_id_present": true, "client_request_id": "6f33775ba44f4015bf26822eddbd9174", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+131. [2026-10-05T01:38:48Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "cb034195b8794e969963df2143af00ea", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d652297b105b454080843f38c0fb36f0", "path": "/v1/chat/completions", "
+132. [2026-10-05T01:38:51Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "a370de04-33eb-4c79-972e-146ba204d785", "action_id_present": true, "client_request_id": "cb034195b8794e969963df2143af00ea", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+133. [2026-10-05T01:38:51Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "78cadd00b0ae4316ad9c5f0c22c6f284", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "bcacf9d238da42d690bcd9061c95c19a", "path": "/v1/chat/completions", "
+134. [2026-10-05T01:38:54Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "062387d3-7cb0-46c5-bbb9-cdd4145bede7", "action_id_present": true, "client_request_id": "78cadd00b0ae4316ad9c5f0c22c6f284", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+135. [2026-10-05T01:38:54Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "5b275e47ce3c46ebbc1945aae1555147", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "cc805069ea7e474ba0eed4e89283b86e", "path": "/v1/chat/completions", "
+136. [2026-10-05T01:38:57Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "6f238369-71c9-4772-b35b-5d9b35eaa4fb", "action_id_present": true, "client_request_id": "5b275e47ce3c46ebbc1945aae1555147", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+137. [2026-10-05T01:38:57Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "5cae47ce9c7e4f00b0e1b6312adb5509", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "11d9354682da464e9c0e513c0a31d708", "path": "/v1/chat/completions", "
+138. [2026-10-05T01:39:00Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "d47ec045-fd87-435d-9ac6-b5c7e1fe51d1", "action_id_present": true, "client_request_id": "5cae47ce9c7e4f00b0e1b6312adb5509", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+139. [2026-10-05T01:39:00Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "1e024ee59f1749fbbfd085db3c86b3bd", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "b92e44594d2243a2ab9f16e6fcadb73b", "path": "/v1/chat/completions", "
+140. [2026-10-05T01:39:03Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "7245ad2c-e5f3-410b-b764-02447c1f2669", "action_id_present": true, "client_request_id": "1e024ee59f1749fbbfd085db3c86b3bd", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+141. [2026-10-05T01:39:03Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "d491c8cfc5c74c2abd637be0e2c736e7", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "6106324e067b42978cc3bf6f5eba22b4", "path": "/v1/chat/completions", "
+142. [2026-10-05T01:39:06Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "8f4d48c4-8152-4369-96e3-4c63aca5483e", "action_id_present": true, "client_request_id": "d491c8cfc5c74c2abd637be0e2c736e7", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+143. [2026-10-05T01:39:06Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "e7e6c3986f0f437f8880f3b67fea2ef8", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "4311c4e0bb544dde9703bda695ec5d19", "path": "/v1/chat/completions", "
+144. [2026-10-05T01:39:09Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "a599398a-7463-4790-88c5-573369c141dc", "action_id_present": true, "client_request_id": "e7e6c3986f0f437f8880f3b67fea2ef8", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+145. [2026-10-05T01:39:09Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "038e3063dcb54f418a45e99b70296982", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "8f133490fc534e419662ed444222441b", "path": "/v1/chat/completions", "
+146. [2026-10-05T01:39:12Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "d396bcd5-956a-4b1f-980b-4d869baad29c", "action_id_present": true, "client_request_id": "038e3063dcb54f418a45e99b70296982", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+147. [2026-10-05T01:39:12Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "830481d76513419186659832eee8a7d8", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "065dee324a29407182e077e43ce13072", "path": "/v1/chat/completions", "
+148. [2026-10-05T01:39:16Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "ccb374a4-9ebf-4f35-bcf4-9a11c1c0e2fd", "action_id_present": true, "client_request_id": "830481d76513419186659832eee8a7d8", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+149. [2026-10-05T01:39:16Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "f40783c5f1cb4231b7af234fff1df991", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "4aff9049f0d24e56b7b15b2d50e067b3", "path": "/v1/chat/completions", "
+150. [2026-10-05T01:39:19Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "946cb872-ab9a-4db0-af96-829a99f5c592", "action_id_present": true, "client_request_id": "f40783c5f1cb4231b7af234fff1df991", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+151. [2026-10-05T01:39:19Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "8fa288fafcea466981a3e373aaaee8ba", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "838b39ced0cd454eb3df313a45363af5", "path": "/v1/chat/completions", "
+152. [2026-10-05T01:39:23Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "a0171eb6-f5f0-4789-ae6c-4b0d8ca69ede", "action_id_present": true, "client_request_id": "8fa288fafcea466981a3e373aaaee8ba", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+153. [2026-10-05T01:39:23Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "02d7f1b8f4e04076b541134e053cd395", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "929c70f9095a41e0b32a9af9181e039d", "path": "/v1/chat/completions", "
+154. [2026-10-05T01:39:26Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "3aa19e5c-4e01-446e-8f99-c651e2b800aa", "action_id_present": true, "client_request_id": "02d7f1b8f4e04076b541134e053cd395", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+155. [2026-10-05T01:39:26Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "bbb2de62ca014ae38f2fb13be5d25059", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "5d4aa8dda175471a9699ec680bd00325", "path": "/v1/chat/completions", "
+156. [2026-10-05T01:39:29Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "c2d3b026-f85b-401d-bf91-7106bf70047b", "action_id_present": true, "client_request_id": "bbb2de62ca014ae38f2fb13be5d25059", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+157. [2026-10-05T01:39:29Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "c46430e5e05b479aa30146e1e7244974", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "f36ce7dff7434ecb85d6cc47443fc60c", "path": "/v1/chat/completions", "
+158. [2026-10-05T01:39:32Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "05b53122-4294-4fbe-a440-197ce51057b0", "action_id_present": true, "client_request_id": "c46430e5e05b479aa30146e1e7244974", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+159. [2026-10-05T01:39:33Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "02c586b1656546caac9d57153de9de03", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "da9cba13a7b642558c9bbcbe7788e699", "path": "/v1/chat/completions", "
+160. [2026-10-05T01:39:36Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "5bcd5f12-9044-4a77-b900-9cb877d4b8d9", "action_id_present": true, "client_request_id": "02c586b1656546caac9d57153de9de03", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+161. [2026-10-05T01:39:36Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "bf580818a01548eaab97ad4ee346e430", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "3a57cb44b2dd4a979b9616c11715c185", "path": "/v1/chat/completions", "
+162. [2026-10-05T01:39:39Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "3a7e4d8f-b7df-4eda-bb86-01f162929c95", "action_id_present": true, "client_request_id": "bf580818a01548eaab97ad4ee346e430", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+163. [2026-10-05T01:39:39Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "854eb9ffd72d431ea0a4e8bfccf7e677", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d28fa2dabf054bf1bb483ee23ff56172", "path": "/v1/chat/completions", "
+164. [2026-10-05T01:39:42Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "b98bbf68-2ed4-4133-9192-9befe88b171f", "action_id_present": true, "client_request_id": "854eb9ffd72d431ea0a4e8bfccf7e677", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+165. [2026-10-05T01:39:43Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "5a0ac142cbc640cda5a49af25cce8205", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "af62269217834ac0be00b2f07ad58676", "path": "/v1/chat/completions", "
+166. [2026-10-05T01:39:46Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "2ecbe540-bde0-4964-9e59-d2645cded83a", "action_id_present": true, "client_request_id": "5a0ac142cbc640cda5a49af25cce8205", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+167. [2026-10-05T01:39:46Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "42a16b36de3b4d49b5979deaef805452", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "696a592318914509a8f5d5a8a5a1a315", "path": "/v1/chat/completions", "
+168. [2026-10-05T01:39:49Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "9585c8d9-7c26-456e-aeff-8db23bffa32e", "action_id_present": true, "client_request_id": "42a16b36de3b4d49b5979deaef805452", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+169. [2026-10-05T01:39:49Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ce6ade5b9535482f84fa741075726626", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "598b4372d00d4d969872e8fba5675b24", "path": "/v1/chat/completions", "
+170. [2026-10-05T01:39:53Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "dda3ff7e-020c-4de7-8c40-9a4f76dd8fe1", "action_id_present": true, "client_request_id": "ce6ade5b9535482f84fa741075726626", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+171. [2026-10-05T01:39:53Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "ef9f812809454909bff7047d1d736837", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "a809a693098b4bbbb2109d6f3fa609ef", "path": "/v1/chat/completions", "
+172. [2026-10-05T01:39:56Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "88d28a1e-7195-4aa0-b6c8-e3702fadd4f3", "action_id_present": true, "client_request_id": "ef9f812809454909bff7047d1d736837", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+173. [2026-10-05T01:39:56Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "8ba1ba41982b42e0b51bbeb86bb58329", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "08b0ee64aec741b39c7debceac449394", "path": "/v1/chat/completions", "
+174. [2026-10-05T01:40:00Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "fa781f37-3fb8-45de-ab61-f792c8bca986", "action_id_present": true, "client_request_id": "8ba1ba41982b42e0b51bbeb86bb58329", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+175. [2026-10-05T01:40:00Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "fe77d2c4537245238ae2a26bcb13b6a5", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "e55641ac216149ed87097dcc2913a6c2", "path": "/v1/chat/completions", "
+176. [2026-10-05T01:40:03Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "14877a42-945d-4655-83ac-1f954c810488", "action_id_present": true, "client_request_id": "fe77d2c4537245238ae2a26bcb13b6a5", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+177. [2026-10-05T01:40:03Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "fea85cf6b3704baab3de84da400d8bda", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "d251f9ecf8d94c6eb3d9867356ff6a9a", "path": "/v1/chat/completions", "
+178. [2026-10-05T01:40:07Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "c97cdc5e-059f-4e18-88d4-c84ed84e52ca", "action_id_present": true, "client_request_id": "fea85cf6b3704baab3de84da400d8bda", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+179. [2026-10-05T01:40:07Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "939b0e65fe554740a44d4860570d39b3", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "7e4d26b2b1b543b9b8366d484c9c175a", "path": "/v1/chat/completions", "
+180. [2026-10-05T01:40:11Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "155924a6-0fe3-4056-9502-a462bbbfeb31", "action_id_present": true, "client_request_id": "939b0e65fe554740a44d4860570d39b3", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+181. [2026-10-05T01:40:11Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "712cd17c3143405e82c50db2e8fda912", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "3736e9d18e2e488d869b294e9959bfed", "path": "/v1/chat/completions", "
+182. [2026-10-05T01:40:14Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "b7cef0e9-4e46-403c-b5bd-2bd87a775614", "action_id_present": true, "client_request_id": "712cd17c3143405e82c50db2e8fda912", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+183. [2026-10-05T01:40:15Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "0900e7b9be174d83a90fcd0e256b3323", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "7ce0fe4d70ff436e84e68014b479360c", "path": "/v1/chat/completions", "
+184. [2026-10-05T01:40:18Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "71c1d0de-86b4-4b6c-bcc3-008d0ceb1eb4", "action_id_present": true, "client_request_id": "0900e7b9be174d83a90fcd0e256b3323", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+185. [2026-10-05T01:40:18Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "f8eede517c004f7f8d42c8b43add9b7c", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "cd7b2134bf264f03ba221c2bd344dd78", "path": "/v1/chat/completions", "
+186. [2026-10-05T01:40:22Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "1606311b-9d8d-441a-91c6-379895a3e080", "action_id_present": true, "client_request_id": "f8eede517c004f7f8d42c8b43add9b7c", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+187. [2026-10-05T01:40:22Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "f93022d57ecc4ef78833ac68920b337f", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "c53e377409874a6db16b3bc5659918ce", "path": "/v1/chat/completions", "
+188. [2026-10-05T01:40:26Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "ea62cee2-7190-4ea6-b69d-96e682c55e20", "action_id_present": true, "client_request_id": "f93022d57ecc4ef78833ac68920b337f", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+189. [2026-10-05T01:40:26Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "61b99ce8a5944e8b9936999f464fcd27", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "7d417d294afe4107b0de1002b21ba416", "path": "/v1/chat/completions", "
+190. [2026-10-05T01:40:29Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "fe568f1d-0029-487c-ba57-dff0be69684b", "action_id_present": true, "client_request_id": "61b99ce8a5944e8b9936999f464fcd27", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+191. [2026-10-05T01:40:29Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "8be9328fa2054e47833589543416539d", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "7e1939446426460eaae3d3304420d2e5", "path": "/v1/chat/completions", "
+192. [2026-10-05T01:40:33Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "4e6364a6-b63a-4ea6-884d-4323bb4ba7de", "action_id_present": true, "client_request_id": "8be9328fa2054e47833589543416539d", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+193. [2026-10-05T01:40:33Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"client_request_id": "310c5ce1291645cf877e2a93b1ebddbe", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "a1310bdf9b4d42c985c9cfbef2d22d63", "path": "/v1/chat/completions", "
+194. [2026-10-05T01:40:33Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    {"action_id": "fb0e7a49-ac55-4e7f-8c37-9bb3268706d6", "action_id_present": true, "client_request_id": "310c5ce1291645cf877e2a93b1ebddbe", "finish_reasons": [], "guardrail_outcome": "NOT_REPORTED", "ht
+195. [2026-10-05T01:40:33Z] INVOCATION | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164066-bdd7e3
+    trace_id=3f58ecd4b8c24412a0a567f6dbb75dfe refused at gateway: http_status=500 model=nemotron-super-120b body="Error code: 403 - {'reason': 'MalformedToolCall', 'detail': 'body is not valid JSON'}"
+196. [2026-10-05T01:40:33Z] RESULT-INSPECTION | actor=network-resolution-agent | step=9
+    correlation_id=fault-1791164066-bdd7e3
+    disposition=refused, no model output

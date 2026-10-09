@@ -1,0 +1,218 @@
+{
+  "$defs": {
+    "EvidenceSetRole": {
+      "enum": [
+        "BASELINE",
+        "CANDIDATE",
+        "SCENARIO_STATE",
+        "CONTEXT",
+        "POLICY_REFERENCE",
+        "STATIC_REFERENCE",
+        "RECOVERY_STATE",
+        "UNKNOWN"
+      ],
+      "title": "EvidenceSetRole",
+      "type": "string"
+    },
+    "ScenarioRef": {
+      "additionalProperties": false,
+      "properties": {
+        "scenarioRunId": {
+          "title": "Scenariorunid",
+          "type": "string"
+        },
+        "scenarioLevel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scenariolevel"
+        },
+        "scenarioSequence": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scenariosequence"
+        },
+        "bindingBasis": {
+          "enum": [
+            "EXPLICIT",
+            "AUTHORITATIVE_WINDOW",
+            "UNBOUND"
+          ],
+          "title": "Bindingbasis",
+          "type": "string"
+        },
+        "scenarioContractDigest": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scenariocontractdigest"
+        }
+      },
+      "required": [
+        "scenarioRunId",
+        "bindingBasis"
+      ],
+      "title": "ScenarioRef",
+      "type": "object"
+    },
+    "TimeWindow": {
+      "additionalProperties": false,
+      "properties": {
+        "startTime": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Starttime"
+        },
+        "endTime": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Endtime"
+        }
+      },
+      "title": "TimeWindow",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "evidenceSetId": {
+      "title": "Evidencesetid",
+      "type": "string"
+    },
+    "caseId": {
+      "title": "Caseid",
+      "type": "string"
+    },
+    "label": {
+      "title": "Label",
+      "type": "string"
+    },
+    "role": {
+      "$ref": "#/$defs/EvidenceSetRole"
+    },
+    "importedAt": {
+      "format": "date-time",
+      "title": "Importedat",
+      "type": "string"
+    },
+    "artifactRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Artifactrefs",
+      "type": "array"
+    },
+    "mappingProfileRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Mappingprofilerefs",
+      "type": "array"
+    },
+    "declaredScenario": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ScenarioRef"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "declaredTimeWindow": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TimeWindow"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "sourceCoverageRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sourcecoverageref"
+    },
+    "datasetDigest": {
+      "title": "Datasetdigest",
+      "type": "string"
+    },
+    "notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    },
+    "frozen": {
+      "default": false,
+      "title": "Frozen",
+      "type": "boolean"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "evidenceSetId",
+    "caseId",
+    "label",
+    "role",
+    "importedAt",
+    "artifactRefs",
+    "datasetDigest"
+  ],
+  "title": "EvidenceSet",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/evidence_set.schema.json"
+}

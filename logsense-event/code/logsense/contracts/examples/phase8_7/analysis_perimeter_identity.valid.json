@@ -1,0 +1,24 @@
+{
+  "analysisRunId": "run-1",
+  "analyzerId": "logsense",
+  "analyzerVersion": "2.0.0",
+  "baselinePerimeterRef": null,
+  "buildIdentity": null,
+  "candidatePerimeterRef": null,
+  "changedAnalyzerDimensions": [],
+  "commitSha": "8190b7e",
+  "compatibilityState": "EXACT",
+  "createdAt": "2026-09-29T00:00:00Z",
+  "evidenceSetIds": [
+    "es-1"
+  ],
+  "identityPolicyDigest": "sha256:id",
+  "incompatibleDimensions": [],
+  "investigationId": "inv-1",
+  "limitations": [],
+  "relationMatrixDigest": "sha256:rel",
+  "rulePackDigest": "sha256:r",
+  "semanticProfileDigest": "sha256:sp",
+  "snapshotDigest": "sha256:snap",
+  "sourceQualificationDigest": "sha256:sq"
+}

@@ -1,0 +1,230 @@
+{
+  "profileVersion": "0.1.0",
+  "profiles": {
+    "STRUCTURAL_DECLARED": {
+      "profileId": "STRUCTURAL_DECLARED",
+      "family": "STRUCTURAL",
+      "claimClass": "STRUCTURAL_BINDING",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "SCHEMA_MAPPING",
+        "TOPOLOGY_DECLARATION"
+      ],
+      "establishmentBases": [
+        "SOURCE_NATIVE_RELATION",
+        "ADAPTER_DECLARED_RELATION",
+        "STATIC_EXACT_RELATION"
+      ],
+      "identity": "PARTIAL_OR_EXACT",
+      "runtime": "NO_RUNTIME_EXECUTION_MEANING"
+    },
+    "EXECUTION_PATH": {
+      "profileId": "EXECUTION_PATH",
+      "family": "EXECUTION_REACHABILITY",
+      "claimClass": "DECLARED_OR_OBSERVED_PATH",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "STATIC_ENDPOINT_CANDIDATE",
+        "SCHEMA_MAPPING"
+      ],
+      "establishmentBases": [
+        "EXACT_ENDPOINT_JOIN",
+        "SOURCE_NATIVE_RELATION",
+        "RUNTIME_INVOCATION_RECORD",
+        "ADAPTER_DECLARED_RELATION"
+      ],
+      "identity": "EXACT_FOR_RUNTIME",
+      "runtime": "ESTABLISHED_MAY_MEAN_REACHABILITY_ONLY_UNLESS_RUNTIME_BASIS"
+    },
+    "INTENT_BINDING": {
+      "profileId": "INTENT_BINDING",
+      "family": "INTENT_ACTION",
+      "claimClass": "INTENT_BINDING",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "SCHEMA_MAPPING"
+      ],
+      "establishmentBases": [
+        "SOURCE_NATIVE_RELATION",
+        "ADAPTER_DECLARED_RELATION"
+      ],
+      "identity": "PARTIAL_OR_EXACT",
+      "runtime": "INTENT_NOT_EXECUTION"
+    },
+    "STATE_EFFECT": {
+      "profileId": "STATE_EFFECT",
+      "family": "CONSEQUENCE_STATE",
+      "claimClass": "STATE_EFFECT_BINDING",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "STATE_DELTA",
+        "CORRELATION_SUPPORTED"
+      ],
+      "establishmentBases": [
+        "PRODUCER_DECLARED_EFFECT",
+        "OPERATION_STATE_ATTRIBUTION_BOUND",
+        "SOURCE_NATIVE_RELATION"
+      ],
+      "identity": "EXACT",
+      "runtime": "EFFECT_RELATION_REQUIRES_ATTRIBUTION"
+    },
+    "AGENT_RUNTIME": {
+      "profileId": "AGENT_RUNTIME",
+      "family": "AGENTIC",
+      "claimClass": "RUNTIME_INVOCATION",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "STATIC_REGISTRY",
+        "AI_MAPPING_PROPOSAL"
+      ],
+      "establishmentBases": [
+        "RUNTIME_INVOCATION_RECORD",
+        "PROTOCOL_NATIVE_RUNTIME_RECORD"
+      ],
+      "identity": "EXACT",
+      "runtime": "OBSERVED_INVOCATION_WHEN_RUNTIME_BASIS"
+    },
+    "AUTHORITY_DELEGATION": {
+      "profileId": "AUTHORITY_DELEGATION",
+      "family": "AUTHORITY_DELEGATION",
+      "claimClass": "AUTHORITY_BINDING",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "DECLARED_DELEGATION_HINT"
+      ],
+      "establishmentBases": [
+        "EXPLICIT_DELEGATION_RECORD",
+        "AUTHORIZATION_BINDING",
+        "BOUND_AUTHORITY_RECORD"
+      ],
+      "identity": "EXACT",
+      "runtime": "AUTHORITY_NOT_REACHABILITY"
+    },
+    "IDENTITY_BINDING": {
+      "profileId": "IDENTITY_BINDING",
+      "family": "IDENTITY_BINDING",
+      "claimClass": "IDENTITY_BINDING",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "IDENTITY_MAPPING_HINT"
+      ],
+      "establishmentBases": [
+        "IDENTITY_REGISTRY_RECORD",
+        "ATTESTATION_RECORD",
+        "SOURCE_NATIVE_RELATION"
+      ],
+      "identity": "EXACT",
+      "runtime": "IDENTITY_NOT_ACTOR_BEHAVIOR"
+    },
+    "EVIDENCE_META": {
+      "profileId": "EVIDENCE_META",
+      "family": "EVIDENCE_FORENSIC",
+      "claimClass": "EVIDENCE_META",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "CASE_ANALYSIS"
+      ],
+      "establishmentBases": [
+        "CHAIN_OF_CUSTODY",
+        "EXPLICIT_CASE_MEMBERSHIP",
+        "COMPARABLE_CLAIM_ANALYSIS",
+        "EXPLICIT_ORDERING_RECORD"
+      ],
+      "identity": "EXACT",
+      "runtime": "META_RELATION_NOT_SYSTEM_BEHAVIOR"
+    },
+    "SUPPLY_CHAIN": {
+      "profileId": "SUPPLY_CHAIN",
+      "family": "SUPPLY_CHAIN",
+      "claimClass": "STRUCTURAL_PROVENANCE",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "MANIFEST_MAPPING"
+      ],
+      "establishmentBases": [
+        "SBOM_RECORD",
+        "BUILD_PROVENANCE",
+        "VEX_RECORD",
+        "PIPELINE_RECORD",
+        "SOURCE_NATIVE_RELATION"
+      ],
+      "identity": "EXACT",
+      "runtime": "PROVENANCE_NOT_EXPLOITATION"
+    },
+    "CLOUD_CONFIG": {
+      "profileId": "CLOUD_CONFIG",
+      "family": "CLOUD_INFRASTRUCTURE",
+      "claimClass": "STRUCTURAL_BINDING",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "CONFIG_MAPPING"
+      ],
+      "establishmentBases": [
+        "K8S_CONFIG_RECORD",
+        "PLATFORM_INVENTORY_RECORD",
+        "SOURCE_NATIVE_RELATION"
+      ],
+      "identity": "EXACT",
+      "runtime": "CONFIG_OR_INVENTORY_NOT_RUNTIME_USE"
+    },
+    "TELECOM_PATH": {
+      "profileId": "TELECOM_PATH",
+      "family": "TELECOM_PATH",
+      "claimClass": "DECLARED_OR_OBSERVED_PATH",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "DOMAIN_SCHEMA_MAPPING"
+      ],
+      "establishmentBases": [
+        "DOMAIN_NATIVE_RELATION",
+        "PROTOCOL_NATIVE_RUNTIME_RECORD",
+        "ADAPTER_DECLARED_RELATION"
+      ],
+      "identity": "EXACT",
+      "runtime": "DECLARED_PATH_NOT_RUNTIME_TRAVERSAL_UNLESS_RUNTIME_BASIS"
+    },
+    "TELECOM_STRUCTURAL": {
+      "profileId": "TELECOM_STRUCTURAL",
+      "family": "TELECOM_STRUCTURE",
+      "claimClass": "STRUCTURAL_BINDING",
+      "admissionCeiling": "ESTABLISHED",
+      "proposalBases": [
+        "DOMAIN_SCHEMA_MAPPING"
+      ],
+      "establishmentBases": [
+        "DOMAIN_NATIVE_RELATION",
+        "INVENTORY_RECORD",
+        "ADAPTER_DECLARED_RELATION"
+      ],
+      "identity": "EXACT",
+      "runtime": "STRUCTURE_NOT_RUNTIME_PATH"
+    },
+    "INFLUENCE": {
+      "profileId": "INFLUENCE",
+      "family": "AGENTIC_INFLUENCE",
+      "claimClass": "INFLUENCE_BINDING",
+      "admissionCeiling": "PARTIAL",
+      "proposalBases": [
+        "AI_MAPPING_PROPOSAL",
+        "TRACE_PROXIMITY"
+      ],
+      "establishmentBases": [
+        "EXPLICIT_DECISION_PROVENANCE_RECORD"
+      ],
+      "identity": "EXACT",
+      "runtime": "INFLUENCE_DOES_NOT_ESTABLISH_ATTACK_OR_CAUSE"
+    },
+    "CAUSE_ANNOTATION": {
+      "profileId": "CAUSE_ANNOTATION",
+      "family": "EVIDENCE_FORENSIC",
+      "claimClass": "CAUSE_ANNOTATION",
+      "admissionCeiling": "PROPOSED_ONLY",
+      "proposalBases": [
+        "CAUSE_RULE_OUTPUT"
+      ],
+      "establishmentBases": [],
+      "identity": "EXACT",
+      "runtime": "CAUSE_CANDIDATE_ONLY_NOT_CANONICAL_RELATION"
+    }
+  }
+}

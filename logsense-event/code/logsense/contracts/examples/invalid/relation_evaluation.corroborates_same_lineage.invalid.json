@@ -1,0 +1,29 @@
+{
+  "evaluationId": "rel-eval-evidence_corroborates",
+  "relationType": "EVIDENCE_CORROBORATES",
+  "sourceRef": "entity:source",
+  "targetRef": "entity:target",
+  "sourceIdentityState": "EXACT",
+  "targetIdentityState": "EXACT",
+  "admissionBasis": "COMPARABLE_CLAIM_ANALYSIS",
+  "evidenceRefs": [
+    "ev-a",
+    "ev-b"
+  ],
+  "lineageFamilies": [
+    "lineage-a"
+  ],
+  "satisfiedConditions": [
+    "EVIDENCE_REFS_PRESENT",
+    "DIRECTION_PRESERVED",
+    "SCENARIO_SCOPE_COMPATIBLE",
+    "SAME_CLAIM_SCOPE",
+    "MATERIALLY_INDEPENDENT_LINEAGE"
+  ],
+  "missingConditions": [],
+  "hardNegativesChecked": [],
+  "decision": "ESTABLISHED",
+  "limitations": [],
+  "analysisRunId": "run-phase55-001",
+  "evaluationVersion": "0.1.1-phase55"
+}

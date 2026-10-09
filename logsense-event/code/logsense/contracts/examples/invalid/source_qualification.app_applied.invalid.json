@@ -1,0 +1,17 @@
+{
+  "qualificationId": "sq-bad",
+  "analysisRunId": "run",
+  "sourceRef": "src-app",
+  "profileId": "sq-application-telemetry",
+  "claimClass": "ACTION_APPLIED",
+  "decision": "CAN_ESTABLISH",
+  "subjectBinding": "EXACT",
+  "evidenceRefs": [
+    "http200"
+  ],
+  "gapRefs": [],
+  "basis": [
+    "APPLICATION_LOG_SUCCESS"
+  ],
+  "limitations": []
+}

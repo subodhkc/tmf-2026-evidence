@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contradiction",
+  "type": "object",
+  "properties": {
+    "contradictionId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string",
+      "enum": [
+        "ACTION_STATUS_CONTRADICTION",
+        "STATE_CONTRADICTION",
+        "SOURCE_AUTHORITY_CONTRADICTION",
+        "STREAM_CONTINUITY_CONTRADICTION",
+        "RELATION_CONTRADICTION",
+        "IDENTITY_CONTRADICTION",
+        "EXPECTED_STATE_CONFLICT"
+      ]
+    },
+    "subjectRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "claimScope": {
+      "type": "string"
+    },
+    "comparabilityBasis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "ESTABLISHED",
+        "PARTIAL",
+        "UNKNOWN",
+        "CONTRADICTED"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rootCauseClaimed": {
+      "const": false
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "contradictionId",
+    "analysisRunId",
+    "class",
+    "subjectRefs",
+    "claimScope",
+    "comparabilityBasis",
+    "evidenceRefs",
+    "state",
+    "limitations",
+    "rootCauseClaimed"
+  ],
+  "$id": "https://logsense.local/schemas/contradiction.schema.json"
+}

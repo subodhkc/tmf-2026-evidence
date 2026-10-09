@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Action Group",
+  "type": "object",
+  "properties": {
+    "actionGroupId": {
+      "type": "string"
+    },
+    "caseId": {
+      "type": "string"
+    },
+    "evidenceSetId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "correlationGroupRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "actionIdentity": {
+      "$ref": "#/$defs/ActionIdentity"
+    },
+    "eventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requestedEventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authorizationEventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptedEventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "appliedEventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confirmedEventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "establishmentState": {
+      "type": "string",
+      "enum": [
+        "ESTABLISHED",
+        "PARTIAL",
+        "UNKNOWN",
+        "CONTRADICTED"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "actionGroupId",
+    "caseId",
+    "evidenceSetId",
+    "analysisRunId",
+    "correlationGroupRefs",
+    "actionIdentity",
+    "eventRefs",
+    "sourceRefs",
+    "requestedEventRefs",
+    "authorizationEventRefs",
+    "acceptedEventRefs",
+    "appliedEventRefs",
+    "confirmedEventRefs",
+    "establishmentState",
+    "limitations"
+  ],
+  "$defs": {
+    "ActionIdentity": {
+      "title": "Action Identity",
+      "type": "object",
+      "properties": {
+        "actorRef": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operationRef": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "nativeOperation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "canonicalOperation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "targetRef": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "resourceScope": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "actionCorrelationId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "taskRef": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "workflowRef": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "buildDigest": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "profileReference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "envelopeReference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidenceSetId": {
+          "type": "string"
+        },
+        "scenarioRunId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "identityState": {
+          "type": "string",
+          "enum": [
+            "EXACT",
+            "PARTIAL",
+            "CANDIDATE",
+            "UNRESOLVED",
+            "CONTRADICTED"
+          ]
+        },
+        "identityBasis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "logicalActionKey": {
+          "type": "string"
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "evidenceSetId",
+        "identityState",
+        "identityBasis",
+        "logicalActionKey",
+        "evidenceRefs",
+        "limitations"
+      ]
+    }
+  },
+  "$id": "https://logsense.local/schemas/action_group.schema.json"
+}

@@ -1,0 +1,82 @@
+{
+  "$id": "https://logsense.local/schemas/hard_negative_guard_registry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contractVersion": {
+      "type": "string"
+    },
+    "guards": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "antecedent": {
+            "type": "string"
+          },
+          "appliesTo": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "benchmarkRefs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "category": {
+            "type": "string"
+          },
+          "forbiddenConclusion": {
+            "type": "string"
+          },
+          "guardId": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "requiredEvidenceToCrossBoundary": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "severity": {
+            "enum": [
+              "CRITICAL",
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "guardId",
+          "category",
+          "antecedent",
+          "forbiddenConclusion",
+          "requiredEvidenceToCrossBoundary",
+          "appliesTo",
+          "benchmarkRefs",
+          "rationale",
+          "severity"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "registryId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "registryId",
+    "contractVersion",
+    "guards"
+  ],
+  "title": "Hard Negative Guard Registry",
+  "type": "object"
+}

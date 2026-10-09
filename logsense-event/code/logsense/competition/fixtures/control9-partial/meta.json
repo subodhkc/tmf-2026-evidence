@@ -1,0 +1,73 @@
+{
+  "fixtureId": "control9-partial",
+  "control": "AIA-ARC-006",
+  "label": "Control 9 \u2014 missing live window (ILLUSTRATIVE)",
+  "description": "Ten expected windows, nine observed \u2014 W10 absent. Expected: PARTIAL, coveragePercent 90, W10 listed MISSING_LIVE. A missing window is never zero drift.",
+  "evidenceFiles": [
+    "kpi.jsonl"
+  ],
+  "runFile": "run.json",
+  "metricProfile": {
+    "profileSchemaVersion": "kpi-metric-profile/0.1",
+    "profileId": "example-performance-score",
+    "profileVersion": 1,
+    "metricId": "example.performance_score",
+    "displayName": "Example Performance Score",
+    "unit": "ratio",
+    "direction": "HIGHER_IS_BETTER",
+    "aggregation": "SOURCE_VALUE",
+    "governedScope": {
+      "type": "LOGICAL_ENTITY",
+      "id": "scope-1"
+    },
+    "valueSource": {
+      "field": "kpiValue",
+      "metricNameField": "kpiName",
+      "unitField": "unit",
+      "scopeIdField": "scopeId"
+    },
+    "timestampSource": "ts",
+    "windowDefinition": {
+      "mode": "SOURCE_WINDOWED",
+      "windowKeyField": "windowId",
+      "expectedWindowKeys": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08",
+        "W09",
+        "W10"
+      ]
+    },
+    "zeroBaselineRule": "RELATIVE_UNAVAILABLE",
+    "createdAt": "2026-10-01T00:00:00Z",
+    "sourceBasis": "ORGANIZER_ILLUSTRATIVE_SHAPE",
+    "limitations": [
+      "ILLUSTRATIVE_EXAMPLE_REPLACE_BEFORE_ASSESSED_USE"
+    ]
+  },
+  "baseline": {
+    "baselineId": "c9-partial-baseline",
+    "baselineVersion": 1,
+    "basis": "KNOWN_GOOD_RUN",
+    "baselineMode": "FIXED_REFERENCE_VALUE",
+    "metricId": "example.performance_score",
+    "unit": "ratio",
+    "direction": "HIGHER_IS_BETTER",
+    "aggregation": "SOURCE_VALUE",
+    "valueBasis": "EXPLICIT_DECLARED",
+    "sourceRunId": "C9-CALIBRATION",
+    "evidenceRefs": [
+      "calibration-run:C9-CALIBRATION"
+    ],
+    "limitations": [
+      "ILLUSTRATIVE_EXAMPLE_REPLACE_BEFORE_ASSESSED_USE",
+      "LOGSENSE_DESCRIPTIVE_BASELINE_NE_HAIEC_GOVERNING_BASELINE"
+    ],
+    "value": 0.9
+  }
+}

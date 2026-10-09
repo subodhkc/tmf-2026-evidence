@@ -1,0 +1,2717 @@
+{
+  "registryId": "logsense-phase7-preapproved-mapping-profiles",
+  "version": "0.1.0",
+  "sourcePhase7ZipSha256": "d210e30ef71501b3a281268bf3202fdc3f055f8622377c5bc765ff8054da7d66",
+  "profileCount": 42,
+  "profiles": [
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-001/baseline_agent_trace.jsonl.fixture.json",
+      "benchmarkId": "GFB-001",
+      "artifactPath": "inputs/baseline_agent_trace.jsonl",
+      "artifactId": "artifact:GFB-001:baseline_agent_trace.jsonl",
+      "artifactSha256": "78a1064eca73b18c52d1e7622df55e2a78d28130ed24d73261b6cb4941a54cb1",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.agent-action.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-001:baseline_agent_trace.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "0fea6b5c870c9f4b9500a61847e461424307b4a79034b29818ddd2c46162ae9d",
+        "name": "GFB-001 artifact:GFB-001:baseline_agent_trace.jsonl mapping",
+        "sourceFingerprint": "78a1064eca73b18c52d1e7622df55e2a78d28130ed24d73261b6cb4941a54cb1",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent_id",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "action",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-001/baseline_api.csv.fixture.json",
+      "benchmarkId": "GFB-001",
+      "artifactPath": "inputs/baseline_api.csv",
+      "artifactId": "artifact:GFB-001:baseline_api.csv",
+      "artifactSha256": "748ae472b8114b03147bb63e775200f3268e3eeed8e882726c590d8ba77c0127",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.api-transaction.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-001:baseline_api.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "46d87c857c90c0f5cb87e3a22a91ae27c9f0bf758f6cf2580d0eb5cdea40113a",
+        "name": "GFB-001 artifact:GFB-001:baseline_api.csv mapping",
+        "sourceFingerprint": "748ae472b8114b03147bb63e775200f3268e3eeed8e882726c590d8ba77c0127",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "actor",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "status",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "request_id",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-001/baseline_policy.yaml.fixture.json",
+      "benchmarkId": "GFB-001",
+      "artifactPath": "inputs/baseline_policy.yaml",
+      "artifactId": "artifact:GFB-001:baseline_policy.yaml",
+      "artifactSha256": "7195d8e47064b43059dcc1295bc58ff06842e966fb62f843947b16849b7e5dbf",
+      "syntaxAdapterId": "syntax.yaml.v1",
+      "semanticProfileIds": [
+        "sem.policy.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-001:baseline_policy.yaml",
+        "profileVersion": "0.1.0",
+        "profileDigest": "fee3bb5a3a4e7cb338bccd002fd60833ee45ec3464409b8bccbb09a7bdc0e615",
+        "name": "GFB-001 artifact:GFB-001:baseline_policy.yaml mapping",
+        "sourceFingerprint": "7195d8e47064b43059dcc1295bc58ff06842e966fb62f843947b16849b7e5dbf",
+        "format": "yaml",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent_id",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "resource",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-001/baseline_state.csv.fixture.json",
+      "benchmarkId": "GFB-001",
+      "artifactPath": "inputs/baseline_state.csv",
+      "artifactId": "artifact:GFB-001:baseline_state.csv",
+      "artifactSha256": "3f250265320ad992c830dc93370c705aea99bc8112b344e9e8087d83cf22e685",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.state.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-001:baseline_state.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "319bcbc811d548eb1062ec7cbccb4c7d43657e66e7402e2e1e6bf62abd47bfd1",
+        "name": "GFB-001 artifact:GFB-001:baseline_state.csv mapping",
+        "sourceFingerprint": "3f250265320ad992c830dc93370c705aea99bc8112b344e9e8087d83cf22e685",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-001/candidate_agent_trace.jsonl.fixture.json",
+      "benchmarkId": "GFB-001",
+      "artifactPath": "inputs/candidate_agent_trace.jsonl",
+      "artifactId": "artifact:GFB-001:candidate_agent_trace.jsonl",
+      "artifactSha256": "3c3cb999ce9d877f76fac9824badeb13894a7475d1ece6cd86b224328f47e408",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.agent-action.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-001:candidate_agent_trace.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "6734a7c9900f7f212bb10aada404a096e596225f7184db2dc2b7d7fa4817e2ad",
+        "name": "GFB-001 artifact:GFB-001:candidate_agent_trace.jsonl mapping",
+        "sourceFingerprint": "3c3cb999ce9d877f76fac9824badeb13894a7475d1ece6cd86b224328f47e408",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent_id",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "action",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-001/candidate_state.csv.fixture.json",
+      "benchmarkId": "GFB-001",
+      "artifactPath": "inputs/candidate_state.csv",
+      "artifactId": "artifact:GFB-001:candidate_state.csv",
+      "artifactSha256": "c346df23bfdf8aec3427de9227a18434a1d7ae8a42112f5195574fd2a3ad5600",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.state.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-001:candidate_state.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "1ecd41b20cf153bf42e3a881d6ee3b500c974e13f6184918142bc4d4367ef9e0",
+        "name": "GFB-001 artifact:GFB-001:candidate_state.csv mapping",
+        "sourceFingerprint": "c346df23bfdf8aec3427de9227a18434a1d7ae8a42112f5195574fd2a3ad5600",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-002/api_transactions.csv.fixture.json",
+      "benchmarkId": "GFB-002",
+      "artifactPath": "inputs/api_transactions.csv",
+      "artifactId": "artifact:GFB-002:api_transactions.csv",
+      "artifactSha256": "5bcc8e4e4382c5ae8613b3f88aab96af8d0e1762ce4664abe5d91b7498a20dac",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.api-transaction.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-002:api_transactions.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "84d76a7d2c7c6a2ee11ae680f78eb7348bea2de22e159e705ba0bdb7242e9546",
+        "name": "GFB-002 artifact:GFB-002:api_transactions.csv mapping",
+        "sourceFingerprint": "5bcc8e4e4382c5ae8613b3f88aab96af8d0e1762ce4664abe5d91b7498a20dac",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "actor",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "status",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "request_id",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-002/guardrail.jsonl.fixture.json",
+      "benchmarkId": "GFB-002",
+      "artifactPath": "inputs/guardrail.jsonl",
+      "artifactId": "artifact:GFB-002:guardrail.jsonl",
+      "artifactSha256": "9c8e092f59b8b58a8f342fc1d23b29180ef9e1dd64313bdc7aacf5b1c90ab468",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.guardrail.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-002:guardrail.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "0b9341a1ec2f2364c2f185fd616efac85b2002f5d49351f7aae8459feeb63bc3",
+        "name": "GFB-002 artifact:GFB-002:guardrail.jsonl mapping",
+        "sourceFingerprint": "9c8e092f59b8b58a8f342fc1d23b29180ef9e1dd64313bdc7aacf5b1c90ab468",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent_id",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "decision",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "AUTHORITATIVE_CONTROL_BOUNDARY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-002/kpi_state.csv.fixture.json",
+      "benchmarkId": "GFB-002",
+      "artifactPath": "inputs/kpi_state.csv",
+      "artifactId": "artifact:GFB-002:kpi_state.csv",
+      "artifactSha256": "6132b4f05183a04f9dc703b3528b695e516fa43a86d83a30d636c88a19b68c81",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.state.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-002:kpi_state.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "4143a25c4b8eddb651f4c89f9454f3d20c6ce5514d25e66b25aabd1428ae32f6",
+        "name": "GFB-002 artifact:GFB-002:kpi_state.csv mapping",
+        "sourceFingerprint": "6132b4f05183a04f9dc703b3528b695e516fa43a86d83a30d636c88a19b68c81",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-002/platform_execution.log.fixture.json",
+      "benchmarkId": "GFB-002",
+      "artifactPath": "inputs/platform_execution.log",
+      "artifactId": "artifact:GFB-002:platform_execution.log",
+      "artifactSha256": "fb11af95f8246159d65f8686eeb50c6c7e237c834bfb05f4f1feed62c72699aa",
+      "syntaxAdapterId": "syntax.kvlog.v1",
+      "semanticProfileIds": [
+        "sem.platform-execution.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-002:platform_execution.log",
+        "profileVersion": "0.1.0",
+        "profileDigest": "87e10f8c1ce0de6b3cbd9a9b312a9c1088fff17dc89704e7b8322a07b6c6ad29",
+        "name": "GFB-002 artifact:GFB-002:platform_execution.log mapping",
+        "sourceFingerprint": "fb11af95f8246159d65f8686eeb50c6c7e237c834bfb05f4f1feed62c72699aa",
+        "format": "log",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "actor",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "correlation",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-002/policy.json.fixture.json",
+      "benchmarkId": "GFB-002",
+      "artifactPath": "inputs/policy.json",
+      "artifactId": "artifact:GFB-002:policy.json",
+      "artifactSha256": "86d523ba171257b0686bcaf72e2fe67184b07c56520eb2df1a2d1743e55df54d",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.policy.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-002:policy.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "363b199b45debc4784937fd1eb832555f2465dbff0de37681ec6394567f6ba77",
+        "name": "GFB-002 artifact:GFB-002:policy.json mapping",
+        "sourceFingerprint": "86d523ba171257b0686bcaf72e2fe67184b07c56520eb2df1a2d1743e55df54d",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent_id",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "resource",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-003/agent.jsonl.fixture.json",
+      "benchmarkId": "GFB-003",
+      "artifactPath": "inputs/agent.jsonl",
+      "artifactId": "artifact:GFB-003:agent.jsonl",
+      "artifactSha256": "4638e89bc51dc1c964ba5e053a0e0c7d33d46c26e000bcda72faeb9cc300cfe6",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.agent-action.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-003:agent.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "021412fced6544029980acd2c7797a78c82416aa54d81d30ceb8865748e605f1",
+        "name": "GFB-003 artifact:GFB-003:agent.jsonl mapping",
+        "sourceFingerprint": "4638e89bc51dc1c964ba5e053a0e0c7d33d46c26e000bcda72faeb9cc300cfe6",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent_id",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-003/api.jsonl.fixture.json",
+      "benchmarkId": "GFB-003",
+      "artifactPath": "inputs/api.jsonl",
+      "artifactId": "artifact:GFB-003:api.jsonl",
+      "artifactSha256": "00b757f5ec1501851374405794b9f7744b22f7706773291ac8a5b33723f70629",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.api-transaction.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-003:api.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "c44220da20e6e8d3f2637c812230e80c4a37e1552056ff44c31c92cadf98f3c7",
+        "name": "GFB-003 artifact:GFB-003:api.jsonl mapping",
+        "sourceFingerprint": "00b757f5ec1501851374405794b9f7744b22f7706773291ac8a5b33723f70629",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [],
+        "statusMappings": [
+          {
+            "sourcePath": "status",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "requestId",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-003/app.log.fixture.json",
+      "benchmarkId": "GFB-003",
+      "artifactPath": "inputs/app.log",
+      "artifactId": "artifact:GFB-003:app.log",
+      "artifactSha256": "44d95b1e8b0771d69e257dee9aaca4034a1d098a817266901744591d4332bdd3",
+      "syntaxAdapterId": "syntax.kvlog.v1",
+      "semanticProfileIds": [
+        "sem.application-log.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-003:app.log",
+        "profileVersion": "0.1.0",
+        "profileDigest": "865e3ff178fe7edf042621a8e0748f61c04639f7671e281544f53d489b914260",
+        "name": "GFB-003 artifact:GFB-003:app.log mapping",
+        "sourceFingerprint": "44d95b1e8b0771d69e257dee9aaca4034a1d098a817266901744591d4332bdd3",
+        "format": "log",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "status",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "requestId",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-003/policy.yaml.fixture.json",
+      "benchmarkId": "GFB-003",
+      "artifactPath": "inputs/policy.yaml",
+      "artifactId": "artifact:GFB-003:policy.yaml",
+      "artifactSha256": "df21635752be3b300e40d47c1197a37ad440f41aec2949931eb64c006256903f",
+      "syntaxAdapterId": "syntax.yaml.v1",
+      "semanticProfileIds": [
+        "sem.policy.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-003:policy.yaml",
+        "profileVersion": "0.1.0",
+        "profileDigest": "9fe542b548b32fca11cfed7fe3452c3ec028cd53d077cd14e7f186e05f79af77",
+        "name": "GFB-003 artifact:GFB-003:policy.yaml mapping",
+        "sourceFingerprint": "df21635752be3b300e40d47c1197a37ad440f41aec2949931eb64c006256903f",
+        "format": "yaml",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [
+          {            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-004/a2a_tasks.jsonl.fixture.json",
+      "benchmarkId": "GFB-004",
+      "artifactPath": "inputs/a2a_tasks.jsonl",
+      "artifactId": "artifact:GFB-004:a2a_tasks.jsonl",
+      "artifactSha256": "bfec5db7dbd88be5169f354ffcea2125414cedcbe879a939297b6e203e602b0c",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.a2a-task.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-004:a2a_tasks.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "7dd400eacb12ae26d4fbaea62c30d8fb154aa3ec529dc91473e3b473c6c263a2",
+        "name": "GFB-004 artifact:GFB-004:a2a_tasks.jsonl mapping",
+        "sourceFingerprint": "bfec5db7dbd88be5169f354ffcea2125414cedcbe879a939297b6e203e602b0c",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "sourceAgent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "taskId",
+            "targetPath": "correlationIds.taskId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "contextId",
+            "targetPath": "correlationIds.contextId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-004/delegation.json.fixture.json",
+      "benchmarkId": "GFB-004",
+      "artifactPath": "inputs/delegation.json",
+      "artifactId": "artifact:GFB-004:delegation.json",
+      "artifactSha256": "4b47becc4373f27627b58f6bfe041bbcecf6942f47f858431c0e0f4c39a1a329",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.delegation.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-004:delegation.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "fb59e227b8dabc1e0f0b241e9abd699eb8f61ac7de0271048e2abf5f6b0b1e90",
+        "name": "GFB-004 artifact:GFB-004:delegation.json mapping",
+        "sourceFingerprint": "4b47becc4373f27627b58f6bfe041bbcecf6942f47f858431c0e0f4c39a1a329",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "sourceAgent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-004/iam_effective.csv.fixture.json",
+      "benchmarkId": "GFB-004",
+      "artifactPath": "inputs/iam_effective.csv",
+      "artifactId": "artifact:GFB-004:iam_effective.csv",
+      "artifactSha256": "03d102d3228c8abba2803ec337b82776379f5e74bc5fde62fd4ad9f9f068a3cf",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.iam-effective.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-004:iam_effective.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "9854c5f7b9b46e31aa83ab3341eb444ea7f3d4f788652747533e0b6a014a5888",
+        "name": "GFB-004 artifact:GFB-004:iam_effective.csv mapping",
+        "sourceFingerprint": "03d102d3228c8abba2803ec337b82776379f5e74bc5fde62fd4ad9f9f068a3cf",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "principal",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "AUTHORITATIVE_CONTROL_BOUNDARY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-004/state.csv.fixture.json",
+      "benchmarkId": "GFB-004",
+      "artifactPath": "inputs/state.csv",
+      "artifactId": "artifact:GFB-004:state.csv",
+      "artifactSha256": "3b5fd9ab6d82d8c65b80fb57fae36c20a2aef60c0b02b30854c52d14b5f69fc0",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.state.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-004:state.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "b079dc63f5c80d4341d1c2ae289326fc71e20e7cc63cc83dfeb96767ab5c77cd",
+        "name": "GFB-004 artifact:GFB-004:state.csv mapping",
+        "sourceFingerprint": "3b5fd9ab6d82d8c65b80fb57fae36c20a2aef60c0b02b30854c52d14b5f69fc0",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-004/tool_trace.log.fixture.json",
+      "benchmarkId": "GFB-004",
+      "artifactPath": "inputs/tool_trace.log",
+      "artifactId": "artifact:GFB-004:tool_trace.log",
+      "artifactSha256": "a776284ca1537c3ebbbce00b33a3b8dabd6a036bbf202b3966bd1737985c5cd2",
+      "syntaxAdapterId": "syntax.kvlog.v1",
+      "semanticProfileIds": [
+        "sem.tool-trace.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-004:tool_trace.log",
+        "profileVersion": "0.1.0",
+        "profileDigest": "4f74419dbc787a6ae2759c935a1a46fb34569223d5bd6ccbe4b3300180af2c5a",
+        "name": "GFB-004 artifact:GFB-004:tool_trace.log mapping",
+        "sourceFingerprint": "a776284ca1537c3ebbbce00b33a3b8dabd6a036bbf202b3966bd1737985c5cd2",
+        "format": "log",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "tool",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "result",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-005/conversation.jsonl.fixture.json",
+      "benchmarkId": "GFB-005",
+      "artifactPath": "inputs/conversation.jsonl",
+      "artifactId": "artifact:GFB-005:conversation.jsonl",
+      "artifactSha256": "2395ce399fecd658ebf89df89e2a00b5c0a4e50a854b07b62e2bf3aa4d85f981",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.conversation.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-005:conversation.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "fcef31789442d50c6478f810dde3aded5b0f9a506f1bec1e48d55dfb335801a0",
+        "name": "GFB-005 artifact:GFB-005:conversation.jsonl mapping",
+        "sourceFingerprint": "2395ce399fecd658ebf89df89e2a00b5c0a4e50a854b07b62e2bf3aa4d85f981",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-005/model_trace.jsonl.fixture.json",
+      "benchmarkId": "GFB-005",
+      "artifactPath": "inputs/model_trace.jsonl",
+      "artifactId": "artifact:GFB-005:model_trace.jsonl",
+      "artifactSha256": "7954dbf92bd91e324d7e5ef2a04240a341271df7854ae2205c227106ce6b6d3b",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.model-trace.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-005:model_trace.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "6301591bbf33e962523a52833b80da05249ac1eba64455d4783b606690d0b789",
+        "name": "GFB-005 artifact:GFB-005:model_trace.jsonl mapping",
+        "sourceFingerprint": "7954dbf92bd91e324d7e5ef2a04240a341271df7854ae2205c227106ce6b6d3b",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent_id",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-005/tool_inventory.json.fixture.json",
+      "benchmarkId": "GFB-005",
+      "artifactPath": "inputs/tool_inventory.json",
+      "artifactId": "artifact:GFB-005:tool_inventory.json",
+      "artifactSha256": "6226017d727273096b3709bbc32979c8168bd8d79563c9c8d33a38ce1d05c52c",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.tool-inventory.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-005:tool_inventory.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "2adef6f36c8599b9c18143c05cb8c0bb0ad16d78101e1322903f380431145e01",
+        "name": "GFB-005 artifact:GFB-005:tool_inventory.json mapping",
+        "sourceFingerprint": "6226017d727273096b3709bbc32979c8168bd8d79563c9c8d33a38ce1d05c52c",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-006/app.log.fixture.json",
+      "benchmarkId": "GFB-006",
+      "artifactPath": "inputs/app.log",
+      "artifactId": "artifact:GFB-006:app.log",
+      "artifactSha256": "c12d8c8c117e01f4b06c05e299b3b390739d3b2c9b001551acac9b0bb21f2219",
+      "syntaxAdapterId": "syntax.kvlog.v1",
+      "semanticProfileIds": [
+        "sem.application-log.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-006:app.log",
+        "profileVersion": "0.1.0",
+        "profileDigest": "c972c1ae7b2dee1a6e1941a15e00938017cd2bc41dcff7b75e2efc7fe2c90d6a",
+        "name": "GFB-006 artifact:GFB-006:app.log mapping",
+        "sourceFingerprint": "c12d8c8c117e01f4b06c05e299b3b390739d3b2c9b001551acac9b0bb21f2219",
+        "format": "log",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "status",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "requestId",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-006/copied.csv.fixture.json",
+      "benchmarkId": "GFB-006",
+      "artifactPath": "inputs/copied.csv",
+      "artifactId": "artifact:GFB-006:copied.csv",
+      "artifactSha256": "1c2afcb16fa4d81ff30297fdefbbaa204272bcd7345dfdeeccefa7530911d6d7",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.application-log.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-006:copied.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "7a844d8fd4f66ba72a4a1d54f47600a2be7848072ae17a21eef6511f4f5c11e5",
+        "name": "GFB-006 artifact:GFB-006:copied.csv mapping",
+        "sourceFingerprint": "1c2afcb16fa4d81ff30297fdefbbaa204272bcd7345dfdeeccefa7530911d6d7",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "status",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "requestId",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-006/siem_export.jsonl.fixture.json",
+      "benchmarkId": "GFB-006",
+      "artifactPath": "inputs/siem_export.jsonl",
+      "artifactId": "artifact:GFB-006:siem_export.jsonl",
+      "artifactSha256": "3c27cc46914892e82f183a8722c50009447f17474d228a1ac45bdee089eec837",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.forwarded-copy.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-006:siem_export.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "0544c24248cd0b8d6ad0563fdfb0d590e16f3cce19e5057cf09d80207c355762",
+        "name": "GFB-006 artifact:GFB-006:siem_export.jsonl mapping",
+        "sourceFingerprint": "3c27cc46914892e82f183a8722c50009447f17474d228a1ac45bdee089eec837",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "EXTERNAL_IMPORTED_RECORD",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-007/agent.log.fixture.json",
+      "benchmarkId": "GFB-007",
+      "artifactPath": "inputs/agent.log",
+      "artifactId": "artifact:GFB-007:agent.log",
+      "artifactSha256": "fdd574fe10741b6781d9f92b7311d7e5ed92ae8720259aa3f3b404eb11227c3d",
+      "syntaxAdapterId": "syntax.kvlog.v1",
+      "semanticProfileIds": [
+        "sem.agent-action.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-007:agent.log",
+        "profileVersion": "0.1.0",
+        "profileDigest": "7cc7b5a798bc35f49c78cdc252eae8775058c8753a4140b4f5b461494092eb96",
+        "name": "GFB-007 artifact:GFB-007:agent.log mapping",
+        "sourceFingerprint": "fdd574fe10741b6781d9f92b7311d7e5ed92ae8720259aa3f3b404eb11227c3d",
+        "format": "log",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "result",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "requestId",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-007/clock_sync.json.fixture.json",
+      "benchmarkId": "GFB-007",
+      "artifactPath": "inputs/clock_sync.json",
+      "artifactId": "artifact:GFB-007:clock_sync.json",
+      "artifactSha256": "c1b78b5cf4f03d91743581ff7df38fd1b9470a78dd51f9334c79483b11e83596",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.clock-sync.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-007:clock_sync.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "e7d39a8f55add0b67fdf0060307e331524f4a6e78db3d6a0b0852da6d8631df0",
+        "name": "GFB-007 artifact:GFB-007:clock_sync.json mapping",
+        "sourceFingerprint": "c1b78b5cf4f03d91743581ff7df38fd1b9470a78dd51f9334c79483b11e83596",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-007/platform.jsonl.fixture.json",
+      "benchmarkId": "GFB-007",
+      "artifactPath": "inputs/platform.jsonl",
+      "artifactId": "artifact:GFB-007:platform.jsonl",
+      "artifactSha256": "df9dc6f83cf352267ac7e552102ea55d1ceee7a8d9f559fb64366983fe59ce09",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.platform-execution.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-007:platform.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "15a7375bb8f55ff425fcc82a0e607068025628876e40f1fa8ccd6cd9e18e3b15",
+        "name": "GFB-007 artifact:GFB-007:platform.jsonl mapping",
+        "sourceFingerprint": "df9dc6f83cf352267ac7e552102ea55d1ceee7a8d9f559fb64366983fe59ce09",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "target",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "state",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "requestId",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-008/baseline_policy.json.fixture.json",
+      "benchmarkId": "GFB-008",
+      "artifactPath": "inputs/baseline_policy.json",
+      "artifactId": "artifact:GFB-008:baseline_policy.json",
+      "artifactSha256": "e5a32dcebb280738c2ba6ee1de62d1a8446fec7cee588b4546305eddb9a878dc",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.policy.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-008:baseline_policy.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "7c3e54503d23a6fda0b52be2fba37984addb7d4ee186c382926041980dcbce08",
+        "name": "GFB-008 artifact:GFB-008:baseline_policy.json mapping",
+        "sourceFingerprint": "e5a32dcebb280738c2ba6ee1de62d1a8446fec7cee588b4546305eddb9a878dc",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-008/inventory.csv.fixture.json",
+      "benchmarkId": "GFB-008",
+      "artifactPath": "inputs/inventory.csv",
+      "artifactId": "artifact:GFB-008:inventory.csv",
+      "artifactSha256": "13c2e3887e14991a6eb4c635a76a1a30b46a7e1d6d3ed702ae680f30df301fe5",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.inventory.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-008:inventory.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "252c016934e04023f6c43695f38eff185f7cd42eb2caa3005edfb31397dc1ddc",
+        "name": "GFB-008 artifact:GFB-008:inventory.csv mapping",
+        "sourceFingerprint": "13c2e3887e14991a6eb4c635a76a1a30b46a7e1d6d3ed702ae680f30df301fe5",
+        "format": "csv",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [
+          {            "sourcePath": "slice_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-008/runtime.jsonl.fixture.json",
+      "benchmarkId": "GFB-008",
+      "artifactPath": "inputs/runtime.jsonl",
+      "artifactId": "artifact:GFB-008:runtime.jsonl",
+      "artifactSha256": "868f7618dc394ab20cf881b0c1d0d6f7af72c558f2627e097f56f033fda87b0c",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.agent-action.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-008:runtime.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "c372ee57847d676007f993a5a21e318a30e83a4fa4b5e2eb914e777ab4176c4c",
+        "name": "GFB-008 artifact:GFB-008:runtime.jsonl mapping",
+        "sourceFingerprint": "868f7618dc394ab20cf881b0c1d0d6f7af72c558f2627e097f56f033fda87b0c",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "agent",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "target_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-008/state.csv.fixture.json",
+      "benchmarkId": "GFB-008",
+      "artifactPath": "inputs/state.csv",
+      "artifactId": "artifact:GFB-008:state.csv",
+      "artifactSha256": "04e453a34d7cc9e1fb9adb04a03f533f4542f7ca1d62a35b50b2cc96e72d6412",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.state.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-008:state.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "a6aaea9cc585c5eeeaa45362a1b5d4b3509edc5a68c89fe6b2484266e79ebc32",
+        "name": "GFB-008 artifact:GFB-008:state.csv mapping",
+        "sourceFingerprint": "04e453a34d7cc9e1fb9adb04a03f533f4542f7ca1d62a35b50b2cc96e72d6412",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "slice_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-009/db_audit.csv.fixture.json",
+      "benchmarkId": "GFB-009",
+      "artifactPath": "inputs/db_audit.csv",
+      "artifactId": "artifact:GFB-009:db_audit.csv",
+      "artifactSha256": "3abafef731ab8f90c37dc65b2667af2236406e5a9fbc0b87cda560c667329ec0",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.db-audit.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-009:db_audit.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "cf9e106cf88f6a0938966cda050605bf4ee82896a611fe71d64a8f8c96525219",
+        "name": "GFB-009 artifact:GFB-009:db_audit.csv mapping",
+        "sourceFingerprint": "3abafef731ab8f90c37dc65b2667af2236406e5a9fbc0b87cda560c667329ec0",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "principal",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "resource",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [
+          {
+            "sourcePath": "result",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "request_id",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-009/iam.json.fixture.json",
+      "benchmarkId": "GFB-009",
+      "artifactPath": "inputs/iam.json",
+      "artifactId": "artifact:GFB-009:iam.json",
+      "artifactSha256": "a8ffb8aa8aee157557eec8a13b9dba17c3e5fe6e807d0daa83a50385e26936be",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.iam-effective.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-009:iam.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "b2a3120cfe794a69ef7ea35df2dcb7566ff829ed179b316cf48d331e67d3eb31",
+        "name": "GFB-009 artifact:GFB-009:iam.json mapping",
+        "sourceFingerprint": "a8ffb8aa8aee157557eec8a13b9dba17c3e5fe6e807d0daa83a50385e26936be",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "principal",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "AUTHORITATIVE_CONTROL_BOUNDARY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-009/request.jsonl.fixture.json",
+      "benchmarkId": "GFB-009",
+      "artifactPath": "inputs/request.jsonl",
+      "artifactId": "artifact:GFB-009:request.jsonl",
+      "artifactSha256": "df41948a6b781ea072f6ea5595ab1bafbb0e0415244ed580063dc4302b90d85e",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.agent-action.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-009:request.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "1ef02f8140d33291c918c552725486223415f46d3dac357bac51da54d5ab3d25",
+        "name": "GFB-009 artifact:GFB-009:request.jsonl mapping",
+        "sourceFingerprint": "df41948a6b781ea072f6ea5595ab1bafbb0e0415244ed580063dc4302b90d85e",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "principal",
+            "targetPath": "actorRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "resource",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "requestId",
+            "targetPath": "correlationIds.requestId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-009/tenant_map.json.fixture.json",
+      "benchmarkId": "GFB-009",
+      "artifactPath": "inputs/tenant_map.json",
+      "artifactId": "artifact:GFB-009:tenant_map.json",
+      "artifactSha256": "2ff1744304c945a103a320252818250b1bfd48c2e8aede0c8adc4f52d62965a8",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.tenant-map.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-009:tenant_map.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "b4134bbb52bb600d882b83096dbba8d3816bd45e930dd560f63513905d3ef9a1",
+        "name": "GFB-009 artifact:GFB-009:tenant_map.json mapping",
+        "sourceFingerprint": "2ff1744304c945a103a320252818250b1bfd48c2e8aede0c8adc4f52d62965a8",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-010/baseline_policy.json.fixture.json",
+      "benchmarkId": "GFB-010",
+      "artifactPath": "inputs/baseline_policy.json",
+      "artifactId": "artifact:GFB-010:baseline_policy.json",
+      "artifactSha256": "d7b773d8d11273ede425d5dc6276a53e5a0ff5ac857766d3290f2da0a031e10d",
+      "syntaxAdapterId": "syntax.json.v1",
+      "semanticProfileIds": [
+        "sem.policy.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-010:baseline_policy.json",
+        "profileVersion": "0.1.0",
+        "profileDigest": "03a481f83bf42f7dbd305753331ac40fc0e42d26e62cf0624fe7e590622deadd",
+        "name": "GFB-010 artifact:GFB-010:baseline_policy.json mapping",
+        "sourceFingerprint": "d7b773d8d11273ede425d5dc6276a53e5a0ff5ac857766d3290f2da0a031e10d",
+        "format": "json",
+        "timeMappings": [],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-010/post_fix.jsonl.fixture.json",
+      "benchmarkId": "GFB-010",
+      "artifactPath": "inputs/post_fix.jsonl",
+      "artifactId": "artifact:GFB-010:post_fix.jsonl",
+      "artifactSha256": "46897b6fbc7969383f186c84e2c045676190f31579b214dd5d1f8e89a3c83a4a",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.guardrail.v1",
+        "sem.platform-execution.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-010:post_fix.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "0a6819e12a07316962a65810b9a7675571bf6c2b6c626425d1cdf257a92ade62",
+        "name": "GFB-010 artifact:GFB-010:post_fix.jsonl mapping",
+        "sourceFingerprint": "46897b6fbc7969383f186c84e2c045676190f31579b214dd5d1f8e89a3c83a4a",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "decision",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "platform",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "UNKNOWN_SOURCE_AUTHORITY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-010/post_fix_state.csv.fixture.json",
+      "benchmarkId": "GFB-010",
+      "artifactPath": "inputs/post_fix_state.csv",
+      "artifactId": "artifact:GFB-010:post_fix_state.csv",
+      "artifactSha256": "afab9b7a609a4c9ebb600974b96e4c75bf606d5c6341e496da14bc012307d4b4",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.state.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-010:post_fix_state.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "e2aa75e00e5a7684598af025a2bba64e9afd01478fc5baf31be0b8d5fd203e1f",
+        "name": "GFB-010 artifact:GFB-010:post_fix_state.csv mapping",
+        "sourceFingerprint": "afab9b7a609a4c9ebb600974b96e4c75bf606d5c6341e496da14bc012307d4b4",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-010/pre_fix.jsonl.fixture.json",
+      "benchmarkId": "GFB-010",
+      "artifactPath": "inputs/pre_fix.jsonl",
+      "artifactId": "artifact:GFB-010:pre_fix.jsonl",
+      "artifactSha256": "a3c0e1c3badff3848967e87729d749e918cc8331681d935b6d454c46e2693315",
+      "syntaxAdapterId": "syntax.jsonl.v1",
+      "semanticProfileIds": [
+        "sem.guardrail.v1",
+        "sem.platform-execution.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-010:pre_fix.jsonl",
+        "profileVersion": "0.1.0",
+        "profileDigest": "1daa38f634c99fba95c7ac7ebc93c2ed638532629ab6c2c2c672a0f838782d23",
+        "name": "GFB-010 artifact:GFB-010:pre_fix.jsonl mapping",
+        "sourceFingerprint": "a3c0e1c3badff3848967e87729d749e918cc8331681d935b6d454c46e2693315",
+        "format": "jsonl",
+        "timeMappings": [
+          {
+            "sourcePath": "ts",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [],
+        "operationMappings": [
+          {
+            "sourcePath": "operation",
+            "targetPath": "operation.nativeOperation",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "statusMappings": [
+          {
+            "sourcePath": "decision",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          },
+          {
+            "sourcePath": "platform",
+            "targetPath": "result.native",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "stateMappings": [],
+        "correlationMappings": [
+          {
+            "sourcePath": "actionCorrelationId",
+            "targetPath": "correlationIds.actionCorrelationId",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "UNKNOWN_SOURCE_AUTHORITY",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    },
+    {
+      "fixtureRef": "fixtures/qualification/phase7/cases/GFB-010/pre_fix_state.csv.fixture.json",
+      "benchmarkId": "GFB-010",
+      "artifactPath": "inputs/pre_fix_state.csv",
+      "artifactId": "artifact:GFB-010:pre_fix_state.csv",
+      "artifactSha256": "c21c33138ebf0773c6d1a3a8b74f99060727cf5c9ceb52130b58f376168c5aef",
+      "syntaxAdapterId": "syntax.csv.v1",
+      "semanticProfileIds": [
+        "sem.state.v1"
+      ],
+      "mappingProfile": {
+        "profileId": "map:GFB-010:pre_fix_state.csv",
+        "profileVersion": "0.1.0",
+        "profileDigest": "9f774bf91c41802713e2eaaae59442e6b55ae2830c6b4bb8bfefd8e51896eb79",
+        "name": "GFB-010 artifact:GFB-010:pre_fix_state.csv mapping",
+        "sourceFingerprint": "c21c33138ebf0773c6d1a3a8b74f99060727cf5c9ceb52130b58f376168c5aef",
+        "format": "csv",
+        "timeMappings": [
+          {
+            "sourcePath": "timestamp",
+            "targetPath": "eventTime",
+            "transform": "RFC3339_NORMALIZE",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "fieldMappings": [],
+        "entityMappings": [
+          {
+            "sourcePath": "cell_id",
+            "targetPath": "targetRefs",
+            "transform": "IDENTITY",
+            "required": false,
+            "limitations": []
+          }
+        ],
+        "operationMappings": [],
+        "statusMappings": [],
+        "stateMappings": [],
+        "correlationMappings": [],
+        "relationMappings": [],
+        "scenarioMappings": [],
+        "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+        "transformRules": [],
+        "redactionRules": [],
+        "acceptedProposalIds": [],
+        "limitations": [
+          "BENCHMARK_PREAPPROVED_MAPPING"
+        ],
+        "createdAt": "2026-09-27T18:30:00Z",
+        "approvedAt": "2026-09-27T18:30:00Z",
+        "approvalMode": "PREAPPROVED_STANDARD"
+      }
+    }
+  ],
+  "limitations": [
+    "BENCHMARK_PREAPPROVED_MAPPING_ONLY",
+    "SOURCE_FINGERPRINT_MUST_EQUAL_ARTIFACT_SHA256",
+    "MAPPING_OUTPUT_IS_NON_CANONICAL_DRAFT"
+  ]
+}

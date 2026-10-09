@@ -1,0 +1,674 @@
+{
+ "fault-1791160095-e06262": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T00:28:18.013Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:30:00-05:00",
+    "avg_ms": 2417.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:33:00-05:00",
+    "avg_ms": 9412.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 14329.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 10102.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 4999.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 6952.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:36:00-05:00",
+    "avg_ms": 69510.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791160286-13e1f2": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T00:31:32.949Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:30:00-05:00",
+    "avg_ms": 2417.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:33:00-05:00",
+    "avg_ms": 9412.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 14329.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 10102.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 4999.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 6952.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:36:00-05:00",
+    "avg_ms": 69510.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 6833.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 8186.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 9830.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791160393-344490": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T00:33:17.818Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:33:00-05:00",
+    "avg_ms": 9412.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 14329.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 10102.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 4999.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 6952.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:36:00-05:00",
+    "avg_ms": 69510.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 6833.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 8186.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 9830.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791160491-d961be": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T00:34:52.874Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:33:00-05:00",
+    "avg_ms": 9412.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 14329.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:34:00-05:00",
+    "avg_ms": 10102.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 4999.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 6952.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:36:00-05:00",
+    "avg_ms": 69510.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 6833.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 8186.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 9830.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791160617-59b8bc": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T00:36:58.361Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 4999.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:35:00-05:00",
+    "avg_ms": 6952.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:36:00-05:00",
+    "avg_ms": 69510.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 6833.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 8186.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T19:37:00-05:00",
+    "avg_ms": 9830.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791164066-bdd7e3": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T01:34:26.883Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:34:00-05:00",
+    "avg_ms": 9005.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:35:00-05:00",
+    "avg_ms": 13067.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:38:00-05:00",
+    "avg_ms": 11930.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:40:00-05:00",
+    "avg_ms": 298485.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 5776.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 3303.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 10960.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791164501-143372": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T01:41:41.144Z",
+  "obs": [
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:40:00-05:00",
+    "avg_ms": 298485.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 5776.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 3303.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 10960.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:43:00-05:00",
+    "avg_ms": 6933.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:44:00-05:00",
+    "avg_ms": 3037.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:44:00-05:00",
+    "avg_ms": 3406.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:45:00-05:00",
+    "avg_ms": 5749.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:46:00-05:00",
+    "avg_ms": 12258.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:46:00-05:00",
+    "avg_ms": 22624.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 9146.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 7116.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 15295.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:48:00-05:00",
+    "avg_ms": 7283.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:48:00-05:00",
+    "avg_ms": 7896.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:49:00-05:00",
+    "avg_ms": 18481.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791164605-3348a2": {
+  "scenario": "S3-restricted-change",
+  "declared": "2026-10-05T01:43:25.028Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 5776.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 3303.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:42:00-05:00",
+    "avg_ms": 10960.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:43:00-05:00",
+    "avg_ms": 6933.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:44:00-05:00",
+    "avg_ms": 3037.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:44:00-05:00",
+    "avg_ms": 3406.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:45:00-05:00",
+    "avg_ms": 5749.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:46:00-05:00",
+    "avg_ms": 12258.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:46:00-05:00",
+    "avg_ms": 22624.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 9146.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 7116.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 15295.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:48:00-05:00",
+    "avg_ms": 7283.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:48:00-05:00",
+    "avg_ms": 7896.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:49:00-05:00",
+    "avg_ms": 18481.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791164732-1092c5": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T01:45:32.052Z",
+  "obs": [
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:44:00-05:00",
+    "avg_ms": 3037.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:44:00-05:00",
+    "avg_ms": 3406.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:45:00-05:00",
+    "avg_ms": 5749.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:46:00-05:00",
+    "avg_ms": 12258.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:46:00-05:00",
+    "avg_ms": 22624.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 9146.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 7116.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:47:00-05:00",
+    "avg_ms": 15295.0,
+    "n": 1.0
+   },
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:48:00-05:00",
+    "avg_ms": 7283.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:48:00-05:00",
+    "avg_ms": 7896.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:49:00-05:00",
+    "avg_ms": 18481.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791165466-51ab52": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T01:57:46.473Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T20:58:00-05:00",
+    "avg_ms": 6794.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T20:58:00-05:00",
+    "avg_ms": 13040.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:58:00-05:00",
+    "avg_ms": 10231.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T20:59:00-05:00",
+    "avg_ms": 17460.0,
+    "n": 2.0
+   }
+  ]
+ },
+ "fault-1791167110-5e3126": {
+  "scenario": "S1-fronthaul-degradation",
+  "declared": "2026-10-05T02:25:10.966Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-04T21:25:00-05:00",
+    "avg_ms": 5925.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-04T21:25:00-05:00",
+    "avg_ms": 13296.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-04T21:26:00-05:00",
+    "avg_ms": 8696.0,
+    "n": 1.0
+   }
+  ]
+ },
+ "fault-1791179120-30b2dc": {
+  "scenario": "S3-restricted-change",
+  "declared": "2026-10-05T05:45:20Z",
+  "obs": [
+   {
+    "agent": "customer_experience_agent",
+    "min": "2026-10-05T00:45:00-05:00",
+    "avg_ms": 7886.0,
+    "n": 1.0
+   },
+   {
+    "agent": "it_resolution_agent",
+    "min": "2026-10-05T00:45:00-05:00",
+    "avg_ms": 4524.0,
+    "n": 1.0
+   },
+   {
+    "agent": "network_resolution_agent",
+    "min": "2026-10-05T00:46:00-05:00",
+    "avg_ms": 6679.0,
+    "n": 1.0
+   }
+  ]
+ }
+}

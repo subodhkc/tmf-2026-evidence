@@ -1,0 +1,18 @@
+
+scenario  S1-fronthaul-degradation  (baseline)
+expects   auto-resolve
+run       fault-1791160393-344490
+
+  PASS  chain has records                       34 records
+  PASS  all three domains present               3 actors: customer-experience-agent, it-resolution-agent, network-resolution-agent
+  PASS  intent recorded before invocation       an agent that invokes before declaring intent leaves an unauditable gap
+  FAIL  guardrail verdict on every model call   0/3 invocations carry a guardrail verdict
+  PASS  result inspected, not just produced     a result nobody checked is not evidence
+  FAIL  cross-domain negotiation recorded       domains that never disagreed did not really consult each other
+  PASS  disposition recorded, not inferred      recorded: auto-resolve
+  PASS  disposition is auto-resolve             S1 has one cause and a protection path; the agents should act
+
+RESULT: FAIL (6/8 checks passed)
+failed checks: guardrail verdict on every model call, cross-domain negotiation recorded
+
+why this scenario exists: One root cause, one reversible action, protection path available. The agents should converge and act.

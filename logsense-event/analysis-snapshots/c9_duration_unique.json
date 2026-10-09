@@ -1,0 +1,377 @@
+{
+ "unique": [
+  {
+   "min": "2026-10-04T19:30:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 2417.0,
+   "runs": [
+    "fault-1791160095-e06262",
+    "fault-1791160286-13e1f2"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:33:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 9412.0,
+   "runs": [
+    "fault-1791160095-e06262",
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:34:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 14329.0,
+   "runs": [
+    "fault-1791160095-e06262",
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:34:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 10102.0,
+   "runs": [
+    "fault-1791160095-e06262",
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:35:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 4999.0,
+   "runs": [
+    "fault-1791160095-e06262",
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be",
+    "fault-1791160617-59b8bc"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:35:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 6952.0,
+   "runs": [
+    "fault-1791160095-e06262",
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be",
+    "fault-1791160617-59b8bc"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:36:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 69510.0,
+   "runs": [
+    "fault-1791160095-e06262",
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be",
+    "fault-1791160617-59b8bc"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:37:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 6833.0,
+   "runs": [
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be",
+    "fault-1791160617-59b8bc"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:37:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 8186.0,
+   "runs": [
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be",
+    "fault-1791160617-59b8bc"
+   ]
+  },
+  {
+   "min": "2026-10-04T19:37:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 9830.0,
+   "runs": [
+    "fault-1791160286-13e1f2",
+    "fault-1791160393-344490",
+    "fault-1791160491-d961be",
+    "fault-1791160617-59b8bc"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:34:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 9005.0,
+   "runs": [
+    "fault-1791164066-bdd7e3"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:35:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 13067.0,
+   "runs": [
+    "fault-1791164066-bdd7e3"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:38:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 11930.0,
+   "runs": [
+    "fault-1791164066-bdd7e3"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:40:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 298485.0,
+   "runs": [
+    "fault-1791164066-bdd7e3",
+    "fault-1791164501-143372"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:42:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 5776.0,
+   "runs": [
+    "fault-1791164066-bdd7e3",
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:42:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 3303.0,
+   "runs": [
+    "fault-1791164066-bdd7e3",
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:42:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 10960.0,
+   "runs": [
+    "fault-1791164066-bdd7e3",
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:43:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 6933.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:44:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 3037.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:44:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 3406.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:45:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 5749.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:46:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 12258.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:46:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 22624.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:47:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 9146.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:47:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 7116.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:47:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 15295.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:48:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 7283.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:48:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 7896.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:49:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 18481.0,
+   "runs": [
+    "fault-1791164501-143372",
+    "fault-1791164605-3348a2",
+    "fault-1791164732-1092c5"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:58:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 6794.0,
+   "runs": [
+    "fault-1791165466-51ab52"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:58:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 13040.0,
+   "runs": [
+    "fault-1791165466-51ab52"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:58:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 10231.0,
+   "runs": [
+    "fault-1791165466-51ab52"
+   ]
+  },
+  {
+   "min": "2026-10-04T20:59:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 17460.0,
+   "runs": [
+    "fault-1791165466-51ab52"
+   ]
+  },
+  {
+   "min": "2026-10-04T21:25:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 5925.0,
+   "runs": [
+    "fault-1791167110-5e3126"
+   ]
+  },
+  {
+   "min": "2026-10-04T21:25:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 13296.0,
+   "runs": [
+    "fault-1791167110-5e3126"
+   ]
+  },
+  {
+   "min": "2026-10-04T21:26:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 8696.0,
+   "runs": [
+    "fault-1791167110-5e3126"
+   ]
+  },
+  {
+   "min": "2026-10-05T00:45:00-05:00",
+   "agent": "customer_experience_agent",
+   "avg_ms": 7886.0,
+   "runs": [
+    "fault-1791179120-30b2dc"
+   ]
+  },
+  {
+   "min": "2026-10-05T00:45:00-05:00",
+   "agent": "it_resolution_agent",
+   "avg_ms": 4524.0,
+   "runs": [
+    "fault-1791179120-30b2dc"
+   ]
+  },
+  {
+   "min": "2026-10-05T00:46:00-05:00",
+   "agent": "network_resolution_agent",
+   "avg_ms": 6679.0,
+   "runs": [
+    "fault-1791179120-30b2dc"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+  "endpoint": "POST /api/otlp/v1/traces?binderId=52ec5f04-c01a-4715-ae46-6bef3260b505",
+  "accepted": 40,
+  "rejected": 0,
+  "quarantined": 0,
+  "source": "40 real spans transcribed verbatim from fault-1791165466-51ab52 OTLP records",
+  "declarations": {
+    "haiec.declared.tools": "real gen_ai.agent.tools list (13 tools)",
+    "haiec.declared.agents": "customer-experience-agent,it-resolution-agent,network-resolution-agent",
+    "haiec.evaluation.id": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+    "haiec.provenance": "mirrored"
+  },
+  "sweep_result": {
+    "detection_findings": 0,
+    "alert_events": 0,
+    "verification": "/api/monitoring/risks + /api/monitoring/stream + /api/notifications all empty"
+  },
+  "interpretation": "correct negative \u2014 all observed calls within declared registry; no rule threshold crossed"
+}

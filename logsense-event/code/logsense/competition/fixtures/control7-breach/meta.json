@@ -1,0 +1,8 @@
+{
+  "fixtureId": "control7-breach",
+  "label": "Control 7 — breach-like measurement fixture",
+  "description": "10 expected events, 9 matched (90% coverage): the AUTHORIZATION_EVALUATED event is not observed, and the E08 to E09 gap exceeds the declared 60s limit. Measurement fixture only — no PASS/FAIL.",
+  "evidenceFiles": ["events.jsonl"],
+  "runFile": "run.json",
+  "manifestFile": "expected.json"
+}

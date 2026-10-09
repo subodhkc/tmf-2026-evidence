@@ -1,0 +1,146 @@
+{
+  "$id": "https://logsense.local/schemas/forensic_claim.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "canonicalOwner": {
+      "type": "string"
+    },
+    "claimClass": {
+      "enum": [
+        "STATE_OBSERVATION",
+        "ACTION_ATTRIBUTION",
+        "CAPABILITY",
+        "AUTHORITY",
+        "COVERAGE",
+        "CONSEQUENCE",
+        "CAUSE",
+        "RECOVERY",
+        "GENERIC"
+      ],
+      "type": "string"
+    },
+    "claimId": {
+      "type": "string"
+    },
+    "closeWith": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "currentness": {
+      "enum": [
+        "FRESH",
+        "AGING",
+        "STALE",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "dispositiveSource": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidenceState": {
+      "enum": [
+        "ESTABLISHED",
+        "PARTIAL",
+        "CONTRADICTED",
+        "UNKNOWN",
+        "NOT_ASSESSED"
+      ],
+      "type": "string"
+    },
+    "evidenceStrength": {
+      "enum": [
+        "STRONG",
+        "MODERATE",
+        "WEAK",
+        "CONTRADICTED",
+        "MISSING"
+      ],
+      "type": "string"
+    },
+    "independentSourceFamilyCount": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "notClaimed": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "scopeCompleteness": {
+      "enum": [
+        "FULL",
+        "PARTIAL",
+        "SAMPLE",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "snapshotRef": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "strengthBasis": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "subjectRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "claimId",
+    "claimClass",
+    "subjectRefs",
+    "statement",
+    "canonicalOwner",
+    "evidenceState",
+    "evidenceStrength",
+    "currentness",
+    "scopeCompleteness",
+    "independentSourceFamilyCount",
+    "dispositiveSource",
+    "evidenceRefs",
+    "strengthBasis",
+    "limitations",
+    "notClaimed",
+    "closeWith",
+    "provenance",
+    "snapshotRef"
+  ],
+  "title": "Forensic Claim",
+  "type": "object"
+}

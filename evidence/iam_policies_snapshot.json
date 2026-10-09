@@ -1,0 +1,794 @@
+{
+ "agentcore-runtime": {
+  "Version": "2012-10-17",
+  "Statement": [
+   {
+    "Action": [
+     "ecr:GetAuthorizationToken",
+     "ecr:BatchGetImage",
+     "ecr:GetDownloadUrlForLayer",
+     "ecr:BatchCheckLayerAvailability"
+    ],
+    "Resource": "*",
+    "Effect": "Allow",
+    "Sid": "PullImages"
+   },
+   {
+    "Action": [
+     "logs:CreateLogGroup",
+     "logs:CreateLogStream",
+     "logs:PutLogEvents",
+     "logs:DescribeLogStreams",
+     "logs:DescribeLogGroups"
+    ],
+    "Resource": "arn:aws:logs:us-east-1:352826992186:log-group:/aws/bedrock-agentcore/*",
+    "Effect": "Allow",
+    "Sid": "Logs"
+   },
+   {
+    "Action": [
+     "xray:PutTraceSegments",
+     "xray:PutTelemetryRecords",
+     "cloudwatch:PutMetricData"
+    ],
+    "Resource": "*",
+    "Effect": "Allow",
+    "Sid": "TracesAndMetrics"
+   },
+   {
+    "Action": [
+     "bedrock-agentcore:GetWorkloadAccessToken",
+     "bedrock-agentcore:GetWorkloadAccessTokenForJWT",
+     "bedrock-agentcore:GetWorkloadAccessTokenForUserId"
+    ],
+    "Resource": "*",
+    "Effect": "Allow",
+    "Sid": "WorkloadIdentity"
+   },
+   {
+    "Action": "logs:PutResourcePolicy",
+    "Resource": "arn:aws:logs:us-east-1:352826992186:log-group:/aws/bedrock-agentcore/runtimes/*",
+    "Effect": "Allow",
+    "Sid": "DeliverSpansToTheAgentLogGroup"
+   },
+   {
+    "Action": "logs:DescribeLogGroups",
+    "Resource": "arn:aws:logs:us-east-1:352826992186:log-group:*",
+    "Effect": "Allow",
+    "Sid": "FindLogGroups"
+   },
+   {
+    "Action": [
+     "xray:GetSamplingRules",
+     "xray:GetSamplingTargets"
+    ],
+    "Resource": "*",
+    "Effect": "Allow",
+    "Sid": "TraceSampling"
+   },
+   {
+    "Action": "bedrock-agentcore:InvokeAgentRuntime",
+    "Resource": "arn:aws:bedrock-agentcore:us-east-1:352826992186:runtime/*",
+    "Effect": "Allow",
+    "Sid": "InvokePeerAgentRuntimes"
+   },
+   {
+    "Action": [
+     "bedrock:InvokeModel",
+     "bedrock:InvokeModelWithResponseStream",
+     "bedrock-agentcore:InvokeGateway"
+    ],
+    "Resource": "*",
+    "Effect": "Deny",
+    "Sid": "NoDirectModelOrToolAccess"
+   }
+  ]
+ },
+ "console-iam-policy-0": {
+  "Version": "2012-10-17",
+  "Statement": [
+   {
+    "Sid": "EksReadAndConsoleAccess",
+    "Effect": "Allow",
+    "Action": [
+     "eks:DescribeCluster",
+     "eks:ListClusters",
+     "eks:ListNodegroups",
+     "eks:DescribeNodegroup",
+     "eks:ListAddons",
+     "eks:DescribeAddon",
+     "eks:AccessKubernetesApi",
+     "eks:ListPodIdentityAssociations"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "CloudFormationReadStacks",
+    "Effect": "Allow",
+    "Action": [
+     "cloudformation:DescribeStacks",
+     "cloudformation:ListStacks",
+     "cloudformation:DescribeStackEvents",
+     "cloudformation:DescribeChangeSet"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "S3ReadEventAssets",
+    "Effect": "Allow",
+    "Action": [
+     "s3:GetObject",
+     "s3:ListBucket"
+    ],
+    "Resource": [
+     "arn:aws:s3:::ws-event-*"
+    ]
+   },
+   {
+    "Sid": "EcrReadOnlyForModaasImages",
+    "Effect": "Allow",
+    "Action": [
+     "ecr:GetAuthorizationToken",
+     "ecr:BatchGetImage",
+     "ecr:GetDownloadUrlForLayer",
+     "ecr:DescribeImages"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "CodeBuildForModaasImageBuilds",
+    "Effect": "Allow",
+    "Action": [
+     "codebuild:StartBuild",
+     "codebuild:BatchGetBuilds"
+    ],
+    "Resource": [
+     "arn:aws:codebuild:*:*:project/*eks-cluster*"
+    ]
+   },
+   {
+    "Sid": "LogsForCodeBuildFailureTriage",
+    "Effect": "Allow",
+    "Action": [
+     "logs:DescribeLogGroups",
+     "logs:DescribeLogStreams",
+     "logs:FilterLogEvents",
+     "logs:GetLogEvents",
+     "logs:StartLiveTail"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "PassRolesCreatedByThisWorkshopOnly",
+    "Effect": "Allow",
+    "Action": [
+     "iam:PassRole"
+    ],
+    "Resource": [
+     "arn:aws:iam::*:role/eks-cluster-*"
+    ],
+    "Condition": {
+     "StringEquals": {
+      "iam:PassedToService": [
+       "eks.amazonaws.com",
+       "ec2.amazonaws.com"
+      ]
+     }
+    }
+   },
+   {
+    "Sid": "ReadOnlyEnvironmentDiagnostics",
+    "Effect": "Allow",
+    "Action": [
+     "ec2:DescribeSubnets",
+     "ec2:DescribeAvailabilityZones",
+     "ec2:DescribeInstanceTypeOfferings",
+     "ec2:DescribeInstances",
+     "ec2:DescribeAccountAttributes",
+     "autoscaling:DescribeAutoScalingGroups",
+     "servicequotas:GetServiceQuota",
+     "servicequotas:ListServiceQuotas",
+     "cloudformation:DescribeStackResources",
+     "cloudformation:DescribeStackResource",
+     "cloudtrail:LookupEvents"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "ReadOnlyAgentCoreRegistryGuardrails",
+    "Effect": "Allow",
+    "Action": [
+     "bedrock-agentcore:List*",
+     "bedrock-agentcore:Get*",
+     "agent-registry:List*",
+     "agent-registry:Get*",
+     "agent-registry:SearchDiscoverableRegistryRecords",
+     "bedrock:ListGuardrails",
+     "bedrock:GetGuardrail"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "ReadAgentObservability",
+    "Effect": "Allow",
+    "Action": [
+     "cloudwatch:GetMetricData",
+     "cloudwatch:ListMetrics",
+     "cloudwatch:DescribeAlarms",
+     "cloudwatch:GetOTelEnrichment",
+     "logs:StartQuery",
+     "logs:GetQueryResults",
+     "logs:StopQuery",
+     "logs:DescribeMetricFilters",
+     "xray:GetTraceSegmentDestination",
+     "xray:GetTraceSummaries",
+     "xray:BatchGetTraces"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "InvokeAgentsModaasCreated",
+    "Effect": "Allow",
+    "Action": [
+     "bedrock-agentcore:InvokeAgentRuntime"
+    ],
+    "Resource": [
+     "arn:aws:bedrock-agentcore:*:*:runtime/*"
+    ]
+   },
+   {
+    "Sid": "DenyDirectModelAndAgentInvocation",
+    "Effect": "Deny",
+    "Action": [
+     "bedrock:InvokeModel",
+     "bedrock:InvokeModelWithResponseStream",
+     "bedrock:InvokeAgent",
+     "bedrock:InvokeFlow",
+     "sagemaker:InvokeEndpoint",
+     "sagemaker:InvokeEndpointAsync",
+     "sagemaker:InvokeEndpointWithResponseStream"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "DenyAiAssetWritesOutsideModaas",
+    "Effect": "Deny",
+    "Action": [
+     "bedrock:CreateGuardrail",
+     "bedrock:CreateGuardrailVersion",
+     "bedrock:UpdateGuardrail",
+     "bedrock:DeleteGuardrail",
+     "bedrock-agentcore:Create*",
+     "bedrock-agentcore:Update*",
+     "bedrock-agentcore:Delete*",
+     "agent-registry:Create*",
+     "agent-registry:Update*",
+     "agent-registry:Delete*",
+     "agent-registry:Submit*"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "DenyExpensiveOperations",
+    "Effect": "Deny",
+    "Action": [
+     "bedrock:CreateProvisionedModelThroughput",
+     "bedrock:UpdateProvisionedModelThroughput",
+     "bedrock:CreateModelCustomizationJob",
+     "bedrock:CreateModelInvocationJob",
+     "bedrock:CreateModelCopyJob",
+     "bedrock:CreateModelImportJob",
+     "sagemaker:CreateEndpoint",
+     "sagemaker:CreateEndpointConfig",
+     "sagemaker:CreateTrainingJob",
+     "sagemaker:CreateProcessingJob",
+     "sagemaker:CreateNotebookInstance",
+     "sagemaker:CreateDomain",
+     "ec2:RunInstances",
+     "ec2:StartInstances",
+     "eks:CreateCluster",
+     "eks:CreateNodegroup",
+     "aws-marketplace:Subscribe",
+     "aws-marketplace:AcceptAgreementApprovalRequest"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "DenyIamEscapeHatch",
+    "Effect": "Deny",
+    "Action": [
+     "iam:CreateUser",
+     "iam:CreateAccessKey",
+     "iam:CreateRole",
+     "iam:CreateLoginProfile",
+     "iam:AttachRolePolicy",
+     "iam:AttachUserPolicy",
+     "iam:PutRolePolicy",
+     "iam:PutUserPolicy",
+     "iam:UpdateAssumeRolePolicy",
+     "iam:DeleteRolePolicy",
+     "iam:CreatePolicy",
+     "iam:CreatePolicyVersion",
+     "iam:SetDefaultPolicyVersion"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "DenyAssumingOperatorRole",
+    "Effect": "Deny",
+    "Action": [
+     "sts:AssumeRole"
+    ],
+    "Resource": [
+     "arn:aws:iam::*:role/*ModaasOperatorRole*"
+    ]
+   },
+   {
+    "Sid": "CloudShellParticipantTerminal",
+    "Effect": "Allow",
+    "Action": [
+     "cloudshell:CreateEnvironment",
+     "cloudshell:CreateSession",
+     "cloudshell:GetEnvironmentStatus",
+     "cloudshell:StartEnvironment",
+     "cloudshell:PutCredentials",
+     "cloudshell:GetFileDownloadUrls"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "AmazonQConsoleChatForParticipants",
+    "Effect": "Allow",
+    "Action": [
+     "q:StartConversation",
+     "q:SendMessage",
+     "q:GetConversation",
+     "q:ListConversations",
+     "q:UpdateConversation",
+     "q:DeleteConversation"
+    ],
+    "Resource": [
+     "*"
+    ]
+   }
+  ]
+ },
+ "ws-default-policy": {
+  "Version": "2012-10-17",
+  "Statement": [
+   {
+    "Sid": "AllowIamReadOnly",
+    "Effect": "Allow",
+    "Action": [
+     "iam:List*",
+     "iam:Get*",
+     "iam:Generate*",
+     "sts:GetCallerIdentity"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "AllowCreateSLR",
+    "Effect": "Allow",
+    "Action": [
+     "iam:CreateServiceLinkedRole"
+    ],
+    "Resource": [
+     "arn:aws:iam::*:role/aws-service-role/*"
+    ]
+   },
+   {
+    "Sid": "AllowIamPassRole",
+    "Effect": "Allow",
+    "Action": [
+     "iam:PassRole"
+    ],
+    "Resource": [
+     "arn:aws:iam::352826992186:role/WSParticipantRole"
+    ]
+   },
+   {
+    "Sid": "DenyAllOutsideAllowedRegions",
+    "Effect": "Deny",
+    "NotAction": [
+     "iam:*",
+     "sts:*",
+     "s3:*",
+     "ds:*",
+     "artifact:Get",
+     "artifact:DownloadAgreement",
+     "lightsail:*",
+     "networkmanager:*",
+     "braket:*",
+     "quicksight:*",
+     "cloudfront:*",
+     "route53:*",
+     "route53-recovery-cluster:*",
+     "route53-recovery-control-config:*",
+     "route53-recovery-readiness:*",
+     "servicediscovery:*",
+     "waf:*",
+     "waf-regional:*",
+     "wafv2:*",
+     "cloudwatch:DescribeAlarms",
+     "cloudwatch:PutMetricAlarm",
+     "cloudwatch:DeleteAlarms",
+     "cloudwatch:GetMetricStatistics",
+     "elasticloadbalancing:DescribeLoadBalancers",
+     "ec2:Describe*",
+     "ecr:GetDownloadUrlForLayer",
+     "ecr:BatchGetImage",
+     "ecr:BatchCheckLayerAvailability",
+     "ecr:GetAuthorizationToken",
+     "globalaccelerator:*",
+     "acm:List*",
+     "acm:Describe*",
+     "cloudformation:List*",
+     "cloudformation:Describe*",
+     "kms:Describe*",
+     "kms:ReEncrypt*",
+     "kms:GenerateDataKey*",
+     "kms:Get*",
+     "kms:List*",
+     "kms:CreateGrant",
+     "kms:RevokeGrant",
+     "ssm:List*",
+     "directconnect:*",
+     "sso:List*",
+     "sso:Describe*",
+     "sso:Get*",
+     "bedrock:Invoke*"
+    ],
+    "Resource": [
+     "*"
+    ],
+    "Condition": {
+     "StringNotEquals": {
+      "aws:RequestedRegion": [
+       "us-east-1"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ "participant-permissions-policy-1": {
+  "Version": "2012-10-17",
+  "Statement": [
+   {
+    "Sid": "P1HostUtilityLambdaAndApi",
+    "Effect": "Allow",
+    "Action": [
+     "lambda:CreateFunction",
+     "lambda:UpdateFunctionCode",
+     "lambda:UpdateFunctionConfiguration",
+     "lambda:DeleteFunction",
+     "lambda:GetFunction",
+     "lambda:GetFunctionConfiguration",
+     "lambda:ListFunctions",
+     "lambda:InvokeFunction",
+     "lambda:AddPermission",
+     "lambda:RemovePermission",
+     "lambda:TagResource",
+     "lambda:ListTags"
+    ],
+    "Resource": [
+     "arn:aws:lambda:*:*:function:team-*"
+    ]
+   },
+   {
+    "Sid": "P1FunctionUrlOnlyWithIamAuth",
+    "Effect": "Allow",
+    "Action": [
+     "lambda:CreateFunctionUrlConfig"
+    ],
+    "Resource": [
+     "arn:aws:lambda:*:*:function:team-*"
+    ],
+    "Condition": {
+     "StringEquals": {
+      "lambda:FunctionUrlAuthType": "AWS_IAM"
+     }
+    }
+   },
+   {
+    "Sid": "P1PassRoleToLambdaOnly",
+    "Effect": "Allow",
+    "Action": [
+     "iam:PassRole"
+    ],
+    "Resource": [
+     "arn:aws:iam::*:role/participant-app-role"
+    ],
+    "Condition": {
+     "StringEquals": {
+      "iam:PassedToService": "lambda.amazonaws.com"
+     }
+    }
+   },
+   {
+    "Sid": "P2TeamEvidenceBucket",
+    "Effect": "Allow",
+    "Action": [
+     "s3:GetObject",
+     "s3:PutObject",
+     "s3:DeleteObject",
+     "s3:ListBucket"
+    ],
+    "Resource": [
+     "arn:aws:s3:::team-evidence-*",
+     "arn:aws:s3:::team-evidence-*/*"
+    ]
+   },
+   {
+    "Sid": "P3TeamDynamoDbTables",
+    "Effect": "Allow",
+    "Action": [
+     "dynamodb:CreateTable",
+     "dynamodb:DescribeTable",
+     "dynamodb:ListTables",
+     "dynamodb:UpdateTimeToLive",
+     "dynamodb:PutItem",
+     "dynamodb:GetItem",
+     "dynamodb:UpdateItem",
+     "dynamodb:DeleteItem",
+     "dynamodb:BatchWriteItem",
+     "dynamodb:BatchGetItem",
+     "dynamodb:Query",
+     "dynamodb:Scan",
+     "dynamodb:DeleteTable"
+    ],
+    "Resource": [
+     "arn:aws:dynamodb:*:*:table/team-*",
+     "arn:aws:dynamodb:*:*:table/team-*/index/*"
+    ]
+   },
+   {
+    "Sid": "P4CloudWatchDashboardWrites",
+    "Effect": "Allow",
+    "Action": [
+     "cloudwatch:PutDashboard",
+     "cloudwatch:DeleteDashboards"
+    ],
+    "Resource": [
+     "arn:aws:cloudwatch::*:dashboard/team-*"
+    ]
+   },
+   {
+    "Sid": "P4CloudWatchReadOnly",
+    "Effect": "Allow",
+    "Action": [
+     "cloudwatch:GetDashboard",
+     "cloudwatch:ListDashboards",
+     "cloudwatch:GetMetricStatistics"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "P4PutMetricDataScopedToTeamNamespace",
+    "Effect": "Allow",
+    "Action": [
+     "cloudwatch:PutMetricData"
+    ],
+    "Resource": [
+     "*"
+    ],
+    "Condition": {
+     "StringLike": {
+      "cloudwatch:namespace": "team/*"
+     }
+    }
+   },
+   {
+    "Sid": "P4TeamAlarms",
+    "Effect": "Allow",
+    "Action": [
+     "cloudwatch:PutMetricAlarm",
+     "cloudwatch:DeleteAlarms",
+     "cloudwatch:DescribeAlarms"
+    ],
+    "Resource": [
+     "arn:aws:cloudwatch:*:*:alarm:team-*"
+    ]
+   },
+   {
+    "Sid": "P4TeamLogGroups",
+    "Effect": "Allow",
+    "Action": [
+     "logs:CreateLogGroup",
+     "logs:CreateLogStream",
+     "logs:PutLogEvents",
+     "logs:PutRetentionPolicy"
+    ],
+    "Resource": [
+     "arn:aws:logs:*:*:log-group:/team/*"
+    ]
+   },
+   {
+    "Sid": "P5TeamSnsTopics",
+    "Effect": "Allow",
+    "Action": [
+     "sns:CreateTopic",
+     "sns:Publish",
+     "sns:Subscribe",
+     "sns:Unsubscribe",
+     "sns:DeleteTopic",
+     "sns:GetTopicAttributes",
+     "sns:ListSubscriptionsByTopic"
+    ],
+    "Resource": [
+     "arn:aws:sns:*:*:team-*"
+    ]
+   },
+   {
+    "Sid": "P6BedrockModelFactsReadOnly",
+    "Effect": "Allow",
+    "Action": [
+     "bedrock:ListFoundationModels",
+     "bedrock:GetFoundationModel",
+     "bedrock:ListInferenceProfiles",
+     "bedrock:GetInferenceProfile"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "P7TraceReadAccess",
+    "Effect": "Allow",
+    "Action": [
+     "xray:GetTraceGraph",
+     "xray:GetServiceGraph",
+     "xray:GetInsight",
+     "xray:GetInsightSummaries",
+     "xray:GetInsightEvents",
+     "logs:DescribeQueries",
+     "cloudwatch:ListServices",
+     "cloudwatch:ListEntitiesForMetric"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "P8CodeBuildProjectDetails",
+    "Effect": "Allow",
+    "Action": [
+     "codebuild:BatchGetProjects",
+     "codebuild:ListBuildsForProject",
+     "codebuild:BatchGetBuilds"
+    ],
+    "Resource": [
+     "arn:aws:codebuild:*:*:project/*eks-cluster*"
+    ]
+   },
+   {
+    "Sid": "CloudTrailLookup",
+    "Effect": "Allow",
+    "Action": [
+     "cloudtrail:LookupEvents"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "AccountLevelListActions",
+    "Effect": "Allow",
+    "Action": [
+     "lambda:ListFunctions",
+     "lambda:GetAccountSettings",
+     "dynamodb:ListTables",
+     "s3:ListAllMyBuckets",
+     "sns:ListTopics",
+     "sqs:ListQueues",
+     "events:ListRules",
+     "secretsmanager:ListSecrets",
+     "ecr:DescribeRepositories",
+     "codebuild:ListProjects"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "EcrReadAndCreateTeamRepos",
+    "Effect": "Allow",
+    "Action": [
+     "ecr:DescribeImages",
+     "ecr:ListImages",
+     "ecr:BatchGetImage",
+     "ecr:GetDownloadUrlForLayer",
+     "ecr:GetAuthorizationToken"
+    ],
+    "Resource": [
+     "*"
+    ]
+   },
+   {
+    "Sid": "EcrCreateTeamRepositories",
+    "Effect": "Allow",
+    "Action": [
+     "ecr:CreateRepository"
+    ],
+    "Resource": [
+     "arn:aws:ecr:*:*:repository/team-*"
+    ]
+   },
+   {
+    "Sid": "TeamSqsQueues",
+    "Effect": "Allow",
+    "Action": [
+     "sqs:CreateQueue",
+     "sqs:DeleteQueue",
+     "sqs:SendMessage",
+     "sqs:ReceiveMessage",
+     "sqs:DeleteMessage",
+     "sqs:GetQueueAttributes",
+     "sqs:GetQueueUrl",
+     "sqs:TagQueue"
+    ],
+    "Resource": [
+     "arn:aws:sqs:*:*:team-*"
+    ]
+   },
+   {
+    "Sid": "TeamEventBridgeRules",
+    "Effect": "Allow",
+    "Action": [
+     "events:PutRule",
+     "events:PutTargets",
+     "events:DeleteRule",
+     "events:RemoveTargets",
+     "events:DescribeRule"
+    ],
+    "Resource": [
+     "arn:aws:events:*:*:rule/team-*"
+    ]
+   },
+   {
+    "Sid": "TeamSecretsManager",
+    "Effect": "Allow",
+    "Action": [
+     "secretsmanager:CreateSecret",
+     "secretsmanager:GetSecretValue",
+     "secretsmanager:PutSecretValue",
+     "secretsmanager:DeleteSecret",
+     "secretsmanager:DescribeSecret",
+     "secretsmanager:TagResource"
+    ],
+    "Resource": [
+     "arn:aws:secretsmanager:*:*:secret:team-*"
+    ]
+   }
+  ]
+ }
+}

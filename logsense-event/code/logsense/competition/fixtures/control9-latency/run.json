@@ -1,0 +1,12 @@
+{
+  "runId": "C9-LATENCY",
+  "label": "Control 9 \u2014 lower-is-better latency (ILLUSTRATIVE)",
+  "traceIds": [
+    "trace-c9-latency"
+  ],
+  "sessionIds": [
+    "sess-c9-latency"
+  ],
+  "notes": "Bundled deterministic fixture: Five windows of example.latency (ms, LOWER_IS_BETTER); W03 reports 120 against a 100ms baseline: (120-100)/100 = 0.20 = 20% relative degradation. Proves the engine is not tied to success-rate semantics.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

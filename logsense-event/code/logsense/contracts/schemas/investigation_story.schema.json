@@ -1,0 +1,126 @@
+{
+  "$id": "https://logsense.local/schemas/investigation_story.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "closeWith": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "consequence": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "divergence": {
+      "type": "string"
+    },
+    "drillDownRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidenceStrength": {
+      "enum": [
+        "STRONG",
+        "MODERATE",
+        "WEAK",
+        "CONTRADICTED",
+        "MISSING"
+      ],
+      "type": "string"
+    },
+    "expectedOrGoverningCondition": {},
+    "family": {
+      "enum": [
+        "EFFECT_ENVELOPE_EXCEEDED",
+        "TARGET_DRIFT",
+        "TOOL_SURFACE_DRIFT",
+        "AUTHORITY_CONTINUITY_BREAK",
+        "EVIDENCE_CONTRADICTION",
+        "EVIDENCE_FRONTIER",
+        "RECOVERY_DIVERGENCE",
+        "MATERIAL_CONSEQUENCE",
+        "DEFERRED_EXECUTION_DIVERGENCE",
+        "MEDIATION_INTEGRITY_BREAK"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "notClaimed": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "observedOrActual": {},
+    "snapshotRef": {
+      "type": "string"
+    },
+    "storyId": {
+      "type": "string"
+    },
+    "subjectRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "whatEstablished": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "whyItMatters": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "storyId",
+    "family",
+    "title",
+    "summary",
+    "subjectRefs",
+    "evidenceStrength",
+    "whatEstablished",
+    "expectedOrGoverningCondition",
+    "observedOrActual",
+    "divergence",
+    "whyItMatters",
+    "consequence",
+    "limitations",
+    "notClaimed",
+    "closeWith",
+    "evidenceRefs",
+    "drillDownRefs",
+    "snapshotRef"
+  ],
+  "title": "Investigation Story",
+  "type": "object"
+}

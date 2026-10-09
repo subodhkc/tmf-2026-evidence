@@ -1,0 +1,48 @@
+{
+  "cid": "fault-1791164605-3348a2",
+  "traceId": "0e614a34a6774b4b9f18a07011d6737b",
+  "capturedAt": "2026-10-05T01:51:29.461150+00:00",
+  "artifacts": {
+    "audit_records.jsonl": {
+      "count": 20,
+      "sha256": "ad64c1f723be0ff4b9eb4857aa04ee1f72d124ea918a5e3da8d5a9341c22166f"
+    },
+    "timeline.txt": {
+      "bytes": 6040,
+      "sha256": "505163960838452a12472e09af13be2f745782be46b1a92f4cb6e51cb92326ff"
+    },
+    "modaas_evidence.jsonl": {
+      "count": 14,
+      "group": "/modaas/evidence",
+      "sha256": "2619c33e759a178b8f341d9a22c676c5b0bddfd42e681dc5721890e7a9caaad4"
+    },
+    "gateway_run.log": {
+      "count": 0,
+      "group": "/aws/modaas/gateway",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "agentcore_customer.jsonl": {
+      "error": "'charmap' codec can't encode character '\\u202f' in position 5741: character maps to <undefined>"
+    },
+    "agentcore_it.jsonl": {
+      "count": 7,
+      "group": "/aws/bedrock-agentcore/runtimes/it_resolution_agent-OxT4r3BXvu-DEFAULT",
+      "sha256": "659c7cd0ee704bb2306361d1747559619ffa9ca459d1d0ae034de5e03e0f7279"
+    },
+    "agentcore_network.jsonl": {
+      "count": 7,
+      "group": "/aws/bedrock-agentcore/runtimes/network_resolution_agent-5uSMf0CrfV-DEFAULT",
+      "sha256": "41815a6ec286bb33b3d1e9be38cadde3130d108f091ac398670af6e64a2690ef"
+    },
+    "aws_spans_cid.jsonl": {
+      "count": 14,
+      "group": "aws/spans",
+      "sha256": "3fd3125215f46d0457884c9fcafe7fa0590caa07ce033a3c79495df82b3aca90"
+    },
+    "aws_spans_trace.jsonl": {
+      "count": 30,
+      "group": "aws/spans",
+      "sha256": "79befd82f2ef503494a1476216cbed0bdedbb14386af7dae5d1e77345fea611e"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Temporal Alignment Result",
+  "type": "object",
+  "properties": {
+    "alignmentId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "referenceClockDomainRef": {
+      "type": "string"
+    },
+    "candidateClockDomainRef": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "EXACT",
+        "ALIGNED",
+        "APPROXIMATE",
+        "UNALIGNED",
+        "CONTRADICTED",
+        "UNKNOWN"
+      ]
+    },
+    "offsetEstimateMs": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "offsetRangeMs": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "basis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "alignmentId",
+    "analysisRunId",
+    "referenceClockDomainRef",
+    "candidateClockDomainRef",
+    "state",
+    "basis",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/temporal_alignment_result.schema.json"
+}

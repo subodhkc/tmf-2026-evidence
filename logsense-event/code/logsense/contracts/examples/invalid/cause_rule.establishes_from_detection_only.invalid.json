@@ -1,0 +1,110 @@
+{
+  "ruleId": "CR-BAD-001",
+  "version": "0.1.0",
+  "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+  "causeMechanism": "POLICY_DENY_NOT_ENFORCED",
+  "title": "Policy deny was not enforced",
+  "scope": "one exact logical action/resource",
+  "ruleClass": "SYSTEM_MECHANISM",
+  "defaultCauseRole": "ROOT_MECHANISM",
+  "requiredPredicates": [
+    {
+      "predicateId": "only-signal",
+      "kind": "DETECTION_SIGNAL",
+      "operator": "SIGNAL_PRESENT",
+      "description": "Only a signal",
+      "params": {
+        "signalRefs": [
+          "AR-12"
+        ]
+      }
+    }
+  ],
+  "anyOfPredicates": [],
+  "forbiddenPredicates": [],
+  "hardNegatives": [
+    "POLICY_DECISION != ACTION_MEDIATED",
+    "HTTP_200 != ACTION_APPLIED",
+    "ACTION_ACCEPTED != ACTION_APPLIED",
+    "APPROVAL_RECORDED != SAME_ACTION_APPROVED"
+  ],
+  "corroborators": [
+    {
+      "predicateId": "effect-confirmed",
+      "kind": "COVERAGE",
+      "operator": "ACTION_PHASE_STATE",
+      "description": "Independent post-state/effect confirms the action consequence",
+      "params": {
+        "phase": "ACTION_CONFIRMED",
+        "states": [
+          "PRESENT"
+        ]
+      }
+    }
+  ],
+  "temporalConstraints": [
+    "CAUSE_OR_CONTROL_FACT_MUST_PRECEDE_OR_COINCIDE_WITH_EFFECT"
+  ],
+  "identityConstraints": [
+    "EXACT_OR_APPROVED_CROSSWALKED_SUBJECT_IDENTITY",
+    "SAME_ACTION_SCOPE_WHEN_ACTION_BOUND"
+  ],
+  "expectedStateRequirements": [],
+  "detectionSignalRefs": [
+    "AR-12"
+  ],
+  "relationRefs": [
+    "ACTION_CLAIM_AUTHORIZED_BY",
+    "CHANGES"
+  ],
+  "gapTypes": [
+    "EFFECT_CONFIRMATION_MISSING",
+    "ACTION_IDENTITY_INCOMPLETE"
+  ],
+  "alternativeMechanisms": [
+    "CONTROL_ORDERING_FAILURE",
+    "POLICY_MAPPING_GAP",
+    "SOURCE_CONTRADICTION"
+  ],
+  "haiecReferences": [
+    {
+      "path": "lib/assurance/action-witness.ts",
+      "symbol": "isWitnessSetComplete / validateLogicalActionIdentity",
+      "reason": "Action phase authority and same-logical-action qualification"
+    },
+    {
+      "path": "lib/assurance/guardrail-decision-transition.ts",
+      "symbol": null,
+      "reason": "Monotonic configured\u2192evaluated\u2192decision\u2192enforcement\u2192mediation ladder"
+    },
+    {
+      "path": "lib/ai-security/risk-registry/hard-negative-registry.ts",
+      "symbol": null,
+      "reason": "Canonical hard-negative distinctions used to prevent overclaiming"
+    },
+    {
+      "path": "lib/evidence/event-contradiction-projection.ts",
+      "symbol": null,
+      "reason": "Contradictions preserve both sources and are not root cause claims"
+    }
+  ],
+  "outputTemplate": "Policy deny was not enforced",
+  "remediationRefs": [
+    "PB-POLICY"
+  ],
+  "verificationRequirements": [
+    "Re-run the denied action and establish DENY with no ACTION_APPLIED and no resulting state mutation."
+  ],
+  "establishmentPolicy": {
+    "allowEstablished": true,
+    "requireAllRequiredPredicates": true,
+    "requireAnyOfWhenPresent": true,
+    "requireNoForbiddenPredicates": true,
+    "requireQualifiedIdentity": true,
+    "requireQualifiedOrdering": true,
+    "detectionOnlyMaximumState": "POSSIBLE",
+    "missingMaterialPredicateMaximumState": "SUPPORTED_CANDIDATE",
+    "corroboratedIndependentLineages": 2
+  },
+  "enabled": true
+}

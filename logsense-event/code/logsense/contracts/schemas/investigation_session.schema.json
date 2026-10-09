@@ -1,0 +1,251 @@
+{
+  "$id": "https://logsense.local/schemas/investigation_session.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "argumentProvenance": {
+      "items": {
+        "$ref": "action_argument_provenance.schema.json"
+      },
+      "type": "array"
+    },
+    "authorityContext": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "collectionHealth": {
+      "additionalProperties": false,
+      "properties": {
+        "continuityState": {
+          "type": "string"
+        },
+        "duplicateRefs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "expectedCount": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lateEventRefs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "missingRanges": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "observedCount": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "orderingBasis": {
+          "type": "string"
+        },
+        "reorderedEventRefs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "samplingState": {
+          "type": "string"
+        },
+        "sourceHealth": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "orderingBasis",
+        "continuityState",
+        "missingRanges",
+        "duplicateRefs",
+        "lateEventRefs",
+        "reorderedEventRefs",
+        "expectedCount",
+        "observedCount",
+        "samplingState",
+        "sourceHealth"
+      ],
+      "type": "object"
+    },
+    "consequenceSummary": {
+      "type": "object"
+    },
+    "contextLineage": {
+      "items": {
+        "$ref": "context_lineage_item.schema.json"
+      },
+      "type": "array"
+    },
+    "deferredExecution": {
+      "items": {
+        "$ref": "deferred_execution_chain.schema.json"
+      },
+      "type": "array"
+    },
+    "evidenceFrontier": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "plannerExecutorBoundary": {
+      "items": {
+        "$ref": "planner_executor_boundary.schema.json"
+      },
+      "type": "array"
+    },
+    "principalContinuity": {
+      "items": {
+        "$ref": "principal_continuity.schema.json"
+      },
+      "type": "array"
+    },
+    "recovery": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "sessionIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "conversationId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "producerRunId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scenarioRunId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sessionId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "traceId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "conversationId",
+        "sessionId",
+        "scenarioRunId",
+        "traceId",
+        "producerRunId"
+      ],
+      "type": "object"
+    },
+    "sourceInventory": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "sourceQuality": {
+      "type": "object"
+    },
+    "stateObservations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "sessionIdentity",
+    "sourceInventory",
+    "collectionHealth",
+    "actions",
+    "stateObservations",
+    "authorityContext",
+    "contextLineage",
+    "argumentProvenance",
+    "deferredExecution",
+    "principalContinuity",
+    "plannerExecutorBoundary",
+    "consequenceSummary",
+    "recovery",
+    "sourceQuality",
+    "evidenceFrontier",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Investigation Session",
+  "type": "object"
+}

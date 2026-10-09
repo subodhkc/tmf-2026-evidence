@@ -1,0 +1,98 @@
+{
+  "evaluationId": "eval-cause-auth-001",
+  "ruleId": "CR-AUTH-001",
+  "subjectRefs": [
+    "resource:cell-101"
+  ],
+  "actionGroupRefs": [
+    "action:changeTilt:1"
+  ],
+  "predicateResults": [
+    {
+      "predicateId": "policy-deny",
+      "state": "SATISFIED",
+      "evidenceRefs": [
+        "ev-policy-deny"
+      ],
+      "gapRefs": [],
+      "detail": "Qualified policy/guardrail decision explicitly denied the exact action"
+    },
+    {
+      "predicateId": "action-applied",
+      "state": "SATISFIED",
+      "evidenceRefs": [
+        "ev-action-applied"
+      ],
+      "gapRefs": [],
+      "detail": "The same logical action has qualified applied evidence"
+    },
+    {
+      "predicateId": "exact-action",
+      "state": "SATISFIED",
+      "evidenceRefs": [
+        "ev-exact-action"
+      ],
+      "gapRefs": [],
+      "detail": "Action identity is exact or explicitly crosswalked"
+    }
+  ],
+  "hardNegativesChecked": [
+    "POLICY_DECISION != ACTION_MEDIATED",
+    "HTTP_200 != ACTION_APPLIED",
+    "ACTION_ACCEPTED != ACTION_APPLIED",
+    "APPROVAL_RECORDED != SAME_ACTION_APPROVED"
+  ],
+  "alternativeMechanismsConsidered": [
+    "CONTROL_ORDERING_FAILURE",
+    "POLICY_MAPPING_GAP",
+    "SOURCE_CONTRADICTION"
+  ],
+  "resultState": "ESTABLISHED",
+  "candidate": {
+    "causeId": "cause:cr-auth-001",
+    "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+    "causeMechanism": "POLICY_DENY_NOT_ENFORCED",
+    "causeRole": "ROOT_MECHANISM",
+    "establishmentState": "ESTABLISHED",
+    "subjectRefs": [
+      "resource:cell-101"
+    ],
+    "actionGroupRefs": [
+      "action:changeTilt:1"
+    ],
+    "evidenceRefs": [
+      "ev-policy",
+      "ev-platform"
+    ],
+    "independentLineageFamilies": [
+      "lin-policy",
+      "lin-platform"
+    ],
+    "mechanismPathRef": "path:1",
+    "requiredPredicatesSatisfied": [
+      "policy-deny",
+      "action-applied",
+      "exact-action"
+    ],
+    "missingPredicates": [],
+    "hardNegativesChecked": [
+      "POLICY_DECISION != ACTION_MEDIATED",
+      "HTTP_200 != ACTION_APPLIED",
+      "ACTION_ACCEPTED != ACTION_APPLIED",
+      "APPROVAL_RECORDED != SAME_ACTION_APPROVED"
+    ],
+    "alternativeCauseRefs": [],
+    "remediationRefs": [
+      "PB-POLICY"
+    ],
+    "verificationRequirementRefs": [
+      "verify:cr-auth-001"
+    ],
+    "limitations": [],
+    "generatedBy": "DETERMINISTIC_RULE",
+    "canonical": false
+  },
+  "limitations": [],
+  "analysisRunId": "run-phase55-001",
+  "evaluationVersion": "0.1.1-phase55"
+}

@@ -1,0 +1,140 @@
+{
+  "registryId": "syntax-adapters",
+  "version": "0.1.0",
+  "adapters": [
+    {
+      "adapterId": "syntax.csv.v1",
+      "adapterVersion": "1.0.0",
+      "formats": [
+        "csv"
+      ],
+      "mediaTypes": [
+        "text/csv"
+      ],
+      "fileExtensions": [
+        ".csv"
+      ],
+      "sourceRoles": [],
+      "parseMode": "STREAMING",
+      "canAutoDetect": true,
+      "preservesRawArtifact": true,
+      "limitations": [
+        "SYNTAX_ONLY_NO_FORENSIC_SEMANTICS"
+      ]
+    },
+    {
+      "adapterId": "syntax.json.v1",
+      "adapterVersion": "1.0.0",
+      "formats": [
+        "json"
+      ],
+      "mediaTypes": [
+        "application/json"
+      ],
+      "fileExtensions": [
+        ".json"
+      ],
+      "sourceRoles": [],
+      "parseMode": "BATCH",
+      "canAutoDetect": true,
+      "preservesRawArtifact": true,
+      "limitations": [
+        "SYNTAX_ONLY_NO_FORENSIC_SEMANTICS"
+      ]
+    },
+    {
+      "adapterId": "syntax.jsonl.v1",
+      "adapterVersion": "1.0.0",
+      "formats": [
+        "jsonl",
+        "ndjson"
+      ],
+      "mediaTypes": [
+        "application/x-ndjson",
+        "application/jsonl"
+      ],
+      "fileExtensions": [
+        ".jsonl",
+        ".ndjson"
+      ],
+      "sourceRoles": [],
+      "parseMode": "STREAMING",
+      "canAutoDetect": true,
+      "preservesRawArtifact": true,
+      "limitations": [
+        "SYNTAX_ONLY_NO_FORENSIC_SEMANTICS"
+      ]
+    },
+    {
+      "adapterId": "syntax.yaml.v1",
+      "adapterVersion": "1.0.0",
+      "formats": [
+        "yaml"
+      ],
+      "mediaTypes": [
+        "application/yaml",
+        "text/yaml"
+      ],
+      "fileExtensions": [
+        ".yaml",
+        ".yml"
+      ],
+      "sourceRoles": [],
+      "parseMode": "BATCH",
+      "canAutoDetect": true,
+      "preservesRawArtifact": true,
+      "limitations": [
+        "SYNTAX_ONLY_NO_FORENSIC_SEMANTICS"
+      ]
+    },
+    {
+      "adapterId": "syntax.kvlog.v1",
+      "adapterVersion": "1.0.0",
+      "formats": [
+        "log",
+        "txt"
+      ],
+      "mediaTypes": [
+        "text/plain"
+      ],
+      "fileExtensions": [
+        ".log",
+        ".txt"
+      ],
+      "sourceRoles": [],
+      "parseMode": "STREAMING",
+      "canAutoDetect": true,
+      "preservesRawArtifact": true,
+      "limitations": [
+        "PROFILE_REGEX_MAY_BE_REQUIRED",
+        "SYNTAX_ONLY_NO_FORENSIC_SEMANTICS"
+      ]
+    },
+    {
+      "adapterId": "syntax.opaque.v1",
+      "adapterVersion": "1.0.0",
+      "formats": [
+        "opaque"
+      ],
+      "mediaTypes": [
+        "application/octet-stream"
+      ],
+      "fileExtensions": [],
+      "sourceRoles": [
+        "UNKNOWN"
+      ],
+      "parseMode": "BATCH",
+      "canAutoDetect": true,
+      "preservesRawArtifact": true,
+      "limitations": [
+        "OPAQUE_UNPARSED",
+        "RAW_ARTIFACT_PRESERVED",
+        "ADAPTER_REQUIRED_FOR_SEMANTIC_PROJECTION"
+      ]
+    }
+  ],
+  "limitations": [
+    "P0_BENCHMARK_FORMATS_ONLY",
+    "SPECIALIZED_OTEL_OCSF_A2A_MCP_TMF_ORAN_ADAPTERS_FUTURE_PHASE"
+  ]
+}

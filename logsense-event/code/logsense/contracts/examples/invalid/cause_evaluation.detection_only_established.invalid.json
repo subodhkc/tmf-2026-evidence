@@ -1,0 +1,94 @@
+{
+  "evaluationId": "bad-detection-only",
+  "ruleId": "CR-PROMPT-001",
+  "subjectRefs": [
+    "agent:a"
+  ],
+  "actionGroupRefs": [
+    "action:x"
+  ],
+  "predicateResults": [
+    {
+      "predicateId": "prompt-signal",
+      "state": "SATISFIED",
+      "evidenceRefs": [
+        "finding:AR-22"
+      ],
+      "gapRefs": [],
+      "detail": "signal only"
+    },
+    {
+      "predicateId": "prompt-action-link",
+      "state": "MISSING",
+      "evidenceRefs": [],
+      "gapRefs": [
+        "gap:relation"
+      ],
+      "detail": null
+    },
+    {
+      "predicateId": "behavior-diverged",
+      "state": "MISSING",
+      "evidenceRefs": [],
+      "gapRefs": [
+        "gap:behavior"
+      ],
+      "detail": null
+    }
+  ],
+  "hardNegativesChecked": [
+    "USER_QUERY != PROMPT_INJECTION",
+    "INSTRUCTION_LIKE != ATTACK",
+    "PATTERN_MATCHED != INTENT_ESTABLISHED",
+    "EXPLICITLY_REFERENCED != CAUSED_DECISION"
+  ],
+  "alternativeMechanismsConsidered": [
+    "UNTRUSTED_INSTRUCTION_ACCEPTED",
+    "CONTEXT_PRECEDENCE_FAILURE"
+  ],
+  "resultState": "ESTABLISHED",
+  "candidate": {
+    "causeId": "cause:cr-prompt-001",
+    "causeFamily": "PROMPT_AND_CONTEXT",
+    "causeMechanism": "DIRECT_PROMPT_INJECTION",
+    "causeRole": "TRIGGER",
+    "establishmentState": "ESTABLISHED",
+    "subjectRefs": [
+      "resource:cell-101"
+    ],
+    "actionGroupRefs": [
+      "action:changeTilt:1"
+    ],
+    "evidenceRefs": [
+      "finding:AR-22"
+    ],
+    "independentLineageFamilies": [
+      "lin-agent"
+    ],
+    "mechanismPathRef": "path:1",
+    "requiredPredicatesSatisfied": [
+      "prompt-signal"
+    ],
+    "missingPredicates": [
+      "prompt-action-link",
+      "behavior-diverged"
+    ],
+    "hardNegativesChecked": [
+      "USER_QUERY != PROMPT_INJECTION",
+      "INSTRUCTION_LIKE != ATTACK",
+      "PATTERN_MATCHED != INTENT_ESTABLISHED",
+      "EXPLICITLY_REFERENCED != CAUSED_DECISION"
+    ],
+    "alternativeCauseRefs": [],
+    "remediationRefs": [],
+    "verificationRequirementRefs": [
+      "verify:cr-prompt-001"
+    ],
+    "limitations": [],
+    "generatedBy": "DETERMINISTIC_RULE",
+    "canonical": false
+  },
+  "limitations": [],
+  "analysisRunId": "run-phase55-001",
+  "evaluationVersion": "0.1.1-phase55"
+}

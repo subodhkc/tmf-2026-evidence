@@ -1,0 +1,28 @@
+{
+  "evaluationId": "rel-eval-agent_uses_tool",
+  "relationType": "AGENT_USES_TOOL",
+  "sourceRef": "entity:source",
+  "targetRef": "entity:target",
+  "sourceIdentityState": "EXACT",
+  "targetIdentityState": "EXACT",
+  "admissionBasis": "RUNTIME_INVOCATION_RECORD",
+  "evidenceRefs": [
+    "ev-1"
+  ],
+  "lineageFamilies": [
+    "lineage-runtime-a"
+  ],
+  "satisfiedConditions": [
+    "EVIDENCE_REFS_PRESENT",
+    "DIRECTION_PRESERVED",
+    "SCENARIO_SCOPE_COMPATIBLE",
+    "EXACT_AGENT_BINDING",
+    "EXACT_INVOCATION_OR_ACCESS_RECORD_FOR_RUNTIME_CLAIM"
+  ],
+  "missingConditions": [],
+  "hardNegativesChecked": [],
+  "decision": "ESTABLISHED",
+  "limitations": [],
+  "analysisRunId": "run-phase55-001",
+  "evaluationVersion": "0.1.1-phase55"
+}

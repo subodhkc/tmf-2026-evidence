@@ -1,0 +1,127 @@
+[
+  {
+    "ruleId": "ADR-01",
+    "priority": 99,
+    "extensions": [
+      ".csv"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.csv.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-02",
+    "priority": 98,
+    "extensions": [
+      ".jsonl"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.jsonl.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-03",
+    "priority": 97,
+    "extensions": [
+      ".ndjson"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.jsonl.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-04",
+    "priority": 96,
+    "extensions": [
+      ".json"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.json.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-05",
+    "priority": 95,
+    "extensions": [
+      ".yaml"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.yaml.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-06",
+    "priority": 94,
+    "extensions": [
+      ".yml"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.yaml.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-07",
+    "priority": 93,
+    "extensions": [
+      ".log"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.kvlog.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-08",
+    "priority": 92,
+    "extensions": [
+      ".txt"
+    ],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.kvlog.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "EXTENSION_MATCH_IS_SYNTAX_ROUTING_NOT_SEMANTIC_CLASSIFICATION"
+    ]
+  },
+  {
+    "ruleId": "ADR-99",
+    "priority": 0,
+    "extensions": [],
+    "mediaTypes": [],
+    "contentMatchers": [],
+    "syntaxAdapterId": "syntax.opaque.v1",
+    "fallbackAdapterIds": [],
+    "limitations": [
+      "CATCH_ALL_PRESERVATION_ONLY",
+      "NO_SEMANTIC_PARSE"
+    ]
+  }
+]

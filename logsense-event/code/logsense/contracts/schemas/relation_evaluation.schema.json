@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/relation-evaluation.schema.json",
+  "title": "Relation Admission Evaluation v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evaluationId",
+    "relationType",
+    "sourceRef",
+    "targetRef",
+    "sourceIdentityState",
+    "targetIdentityState",
+    "admissionBasis",
+    "evidenceRefs",
+    "lineageFamilies",
+    "satisfiedConditions",
+    "missingConditions",
+    "hardNegativesChecked",
+    "decision",
+    "limitations",
+    "analysisRunId",
+    "evaluationVersion"
+  ],
+  "properties": {
+    "evaluationId": {
+      "type": "string"
+    },
+    "relationType": {
+      "type": "string"
+    },
+    "sourceRef": {
+      "type": "string"
+    },
+    "targetRef": {
+      "type": "string"
+    },
+    "sourceIdentityState": {
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "CANDIDATE",
+        "UNRESOLVED",
+        "CONTRADICTED"
+      ]
+    },
+    "targetIdentityState": {
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "CANDIDATE",
+        "UNRESOLVED",
+        "CONTRADICTED"
+      ]
+    },
+    "admissionBasis": {
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lineageFamilies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "satisfiedConditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missingConditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hardNegativesChecked": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decision": {
+      "enum": [
+        "PROPOSED",
+        "PARTIAL",
+        "ESTABLISHED",
+        "CONTRADICTED",
+        "REJECTED",
+        "UNKNOWN"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "evaluationVersion": {
+      "type": "string"
+    }
+  }
+}

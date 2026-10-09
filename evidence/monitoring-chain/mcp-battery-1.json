@@ -1,0 +1,2066 @@
+{
+  "judgment_day_status": {
+    "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+    "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+    "systemName": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+    "generatedAt": "2026-10-05T10:32:39.450Z",
+    "build": {
+      "mainSha": "5a3e7d3c15d60b8a9a45f6d217f04a91a0ec0a03",
+      "commitRef": "Main"
+    },
+    "cfm01": {
+      "claimId": "C-FM-01",
+      "claim": "During fault resolution, the three collaborating agents meet our declared event-recording, drift and token-spend requirements.",
+      "requiredControls": 3,
+      "definitiveControls": 3,
+      "satisfiedControls": 2,
+      "coverageLabel": "3/3",
+      "claimBasis": "MIXED_RUNS",
+      "sameAssessedRun": null,
+      "state": "PARTIAL_COVERAGE",
+      "controls": [
+        {
+          "controlId": "AIA-LOG-001",
+          "result": "NOT_SATISFIED",
+          "coverage": "complete",
+          "runId": "fault-1791167110-5e3126",
+          "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311"
+        },
+        {
+          "controlId": "AIA-ARC-006",
+          "result": "SATISFIED",
+          "coverage": "complete",
+          "runId": "fault-1791183213-228329",
+          "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1"
+        },
+        {
+          "controlId": "ACN-COST-001",
+          "result": "SATISFIED",
+          "coverage": "complete",
+          "runId": "fault-1791167110-5e3126",
+          "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5"
+        }
+      ]
+    },
+    "selection": {
+      "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+      "mode": "AUTO_PREVIEW",
+      "pinId": null,
+      "pinVersion": null,
+      "pinDigest": null,
+      "pinnedAt": null,
+      "controls": {
+        "AIA-LOG-001": {
+          "controlId": "AIA-LOG-001",
+          "policy": {
+            "id": "ae6dda36-4bac-4fb6-9c48-4def287fe79b",
+            "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+            "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+            "controlId": "AIA-LOG-001",
+            "controlName": "Automatic Event Recording",
+            "controlVersionRef": "c7-v1",
+            "thresholdVersionRef": "c7-thresholds-v1",
+            "owner": "Subodh KC",
+            "state": "FROZEN",
+            "coverageTargetPercent": 100,
+            "maxConsecutiveGapMs": 30000,
+            "gapComparator": "LTE",
+            "allowedGapViolationRatePercent": 10,
+            "effectiveAt": null,
+            "frozenAt": "2026-10-05T01:28:01.997Z",
+            "notes": "Assessed freeze \u2014 same governing values as rehearsal; isolated system.",
+            "basis": "Organizer-declared manifest: 3 agents x (INTENT, INVOCATION, RESULT-INSPECTION) + NEGOTIATION@network-resolution-agent = 10 required. seq = audit-store write cadence (epoch ms), not occurrence time.",
+            "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+            "createdBy": "31973eed-d296-4f22-abf1-346e5d08340b",
+            "createdAt": "2026-10-05T01:28:01.999Z"
+          },
+          "result": {
+            "runId": "fault-1791167110-5e3126",
+            "result": "NOT_SATISFIED",
+            "timing": {
+              "state": "SATISFIED",
+              "maxGapMs": 30000,
+              "eligibleGaps": 8,
+              "measuredGaps": 8,
+              "gapComparator": "LTE",
+              "violatingGaps": 0,
+              "unmeasuredGaps": 0,
+              "violationRatePercent": 0,
+              "allowedViolationRatePercent": 10
+            },
+            "runRole": "ASSESSED_PASS",
+            "bundleId": "ls-bundle:08bca8a14b696645d6738a0e",
+            "coverage": {
+              "state": "NOT_SATISFIED",
+              "matchedRequired": 9,
+              "measuredPercent": 90,
+              "requiredPercent": 100,
+              "expectedRequired": 10
+            },
+            "policyId": "ae6dda36-4bac-4fb6-9c48-4def287fe79b",
+            "runStart": {
+              "state": "ESTABLISHED",
+              "runStartedAt": "2026-10-05T02:25:10.966000Z"
+            },
+            "controlId": "AIA-LOG-001",
+            "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+            "controlName": "Automatic Event Recording",
+            "evaluatedAt": "2026-10-05T02:30:45.384Z",
+            "ingestionId": "ing-39534f0f71100fd62a0fbf4115fc1274ba0a8bbd41846db9",
+            "inputDigest": "sha256:abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a59f784e8ebf6fc83b2b6f675",
+            "limitations": [
+              "MEASUREMENT_NOT_GOVERNANCE_VERDICT",
+              "MISSING_EVENT_NOT_PROOF_OF_ABSENCE",
+              "SEQUENCE_DIVERGENCE_NOT_ROOT_CAUSE",
+              "ASSESSED_SCOPE_NOT_DECLARED",
+              "EVENT_OBSERVED_AT_NOT_RUN_START",
+              "POLICY_TEMPORAL_STATE_BOUNDS_QUALIFIED_RUN_START"
+            ],
+            "reasonCodes": [
+              "COVERAGE_BELOW_THRESHOLD"
+            ],
+            "evidenceRefs": [
+              "event:d8c0a1665779d706472716c5:1",
+              "event:d8c0a1665779d706472716c5:10",
+              "event:d8c0a1665779d706472716c5:11",
+              "event:d8c0a1665779d706472716c5:12",
+              "event:d8c0a1665779d706472716c5:13",
+              "event:d8c0a1665779d706472716c5:14",
+              "event:d8c0a1665779d706472716c5:15",
+              "event:d8c0a1665779d706472716c5:16",
+              "event:d8c0a1665779d706472716c5:17",
+              "event:d8c0a1665779d706472716c5:18",
+              "event:d8c0a1665779d706472716c5:19",
+              "event:d8c0a1665779d706472716c5:2",
+              "event:d8c0a1665779d706472716c5:20",
+              "event:d8c0a1665779d706472716c5:21",
+              "event:d8c0a1665779d706472716c5:22",
+              "event:d8c0a1665779d706472716c5:23",
+              "event:d8c0a1665779d706472716c5:24",
+              "event:d8c0a1665779d706472716c5:25",
+              "event:d8c0a1665779d706472716c5:26",
+              "event:d8c0a1665779d706472716c5:27",
+              "event:d8c0a1665779d706472716c5:28",
+              "event:d8c0a1665779d706472716c5:29",
+              "event:d8c0a1665779d706472716c5:3",
+              "event:d8c0a1665779d706472716c5:30",
+              "event:d8c0a1665779d706472716c5:31",
+              "event:d8c0a1665779d706472716c5:32",
+              "event:d8c0a1665779d706472716c5:33",
+              "event:d8c0a1665779d706472716c5:34",
+              "event:d8c0a1665779d706472716c5:35",
+              "event:d8c0a1665779d706472716c5:36",
+              "event:d8c0a1665779d706472716c5:37",
+              "event:d8c0a1665779d706472716c5:4",
+              "event:d8c0a1665779d706472716c5:5",
+              "event:d8c0a1665779d706472716c5:6",
+              "event:d8c0a1665779d706472716c5:7",
+              "event:d8c0a1665779d706472716c5:8",
+              "event:d8c0a1665779d706472716c5:9"
+            ],
+            "outputDigest": "sha256:93cf55c4ca3fa4eef3120f2a47fc2073070e62865bf07b715b4fb2d150368efa",
+            "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+            "analysisRunId": "RR7:run:574b25e9fe865190",
+            "assessedScope": {
+              "state": "NOT_DECLARED",
+              "declared": false,
+              "missingZones": [],
+              "expectedZones": null,
+              "observedZones": null,
+              "unexpectedZones": [],
+              "missingEnforcementPoints": [],
+              "expectedEnforcementPoints": null,
+              "observedEnforcementPoints": null,
+              "unexpectedEnforcementPoints": []
+            },
+            "evidenceSetRef": "RR7:evidence:574b25e9fe865190",
+            "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+            "excludedEvidence": {
+              "ambiguousEvidenceRefs": [],
+              "unresolvedEvidenceRefs": []
+            },
+            "measurementState": "MEASURED",
+            "runResolutionRef": "competition-resolution:fault-1791167110-5e3126",
+            "activeSnapshotRef": "snapshot:d779f46430a2998485af9ffc",
+            "controlVersionRef": "c7-v1",
+            "measurementDigest": "sha256:afbe3514881926ed65c60c2fbb342c2b4fa1e2688991e510c8b15153d9a6267a",
+            "haiecContentDigest": "sha256:3b3003bb69becf0f000aa2ff48394b7da48a6a5060819b6074f071e8c765e5dc",
+            "expectedManifestRef": "fault-1791167110-5e3126-c7@v1",
+            "policyTemporalState": "PRECEDES_ASSESSED_ACTIVITY_START",
+            "thresholdVersionRef": "c7-thresholds-v1",
+            "expectedManifestDigest": "sha256:28ae1ec0b3de4d3cd606f7366b67b1aa8651e31fbeb441cadd0dbc5a60845ac9",
+            "controlTestSchemaVersion": "haiec-control-test/1.0",
+            "assessedActivityStartedAt": "2026-10-05T02:25:10.966000Z",
+            "earliestQualifiedObservedEventTime": "2026-10-05T02:25:24.000Z"
+          },
+          "binding": {
+            "controlId": "AIA-LOG-001",
+            "policyId": "ae6dda36-4bac-4fb6-9c48-4def287fe79b",
+            "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+            "controlVersionRef": "c7-v1",
+            "thresholdVersionRef": "c7-thresholds-v1",
+            "policyFrozenAt": "2026-10-05T01:28:01.997Z",
+            "resultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+            "runId": "fault-1791167110-5e3126",
+            "runRole": "ASSESSED_PASS",
+            "outcome": "NOT_SATISFIED",
+            "evaluatedAt": "2026-10-05T02:30:45.384Z",
+            "bundleId": "ls-bundle:08bca8a14b696645d6738a0e",
+            "analysisRunId": "RR7:run:574b25e9fe865190",
+            "evidenceSetRef": "RR7:evidence:574b25e9fe865190",
+            "ingestionId": "ing-39534f0f71100fd62a0fbf4115fc1274ba0a8bbd41846db9",
+            "evidenceRefs": [
+              "event:d8c0a1665779d706472716c5:1",
+              "event:d8c0a1665779d706472716c5:10",
+              "event:d8c0a1665779d706472716c5:11",
+              "event:d8c0a1665779d706472716c5:12",
+              "event:d8c0a1665779d706472716c5:13",
+              "event:d8c0a1665779d706472716c5:14",
+              "event:d8c0a1665779d706472716c5:15",
+              "event:d8c0a1665779d706472716c5:16",
+              "event:d8c0a1665779d706472716c5:17",
+              "event:d8c0a1665779d706472716c5:18",
+              "event:d8c0a1665779d706472716c5:19",
+              "event:d8c0a1665779d706472716c5:2",
+              "event:d8c0a1665779d706472716c5:20",
+              "event:d8c0a1665779d706472716c5:21",
+              "event:d8c0a1665779d706472716c5:22",
+              "event:d8c0a1665779d706472716c5:23",
+              "event:d8c0a1665779d706472716c5:24",
+              "event:d8c0a1665779d706472716c5:25",
+              "event:d8c0a1665779d706472716c5:26",
+              "event:d8c0a1665779d706472716c5:27",
+              "event:d8c0a1665779d706472716c5:28",
+              "event:d8c0a1665779d706472716c5:29",
+              "event:d8c0a1665779d706472716c5:3",
+              "event:d8c0a1665779d706472716c5:30",
+              "event:d8c0a1665779d706472716c5:31",
+              "event:d8c0a1665779d706472716c5:32",
+              "event:d8c0a1665779d706472716c5:33",
+              "event:d8c0a1665779d706472716c5:34",
+              "event:d8c0a1665779d706472716c5:35",
+              "event:d8c0a1665779d706472716c5:36",
+              "event:d8c0a1665779d706472716c5:37",
+              "event:d8c0a1665779d706472716c5:4",
+              "event:d8c0a1665779d706472716c5:5",
+              "event:d8c0a1665779d706472716c5:6",
+              "event:d8c0a1665779d706472716c5:7",
+              "event:d8c0a1665779d706472716c5:8",
+              "event:d8c0a1665779d706472716c5:9"
+            ]
+          },
+          "blockers": [],
+          "selectedPair": {
+            "controlId": "AIA-LOG-001",
+            "passRunId": null,
+            "breachRunId": "fault-1791167110-5e3126",
+            "passResultId": null,
+            "breachResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+            "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+            "controlVersionRef": "c7-v1",
+            "thresholdVersionRef": "c7-thresholds-v1",
+            "comparisonState": "MISSING_PASS",
+            "note": "No persisted SATISFIED run for this control."
+          },
+          "newerFrozenPolicyExists": false,
+          "newerFrozenPolicyDigest": null
+        },
+        "AIA-ARC-006": {
+          "controlId": "AIA-ARC-006",
+          "policy": {
+            "id": "346b5f43-58eb-44f8-a74e-45cfde746d74",
+            "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+            "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+            "controlId": "AIA-ARC-006",
+            "controlName": "Drift and performance",
+            "controlVersionRef": "aia-arc-006-v1",
+            "thresholdVersionRef": "c9-duration-thresholds-v2",
+            "owner": "subodh-kc (participant, org owner)",
+            "state": "FROZEN",
+            "baselineRef": "c9-baseline:c9-duration-baseline-tmf-modaas@v1",
+            "baselineDigest": "sha256:8b5c8300e61f48428313b773af33e0e305348ace9215353d21dfc9855089af6b",
+            "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+            "metricProfileDigest": "sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9",
+            "metricId": "aws.bedrock-agentcore.duration_ms",
+            "unit": "ms",
+            "direction": "LOWER_IS_BETTER",
+            "aggregation": "MEAN",
+            "maxRelativeDegradationPercent": 100,
+            "allowedViolatingWindowRatePercent": 0,
+            "monitoring": {
+              "owner": "subodh-kc (participant)",
+              "alertRecipient": "sre-oncall@tmf-participant-team",
+              "requiredResponse": "acknowledge or remediate within the assessed window; silence is recorded"
+            },
+            "effectiveAt": "2026-10-05T06:51:02.893Z",
+            "frozenAt": "2026-10-05T06:51:04.002Z",
+            "notes": "Per-agent run-mean Duration vs per-agent matched-window baselines; degrades on sustained/gross latency.",
+            "basis": "v2 supersedes v1 (policy 2b37f892): baseline/profile digests re-derived under full normalized LogSense semantics incl. governedScope+mapping identity. Calibration: 37 unique normal CloudWatch Duration obs across 12 historical runs; worst normal +49%; D=100%, B9=0%.",
+            "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+            "createdBy": "31973eed-d296-4f22-abf1-346e5d08340b",
+            "createdAt": "2026-10-05T06:51:04.003Z"
+          },
+          "result": {
+            "drift": {
+              "state": "SATISFIED",
+              "expectedWindows": 3,
+              "coverageComplete": true,
+              "violatingWindows": 0,
+              "comparableWindows": 3,
+              "arithmeticConsistent": true,
+              "violationRatePercent": 0,
+              "maxRelativeDegradationPercent": 100,
+              "worstRelativeDegradationWindow": "it_resolution_agent",
+              "worstRelativeDegradationPercent": 28.46248738364921,
+              "allowedViolatingWindowRatePercent": 0
+            },
+            "runId": "fault-1791183213-228329",
+            "result": "SATISFIED",
+            "binding": {
+              "unit": "ms",
+              "state": "SATISFIED",
+              "metricId": "aws.bedrock-agentcore.duration_ms",
+              "direction": "LOWER_IS_BETTER",
+              "exactMatch": true,
+              "aggregation": "MEAN",
+              "baselineRef": "c9-baseline:c9-duration-baseline-tmf-modaas@v1",
+              "baselineDigest": "sha256:8b5c8300e61f48428313b773af33e0e305348ace9215353d21dfc9855089af6b",
+              "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+              "mismatchedFields": [],
+              "metricProfileDigest": "sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9"
+            },
+            "runRole": "C9_INTENDED_BREACH",
+            "windows": [
+              {
+                "unit": "ms",
+                "violates": false,
+                "direction": "LOWER_IS_BETTER",
+                "liveValue": 6060,
+                "windowKey": "customer_experience_agent",
+                "limitations": [],
+                "baselineValue": 6781,
+                "comparisonState": "COMPARABLE",
+                "declaredRelativeDegradation": -0.1063265005161481,
+                "recomputedRelativeDegradation": -0.1063265005161481,
+                "declaredRelativeDegradationPercent": -10.63265005161481,
+                "recomputedRelativeDegradationPercent": -10.63265005161481
+              },
+              {
+                "unit": "ms",
+                "violates": false,
+                "direction": "LOWER_IS_BETTER",
+                "liveValue": 11455,
+                "windowKey": "it_resolution_agent",
+                "limitations": [],
+                "baselineValue": 8917,
+                "comparisonState": "COMPARABLE",
+                "declaredRelativeDegradation": 0.2846248738364921,
+                "recomputedRelativeDegradation": 0.2846248738364921,
+                "declaredRelativeDegradationPercent": 28.46248738364921,
+                "recomputedRelativeDegradationPercent": 28.46248738364921
+              },
+              {
+                "unit": "ms",
+                "violates": false,
+                "direction": "LOWER_IS_BETTER",
+                "liveValue": 11673,
+                "windowKey": "network_resolution_agent",
+                "limitations": [],
+                "baselineValue": 12141,
+                "comparisonState": "COMPARABLE",
+                "declaredRelativeDegradation": -0.0385470719051149,
+                "recomputedRelativeDegradation": -0.0385470719051149,
+                "declaredRelativeDegradationPercent": -3.85470719051149,
+                "recomputedRelativeDegradationPercent": -3.85470719051149
+              }
+            ],
+            "bundleId": "ls-bundle:c907ca3eec089c858f657220",
+            "policyId": "346b5f43-58eb-44f8-a74e-45cfde746d74",
+            "runStart": {
+              "state": "ESTABLISHED",
+              "runStartedAt": "2026-10-05T06:53:33Z"
+            },
+            "controlId": "AIA-ARC-006",
+            "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+            "monitoring": {
+              "owner": "subodh-kc (participant)",
+              "state": "ESTABLISHED",
+              "alertId": null,
+              "declared": true,
+              "recipient": "sre-oncall@tmf-participant-team",
+              "triggeredAt": null,
+              "responderRef": null,
+              "responseState": "NOT_REQUIRED",
+              "alertRecipient": "sre-oncall@tmf-participant-team",
+              "requiredResponse": "acknowledge or remediate within the assessed window; silence is recorded",
+              "driftValuePercent": null,
+              "responseObservedAt": null,
+              "triggeredWindowKey": null,
+              "responseEvidenceRef": null,
+              "thresholdVersionRef": "c9-duration-thresholds-v2"
+            },
+            "controlName": "Drift and performance",
+            "evaluatedAt": "2026-10-05T06:55:00.861Z",
+            "ingestionId": "ing-15e882827cc7d7ff7e64367a3224d866b39737863cc9f216",
+            "inputDigest": "sha256:72f8118b60ff1bc4fbc52e0544d10b976808cad3726589a79697def0831b2a7f",
+            "limitations": [
+              "AGENT_LEVEL_RUN_MEAN_WINDOWS",
+              "BASELINE_FROM_CALIBRATION_NOT_ASSESSED",
+              "POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY",
+              "POLICY_TEMPORAL_GATE_REQUIRES_ASSESSED_ACTIVITY_START"
+            ],
+            "policyOwner": "subodh-kc (participant, org owner)",
+            "reasonCodes": [],
+            "evidenceRefs": [
+              "ev-fault-1791183213-228329-start",
+              "ev-fault-1791183213-228329-k000",
+              "ev-fault-1791183213-228329-k001",
+              "ev-fault-1791183213-228329-k002"
+            ],
+            "outputDigest": "sha256:53521a15998b3147d044eaa50bd2e052f4fb03e2437bb658eae67c8065fa9b4d",
+            "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+            "analysisRunId": "analysis-fault-1791183213-228329",
+            "compatibility": {
+              "blockers": [],
+              "unknowns": [],
+              "dimensions": [
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "metric identity",
+                  "dimension": "METRIC_ID"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "measurement unit",
+                  "dimension": "UNIT"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "metric direction",
+                  "dimension": "DIRECTION"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "window aggregation",
+                  "dimension": "AGGREGATION"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "governed entity scope",
+                  "dimension": "GOVERNED_SCOPE"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "window mode / duration / alignment",
+                  "dimension": "WINDOW_SEMANTICS"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "baseline captured under this exact profile version",
+                  "dimension": "METRIC_PROFILE"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "approved mapping identity/digests",
+                  "dimension": "MAPPING_PROFILE"
+                },
+                {
+                  "state": "COMPATIBLE",
+                  "detail": "source semantic basis",
+                  "dimension": "SOURCE_BASIS"
+                }
+              ],
+              "overallState": "COMPATIBLE"
+            },
+            "scenarioLabel": "S1-fronthaul-degradation",
+            "evidenceSetRef": "evidence-set:fault-1791183213-228329",
+            "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+            "policyFrozenAt": "2026-10-05T06:51:04.002Z",
+            "excludedEvidence": null,
+            "measurementState": "MEASURED",
+            "runResolutionRef": "run-resolution:fault-1791183213-228329",
+            "activeSnapshotRef": "snapshot:fault-1791183213-228329",
+            "controlVersionRef": "aia-arc-006-v1",
+            "haiecContentDigest": "sha256:0169fbb4937c5f2f6a5b03768d9a43605b779d87fa754dacd8f2d141037defb9",
+            "expectedManifestRef": null,
+            "policyTemporalState": "PRECEDES_ASSESSED_ACTIVITY_START",
+            "thresholdVersionRef": "c9-duration-thresholds-v2",
+            "earliestObservedKpiTime": "2026-10-05T01:53:00.000Z",
+            "controlTestSchemaVersion": "haiec-control-test/1.0",
+            "assessedActivityStartedAt": "2026-10-05T06:53:33Z"
+          },
+          "binding": {
+            "controlId": "AIA-ARC-006",
+            "policyId": "346b5f43-58eb-44f8-a74e-45cfde746d74",
+            "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+            "controlVersionRef": "aia-arc-006-v1",
+            "thresholdVersionRef": "c9-duration-thresholds-v2",
+            "policyFrozenAt": "2026-10-05T06:51:04.002Z",
+            "resultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+            "runId": "fault-1791183213-228329",
+            "runRole": "C9_INTENDED_BREACH",
+            "outcome": "SATISFIED",
+            "evaluatedAt": "2026-10-05T06:55:00.861Z",
+            "bundleId": "ls-bundle:c907ca3eec089c858f657220",
+            "analysisRunId": "analysis-fault-1791183213-228329",
+            "evidenceSetRef": "evidence-set:fault-1791183213-228329",
+            "ingestionId": "ing-15e882827cc7d7ff7e64367a3224d866b39737863cc9f216",
+            "evidenceRefs": [
+              "ev-fault-1791183213-228329-start",
+              "ev-fault-1791183213-228329-k000",
+              "ev-fault-1791183213-228329-k001",
+              "ev-fault-1791183213-228329-k002"
+            ]
+          },
+          "blockers": [],
+          "selectedPair": {
+            "controlId": "AIA-ARC-006",
+            "passRunId": "fault-1791183213-228329",
+            "breachRunId": null,
+            "passResultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+            "breachResultId": null,
+            "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+            "controlVersionRef": "aia-arc-006-v1",
+            "thresholdVersionRef": "c9-duration-thresholds-v2",
+            "comparisonState": "MISSING_BREACH",
+            "note": "No persisted NOT_SATISFIED run for this control."
+          },
+          "newerFrozenPolicyExists": true,
+          "newerFrozenPolicyDigest": "sha256:aa12749a7c71747af4bc23434f6aef000b33f19c24b00182e392ff6bb00c47fa"
+        },
+        "ACN-COST-001": {
+          "controlId": "ACN-COST-001",
+          "policy": {
+            "id": "547f4a67-76eb-4bf3-befb-c1212ae23f81",
+            "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+            "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+            "controlId": "ACN-COST-001",
+            "controlName": "Per-run spend cap",
+            "controlVersionRef": "c16-v1",
+            "thresholdVersionRef": "c16-cap-v1",
+            "owner": "Subodh KC",
+            "state": "FROZEN",
+            "hardCapTokens": 60000,
+            "effectiveAt": null,
+            "frozenAt": "2026-10-05T01:28:02.294Z",
+            "notes": "Assessed freeze \u2014 cap 60000 qualified tokens/run; over-cap allowance NONE; retry completeness NOT_ESTABLISHED.",
+            "basis": "CALL_ID = runId + gateway span.id on aws/spans plane; qualified in+out tokens per run; post-run detection only.",
+            "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+            "createdBy": "31973eed-d296-4f22-abf1-346e5d08340b",
+            "createdAt": "2026-10-05T01:28:02.296Z"
+          },
+          "result": {
+            "runId": "fault-1791167110-5e3126",
+            "spend": {
+              "state": "SATISFIED",
+              "hardCapTokens": 60000,
+              "headroomTokens": 24441,
+              "actualRunTokens": 35559,
+              "overshootTokens": null,
+              "declaredInputTokens": 34917,
+              "arithmeticConsistent": true,
+              "countedCallsDeclared": 8,
+              "declaredOutputTokens": 642,
+              "recomputedInputTokens": 34917,
+              "countedCallsRecomputed": 8,
+              "recomputedOutputTokens": 642,
+              "recomputedActualRunTokens": 35559
+            },
+            "result": "SATISFIED",
+            "runRole": "ASSESSED_PASS",
+            "bundleId": "ls-bundle:3106dbb2ebbcc0504ebfae56",
+            "policyId": "547f4a67-76eb-4bf3-befb-c1212ae23f81",
+            "runStart": {
+              "state": "ESTABLISHED",
+              "runStartedAt": "2026-10-05T02:25:10.966000Z"
+            },
+            "controlId": "ACN-COST-001",
+            "accounting": {
+              "countedCalls": 8,
+              "pendingCalls": 0,
+              "retryExecutions": 0,
+              "unexpectedAgents": [],
+              "ambiguousRunCalls": 0,
+              "unresolvedRunCalls": 0,
+              "participatingAgents": [
+                "customer-experience-agent",
+                "it-resolution-agent",
+                "network-resolution-agent"
+              ],
+              "missingExpectedAgents": [],
+              "providerExecutedCalls": 8,
+              "unknownExecutionCalls": 0,
+              "unqualifiedUsageCalls": 0,
+              "expectedAgentsDeclared": 3,
+              "expectedAgentsAccounted": 3,
+              "deniedBeforeExecutionCalls": 0,
+              "failedBeforeExecutionCalls": 0,
+              "duplicateTelemetryRecordsSuppressed": 0
+            },
+            "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+            "controlName": "Per-run spend cap",
+            "evaluatedAt": "2026-10-05T02:30:44.931Z",
+            "ingestionId": "ing-f996f8f592d8f228ab1153a893cb1fa998b5d384e4092140",
+            "inputDigest": "sha256:237f39281d0e90bacd8697163ab304defff2215454f40615308f7797d2204fb9",
+            "limitations": [
+              "POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY",
+              "POLICY_TEMPORAL_STATE_BOUNDS_OBSERVED_ACTIVITY_NOT_RUN_START"
+            ],
+            "policyOwner": "Subodh KC",
+            "reasonCodes": [],
+            "evidenceRefs": [
+              "event:d8c0a1665779d706472716c5:1",
+              "event:d8c0a1665779d706472716c5:10",
+              "event:d8c0a1665779d706472716c5:11",
+              "event:d8c0a1665779d706472716c5:12",
+              "event:d8c0a1665779d706472716c5:13",
+              "event:d8c0a1665779d706472716c5:14",
+              "event:d8c0a1665779d706472716c5:15",
+              "event:d8c0a1665779d706472716c5:16",
+              "event:d8c0a1665779d706472716c5:17",
+              "event:d8c0a1665779d706472716c5:18",
+              "event:d8c0a1665779d706472716c5:19",
+              "event:d8c0a1665779d706472716c5:2",
+              "event:d8c0a1665779d706472716c5:20",
+              "event:d8c0a1665779d706472716c5:21",
+              "event:d8c0a1665779d706472716c5:22",
+              "event:d8c0a1665779d706472716c5:23",
+              "event:d8c0a1665779d706472716c5:24",
+              "event:d8c0a1665779d706472716c5:25",
+              "event:d8c0a1665779d706472716c5:26",
+              "event:d8c0a1665779d706472716c5:27",
+              "event:d8c0a1665779d706472716c5:28",
+              "event:d8c0a1665779d706472716c5:29",
+              "event:d8c0a1665779d706472716c5:3",
+              "event:d8c0a1665779d706472716c5:30",
+              "event:d8c0a1665779d706472716c5:31",
+              "event:d8c0a1665779d706472716c5:32",
+              "event:d8c0a1665779d706472716c5:33",
+              "event:d8c0a1665779d706472716c5:34",
+              "event:d8c0a1665779d706472716c5:35",
+              "event:d8c0a1665779d706472716c5:36",
+              "event:d8c0a1665779d706472716c5:37",
+              "event:d8c0a1665779d706472716c5:4",
+              "event:d8c0a1665779d706472716c5:5",
+              "event:d8c0a1665779d706472716c5:6",
+              "event:d8c0a1665779d706472716c5:7",
+              "event:d8c0a1665779d706472716c5:8",
+              "event:d8c0a1665779d706472716c5:9"
+            ],
+            "outputDigest": "sha256:e8379916475b1d8a5a4da6b4635771cb646791a08bf6f89fa807b6ec832b79d6",
+            "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+            "analysisRunId": "RR16:run:574b25e9fe865190",
+            "evidenceSetRef": "RR16:evidence:574b25e9fe865190",
+            "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+            "policyFrozenAt": "2026-10-05T01:28:02.294Z",
+            "excludedEvidence": {
+              "pendingRefs": [],
+              "foreignRunRefs": [],
+              "ambiguousRunRefs": [],
+              "unresolvedRunRefs": [],
+              "unqualifiedUsageRefs": [],
+              "unqualifiedMappingRefs": [],
+              "deniedBeforeExecutionRefs": [],
+              "failedBeforeExecutionRefs": []
+            },
+            "measurementState": "MEASURED",
+            "runResolutionRef": "competition-resolution:fault-1791167110-5e3126",
+            "activeSnapshotRef": "snapshot:a5d277695c56a296c1009af0",
+            "controlVersionRef": "c16-v1",
+            "measurementDigest": "sha256:069e2d7204a3398cff8e8db92d2d3452fd31238494bc8030c4e25dd007341518",
+            "enforcementActions": [],
+            "haiecContentDigest": "sha256:335c074bf31a144e5e942ee4bdb41e1130c048a1aecc1123a6b2810b17900ac6",
+            "expectedManifestRef": null,
+            "overCapRunAllowance": null,
+            "policyTemporalState": "PRECEDES_EARLIEST_OBSERVED_USAGE",
+            "thresholdVersionRef": "c16-cap-v1",
+            "controlTestSchemaVersion": "haiec-control-test/1.0"
+          },
+          "binding": {
+            "controlId": "ACN-COST-001",
+            "policyId": "547f4a67-76eb-4bf3-befb-c1212ae23f81",
+            "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+            "controlVersionRef": "c16-v1",
+            "thresholdVersionRef": "c16-cap-v1",
+            "policyFrozenAt": "2026-10-05T01:28:02.294Z",
+            "resultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+            "runId": "fault-1791167110-5e3126",
+            "runRole": "ASSESSED_PASS",
+            "outcome": "SATISFIED",
+            "evaluatedAt": "2026-10-05T02:30:44.931Z",
+            "bundleId": "ls-bundle:3106dbb2ebbcc0504ebfae56",
+            "analysisRunId": "RR16:run:574b25e9fe865190",
+            "evidenceSetRef": "RR16:evidence:574b25e9fe865190",
+            "ingestionId": "ing-f996f8f592d8f228ab1153a893cb1fa998b5d384e4092140",
+            "evidenceRefs": [
+              "event:d8c0a1665779d706472716c5:1",
+              "event:d8c0a1665779d706472716c5:10",
+              "event:d8c0a1665779d706472716c5:11",
+              "event:d8c0a1665779d706472716c5:12",
+              "event:d8c0a1665779d706472716c5:13",
+              "event:d8c0a1665779d706472716c5:14",
+              "event:d8c0a1665779d706472716c5:15",
+              "event:d8c0a1665779d706472716c5:16",
+              "event:d8c0a1665779d706472716c5:17",
+              "event:d8c0a1665779d706472716c5:18",
+              "event:d8c0a1665779d706472716c5:19",
+              "event:d8c0a1665779d706472716c5:2",
+              "event:d8c0a1665779d706472716c5:20",
+              "event:d8c0a1665779d706472716c5:21",
+              "event:d8c0a1665779d706472716c5:22",
+              "event:d8c0a1665779d706472716c5:23",
+              "event:d8c0a1665779d706472716c5:24",
+              "event:d8c0a1665779d706472716c5:25",
+              "event:d8c0a1665779d706472716c5:26",
+              "event:d8c0a1665779d706472716c5:27",
+              "event:d8c0a1665779d706472716c5:28",
+              "event:d8c0a1665779d706472716c5:29",
+              "event:d8c0a1665779d706472716c5:3",
+              "event:d8c0a1665779d706472716c5:30",
+              "event:d8c0a1665779d706472716c5:31",
+              "event:d8c0a1665779d706472716c5:32",
+              "event:d8c0a1665779d706472716c5:33",
+              "event:d8c0a1665779d706472716c5:34",
+              "event:d8c0a1665779d706472716c5:35",
+              "event:d8c0a1665779d706472716c5:36",
+              "event:d8c0a1665779d706472716c5:37",
+              "event:d8c0a1665779d706472716c5:4",
+              "event:d8c0a1665779d706472716c5:5",
+              "event:d8c0a1665779d706472716c5:6",
+              "event:d8c0a1665779d706472716c5:7",
+              "event:d8c0a1665779d706472716c5:8",
+              "event:d8c0a1665779d706472716c5:9"
+            ]
+          },
+          "blockers": [],
+          "selectedPair": {
+            "controlId": "ACN-COST-001",
+            "passRunId": "fault-1791167110-5e3126",
+            "breachRunId": "fault-1791165466-51ab52",
+            "passResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+            "breachResultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+            "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+            "controlVersionRef": "c16-v1",
+            "thresholdVersionRef": "c16-cap-v1",
+            "comparisonState": "COMPARABLE",
+            "note": "PASS and BREACH under the same frozen policy \u2014 comparable."
+          },
+          "newerFrozenPolicyExists": false,
+          "newerFrozenPolicyDigest": null
+        }
+      },
+      "demonstrationPair": {
+        "controlId": "ACN-COST-001",
+        "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+        "thresholdVersionRef": "c16-cap-v1",
+        "passResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+        "passRunId": "fault-1791167110-5e3126",
+        "breachResultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+        "breachRunId": "fault-1791165466-51ab52"
+      },
+      "retests": [
+        {
+          "controlId": "ACN-COST-001",
+          "gapId": "gap-ACN-COST-001-fault-1791165466-51ab52-6d1420087291",
+          "breachResultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+          "breachRunId": "fault-1791165466-51ab52",
+          "retestResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+          "retestRunId": "fault-1791167110-5e3126",
+          "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5"
+        },
+        {
+          "controlId": "ACN-COST-001",
+          "gapId": "gap-ACN-COST-001-fault-1791164501-143372-3dc981a99ba6",
+          "breachResultId": "ctr-3dc981a99ba695036e6fdd6755be733d6cc26efb",
+          "breachRunId": "fault-1791164501-143372",
+          "retestResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+          "retestRunId": "fault-1791167110-5e3126",
+          "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5"
+        }
+      ],
+      "blockers": []
+    },
+    "historicalContext": {
+      "additionalResultCount": 7,
+      "bundleIds": [
+        "ls-bundle:e34b6329cdd3e83c47e8f8d9",
+        "ls-bundle:5eb5f20c1dd2ecc4fd046e39",
+        "ls-bundle:dcffb9903ab3e41e44632a47",
+        "ls-bundle:b7a8b12d7afe50cb4f327237",
+        "ls-bundle:c4cc5bc262ffa14fb6066453",
+        "ls-bundle:f31bd225e0afc4091f35bd45",
+        "ls-bundle:3f7ed82999d0ed47188a2707"
+      ],
+      "analysisRunIds": [
+        "RR7:run:691d1d6d77601de7",
+        "RR:run:5b6cb446ea7aff95",
+        "RR:run:f5bedd179d59b482",
+        "analysis-fault-1791183079-256a5e",
+        "RR16:run:691d1d6d77601de7"
+      ]
+    },
+    "scoredSetPin": null,
+    "eligiblePolicies": {
+      "AIA-LOG-001": [
+        {
+          "policyId": "ae6dda36-4bac-4fb6-9c48-4def287fe79b",
+          "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+          "thresholdVersionRef": "c7-thresholds-v1",
+          "frozenAt": "2026-10-05T01:28:01.997Z"
+        }
+      ],
+      "AIA-ARC-006": [
+        {
+          "policyId": "346b5f43-58eb-44f8-a74e-45cfde746d74",
+          "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+          "thresholdVersionRef": "c9-duration-thresholds-v2",
+          "frozenAt": "2026-10-05T06:51:04.002Z"
+        },
+        {
+          "policyId": "2b37f892-e634-47ed-8ec8-5994991e2407",
+          "policyDigest": "sha256:aa12749a7c71747af4bc23434f6aef000b33f19c24b00182e392ff6bb00c47fa",
+          "thresholdVersionRef": "c9-duration-thresholds-v1",
+          "frozenAt": "2026-10-05T06:44:51.526Z"
+        }
+      ],
+      "ACN-COST-001": [
+        {
+          "policyId": "547f4a67-76eb-4bf3-befb-c1212ae23f81",
+          "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+          "thresholdVersionRef": "c16-cap-v1",
+          "frozenAt": "2026-10-05T01:28:02.294Z"
+        }
+      ]
+    },
+    "pairs": {
+      "AIA-LOG-001": {
+        "controlId": "AIA-LOG-001",
+        "passRunId": null,
+        "breachRunId": "fault-1791167110-5e3126",
+        "passResultId": null,
+        "breachResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+        "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+        "controlVersionRef": "c7-v1",
+        "thresholdVersionRef": "c7-thresholds-v1",
+        "comparisonState": "MISSING_PASS",
+        "note": "No persisted SATISFIED run for this control."
+      },
+      "AIA-ARC-006": {
+        "controlId": "AIA-ARC-006",
+        "passRunId": "fault-1791183213-228329",
+        "breachRunId": null,
+        "passResultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+        "breachResultId": null,
+        "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+        "controlVersionRef": "aia-arc-006-v1",
+        "thresholdVersionRef": "c9-duration-thresholds-v2",
+        "comparisonState": "MISSING_BREACH",
+        "note": "No persisted NOT_SATISFIED run for this control."
+      },
+      "ACN-COST-001": {
+        "controlId": "ACN-COST-001",
+        "passRunId": "fault-1791167110-5e3126",
+        "breachRunId": "fault-1791165466-51ab52",
+        "passResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+        "breachResultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+        "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+        "controlVersionRef": "c16-v1",
+        "thresholdVersionRef": "c16-cap-v1",
+        "comparisonState": "COMPARABLE",
+        "note": "PASS and BREACH under the same frozen policy \u2014 comparable."
+      }
+    },
+    "gaps": {
+      "AIA-LOG-001": [
+        {
+          "gapId": "gap-AIA-LOG-001-fault-1791167110-5e3126-abdf612fdf8c",
+          "controlId": "AIA-LOG-001",
+          "runId": "fault-1791167110-5e3126",
+          "resultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+          "kind": "CONTROL_BREACH",
+          "lifecycle": "OPEN",
+          "reasonCodes": [
+            "COVERAGE_BELOW_THRESHOLD"
+          ],
+          "limitations": [
+            "MEASUREMENT_NOT_GOVERNANCE_VERDICT",
+            "MISSING_EVENT_NOT_PROOF_OF_ABSENCE",
+            "SEQUENCE_DIVERGENCE_NOT_ROOT_CAUSE",
+            "ASSESSED_SCOPE_NOT_DECLARED",
+            "EVENT_OBSERVED_AT_NOT_RUN_START",
+            "POLICY_TEMPORAL_STATE_BOUNDS_QUALIFIED_RUN_START"
+          ],
+          "evidenceRefs": [
+            "event:d8c0a1665779d706472716c5:1",
+            "event:d8c0a1665779d706472716c5:10",
+            "event:d8c0a1665779d706472716c5:11",
+            "event:d8c0a1665779d706472716c5:12",
+            "event:d8c0a1665779d706472716c5:13",
+            "event:d8c0a1665779d706472716c5:14",
+            "event:d8c0a1665779d706472716c5:15",
+            "event:d8c0a1665779d706472716c5:16",
+            "event:d8c0a1665779d706472716c5:17",
+            "event:d8c0a1665779d706472716c5:18",
+            "event:d8c0a1665779d706472716c5:19",
+            "event:d8c0a1665779d706472716c5:2",
+            "event:d8c0a1665779d706472716c5:20",
+            "event:d8c0a1665779d706472716c5:21",
+            "event:d8c0a1665779d706472716c5:22",
+            "event:d8c0a1665779d706472716c5:23",
+            "event:d8c0a1665779d706472716c5:24",
+            "event:d8c0a1665779d706472716c5:25",
+            "event:d8c0a1665779d706472716c5:26",
+            "event:d8c0a1665779d706472716c5:27",
+            "event:d8c0a1665779d706472716c5:28",
+            "event:d8c0a1665779d706472716c5:29",
+            "event:d8c0a1665779d706472716c5:3",
+            "event:d8c0a1665779d706472716c5:30",
+            "event:d8c0a1665779d706472716c5:31",
+            "event:d8c0a1665779d706472716c5:32",
+            "event:d8c0a1665779d706472716c5:33",
+            "event:d8c0a1665779d706472716c5:34",
+            "event:d8c0a1665779d706472716c5:35",
+            "event:d8c0a1665779d706472716c5:36",
+            "event:d8c0a1665779d706472716c5:37",
+            "event:d8c0a1665779d706472716c5:4",
+            "event:d8c0a1665779d706472716c5:5",
+            "event:d8c0a1665779d706472716c5:6",
+            "event:d8c0a1665779d706472716c5:7",
+            "event:d8c0a1665779d706472716c5:8",
+            "event:d8c0a1665779d706472716c5:9"
+          ],
+          "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+          "openedAt": "2026-10-05T02:30:45.384Z",
+          "retestRunId": null,
+          "retestResultId": null,
+          "closedAt": null,
+          "note": "Valid measured rule violation \u2014 a demonstrated breach, not automatically an unresolved evidence gap."
+        },
+        {
+          "gapId": "gap-AIA-LOG-001-fault-1791165466-51ab52-097479287ace",
+          "controlId": "AIA-LOG-001",
+          "runId": "fault-1791165466-51ab52",
+          "resultId": "ctr-097479287ace337feb77a5b9cbee8db8b0ba9d21",
+          "kind": "CONTROL_BREACH",
+          "lifecycle": "RETEST_PENDING",
+          "reasonCodes": [
+            "COVERAGE_BELOW_THRESHOLD"
+          ],
+          "limitations": [
+            "MEASUREMENT_NOT_GOVERNANCE_VERDICT",
+            "MISSING_EVENT_NOT_PROOF_OF_ABSENCE",
+            "SEQUENCE_DIVERGENCE_NOT_ROOT_CAUSE",
+            "ASSESSED_SCOPE_NOT_DECLARED",
+            "EVENT_OBSERVED_AT_NOT_RUN_START",
+            "POLICY_TEMPORAL_STATE_BOUNDS_QUALIFIED_RUN_START"
+          ],
+          "evidenceRefs": [
+            "event:47ddcb25ccd4405502493f9f:1",
+            "event:47ddcb25ccd4405502493f9f:10",
+            "event:47ddcb25ccd4405502493f9f:11",
+            "event:47ddcb25ccd4405502493f9f:12",
+            "event:47ddcb25ccd4405502493f9f:13",
+            "event:47ddcb25ccd4405502493f9f:14",
+            "event:47ddcb25ccd4405502493f9f:15",
+            "event:47ddcb25ccd4405502493f9f:16",
+            "event:47ddcb25ccd4405502493f9f:17",
+            "event:47ddcb25ccd4405502493f9f:18",
+            "event:47ddcb25ccd4405502493f9f:19",
+            "event:47ddcb25ccd4405502493f9f:2",
+            "event:47ddcb25ccd4405502493f9f:20",
+            "event:47ddcb25ccd4405502493f9f:21",
+            "event:47ddcb25ccd4405502493f9f:22",
+            "event:47ddcb25ccd4405502493f9f:23",
+            "event:47ddcb25ccd4405502493f9f:24",
+            "event:47ddcb25ccd4405502493f9f:25",
+            "event:47ddcb25ccd4405502493f9f:26",
+            "event:47ddcb25ccd4405502493f9f:27",
+            "event:47ddcb25ccd4405502493f9f:28",
+            "event:47ddcb25ccd4405502493f9f:29",
+            "event:47ddcb25ccd4405502493f9f:3",
+            "event:47ddcb25ccd4405502493f9f:30",
+            "event:47ddcb25ccd4405502493f9f:31",
+            "event:47ddcb25ccd4405502493f9f:32",
+            "event:47ddcb25ccd4405502493f9f:33",
+            "event:47ddcb25ccd4405502493f9f:34",
+            "event:47ddcb25ccd4405502493f9f:35",
+            "event:47ddcb25ccd4405502493f9f:36",
+            "event:47ddcb25ccd4405502493f9f:37",
+            "event:47ddcb25ccd4405502493f9f:38",
+            "event:47ddcb25ccd4405502493f9f:39",
+            "event:47ddcb25ccd4405502493f9f:4",
+            "event:47ddcb25ccd4405502493f9f:40",
+            "event:47ddcb25ccd4405502493f9f:41",
+            "event:47ddcb25ccd4405502493f9f:42",
+            "event:47ddcb25ccd4405502493f9f:43",
+            "event:47ddcb25ccd4405502493f9f:44",
+            "event:47ddcb25ccd4405502493f9f:45",
+            "event:47ddcb25ccd4405502493f9f:46",
+            "event:47ddcb25ccd4405502493f9f:47",
+            "event:47ddcb25ccd4405502493f9f:48",
+            "event:47ddcb25ccd4405502493f9f:49",
+            "event:47ddcb25ccd4405502493f9f:5",
+            "event:47ddcb25ccd4405502493f9f:50",
+            "event:47ddcb25ccd4405502493f9f:51",
+            "event:47ddcb25ccd4405502493f9f:52",
+            "event:47ddcb25ccd4405502493f9f:53",
+            "event:47ddcb25ccd4405502493f9f:54",
+            "event:47ddcb25ccd4405502493f9f:55",
+            "event:47ddcb25ccd4405502493f9f:56",
+            "event:47ddcb25ccd4405502493f9f:57",
+            "event:47ddcb25ccd4405502493f9f:58",
+            "event:47ddcb25ccd4405502493f9f:59",
+            "event:47ddcb25ccd4405502493f9f:6",
+            "event:47ddcb25ccd4405502493f9f:60",
+            "event:47ddcb25ccd4405502493f9f:61",
+            "event:47ddcb25ccd4405502493f9f:62",
+            "event:47ddcb25ccd4405502493f9f:63",
+            "event:47ddcb25ccd4405502493f9f:64",
+            "event:47ddcb25ccd4405502493f9f:65",
+            "event:47ddcb25ccd4405502493f9f:66",
+            "event:47ddcb25ccd4405502493f9f:67",
+            "event:47ddcb25ccd4405502493f9f:68",
+            "event:47ddcb25ccd4405502493f9f:69",
+            "event:47ddcb25ccd4405502493f9f:7",
+            "event:47ddcb25ccd4405502493f9f:70",
+            "event:47ddcb25ccd4405502493f9f:8",
+            "event:47ddcb25ccd4405502493f9f:9"
+          ],
+          "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+          "openedAt": "2026-10-05T02:02:55.777Z",
+          "retestRunId": "fault-1791167110-5e3126",
+          "retestResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+          "closedAt": null,
+          "note": "Valid measured rule violation \u2014 a demonstrated breach, not automatically an unresolved evidence gap."
+        },
+        {
+          "gapId": "gap-AIA-LOG-001-fault-1791164605-3348a2-eb05cfe0dd14",
+          "controlId": "AIA-LOG-001",
+          "runId": "fault-1791164605-3348a2",
+          "resultId": "ctr-eb05cfe0dd1416ca69f802622fc24222d6930d1c",
+          "kind": "CONTROL_BREACH",
+          "lifecycle": "RETEST_PENDING",
+          "reasonCodes": [
+            "COVERAGE_BELOW_THRESHOLD"
+          ],
+          "limitations": [
+            "MEASUREMENT_NOT_GOVERNANCE_VERDICT",
+            "MISSING_EVENT_NOT_PROOF_OF_ABSENCE",
+            "SEQUENCE_DIVERGENCE_NOT_ROOT_CAUSE",
+            "ASSESSED_SCOPE_NOT_DECLARED",
+            "EVENT_OBSERVED_AT_NOT_RUN_START",
+            "POLICY_TEMPORAL_STATE_BOUNDS_QUALIFIED_RUN_START"
+          ],
+          "evidenceRefs": [
+            "event:e8f71233c1abd7c857a339eb:1",
+            "event:e8f71233c1abd7c857a339eb:10",
+            "event:e8f71233c1abd7c857a339eb:11",
+            "event:e8f71233c1abd7c857a339eb:12",
+            "event:e8f71233c1abd7c857a339eb:13",
+            "event:e8f71233c1abd7c857a339eb:14",
+            "event:e8f71233c1abd7c857a339eb:15",
+            "event:e8f71233c1abd7c857a339eb:16",
+            "event:e8f71233c1abd7c857a339eb:17",
+            "event:e8f71233c1abd7c857a339eb:18",
+            "event:e8f71233c1abd7c857a339eb:19",
+            "event:e8f71233c1abd7c857a339eb:2",
+            "event:e8f71233c1abd7c857a339eb:20",
+            "event:e8f71233c1abd7c857a339eb:21",
+            "event:e8f71233c1abd7c857a339eb:22",
+            "event:e8f71233c1abd7c857a339eb:23",
+            "event:e8f71233c1abd7c857a339eb:24",
+            "event:e8f71233c1abd7c857a339eb:25",
+            "event:e8f71233c1abd7c857a339eb:3",
+            "event:e8f71233c1abd7c857a339eb:4",
+            "event:e8f71233c1abd7c857a339eb:5",
+            "event:e8f71233c1abd7c857a339eb:6",
+            "event:e8f71233c1abd7c857a339eb:7",
+            "event:e8f71233c1abd7c857a339eb:8",
+            "event:e8f71233c1abd7c857a339eb:9"
+          ],
+          "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+          "openedAt": "2026-10-05T01:56:32.893Z",
+          "retestRunId": "fault-1791167110-5e3126",
+          "retestResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+          "closedAt": null,
+          "note": "Valid measured rule violation \u2014 a demonstrated breach, not automatically an unresolved evidence gap."
+        },
+        {
+          "gapId": "gap-AIA-LOG-001-fault-1791164501-143372-a20c0527ed3b",
+          "controlId": "AIA-LOG-001",
+          "runId": "fault-1791164501-143372",
+          "resultId": "ctr-a20c0527ed3b9e36393a8e640f7b7ca1ec097ec5",
+          "kind": "CONTROL_BREACH",
+          "lifecycle": "RETEST_PENDING",
+          "reasonCodes": [
+            "COVERAGE_BELOW_THRESHOLD"
+          ],
+          "limitations": [
+            "MEASUREMENT_NOT_GOVERNANCE_VERDICT",
+            "MISSING_EVENT_NOT_PROOF_OF_ABSENCE",
+            "SEQUENCE_DIVERGENCE_NOT_ROOT_CAUSE",
+            "ASSESSED_SCOPE_NOT_DECLARED",
+            "EVENT_OBSERVED_AT_NOT_RUN_START",
+            "POLICY_TEMPORAL_STATE_BOUNDS_QUALIFIED_RUN_START"
+          ],
+          "evidenceRefs": [
+            "event:186054be57ee3badbbb696ff:1",
+            "event:186054be57ee3badbbb696ff:10",
+            "event:186054be57ee3badbbb696ff:11",
+            "event:186054be57ee3badbbb696ff:12",
+            "event:186054be57ee3badbbb696ff:13",
+            "event:186054be57ee3badbbb696ff:14",
+            "event:186054be57ee3badbbb696ff:15",
+            "event:186054be57ee3badbbb696ff:16",
+            "event:186054be57ee3badbbb696ff:17",
+            "event:186054be57ee3badbbb696ff:18",
+            "event:186054be57ee3badbbb696ff:19",
+            "event:186054be57ee3badbbb696ff:2",
+            "event:186054be57ee3badbbb696ff:20",
+            "event:186054be57ee3badbbb696ff:21",
+            "event:186054be57ee3badbbb696ff:22",
+            "event:186054be57ee3badbbb696ff:23",
+            "event:186054be57ee3badbbb696ff:24",
+            "event:186054be57ee3badbbb696ff:25",
+            "event:186054be57ee3badbbb696ff:26",
+            "event:186054be57ee3badbbb696ff:27",
+            "event:186054be57ee3badbbb696ff:28",
+            "event:186054be57ee3badbbb696ff:29",
+            "event:186054be57ee3badbbb696ff:3",
+            "event:186054be57ee3badbbb696ff:30",
+            "event:186054be57ee3badbbb696ff:31",
+            "event:186054be57ee3badbbb696ff:32",
+            "event:186054be57ee3badbbb696ff:33",
+            "event:186054be57ee3badbbb696ff:34",
+            "event:186054be57ee3badbbb696ff:35",
+            "event:186054be57ee3badbbb696ff:4",
+            "event:186054be57ee3badbbb696ff:5",
+            "event:186054be57ee3badbbb696ff:6",
+            "event:186054be57ee3badbbb696ff:7",
+            "event:186054be57ee3badbbb696ff:8",
+            "event:186054be57ee3badbbb696ff:9"
+          ],
+          "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+          "openedAt": "2026-10-05T01:56:32.039Z",
+          "retestRunId": "fault-1791167110-5e3126",
+          "retestResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+          "closedAt": null,
+          "note": "Valid measured rule violation \u2014 a demonstrated breach, not automatically an unresolved evidence gap."
+        }
+      ],
+      "AIA-ARC-006": [],
+      "ACN-COST-001": [
+        {
+          "gapId": "gap-ACN-COST-001-fault-1791165466-51ab52-6d1420087291",
+          "controlId": "ACN-COST-001",
+          "runId": "fault-1791165466-51ab52",
+          "resultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+          "kind": "CONTROL_BREACH",
+          "lifecycle": "CLOSED",
+          "reasonCodes": [
+            "SPEND_CAP_EXCEEDED"
+          ],
+          "limitations": [
+            "POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY",
+            "POLICY_TEMPORAL_STATE_BOUNDS_OBSERVED_ACTIVITY_NOT_RUN_START"
+          ],
+          "evidenceRefs": [
+            "event:47ddcb25ccd4405502493f9f:1",
+            "event:47ddcb25ccd4405502493f9f:10",
+            "event:47ddcb25ccd4405502493f9f:11",
+            "event:47ddcb25ccd4405502493f9f:12",
+            "event:47ddcb25ccd4405502493f9f:13",
+            "event:47ddcb25ccd4405502493f9f:14",
+            "event:47ddcb25ccd4405502493f9f:15",
+            "event:47ddcb25ccd4405502493f9f:16",
+            "event:47ddcb25ccd4405502493f9f:17",
+            "event:47ddcb25ccd4405502493f9f:18",
+            "event:47ddcb25ccd4405502493f9f:19",
+            "event:47ddcb25ccd4405502493f9f:2",
+            "event:47ddcb25ccd4405502493f9f:20",
+            "event:47ddcb25ccd4405502493f9f:21",
+            "event:47ddcb25ccd4405502493f9f:22",
+            "event:47ddcb25ccd4405502493f9f:23",
+            "event:47ddcb25ccd4405502493f9f:24",
+            "event:47ddcb25ccd4405502493f9f:25",
+            "event:47ddcb25ccd4405502493f9f:26",
+            "event:47ddcb25ccd4405502493f9f:27",
+            "event:47ddcb25ccd4405502493f9f:28",
+            "event:47ddcb25ccd4405502493f9f:29",
+            "event:47ddcb25ccd4405502493f9f:3",
+            "event:47ddcb25ccd4405502493f9f:30",
+            "event:47ddcb25ccd4405502493f9f:31",
+            "event:47ddcb25ccd4405502493f9f:32",
+            "event:47ddcb25ccd4405502493f9f:33",
+            "event:47ddcb25ccd4405502493f9f:34",
+            "event:47ddcb25ccd4405502493f9f:35",
+            "event:47ddcb25ccd4405502493f9f:36",
+            "event:47ddcb25ccd4405502493f9f:37",
+            "event:47ddcb25ccd4405502493f9f:38",
+            "event:47ddcb25ccd4405502493f9f:39",
+            "event:47ddcb25ccd4405502493f9f:4",
+            "event:47ddcb25ccd4405502493f9f:40",
+            "event:47ddcb25ccd4405502493f9f:41",
+            "event:47ddcb25ccd4405502493f9f:42",
+            "event:47ddcb25ccd4405502493f9f:43",
+            "event:47ddcb25ccd4405502493f9f:44",
+            "event:47ddcb25ccd4405502493f9f:45",
+            "event:47ddcb25ccd4405502493f9f:46",
+            "event:47ddcb25ccd4405502493f9f:47",
+            "event:47ddcb25ccd4405502493f9f:48",
+            "event:47ddcb25ccd4405502493f9f:49",
+            "event:47ddcb25ccd4405502493f9f:5",
+            "event:47ddcb25ccd4405502493f9f:50",
+            "event:47ddcb25ccd4405502493f9f:51",
+            "event:47ddcb25ccd4405502493f9f:52",
+            "event:47ddcb25ccd4405502493f9f:53",
+            "event:47ddcb25ccd4405502493f9f:54",
+            "event:47ddcb25ccd4405502493f9f:55",
+            "event:47ddcb25ccd4405502493f9f:56",
+            "event:47ddcb25ccd4405502493f9f:57",
+            "event:47ddcb25ccd4405502493f9f:58",
+            "event:47ddcb25ccd4405502493f9f:59",
+            "event:47ddcb25ccd4405502493f9f:6",
+            "event:47ddcb25ccd4405502493f9f:60",
+            "event:47ddcb25ccd4405502493f9f:61",
+            "event:47ddcb25ccd4405502493f9f:62",
+            "event:47ddcb25ccd4405502493f9f:63",
+            "event:47ddcb25ccd4405502493f9f:64",
+            "event:47ddcb25ccd4405502493f9f:65",
+            "event:47ddcb25ccd4405502493f9f:66",
+            "event:47ddcb25ccd4405502493f9f:67",
+            "event:47ddcb25ccd4405502493f9f:68",
+            "event:47ddcb25ccd4405502493f9f:69",
+            "event:47ddcb25ccd4405502493f9f:7",
+            "event:47ddcb25ccd4405502493f9f:70",
+            "event:47ddcb25ccd4405502493f9f:8",
+            "event:47ddcb25ccd4405502493f9f:9"
+          ],
+          "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+          "openedAt": "2026-10-05T02:02:56.241Z",
+          "retestRunId": "fault-1791167110-5e3126",
+          "retestResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+          "closedAt": "2026-10-05T02:30:44.931Z",
+          "note": "Valid measured rule violation \u2014 a demonstrated breach, not automatically an unresolved evidence gap."
+        },
+        {
+          "gapId": "gap-ACN-COST-001-fault-1791164501-143372-3dc981a99ba6",
+          "controlId": "ACN-COST-001",
+          "runId": "fault-1791164501-143372",
+          "resultId": "ctr-3dc981a99ba695036e6fdd6755be733d6cc26efb",
+          "kind": "EVIDENCE_GAP",
+          "lifecycle": "CLOSED",
+          "reasonCodes": [
+            "LOGSENSE_MEASUREMENT_NOT_MEASURED",
+            "EXPECTED_AGENT_USAGE_INCOMPLETE"
+          ],
+          "limitations": [
+            "EXPECTED_AGENT_WITHOUT_USAGE_EVIDENCE:it-resolution-agent",
+            "MEASUREMENT_NOT_GOVERNANCE_VERDICT",
+            "MISSING_EVENT_NOT_PROOF_OF_ABSENCE",
+            "SEQUENCE_DIVERGENCE_NOT_ROOT_CAUSE",
+            "EXPECTED_AGENT_WITHOUT_USAGE_EVIDENCE:it-resolution-agent",
+            "POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY",
+            "POLICY_TEMPORAL_STATE_BOUNDS_OBSERVED_ACTIVITY_NOT_RUN_START"
+          ],
+          "evidenceRefs": [
+            "event:186054be57ee3badbbb696ff:1",
+            "event:186054be57ee3badbbb696ff:10",
+            "event:186054be57ee3badbbb696ff:11",
+            "event:186054be57ee3badbbb696ff:12",
+            "event:186054be57ee3badbbb696ff:13",
+            "event:186054be57ee3badbbb696ff:14",
+            "event:186054be57ee3badbbb696ff:15",
+            "event:186054be57ee3badbbb696ff:16",
+            "event:186054be57ee3badbbb696ff:17",
+            "event:186054be57ee3badbbb696ff:18",
+            "event:186054be57ee3badbbb696ff:19",
+            "event:186054be57ee3badbbb696ff:2",
+            "event:186054be57ee3badbbb696ff:20",
+            "event:186054be57ee3badbbb696ff:21",
+            "event:186054be57ee3badbbb696ff:22",
+            "event:186054be57ee3badbbb696ff:23",
+            "event:186054be57ee3badbbb696ff:24",
+            "event:186054be57ee3badbbb696ff:25",
+            "event:186054be57ee3badbbb696ff:26",
+            "event:186054be57ee3badbbb696ff:27",
+            "event:186054be57ee3badbbb696ff:28",
+            "event:186054be57ee3badbbb696ff:29",
+            "event:186054be57ee3badbbb696ff:3",
+            "event:186054be57ee3badbbb696ff:30",
+            "event:186054be57ee3badbbb696ff:31",
+            "event:186054be57ee3badbbb696ff:32",
+            "event:186054be57ee3badbbb696ff:33",
+            "event:186054be57ee3badbbb696ff:34",
+            "event:186054be57ee3badbbb696ff:35",
+            "event:186054be57ee3badbbb696ff:4",
+            "event:186054be57ee3badbbb696ff:5",
+            "event:186054be57ee3badbbb696ff:6",
+            "event:186054be57ee3badbbb696ff:7",
+            "event:186054be57ee3badbbb696ff:8",
+            "event:186054be57ee3badbbb696ff:9"
+          ],
+          "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+          "openedAt": "2026-10-05T01:56:32.446Z",
+          "retestRunId": "fault-1791167110-5e3126",
+          "retestResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+          "closedAt": "2026-10-05T02:30:44.931Z",
+          "note": "Evaluation could not close \u2014 see reason codes."
+        }
+      ]
+    },
+    "gapSummary": {
+      "openEvidenceGaps": 0,
+      "closedGaps": 2,
+      "retestPending": 3,
+      "controlBreaches": 5
+    },
+    "artifacts": [
+      {
+        "id": "evidence-file",
+        "name": "Evidence File",
+        "state": "READY",
+        "missing": [],
+        "nextAction": null,
+        "preview": {
+          "perControl": [
+            {
+              "controlId": "AIA-LOG-001",
+              "bound": true,
+              "resultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+              "runId": "fault-1791167110-5e3126",
+              "bundleId": "ls-bundle:08bca8a14b696645d6738a0e",
+              "analysisRunId": "RR7:run:574b25e9fe865190",
+              "evidenceSetRef": "RR7:evidence:574b25e9fe865190"
+            },
+            {
+              "controlId": "AIA-ARC-006",
+              "bound": true,
+              "resultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+              "runId": "fault-1791183213-228329",
+              "bundleId": "ls-bundle:c907ca3eec089c858f657220",
+              "analysisRunId": "analysis-fault-1791183213-228329",
+              "evidenceSetRef": "evidence-set:fault-1791183213-228329"
+            },
+            {
+              "controlId": "ACN-COST-001",
+              "bound": true,
+              "resultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+              "runId": "fault-1791167110-5e3126",
+              "bundleId": "ls-bundle:3106dbb2ebbcc0504ebfae56",
+              "analysisRunId": "RR16:run:574b25e9fe865190",
+              "evidenceSetRef": "RR16:evidence:574b25e9fe865190"
+            }
+          ]
+        },
+        "href": "/dashboard/evidence"
+      },
+      {
+        "id": "threshold-document",
+        "name": "Threshold Document",
+        "state": "PREPARED",
+        "missing": [
+          "AIA-LOG-001: expectedZones (assessed scope)",
+          "AIA-LOG-001: expectedEnforcementPoints (assessed scope)",
+          "ACN-COST-001: overCapRunAllowance"
+        ],
+        "nextAction": "Freeze complete governing policies on the Control Test page \u2014 missing: AIA-LOG-001: expectedZones (assessed scope); AIA-LOG-001: expectedEnforcementPoints (assessed scope); ACN-COST-001: overCapRunAllowance.",
+        "preview": {
+          "perControl": [
+            {
+              "controlId": "AIA-LOG-001",
+              "ok": false,
+              "missing": [
+                "expectedZones (assessed scope)",
+                "expectedEnforcementPoints (assessed scope)"
+              ],
+              "thresholdVersionRef": "c7-thresholds-v1",
+              "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+              "frozenAt": "2026-10-05T01:28:01.997Z",
+              "owner": "Subodh KC"
+            },
+            {
+              "controlId": "AIA-ARC-006",
+              "ok": true,
+              "missing": [],
+              "thresholdVersionRef": "c9-duration-thresholds-v2",
+              "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+              "frozenAt": "2026-10-05T06:51:04.002Z",
+              "owner": "subodh-kc (participant, org owner)"
+            },
+            {
+              "controlId": "ACN-COST-001",
+              "ok": false,
+              "missing": [
+                "overCapRunAllowance"
+              ],
+              "thresholdVersionRef": "c16-cap-v1",
+              "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+              "frozenAt": "2026-10-05T01:28:02.294Z",
+              "owner": "Subodh KC"
+            }
+          ]
+        },
+        "href": "/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/control-test"
+      },
+      {
+        "id": "control-test-tool",
+        "name": "Control Test Tool",
+        "state": "READY",
+        "missing": [],
+        "nextAction": null,
+        "preview": {
+          "perControl": [
+            {
+              "controlId": "AIA-LOG-001",
+              "ok": true
+            },
+            {
+              "controlId": "AIA-ARC-006",
+              "ok": true
+            },
+            {
+              "controlId": "ACN-COST-001",
+              "ok": true
+            }
+          ]
+        },
+        "href": "/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/control-test"
+      },
+      {
+        "id": "two-named-runs",
+        "name": "Two Named Runs",
+        "state": "READY",
+        "missing": [],
+        "nextAction": null,
+        "preview": {
+          "demonstrationPair": {
+            "controlId": "ACN-COST-001",
+            "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+            "thresholdVersionRef": "c16-cap-v1",
+            "passResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+            "passRunId": "fault-1791167110-5e3126",
+            "breachResultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+            "breachRunId": "fault-1791165466-51ab52"
+          },
+          "selectedPairs": {
+            "AIA-LOG-001": {
+              "controlId": "AIA-LOG-001",
+              "passRunId": null,
+              "breachRunId": "fault-1791167110-5e3126",
+              "passResultId": null,
+              "breachResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+              "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+              "controlVersionRef": "c7-v1",
+              "thresholdVersionRef": "c7-thresholds-v1",
+              "comparisonState": "MISSING_PASS",
+              "note": "No persisted SATISFIED run for this control."
+            },
+            "AIA-ARC-006": {
+              "controlId": "AIA-ARC-006",
+              "passRunId": "fault-1791183213-228329",
+              "breachRunId": null,
+              "passResultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+              "breachResultId": null,
+              "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+              "controlVersionRef": "aia-arc-006-v1",
+              "thresholdVersionRef": "c9-duration-thresholds-v2",
+              "comparisonState": "MISSING_BREACH",
+              "note": "No persisted NOT_SATISFIED run for this control."
+            },
+            "ACN-COST-001": {
+              "controlId": "ACN-COST-001",
+              "passRunId": "fault-1791167110-5e3126",
+              "breachRunId": "fault-1791165466-51ab52",
+              "passResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+              "breachResultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+              "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+              "controlVersionRef": "c16-v1",
+              "thresholdVersionRef": "c16-cap-v1",
+              "comparisonState": "COMPARABLE",
+              "note": "PASS and BREACH under the same frozen policy \u2014 comparable."
+            }
+          }
+        },
+        "href": "/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/control-test"
+      },
+      {
+        "id": "one-page-architecture",
+        "name": "One-Page Architecture",
+        "state": "PREPARED",
+        "missing": [
+          "no declared or observed enforcement point"
+        ],
+        "nextAction": "Declare enforcement points on the frozen policies and bind evidence sources \u2014 architecture is drawn from the selected scored truth only.",
+        "preview": {
+          "layers": [
+            "LAB / AI SYSTEM",
+            "ENFORCEMENT POINTS",
+            "TELEMETRY",
+            "CONTROL REGISTER (outside execution path)",
+            "ONE CONTROL CONTRACT: evaluate() / emit() / pull() / callback()",
+            "STATELESS EVALUATOR \u2192 deterministic result",
+            "LogSense independent measurement/reconciliation"
+          ],
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "declaredEnforcementPoints": [],
+          "observedEnforcementPoints": [],
+          "evidenceSources": [
+            "ls-bundle:08bca8a14b696645d6738a0e",
+            "ls-bundle:c907ca3eec089c858f657220",
+            "ls-bundle:3106dbb2ebbcc0504ebfae56"
+          ]
+        }
+      },
+      {
+        "id": "gap-list",
+        "name": "Gap List",
+        "state": "READY",
+        "missing": [],
+        "nextAction": null,
+        "preview": {
+          "openEvidenceGaps": 0,
+          "closedGaps": 1,
+          "controlBreaches": 5,
+          "items": [
+            {
+              "gapId": "gap-AIA-LOG-001-fault-1791167110-5e3126-abdf612fdf8c",
+              "controlId": "AIA-LOG-001",
+              "runId": "fault-1791167110-5e3126",
+              "kind": "CONTROL_BREACH",
+              "lifecycle": "OPEN",
+              "reasonCodes": [
+                "COVERAGE_BELOW_THRESHOLD"
+              ],
+              "retestRunId": null
+            },
+            {
+              "gapId": "gap-AIA-LOG-001-fault-1791165466-51ab52-097479287ace",
+              "controlId": "AIA-LOG-001",
+              "runId": "fault-1791165466-51ab52",
+              "kind": "CONTROL_BREACH",
+              "lifecycle": "RETEST_PENDING",
+              "reasonCodes": [
+                "COVERAGE_BELOW_THRESHOLD"
+              ],
+              "retestRunId": "fault-1791167110-5e3126"
+            },
+            {
+              "gapId": "gap-AIA-LOG-001-fault-1791164605-3348a2-eb05cfe0dd14",
+              "controlId": "AIA-LOG-001",
+              "runId": "fault-1791164605-3348a2",
+              "kind": "CONTROL_BREACH",
+              "lifecycle": "RETEST_PENDING",
+              "reasonCodes": [
+                "COVERAGE_BELOW_THRESHOLD"
+              ],
+              "retestRunId": "fault-1791167110-5e3126"
+            },
+            {
+              "gapId": "gap-AIA-LOG-001-fault-1791164501-143372-a20c0527ed3b",
+              "controlId": "AIA-LOG-001",
+              "runId": "fault-1791164501-143372",
+              "kind": "CONTROL_BREACH",
+              "lifecycle": "RETEST_PENDING",
+              "reasonCodes": [
+                "COVERAGE_BELOW_THRESHOLD"
+              ],
+              "retestRunId": "fault-1791167110-5e3126"
+            },
+            {
+              "gapId": "gap-ACN-COST-001-fault-1791165466-51ab52-6d1420087291",
+              "controlId": "ACN-COST-001",
+              "runId": "fault-1791165466-51ab52",
+              "kind": "CONTROL_BREACH",
+              "lifecycle": "CLOSED",
+              "reasonCodes": [
+                "SPEND_CAP_EXCEEDED"
+              ],
+              "retestRunId": "fault-1791167110-5e3126"
+            },
+            {
+              "gapId": "gap-ACN-COST-001-fault-1791164501-143372-3dc981a99ba6",
+              "controlId": "ACN-COST-001",
+              "runId": "fault-1791164501-143372",
+              "kind": "EVIDENCE_GAP",
+              "lifecycle": "CLOSED",
+              "reasonCodes": [
+                "LOGSENSE_MEASUREMENT_NOT_MEASURED",
+                "EXPECTED_AGENT_USAGE_INCOMPLETE"
+              ],
+              "retestRunId": "fault-1791167110-5e3126"
+            }
+          ]
+        }
+      }
+    ],
+    "eventFreeze": {
+      "state": "BLOCKED",
+      "blockers": [
+        "SCORED_SET_NOT_PINNED",
+        "artifact Threshold Document: PREPARED != READY",
+        "artifact One-Page Architecture: PREPARED != READY"
+      ],
+      "freezeDigest": "sha256:07204634811e718e21832750810c6972c25b559ffeef988fd3c74e2adeb2f270",
+      "latestFreeze": null,
+      "drifted": false,
+      "payload": {
+        "schemaVersion": "haiec-event-freeze/1.0",
+        "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+        "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+        "generatedAt": "2026-10-05T10:32:39.449Z",
+        "build": {
+          "mainSha": "5a3e7d3c15d60b8a9a45f6d217f04a91a0ec0a03",
+          "commitRef": "Main",
+          "packageVersion": "1.0.0"
+        },
+        "controls": [
+          {
+            "controlId": "AIA-LOG-001",
+            "policyId": "ae6dda36-4bac-4fb6-9c48-4def287fe79b",
+            "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+            "controlVersionRef": "c7-v1",
+            "thresholdVersionRef": "c7-thresholds-v1",
+            "frozenAt": "2026-10-05T01:28:01.997Z",
+            "scoredResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+            "scoredRunId": "fault-1791167110-5e3126",
+            "scoredOutcome": "NOT_SATISFIED",
+            "evaluatedAt": "2026-10-05T02:30:45.384Z"
+          },
+          {
+            "controlId": "AIA-ARC-006",
+            "policyId": "346b5f43-58eb-44f8-a74e-45cfde746d74",
+            "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+            "controlVersionRef": "aia-arc-006-v1",
+            "thresholdVersionRef": "c9-duration-thresholds-v2",
+            "frozenAt": "2026-10-05T06:51:04.002Z",
+            "scoredResultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+            "scoredRunId": "fault-1791183213-228329",
+            "scoredOutcome": "SATISFIED",
+            "evaluatedAt": "2026-10-05T06:55:00.861Z"
+          },
+          {
+            "controlId": "ACN-COST-001",
+            "policyId": "547f4a67-76eb-4bf3-befb-c1212ae23f81",
+            "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+            "controlVersionRef": "c16-v1",
+            "thresholdVersionRef": "c16-cap-v1",
+            "frozenAt": "2026-10-05T01:28:02.294Z",
+            "scoredResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+            "scoredRunId": "fault-1791167110-5e3126",
+            "scoredOutcome": "SATISFIED",
+            "evaluatedAt": "2026-10-05T02:30:44.931Z"
+          }
+        ],
+        "namedRuns": [
+          {
+            "controlId": "AIA-LOG-001",
+            "passRunId": null,
+            "breachRunId": "fault-1791167110-5e3126",
+            "passResultId": null,
+            "breachResultId": "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+            "retestRunId": null,
+            "retestResultId": null,
+            "policyDigest": "sha256:45f1abaf74b7851881a63cee0c21d22ac9441ab2eee48cf5f27f7f613d29e311",
+            "thresholdVersionRef": "c7-thresholds-v1",
+            "comparisonState": "MISSING_PASS"
+          },
+          {
+            "controlId": "AIA-ARC-006",
+            "passRunId": "fault-1791183213-228329",
+            "breachRunId": null,
+            "passResultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+            "breachResultId": null,
+            "retestRunId": null,
+            "retestResultId": null,
+            "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+            "thresholdVersionRef": "c9-duration-thresholds-v2",
+            "comparisonState": "MISSING_BREACH"
+          },
+          {
+            "controlId": "ACN-COST-001",
+            "passRunId": "fault-1791167110-5e3126",
+            "breachRunId": "fault-1791165466-51ab52",
+            "passResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+            "breachResultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+            "retestRunId": "fault-1791167110-5e3126",
+            "retestResultId": "ctr-237f39281d0e90bacd8697163ab304defff22154",
+            "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+            "thresholdVersionRef": "c16-cap-v1",
+            "comparisonState": "COMPARABLE"
+          }
+        ],
+        "evidence": {
+          "bundleIds": [
+            "ls-bundle:08bca8a14b696645d6738a0e",
+            "ls-bundle:c907ca3eec089c858f657220",
+            "ls-bundle:3106dbb2ebbcc0504ebfae56"
+          ],
+          "analysisRunIds": [
+            "RR7:run:574b25e9fe865190",
+            "analysis-fault-1791183213-228329",
+            "RR16:run:574b25e9fe865190"
+          ],
+          "evidenceSetRefs": [
+            "RR7:evidence:574b25e9fe865190",
+            "evidence-set:fault-1791183213-228329",
+            "RR16:evidence:574b25e9fe865190"
+          ],
+          "ingestionIds": [
+            "ing-39534f0f71100fd62a0fbf4115fc1274ba0a8bbd41846db9",
+            "ing-15e882827cc7d7ff7e64367a3224d866b39737863cc9f216",
+            "ing-f996f8f592d8f228ab1153a893cb1fa998b5d384e4092140"
+          ],
+          "evidenceRefs": [
+            "event:d8c0a1665779d706472716c5:1",
+            "event:d8c0a1665779d706472716c5:10",
+            "event:d8c0a1665779d706472716c5:11",
+            "event:d8c0a1665779d706472716c5:12",
+            "event:d8c0a1665779d706472716c5:13",
+            "event:d8c0a1665779d706472716c5:14",
+            "event:d8c0a1665779d706472716c5:15",
+            "event:d8c0a1665779d706472716c5:16",
+            "event:d8c0a1665779d706472716c5:17",
+            "event:d8c0a1665779d706472716c5:18",
+            "event:d8c0a1665779d706472716c5:19",
+            "event:d8c0a1665779d706472716c5:2",
+            "event:d8c0a1665779d706472716c5:20",
+            "event:d8c0a1665779d706472716c5:21",
+            "event:d8c0a1665779d706472716c5:22",
+            "event:d8c0a1665779d706472716c5:23",
+            "event:d8c0a1665779d706472716c5:24",
+            "event:d8c0a1665779d706472716c5:25",
+            "event:d8c0a1665779d706472716c5:26",
+            "event:d8c0a1665779d706472716c5:27",
+            "event:d8c0a1665779d706472716c5:28",
+            "event:d8c0a1665779d706472716c5:29",
+            "event:d8c0a1665779d706472716c5:3",
+            "event:d8c0a1665779d706472716c5:30",
+            "event:d8c0a1665779d706472716c5:31",
+            "event:d8c0a1665779d706472716c5:32",
+            "event:d8c0a1665779d706472716c5:33",
+            "event:d8c0a1665779d706472716c5:34",
+            "event:d8c0a1665779d706472716c5:35",
+            "event:d8c0a1665779d706472716c5:36",
+            "event:d8c0a1665779d706472716c5:37",
+            "event:d8c0a1665779d706472716c5:4",
+            "event:d8c0a1665779d706472716c5:5",
+            "event:d8c0a1665779d706472716c5:6",
+            "event:d8c0a1665779d706472716c5:7",
+            "event:d8c0a1665779d706472716c5:8",
+            "event:d8c0a1665779d706472716c5:9",
+            "ev-fault-1791183213-228329-start",
+            "ev-fault-1791183213-228329-k000",
+            "ev-fault-1791183213-228329-k001",
+            "ev-fault-1791183213-228329-k002"
+          ],
+          "scoredResultIds": [
+            "ctr-abdf612fdf8cf2d08b1caa50e527b5ffefac4c7a",
+            "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+            "ctr-237f39281d0e90bacd8697163ab304defff22154"
+          ],
+          "scoredRunIds": [
+            "fault-1791167110-5e3126",
+            "fault-1791183213-228329",
+            "fault-1791167110-5e3126"
+          ]
+        },
+        "artifacts": [
+          {
+            "id": "evidence-file",
+            "name": "Evidence File",
+            "state": "READY"
+          },
+          {
+            "id": "threshold-document",
+            "name": "Threshold Document",
+            "state": "PREPARED"
+          },
+          {
+            "id": "control-test-tool",
+            "name": "Control Test Tool",
+            "state": "READY"
+          },
+          {
+            "id": "two-named-runs",
+            "name": "Two Named Runs",
+            "state": "READY"
+          },
+          {
+            "id": "one-page-architecture",
+            "name": "One-Page Architecture",
+            "state": "PREPARED"
+          },
+          {
+            "id": "gap-list",
+            "name": "Gap List",
+            "state": "READY"
+          }
+        ],
+        "gaps": {
+          "openEvidenceGaps": [],
+          "closedGaps": [
+            "gap-ACN-COST-001-fault-1791165466-51ab52-6d1420087291",
+            "gap-ACN-COST-001-fault-1791164501-143372-3dc981a99ba6"
+          ],
+          "controlBreaches": [
+            "gap-AIA-LOG-001-fault-1791167110-5e3126-abdf612fdf8c",
+            "gap-AIA-LOG-001-fault-1791165466-51ab52-097479287ace",
+            "gap-AIA-LOG-001-fault-1791164605-3348a2-eb05cfe0dd14",
+            "gap-AIA-LOG-001-fault-1791164501-143372-a20c0527ed3b",
+            "gap-ACN-COST-001-fault-1791165466-51ab52-6d1420087291"
+          ],
+          "retestRefs": [
+            "fault-1791167110-5e3126"
+          ]
+        },
+        "cfm01": {
+          "state": "PARTIAL_COVERAGE",
+          "coverageLabel": "3/3",
+          "claimBasis": "MIXED_RUNS",
+          "sameAssessedRun": null
+        },
+        "scoredSetSelection": {
+          "mode": "AUTO_PREVIEW",
+          "pinId": null,
+          "pinVersion": null,
+          "pinDigest": null,
+          "pinnedAt": null
+        },
+        "provenance": {
+          "producer": "LogSense Competition Evidence Bundle",
+          "producerVersion": null,
+          "haiecMainSha": "5a3e7d3c15d60b8a9a45f6d217f04a91a0ec0a03"
+        }
+      }
+    }
+  },
+  "telemetry_status": {
+    "binders": [
+      {
+        "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+        "adapterId": "otlp-http",
+        "adapterVersion": "otlp-receiver-1.0.0",
+        "sourceSystem": "otlp",
+        "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+        "active": true,
+        "createdAt": "2026-10-05T05:41:29.859Z"
+      },
+      {
+        "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+        "adapterId": "structured-event-adapter",
+        "adapterVersion": "1.0.0",
+        "sourceSystem": "logsense",
+        "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+        "active": true,
+        "createdAt": "2026-10-05T01:56:30.804Z"
+      }
+    ],
+    "intake": {
+      "totalBatches": 94,
+      "totalRecords": 7529,
+      "mostRecentBatch": {
+        "batchId": "afd7b615-1cff-4dab-8549-65ba6e9cdaff",
+        "recordCount": 40,
+        "createdAt": "2026-10-05T09:26:57.500Z"
+      },
+      "recentBatches": [
+        {
+          "batchId": "afd7b615-1cff-4dab-8549-65ba6e9cdaff",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 40,
+          "createdAt": "2026-10-05T09:26:57.500Z"
+        },
+        {
+          "batchId": "c322434a-1571-4fe7-bead-f83470558477",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:01:08.316Z"
+        },
+        {
+          "batchId": "4816392c-5de2-44d5-96fc-ba8ee028d3e1",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:01:05.711Z"
+        },
+        {
+          "batchId": "d09c46a4-02bd-4a1b-baab-5a39e5e97009",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:01:03.297Z"
+        },
+        {
+          "batchId": "f718b2f8-8f29-4672-8ee4-75ba580e0650",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:01:01.067Z"
+        },
+        {
+          "batchId": "76f20c27-4924-49f9-a37e-a63d4878b560",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:00:58.798Z"
+        },
+        {
+          "batchId": "1665857f-2072-41d3-9a04-38b9ba8b0932",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:00:56.499Z"
+        },
+        {
+          "batchId": "618100ab-d452-47d9-bd51-e61c285a4dd2",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 95,
+          "createdAt": "2026-10-05T07:00:44.764Z"
+        },
+        {
+          "batchId": "f13219ac-431d-41dd-871b-60006479caf8",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:00:42.150Z"
+        },
+        {
+          "batchId": "81a98bfb-a3bf-448f-bc8b-2a56d2758d9a",
+          "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+          "adapterId": "otlp-http",
+          "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "recordCount": 100,
+          "createdAt": "2026-10-05T07:00:37.722Z"
+        }
+      ]
+    },
+    "telemetryReadiness": {
+      "state": "SIGNAL_RECEIVED",
+      "binderConfigured": true,
+      "systemBound": true,
+      "signalReceived": true,
+      "latestReceivedAt": "2026-10-05T09:26:57.500Z",
+      "acceptedBatchCount": 94,
+      "acceptedRecordCount": 7529,
+      "nextAction": "RUN_NEW_EVALUATION"
+    },
+    "limitations": [
+      "Counts reflect accepted intake batches \u2014 rejected/quarantined intake is not part of this projection.",
+      "Coverage/continuity is UNKNOWN unless the source supplies deterministic continuity evidence.",
+      "Telemetry presence != OBSERVED Assurance truth \u2014 only a new Evaluation establishes change.",
+      "SIGNAL_RECEIVED != READY / PROVEN / VERIFIED_RUNTIME \u2014 receiving evidence establishes receipt only."
+    ]
+  },
+  "governance": {
+    "schemaVersion": "system-governance-1",
+    "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+    "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+    "evaluationId": null,
+    "basis": "CURRENT",
+    "projectionHash": "67e824483c9f3b65711c19acce290a615f8dcc26f17c7ad3b7423ddd2c021555",
+    "envelopes": [],
+    "policyBinding": null,
+    "delegation": {
+      "daiRuleConfirmations": []
+    },
+    "enforcement": {
+      "killSwitchBinding": "NOT_ESTABLISHED",
+      "killSwitchDetail": "The kill_switch subsystem exists, but kill_switch_systems carries no aiSystemId binding \u2014 per-system protection cannot be established."
+    },
+    "authority": {
+      "available": true,
+      "divergences": [
+        "NO_CURRENT_ACCEPTED_SOURCE",
+        "NO_COMPLETED_ASSURANCE_EVALUATION",
+        "NO_APPROVED_OPERATING_ENVELOPE"
+      ],
+      "evaluatedBasisState": "NOT_AVAILABLE",
+      "currentPolicyState": "NOT_CONFIGURED"
+    },
+    "frameworks": {
+      "observedMappings": [],
+      "catalog": {
+        "engineVersion": "2.1.0",
+        "frameworkCatalogHash": "c0ac90a149bb812c",
+        "mappingEdgeHash": "df38ec0fd248b477",
+        "releases": [
+          {
+            "frameworkId": "OWASP_LLM",
+            "release": "2026",
+            "sourceQualification": "PRIMARY_SOURCE",
+            "isCurrent": true
+          },
+          {
+            "frameworkId": "OWASP_LLM",
+            "release": "2025",
+            "sourceQualification": "HISTORICAL",
+            "isCurrent": false
+          },
+          {
+            "frameworkId": "OWASP_LLM",
+            "release": "2023",
+            "sourceQualification": "HISTORICAL",
+            "isCurrent": false
+          },
+          {
+            "frameworkId": "OWASP_AGENTIC",
+            "release": "2026",
+            "sourceQualification": "PRIMARY_SOURCE",
+            "isCurrent": true
+          },
+          {
+            "frameworkId": "NIST_AI_RMF_GENAI",
+            "release": "600-1",
+            "sourceQualification": "PRIMARY_SOURCE",
+            "isCurrent": true
+          }
+        ],
+        "quarantinedIds": [
+          "AML.T001",
+          "AML.T004",
+          "AML.T005"
+        ],
+        "mappingEdgeCount": 27,
+        "notAssessedEdgeCount": 4
+      },
+      "evaluationFrozen": "NOT_RECORDED",
+      "evaluationFrozenDetail": "No frozen framework binding exists for this basis \u2014 the crosswalk shown is current-catalog state, not evaluation-time truth.",
+      "boundFrameworkBinding": null,
+      "frameworkReproducibility": null
+    },
+    "findingCount": 0,
+    "gaps": [
+      "Kill Switch enforcement binding is not established \u2014 kill_switch_systems has no AI-system binding field; product existence does not prove this system is protected.",
+      "No regulatory mappings (EU AI Act, Colorado AI Act, ISO 42001, ISO 27001, SOC 2) exist in the canonical versioned crosswalk \u2014 those live in separate product surfaces and are not detection-finding mappings.",
+      "Crosswalk catalog shown is current-state unless the bound evaluation recorded a frameworkBinding \u2014 check evaluationFrozen; BOUND_DRIFTED means rendered edges differ from evaluation-time truth."
+    ],
+    "limitations": [
+      "FRAMEWORK_MAPPING != COMPLIANCE \u2014 a mapping edge is an analytical crosswalk, not certification, audit opinion, or accreditation.",
+      "CONTROL_CONFIGURED != CONTROL_ENFORCING \u2014 envelope/policy state describes configuration, not runtime enforcement.",
+      "CURRENT_POLICY_PACK != HISTORICAL_POLICY_PACK \u2014 policy binding shown is either the exact evaluation binding or the most recent; check the binding field.",
+      "Quarantined MITRE ATLAS IDs (AML.T001/T004/T005) are excluded from customer-visible mappings."
+    ],
+    "links": {
+      "governance": "https://www.haiec.com/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/action-map?view=governance"
+    },
+    "semantics": [
+      "FRAMEWORK_MAPPING != COMPLIANCE \u2014 a crosswalk edge is never certification, audit opinion, or accreditation.",
+      "CONTROL_CONFIGURED != CONTROL_ENFORCING \u2014 envelope/policy state is configuration, not runtime enforcement.",
+      "KILL_SWITCH_PRODUCT_EXISTS != ASSESSED_SYSTEM_IS_KILL_SWITCH_PROTECTED.",
+      "CURRENT_POLICY != EVALUATED_POLICY \u2014 check the policyBinding scope."
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "causeId": "cause:cr-auth-001",
+  "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+  "causeMechanism": "POLICY_DENY_NOT_ENFORCED",
+  "causeRole": "ROOT_MECHANISM",
+  "establishmentState": "CORROBORATED",
+  "subjectRefs": [
+    "resource:cell-101"
+  ],
+  "actionGroupRefs": [
+    "action:changeTilt:1"
+  ],
+  "evidenceRefs": [
+    "ev-policy",
+    "ev-platform"
+  ],
+  "independentLineageFamilies": [
+    "lin-same",
+    "lin-same"
+  ],
+  "mechanismPathRef": "path:1",
+  "requiredPredicatesSatisfied": [
+    "policy-deny",
+    "action-applied",
+    "exact-action"
+  ],
+  "missingPredicates": [],
+  "hardNegativesChecked": [
+    "POLICY_DECISION != ACTION_MEDIATED",
+    "HTTP_200 != ACTION_APPLIED",
+    "ACTION_ACCEPTED != ACTION_APPLIED",
+    "APPROVAL_RECORDED != SAME_ACTION_APPROVED"
+  ],
+  "alternativeCauseRefs": [],
+  "remediationRefs": [
+    "PB-POLICY"
+  ],
+  "verificationRequirementRefs": [
+    "verify:cr-auth-001"
+  ],
+  "limitations": [],
+  "generatedBy": "DETERMINISTIC_RULE",
+  "canonical": false
+}

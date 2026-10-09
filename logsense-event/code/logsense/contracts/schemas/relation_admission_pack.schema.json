@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/relation-admission-pack.schema.json",
+  "title": "Relation Admission Matrix Pack v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "matrixId",
+    "version",
+    "referenceVocabularySha",
+    "relationCount",
+    "entries"
+  ],
+  "properties": {
+    "matrixId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "referenceVocabularySha": {
+      "type": "string"
+    },
+    "relationCount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "https://logsense.local/schemas/relation-admission-entry.schema.json"
+      }
+    }
+  }
+}

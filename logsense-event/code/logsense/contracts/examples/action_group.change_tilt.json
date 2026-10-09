@@ -1,0 +1,67 @@
+{
+  "actionGroupId": "ag-change-tilt-001",
+  "caseId": "case-atp",
+  "evidenceSetId": "es-al2",
+  "analysisRunId": "run-phase55-001",
+  "correlationGroupRefs": [
+    "cg-trace-001"
+  ],
+  "actionIdentity": {
+    "actorRef": "entity-agent-b",
+    "operationRef": "event-api-req-1",
+    "nativeOperation": "changeTilt",
+    "canonicalOperation": "CONFIGURE",
+    "targetRef": "entity-cell-17",
+    "resourceScope": "cell:17",
+    "actionCorrelationId": "act-774",
+    "taskRef": "task-9",
+    "workflowRef": null,
+    "buildDigest": null,
+    "profileReference": null,
+    "envelopeReference": null,
+    "evidenceSetId": "es-al2",
+    "scenarioRunId": "atp-001",
+    "identityState": "EXACT",
+    "identityBasis": [
+      "ACTION_CORRELATION_ID",
+      "ACTOR_OPERATION_TARGET_SCOPE"
+    ],
+    "logicalActionKey": "action:agent-b:changeTilt:cell-17:act-774",
+    "evidenceRefs": [
+      "ev-req",
+      "ev-policy",
+      "ev-api",
+      "ev-state"
+    ],
+    "limitations": []
+  },
+  "eventRefs": [
+    "event-request",
+    "event-deny",
+    "event-api-200",
+    "event-state"
+  ],
+  "sourceRefs": [
+    "src-agent",
+    "src-policy",
+    "src-api",
+    "src-kpi"
+  ],
+  "requestedEventRefs": [
+    "event-request"
+  ],
+  "authorizationEventRefs": [
+    "event-deny"
+  ],
+  "acceptedEventRefs": [
+    "event-api-200"
+  ],
+  "appliedEventRefs": [
+    "event-state"
+  ],
+  "confirmedEventRefs": [
+    "event-kpi"
+  ],
+  "establishmentState": "ESTABLISHED",
+  "limitations": []
+}

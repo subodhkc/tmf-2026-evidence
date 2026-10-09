@@ -1,0 +1,21 @@
+{
+  "fetched_at": "2026-10-05T09:30Z",
+  "http": 200,
+  "rules": {
+    "rules": [
+      {
+        "active": true,
+        "ruleId": "rule-tmf-threshold-violation",
+        "trigger": "THRESHOLD_VIOLATION",
+        "channels": [
+          "WEBHOOK",
+          "EMAIL"
+        ],
+        "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+        "rateLimitPerHour": 10,
+        "severityThreshold": "MEDIUM",
+        "deduplicationWindow": "15m"
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "State Transition",
+  "type": "object",
+  "properties": {
+    "transitionId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "subjectRef": {
+      "type": "string"
+    },
+    "property": {
+      "type": "string"
+    },
+    "stateFacet": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "priorObservationRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "currentObservationRef": {
+      "type": "string"
+    },
+    "transitionKind": {
+      "type": "string",
+      "enum": [
+        "PRODUCER_DECLARED",
+        "RECONSTRUCTED_PAIR",
+        "CONTRADICTED",
+        "UNKNOWN"
+      ]
+    },
+    "operationAttributionState": {
+      "type": "string",
+      "enum": [
+        "BOUND",
+        "CONSISTENT",
+        "UNBOUND",
+        "CONTRADICTED"
+      ]
+    },
+    "operationEventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relationEvaluationRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "orderingBasis": {
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "transitionId",
+    "analysisRunId",
+    "subjectRef",
+    "property",
+    "currentObservationRef",
+    "transitionKind",
+    "operationAttributionState",
+    "operationEventRefs",
+    "relationEvaluationRefs",
+    "orderingBasis",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/state_transition.schema.json"
+}

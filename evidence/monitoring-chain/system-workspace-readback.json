@@ -1,0 +1,258 @@
+{
+  "success": true,
+  "data": {
+    "system": {
+      "id": "4043efee-cec6-4007-954b-1f8da2273f35",
+      "name": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+      "systemType": "AI_AGENT",
+      "systemTypeCanonical": "AI_AGENT",
+      "systemTypeLabel": "AI Agent / Autonomous Workflow",
+      "provider": null,
+      "model": null,
+      "useCase": "TM Forum 2026 assessed proof environment \u2014 isolated C7/C16 governing instances and scored runs. Provenance: OUR_NEW_ASSESSED_WORK.",
+      "environment": "testing",
+      "description": null,
+      "isProduction": false,
+      "createdAt": "2026-10-05T01:27:45.832Z",
+      "updatedAt": "2026-10-05T10:09:36.637Z",
+      "metadata": null
+    },
+    "assets": [],
+    "retiredAssets": [],
+    "assetSummary": {
+      "totalCount": 0,
+      "byConnectionState": {},
+      "byIdentityState": {},
+      "unresolvedIdentityCount": 0,
+      "conflictedIdentityCount": 0,
+      "connectedCount": 0
+    },
+    "evidence": {
+      "hasActiveSystemEvidence": true,
+      "hasActiveAssetEvidence": false,
+      "hasHistoricalAssetEvidence": false,
+      "hasHistoricalAssetEvidenceOnly": false,
+      "coverage": "UNKNOWN",
+      "activeSystemEvidenceCount": 2,
+      "activeAssetEvidenceCount": 0,
+      "historicalAssetEvidenceCount": 0,
+      "evidenceCount": 2,
+      "hasPartialProducerEvidence": false,
+      "producerCoverage": [
+        {
+          "producerId": "saas-static",
+          "displayName": "SaaS Static Scanner",
+          "producerType": "STATIC_ANALYSIS",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        },
+        {
+          "producerId": "saas-runtime",
+          "displayName": "SaaS Runtime Scanner",
+          "producerType": "RUNTIME_TEST",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        },
+        {
+          "producerId": "saas-inventory",
+          "displayName": "AI Inventory",
+          "producerType": "INVENTORY",
+          "state": "PRESENT_PARTIAL",
+          "recordCount": 2,
+          "latestEvidenceAt": "2026-10-05T10:09:36.637Z",
+          "hasPartialRecords": true
+        },
+        {
+          "producerId": "saas-wizard",
+          "displayName": "Compliance Wizard",
+          "producerType": "SELF_REPORT",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        },
+        {
+          "producerId": "saas-regulatory",
+          "displayName": "Regulatory Engine",
+          "producerType": "REGULATORY",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        },
+        {
+          "producerId": "sarif-import",
+          "displayName": "SARIF Import",
+          "producerType": "EXTERNAL_IMPORT",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        },
+        {
+          "producerId": "ci-cd-scanner",
+          "displayName": "CI/CD Scanner",
+          "producerType": "CI_CD",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        },
+        {
+          "producerId": "saas-iam-grant",
+          "displayName": "SaaS IAM Grant Observer",
+          "producerType": "IAM_GRANT",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        },
+        {
+          "producerId": "structured-ingress",
+          "displayName": "Structured Event Ingress",
+          "producerType": "EXTERNAL_IMPORT",
+          "state": "ABSENT",
+          "recordCount": 0,
+          "latestEvidenceAt": null,
+          "hasPartialRecords": false
+        }
+      ],
+      "records": [
+        {
+          "id": "13a84a10-ced6-4917-9c74-5b5f3381cd03",
+          "producerId": "saas-inventory",
+          "producerRunId": "4043efee-cec6-4007-954b-1f8da2273f35:snapshot:2026-10-05T10:09:36.637Z",
+          "sourceType": "ai_inventory",
+          "evidenceType": "system_configuration",
+          "title": "saas-inventory: system_configuration \u2014 TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+          "description": "Producer: saas-inventory | Outcome: COMPLETE | Coverage: UNKNOWN | Limitations: INVENTORY_NOT_VERIFICATION, INVENTORY_PRESENCE_NOT_CONTROL_EFFECTIVENESS, NULLABLE_ORG_ID",
+          "evidenceDate": "2026-10-05T10:09:36.637Z",
+          "producerOutcome": "COMPLETE",
+          "coverageStatus": "UNKNOWN",
+          "coverageRatio": null,
+          "targetType": "AI_SYSTEM",
+          "targetId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "targetName": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+          "connectedAssetId": null,
+          "bindingPath": "AI_SYSTEM_TARGET",
+          "associationClass": "DIRECT_SYSTEM",
+          "limitations": [
+            {
+              "code": "INVENTORY_NOT_VERIFICATION",
+              "description": "AI inventory records system existence and configuration, not technical security verification",
+              "affectsCoverage": false
+            },
+            {
+              "code": "INVENTORY_PRESENCE_NOT_CONTROL_EFFECTIVENESS",
+              "description": "Inventory presence does NOT prove control effectiveness, compliance, or security",
+              "affectsCoverage": false
+            },
+            {
+              "code": "NULLABLE_ORG_ID",
+              "description": "ai_systems.organizationId is nullable \u2014 only systems with confirmed orgId are included",
+              "affectsCoverage": true
+            }
+          ],
+          "contentHash": "37af7a37150cbc18362c39d030545937ff4a9d350e5963f3719a4367e8c89b92",
+          "envelopeSemanticDigest": "37af7a37150cbc18362c39d030545937ff4a9d350e5963f3719a4367e8c89b92",
+          "normalizedRecord": null,
+          "hasRuntimeTurnFacts": false
+        },
+        {
+          "id": "5cf06cf1-2e87-4cb7-97e4-2b8f0b92c5d8",
+          "producerId": "saas-inventory",
+          "producerRunId": "4043efee-cec6-4007-954b-1f8da2273f35:snapshot:2026-10-05T01:27:45.832Z",
+          "sourceType": "ai_inventory",
+          "evidenceType": "system_configuration",
+          "title": "saas-inventory: system_configuration \u2014 TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+          "description": "Producer: saas-inventory | Outcome: COMPLETE | Coverage: UNKNOWN | Limitations: INVENTORY_NOT_VERIFICATION, INVENTORY_PRESENCE_NOT_CONTROL_EFFECTIVENESS, NULLABLE_ORG_ID",
+          "evidenceDate": "2026-10-05T01:27:45.832Z",
+          "producerOutcome": "COMPLETE",
+          "coverageStatus": "UNKNOWN",
+          "coverageRatio": null,
+          "targetType": "AI_SYSTEM",
+          "targetId": "4043efee-cec6-4007-954b-1f8da2273f35",
+          "targetName": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+          "connectedAssetId": null,
+          "bindingPath": "AI_SYSTEM_TARGET",
+          "associationClass": "DIRECT_SYSTEM",
+          "limitations": [
+            {
+              "code": "INVENTORY_NOT_VERIFICATION",
+              "description": "AI inventory records system existence and configuration, not technical security verification",
+              "affectsCoverage": false
+            },
+            {
+              "code": "INVENTORY_PRESENCE_NOT_CONTROL_EFFECTIVENESS",
+              "description": "Inventory presence does NOT prove control effectiveness, compliance, or security",
+              "affectsCoverage": false
+            },
+            {
+              "code": "NULLABLE_ORG_ID",
+              "description": "ai_systems.organizationId is nullable \u2014 only systems with confirmed orgId are included",
+              "affectsCoverage": true
+            }
+          ],
+          "contentHash": "99cb196decad883f58848430aa45929b437cbed9c82e808929a0208aceda7e59",
+          "envelopeSemanticDigest": "99cb196decad883f58848430aa45929b437cbed9c82e808929a0208aceda7e59",
+          "normalizedRecord": null,
+          "hasRuntimeTurnFacts": false
+        }
+      ]
+    },
+    "assurance": {
+      "hasAssurance": false,
+      "latestDisposition": null,
+      "latestEvaluationAt": null,
+      "latestEvaluationId": null,
+      "latestRunId": null,
+      "planeAvailability": null,
+      "evaluatedScopeCaptured": false,
+      "scopeDigestReceiptBound": false
+    },
+    "reports": {
+      "hasReceipt": false,
+      "matchingReceiptState": "NO_RECEIPT",
+      "latestEvaluationReceipt": {
+        "packageId": null,
+        "receiptHash": null,
+        "state": "NO_RECEIPT",
+        "createdAt": null,
+        "publicVerificationId": null
+      },
+      "historicalReceiptSummary": {
+        "count": 0,
+        "mostRecentPackageId": null,
+        "mostRecentCreatedAt": null
+      }
+    },
+    "nextAction": {
+      "stage": "CONNECT",
+      "label": "Connect where this AI System lives",
+      "description": "No sources connected yet. Connect a code repository, API endpoint, or deployment source so HAIEC can observe this system.",
+      "ctaHref": "/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35?tab=assets",
+      "ctaLabel": "Sources"
+    },
+    "runCount": 0,
+    "staleness": {
+      "latestActiveEvidenceAt": "2026-10-05T10:09:36.637Z",
+      "evidenceNewerThanLatestEvaluation": false
+    },
+    "telemetryReadiness": {
+      "state": "SIGNAL_RECEIVED",
+      "binderConfigured": true,
+      "systemBound": true,
+      "signalReceived": true,
+      "latestReceivedAt": "2026-10-05T09:26:57.500Z",
+      "acceptedBatchCount": 94,
+      "acceptedRecordCount": 7529,
+      "nextAction": "RUN_NEW_EVALUATION"
+    },
+    "latestScenarioEvidence": null,
+    "viewerMembershipRole": "owner"
+  }
+}

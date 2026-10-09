@@ -1,0 +1,8 @@
+{
+  "runId": "C7-HEALTHY",
+  "label": "Control 7 healthy reference run",
+  "traceIds": ["trace-healthy-001"],
+  "sessionIds": ["sess-healthy-001"],
+  "notes": "Bundled deterministic fixture: all expected events recorded within declared gap limit.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

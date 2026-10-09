@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/cause-rule-pack.schema.json",
+  "title": "Cause Rule Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packId",
+    "version",
+    "predicateSemanticsVersion",
+    "createdFromHaiecRef",
+    "evaluationPolicy",
+    "rules"
+  ],
+  "properties": {
+    "packId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "predicateSemanticsVersion": {
+      "type": "string"
+    },
+    "createdFromHaiecRef": {
+      "type": "object",
+      "required": [
+        "repository",
+        "branch",
+        "reviewedMainSha",
+        "semanticReferencePaths"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "reviewedMainSha": {
+          "type": "string"
+        },
+        "semanticReferencePaths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "evaluationPolicy": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "cause-rule.schema.json"
+      }
+    }
+  }
+}

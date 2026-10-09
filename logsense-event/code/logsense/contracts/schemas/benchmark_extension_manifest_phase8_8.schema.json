@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/benchmark_extension_manifest_phase8_8.schema.json",
+  "title": "Phase 8.8 Golden Benchmark Extension Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["benchmarkVersion","sourceDocumentId","sourceDocumentRevision","baseBenchmark","cases","assertionTypes","zeroToleranceMetrics"],
+  "properties": {
+    "benchmarkVersion": {"const": "0.2.0"},
+    "sourceDocumentId": {"type": "string"},
+    "sourceDocumentRevision": {"type": "string"},
+    "baseBenchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["caseRange","sourceZipSha256"],
+      "properties": {
+        "caseRange": {"const": "GFB-001..GFB-010"},
+        "sourceZipSha256": {"type": "string"}
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "required": ["benchmarkId","path","profile","criticalAssertionCount"],
+        "properties": {
+          "benchmarkId": {"type": "string"},
+          "path": {"type": "string"},
+          "domain": {"type": "string"},
+          "profile": {"type": "string"},
+          "criticalAssertionCount": {"type": "integer","minimum": 1}
+        }
+      }
+    },
+    "assertionTypes": {"type": "array","items": {"type": "string"}},
+    "zeroToleranceMetrics": {"type": "object"}
+  }
+}

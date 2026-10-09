@@ -1,0 +1,489 @@
+{
+  "version": "0.1.0",
+  "registryId": "logsense.telecom.semantic-profiles.v0.1",
+  "profiles": [
+    {
+      "profileId": "sem.telecom-alarm.v1",
+      "version": "0.1.0",
+      "name": "Telecom alarm/fault event",
+      "sourceRoles": [
+        "ALARM",
+        "NETWORK_LOG"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1",
+        "syntax.json.v1",
+        "syntax.jsonl.v1",
+        "syntax.kvlog.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "AR1",
+          "eventClass": "ALARM_RAISED",
+          "basis": "explicit alarm_state=RAISED",
+          "when": {
+            "alarm_state": "RAISED"
+          }
+        },
+        {
+          "ruleId": "AR2",
+          "eventClass": "ALARM_CLEARED",
+          "basis": "explicit alarm_state=CLEARED",
+          "when": {
+            "alarm_state": "CLEARED"
+          }
+        },
+        {
+          "ruleId": "AR3",
+          "eventClass": "ALARM_RAISED",
+          "basis": "explicit state=RAISED",
+          "when": {
+            "state": "RAISED"
+          }
+        },
+        {
+          "ruleId": "AR4",
+          "eventClass": "ALARM_CLEARED",
+          "basis": "explicit state=CLEARED",
+          "when": {
+            "state": "CLEARED"
+          }
+        },
+        {
+          "ruleId": "AR5",
+          "eventClass": "ALARM_RAISED",
+          "basis": "explicit status=RAISED",
+          "when": {
+            "status": "RAISED"
+          }
+        },
+        {
+          "ruleId": "AR6",
+          "eventClass": "ALARM_CLEARED",
+          "basis": "explicit status=CLEARED",
+          "when": {
+            "status": "CLEARED"
+          }
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "AL1",
+          "entityType": "ALARM",
+          "idPaths": [
+            "alarm_id",
+            "alarmId",
+            "notification_id",
+            "notificationId"
+          ],
+          "namePath": null,
+          "role": "alarm"
+        },
+        {
+          "ruleId": "NC1",
+          "entityType": "NetworkCell",
+          "idPaths": [
+            "cell_id",
+            "cellId",
+            "nrcell_id",
+            "nrCellId"
+          ],
+          "namePath": null,
+          "role": "target"
+        },
+        {
+          "ruleId": "NF1",
+          "entityType": "NetworkFunction",
+          "idPaths": [
+            "network_function_id",
+            "networkFunctionId",
+            "nf_id",
+            "nfId"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "alarm_id",
+          "kind": "correlationId"
+        },
+        {
+          "sourcePath": "alarmId",
+          "kind": "correlationId"
+        },
+        {
+          "sourcePath": "request_id",
+          "kind": "requestId"
+        },
+        {
+          "sourcePath": "requestId",
+          "kind": "requestId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+      "limitations": [
+        "ALARM_PRESENCE_NE_ROOT_CAUSE",
+        "ALARM_SEVERITY_NE_BUSINESS_IMPACT",
+        "ALARM_TIME_PROXIMITY_NE_CAUSAL_ORDER"
+      ]
+    },
+    {
+      "profileId": "sem.telecom-kpi.v1",
+      "version": "0.1.0",
+      "name": "Telecom KPI/performance measurement",
+      "sourceRoles": [
+        "KPI_METRIC",
+        "NETWORK_LOG"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1",
+        "syntax.json.v1",
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "K1",
+          "eventClass": "KPI_OBSERVATION",
+          "basis": "explicit KPI/metric record"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "NC1",
+          "entityType": "NetworkCell",
+          "idPaths": [
+            "cell_id",
+            "cellId",
+            "nrcell_id",
+            "nrCellId"
+          ],
+          "namePath": null,
+          "role": "target"
+        },
+        {
+          "ruleId": "SL1",
+          "entityType": "NetworkSlice",
+          "idPaths": [
+            "slice_id",
+            "sliceId",
+            "snssai",
+            "s_nssai"
+          ],
+          "namePath": null,
+          "role": "target"
+        },
+        {
+          "ruleId": "NF1",
+          "entityType": "NetworkFunction",
+          "idPaths": [
+            "network_function_id",
+            "networkFunctionId",
+            "nf_id",
+            "nfId"
+          ],
+          "namePath": null,
+          "role": "target"
+        },
+        {
+          "ruleId": "SV1",
+          "entityType": "SERVICE",
+          "idPaths": [
+            "service_id",
+            "serviceId"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "measurement_id",
+          "kind": "correlationId"
+        },
+        {
+          "sourcePath": "measurementId",
+          "kind": "correlationId"
+        },
+        {
+          "sourcePath": "request_id",
+          "kind": "requestId"
+        },
+        {
+          "sourcePath": "requestId",
+          "kind": "requestId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+      "limitations": [
+        "KPI_OBSERVATION_NE_ANOMALY",
+        "KPI_ANOMALY_NE_ROOT_CAUSE",
+        "KPI_TIME_PROXIMITY_NE_ACTION_EFFECT"
+      ]
+    },
+    {
+      "profileId": "sem.telecom-topology.v1",
+      "version": "0.1.0",
+      "name": "Telecom topology/resource inventory",
+      "sourceRoles": [
+        "TOPOLOGY"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1",
+        "syntax.json.v1",
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "T1",
+          "eventClass": "SOURCE_LIFECYCLE",
+          "basis": "topology/inventory record"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "CELL",
+          "entityType": "NetworkCell",
+          "idPaths": [
+            "cell_id",
+            "cellId",
+            "nrcell_id",
+            "nrCellId"
+          ],
+          "namePath": "cell_name",
+          "role": "cell"
+        },
+        {
+          "ruleId": "SITE",
+          "entityType": "CellSite",
+          "idPaths": [
+            "site_id",
+            "siteId"
+          ],
+          "namePath": "site_name",
+          "role": "site"
+        },
+        {
+          "ruleId": "SECTOR",
+          "entityType": "Sector",
+          "idPaths": [
+            "sector_id",
+            "sectorId"
+          ],
+          "namePath": null,
+          "role": "sector"
+        },
+        {
+          "ruleId": "UE",
+          "entityType": "UE_Device",
+          "idPaths": [
+            "ue_id",
+            "ueId",
+            "imsi",
+            "supi"
+          ],
+          "namePath": null,
+          "role": "ue"
+        },
+        {
+          "ruleId": "SESSION",
+          "entityType": "UE_Session",
+          "idPaths": [
+            "session_id",
+            "sessionId",
+            "pdu_session_id",
+            "pduSessionId"
+          ],
+          "namePath": null,
+          "role": "session"
+        },
+        {
+          "ruleId": "SLICE",
+          "entityType": "NetworkSlice",
+          "idPaths": [
+            "slice_id",
+            "sliceId",
+            "snssai",
+            "s_nssai"
+          ],
+          "namePath": null,
+          "role": "slice"
+        },
+        {
+          "ruleId": "SUBNET",
+          "entityType": "SliceSubnet",
+          "idPaths": [
+            "subnet_id",
+            "subnetId"
+          ],
+          "namePath": null,
+          "role": "subnet"
+        },
+        {
+          "ruleId": "NF",
+          "entityType": "NetworkFunction",
+          "idPaths": [
+            "network_function_id",
+            "networkFunctionId",
+            "nf_id",
+            "nfId"
+          ],
+          "namePath": null,
+          "role": "network-function"
+        }
+      ],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [
+        {
+          "relationType": "CELL_PART_OF_SITE",
+          "sourceRole": "cell",
+          "targetRole": "site",
+          "basis": "explicit topology fields"
+        },
+        {
+          "relationType": "SLICE_USES_SUBNET",
+          "sourceRole": "slice",
+          "targetRole": "subnet",
+          "basis": "explicit topology fields"
+        },
+        {
+          "relationType": "UE_SERVED_BY_CELL",
+          "sourceRole": "ue",
+          "targetRole": "cell",
+          "basis": "explicit topology fields"
+        }
+      ],
+      "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+      "limitations": [
+        "TOPOLOGY_DECLARATION_NE_RUNTIME_PATH",
+        "TOPOLOGY_ADJACENCY_NE_CAUSAL_PATH",
+        "INVENTORY_PRESENCE_NE_RUNTIME_EXISTENCE"
+      ]
+    },
+    {
+      "profileId": "sem.telecom-config-change.v1",
+      "version": "0.1.0",
+      "name": "Telecom configuration/change record",
+      "sourceRoles": [
+        "CONFIGURATION",
+        "NETWORK_LOG"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1",
+        "syntax.json.v1",
+        "syntax.jsonl.v1",
+        "syntax.kvlog.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "C1",
+          "eventClass": "CONFIG_CHANGE",
+          "basis": "explicit before/after configuration record"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "ACTOR",
+          "entityType": "SERVICE_PRINCIPAL",
+          "idPaths": [
+            "actor",
+            "principal",
+            "user_id",
+            "userId"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "CELL",
+          "entityType": "NetworkCell",
+          "idPaths": [
+            "cell_id",
+            "cellId",
+            "nrcell_id",
+            "nrCellId"
+          ],
+          "namePath": null,
+          "role": "target"
+        },
+        {
+          "ruleId": "SLICE",
+          "entityType": "NetworkSlice",
+          "idPaths": [
+            "slice_id",
+            "sliceId",
+            "snssai",
+            "s_nssai"
+          ],
+          "namePath": null,
+          "role": "target"
+        },
+        {
+          "ruleId": "NF",
+          "entityType": "NetworkFunction",
+          "idPaths": [
+            "network_function_id",
+            "networkFunctionId",
+            "nf_id",
+            "nfId"
+          ],
+          "namePath": null,
+          "role": "target"
+        },
+        {
+          "ruleId": "RESOURCE",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "resource_id",
+            "resourceId",
+            "target",
+            "resource"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "change_id",
+          "kind": "actionCorrelationId"
+        },
+        {
+          "sourcePath": "changeId",
+          "kind": "actionCorrelationId"
+        },
+        {
+          "sourcePath": "request_id",
+          "kind": "requestId"
+        },
+        {
+          "sourcePath": "requestId",
+          "kind": "requestId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+      "limitations": [
+        "CONFIG_CHANGE_RECORD_NE_ACTION_APPLIED",
+        "CONFIG_CHANGE_NE_EFFECT_CONFIRMED",
+        "CHANGE_RECORD_NE_ROOT_CAUSE"
+      ]
+    }
+  ],
+  "limitations": [
+    "DETERMINISTIC_TELECOM_PROFILE_RECOGNITION_ONLY",
+    "PROFILE_SELECTION_NE_CANONICAL_MAPPING",
+    "ALARM_KPI_TOPOLOGY_CONFIG_NE_CAUSAL_PROOF"
+  ]
+}

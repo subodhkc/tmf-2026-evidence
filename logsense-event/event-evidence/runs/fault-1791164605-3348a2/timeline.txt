@@ -1,0 +1,62 @@
+AUDIT TRAIL -- 20 records
+================================================================
+ 1. [2026-10-05T01:43:46Z] INTENT | actor=customer-experience-agent | step=1
+    correlation_id=fault-1791164605-3348a2
+    trace_id=1c592bd340e34d18a58334d91360bc35 customer analysis via governed model 'nemotron-super-120b'; tool customer-records
+ 2. [2026-10-05T01:43:47Z] MODEL-REQUEST-INTENT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164605-3348a2
+    {"client_request_id": "c4565635d7e54397bed61beae962b370", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "13ae9ff432494526b332b1bd0868e0fb", "path": "/v1/chat/completions", "
+ 3. [2026-10-05T01:43:48Z] MODEL-REQUEST-RESULT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164605-3348a2
+    {"action_id": "b851795f-2e8c-439c-9b9f-6a439d9a9b83", "action_id_present": true, "client_request_id": "c4565635d7e54397bed61beae962b370", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+ 4. [2026-10-05T01:43:49Z] MODEL-REQUEST-INTENT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164605-3348a2
+    {"client_request_id": "2ef7fcb0ff454072971d71ac0a97395f", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "903e755b6bf04f18a7cc6059497a394f", "path": "/v1/chat/completions", "
+ 5. [2026-10-05T01:43:52Z] MODEL-REQUEST-RESULT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164605-3348a2
+    {"action_id": "7b31753a-adfc-4fc1-a16e-ddcd2724700b", "action_id_present": true, "client_request_id": "2ef7fcb0ff454072971d71ac0a97395f", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+ 6. [2026-10-05T01:43:52Z] TOOL-INVOCATION | actor=customer-experience-agent | step=1.5
+    correlation_id=fault-1791164605-3348a2
+    actor=customer-experience-agent tool=customer-records correlation_id=fault-1791164605-3348a2 trace_id=1c592bd340e34d18a58334d91360bc35 result_summary=- **Impacted customers**: Cascade Health (CUST-331
+ 7. [2026-10-05T01:43:52Z] INVOCATION | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791164605-3348a2
+    trace_id=1c592bd340e34d18a58334d91360bc35 governed call via alias nemotron-super-120b: http_status=200
+ 8. [2026-10-05T01:43:52Z] RESULT-INSPECTION | actor=customer-experience-agent | step=3
+    correlation_id=fault-1791164605-3348a2
+    disposition=escalate, decision='- **Impacted customers**: Cascade Health (CUST-3310, enterprise tier) and Greenfield Agriculture (CUST-5890, standard tier) at site SITE-PHX-04.  \n- **How they are imp
+ 9. [2026-10-05T01:44:12Z] INTENT | actor=it-resolution-agent | step=4
+    correlation_id=fault-1791164605-3348a2
+    trace_id=66860cf4efa748c887452f6e9f361731 it analysis via governed model 'nemotron-nano-9b'; tool runbook-lookup
+10. [2026-10-05T01:44:12Z] MODEL-REQUEST-INTENT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164605-3348a2
+    {"client_request_id": "356b1f28187c434896f727d1a8577517", "method": "POST", "model_alias": "nemotron-nano-9b", "model_turn_id": "4e00a6820e4343b1852dc85545b2fd9f", "path": "/v1/chat/completions", "tra
+11. [2026-10-05T01:44:14Z] MODEL-REQUEST-RESULT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164605-3348a2
+    {"action_id": "e0c65f41-6f6c-4acd-a3d7-c42bf58eec15", "action_id_present": true, "client_request_id": "356b1f28187c434896f727d1a8577517", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+12. [2026-10-05T01:44:14Z] TOOL-INVOCATION | actor=it-resolution-agent | step=4.5
+    correlation_id=fault-1791164605-3348a2
+    actor=it-resolution-agent tool=runbook-lookup correlation_id=fault-1791164605-3348a2 trace_id=66860cf4efa748c887452f6e9f361731 result_summary=- **Incident disposition**: The incident is marked as "Cle
+13. [2026-10-05T01:44:14Z] INVOCATION | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791164605-3348a2
+    trace_id=66860cf4efa748c887452f6e9f361731 governed call via alias nemotron-nano-9b: http_status=200
+14. [2026-10-05T01:44:14Z] RESULT-INSPECTION | actor=it-resolution-agent | step=6
+    correlation_id=fault-1791164605-3348a2
+    disposition=escalate, decision='- **Incident disposition**: The incident is marked as "Clear fix available, but the change is out of policy" due to operational constraints.  \n- **Action per runbook**
+15. [2026-10-05T01:44:39Z] INTENT | actor=network-resolution-agent | step=7
+    correlation_id=fault-1791164605-3348a2
+    trace_id=cf4d10aef90b49b2a02bab1de8eabd8a network analysis via governed model 'nemotron-super-120b'; tool network-twin
+16. [2026-10-05T01:44:40Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164605-3348a2
+    {"client_request_id": "06af528a5997468e937171cb7e23c41d", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "4fb62ec6964e4b1fab0e3cf224cc5158", "path": "/v1/chat/completions", "
+17. [2026-10-05T01:44:42Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164605-3348a2
+    {"action_id": "571e73e4-4afc-46ce-beae-01937180fcd4", "action_id_present": true, "client_request_id": "06af528a5997468e937171cb7e23c41d", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+18. [2026-10-05T01:44:42Z] TOOL-INVOCATION | actor=network-resolution-agent | step=7.5
+    correlation_id=fault-1791164605-3348a2
+    actor=network-resolution-agent tool=network-twin correlation_id=fault-1791164605-3348a2 trace_id=cf4d10aef90b49b2a02bab1de8eabd8a result_summary=</think>
+19. [2026-10-05T01:44:42Z] INVOCATION | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791164605-3348a2
+    trace_id=cf4d10aef90b49b2a02bab1de8eabd8a governed call via alias nemotron-super-120b: http_status=200
+20. [2026-10-05T01:44:42Z] RESULT-INSPECTION | actor=network-resolution-agent | step=9
+    correlation_id=fault-1791164605-3348a2
+    disposition=undetermined, decision='</think>' | negotiation_with_it=pending-live-negotiation

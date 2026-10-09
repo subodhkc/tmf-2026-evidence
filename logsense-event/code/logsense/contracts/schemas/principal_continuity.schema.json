@@ -1,0 +1,150 @@
+{
+  "$id": "https://logsense.local/schemas/principal_continuity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "afterAuthorityContextRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "afterCredentialRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "afterDelegatedScope": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "afterPrincipalRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "afterTenantRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "beforeAuthorityContextRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "beforeCredentialRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "beforeDelegatedScope": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "beforePrincipalRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "beforeTenantRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "boundaryRef": {
+      "type": "string"
+    },
+    "continuityState": {
+      "enum": [
+        "PRESERVED",
+        "CHANGED",
+        "PARTIAL",
+        "UNKNOWN",
+        "CONTRADICTED"
+      ],
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "boundaryRef",
+    "beforePrincipalRef",
+    "afterPrincipalRef",
+    "beforeTenantRef",
+    "afterTenantRef",
+    "beforeCredentialRef",
+    "afterCredentialRef",
+    "beforeDelegatedScope",
+    "afterDelegatedScope",
+    "beforeAuthorityContextRef",
+    "afterAuthorityContextRef",
+    "continuityState",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Principal Continuity",
+  "type": "object"
+}

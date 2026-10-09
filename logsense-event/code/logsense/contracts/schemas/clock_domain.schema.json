@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clock Domain",
+  "type": "object",
+  "properties": {
+    "clockDomainId": {
+      "type": "string"
+    },
+    "sourceRef": {
+      "type": "string"
+    },
+    "clockType": {
+      "type": "string",
+      "enum": [
+        "WALL_CLOCK",
+        "MONOTONIC",
+        "SEQUENCE_ONLY",
+        "UNKNOWN"
+      ]
+    },
+    "timezone": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timezoneBasis": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sourceClockIdentity": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "precision": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "clockDomainId",
+    "sourceRef",
+    "clockType",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/clock_domain.schema.json"
+}

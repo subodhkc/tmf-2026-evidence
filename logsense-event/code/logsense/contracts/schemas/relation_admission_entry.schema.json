@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/relation-admission-entry.schema.json",
+  "title": "Relation Admission Entry v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "relationType",
+    "profileId",
+    "family",
+    "claimClass",
+    "semanticPurpose",
+    "admissionCeiling",
+    "proposalEvidenceBases",
+    "establishmentEvidenceBases",
+    "requiredSourceIdentityState",
+    "requiredTargetIdentityState",
+    "requiredConditions",
+    "forbiddenAdmissionBases",
+    "hardNegatives",
+    "contradictionMinimumEvidenceRefs",
+    "requiresIndependentLineageForEstablishment",
+    "qualifiesReachability",
+    "qualifiesConsequencePropagation",
+    "runtimeInterpretation",
+    "causeRuleConsumerRefs",
+    "gapTypes",
+    "haiecReferences",
+    "notes"
+  ],
+  "properties": {
+    "relationType": {
+      "type": "string"
+    },
+    "profileId": {
+      "type": "string"
+    },
+    "family": {
+      "type": "string"
+    },
+    "claimClass": {
+      "type": "string"
+    },
+    "semanticPurpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "admissionCeiling": {
+      "enum": [
+        "ESTABLISHED",
+        "PARTIAL",
+        "PROPOSED_ONLY",
+        "BLOCKED"
+      ]
+    },
+    "proposalEvidenceBases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "establishmentEvidenceBases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requiredSourceIdentityState": {
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "CANDIDATE",
+        "UNRESOLVED"
+      ]
+    },
+    "requiredTargetIdentityState": {
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "CANDIDATE",
+        "UNRESOLVED"
+      ]
+    },
+    "requiredConditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbiddenAdmissionBases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hardNegatives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contradictionMinimumEvidenceRefs": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "requiresIndependentLineageForEstablishment": {
+      "type": "boolean"
+    },
+    "qualifiesReachability": {
+      "type": "boolean"
+    },
+    "qualifiesConsequencePropagation": {
+      "type": "boolean"
+    },
+    "runtimeInterpretation": {
+      "type": "string"
+    },
+    "causeRuleConsumerRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gapTypes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "IDENTITY_UNRESOLVED",
+          "ACTOR_UNRESOLVED",
+          "RESOURCE_UNRESOLVED",
+          "TOOL_UNRESOLVED",
+          "SOURCE_ROLE_UNKNOWN",
+          "SOURCE_AUTHORITY_UNKNOWN",
+          "SOURCE_LINEAGE_UNKNOWN",
+          "TIMESTAMP_MISSING",
+          "TIMEZONE_UNKNOWN",
+          "CLOCK_DOMAIN_UNKNOWN",
+          "CORRELATION_ID_MISSING",
+          "CORRELATION_AMBIGUOUS",
+          "ACTION_IDENTITY_INCOMPLETE",
+          "OPERATION_UNMAPPED",
+          "RESULT_UNMAPPED",
+          "STATE_FACET_UNKNOWN",
+          "UNIT_UNKNOWN",
+          "EXPECTED_STATE_MISSING",
+          "POLICY_EVIDENCE_MISSING",
+          "AUTHORIZATION_EVIDENCE_MISSING",
+          "EFFECTIVE_GRANT_MISSING",
+          "CODE_CAPABILITY_MISSING",
+          "EXECUTION_EVIDENCE_MISSING",
+          "EFFECT_CONFIRMATION_MISSING",
+          "STREAM_COMPLETENESS_UNKNOWN",
+          "BASELINE_INSUFFICIENT",
+          "BASELINE_INCOMPATIBLE",
+          "RELATION_UNESTABLISHED",
+          "CAUSE_MECHANISM_INCOMPLETE",
+          "ALTERNATIVE_CAUSES_UNRESOLVED",
+          "UNSUPPORTED_FORMAT",
+          "PARSER_PARTIAL",
+          "SCHEMA_MAPPING_PENDING",
+          "TENANT_CONTEXT_LOSS",
+          "SOURCE_QUALIFICATION_UNKNOWN",
+          "TEMPORAL_ALIGNMENT_UNCERTAIN",
+          "DUPLICATE_RECORD_AMBIGUOUS",
+          "ACTION_SCOPE_UNRESOLVED",
+          "SOURCE_CLAIM_NOT_QUALIFIED"
+        ]
+      }
+    },
+    "haiecReferences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

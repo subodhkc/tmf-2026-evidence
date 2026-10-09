@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/adapter_detection_rule.schema.json",
+  "title": "Adapter Detection Rule",
+  "type": "object",
+  "properties": {
+    "ruleId": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mediaTypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contentMatchers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "pattern"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "REGEX",
+              "JSON_KEYS",
+              "CSV_HEADERS",
+              "YAML_KEYS",
+              "PREFIX"
+            ]
+          },
+          "pattern": {},
+          "required": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "syntaxAdapterId": {
+      "type": "string"
+    },
+    "fallbackAdapterIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "ruleId",
+    "priority",
+    "extensions",
+    "mediaTypes",
+    "contentMatchers",
+    "syntaxAdapterId",
+    "fallbackAdapterIds",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

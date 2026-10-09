@@ -1,0 +1,28 @@
+{
+  "evaluationId": "rel-eval-changes",
+  "relationType": "CHANGES",
+  "sourceRef": "entity:source",
+  "targetRef": "entity:target",
+  "sourceIdentityState": "EXACT",
+  "targetIdentityState": "EXACT",
+  "admissionBasis": "TIMESTAMP_PROXIMITY_ONLY",
+  "evidenceRefs": [
+    "ev-1"
+  ],
+  "lineageFamilies": [
+    "lineage-runtime-a"
+  ],
+  "satisfiedConditions": [
+    "EVIDENCE_REFS_PRESENT",
+    "DIRECTION_PRESERVED",
+    "SCENARIO_SCOPE_COMPATIBLE",
+    "EXACT_SUBJECT_MATCH",
+    "QUALIFIED_OPERATION_STATE_BINDING"
+  ],
+  "missingConditions": [],
+  "hardNegativesChecked": [],
+  "decision": "ESTABLISHED",
+  "limitations": [],
+  "analysisRunId": "run-phase55-001",
+  "evaluationVersion": "0.1.1-phase55"
+}

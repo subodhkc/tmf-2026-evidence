@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entity Type Registry",
+  "type": "object",
+  "properties": {
+    "registryId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Entry"
+      }
+    },
+    "digest": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "registryId",
+    "version",
+    "entries",
+    "digest"
+  ],
+  "$defs": {
+    "Entry": {
+      "title": "Entity Type Entry",
+      "type": "object",
+      "properties": {
+        "entityType": {
+          "type": "string"
+        },
+        "parentCategory": {
+          "type": "string"
+        },
+        "joinCompatibilityGroup": {
+          "type": "string"
+        },
+        "identityComponents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requiredExactKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allowedAliasKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "instanceScoped": {
+          "type": "boolean"
+        },
+        "haiecTargetType": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "localOnly": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "entityType",
+        "parentCategory",
+        "joinCompatibilityGroup",
+        "identityComponents",
+        "requiredExactKeys",
+        "allowedAliasKeys",
+        "instanceScoped",
+        "localOnly",
+        "notes"
+      ]
+    }
+  },
+  "$id": "https://logsense.local/schemas/entity_type_registry.schema.json"
+}

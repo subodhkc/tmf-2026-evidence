@@ -1,0 +1,1262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/entity-ref.schema.json",
+  "title": "Entity Ref",
+  "type": "object",
+  "properties": {
+    "entityKey": {
+      "type": "string"
+    },
+    "entityType": {
+      "type": "string",
+      "enum": [
+        "HUMAN_PRINCIPAL",
+        "SERVICE_PRINCIPAL",
+        "ORGANIZATION",
+        "AI_SYSTEM",
+        "AI_AGENT",
+        "AGENT_INSTANCE",
+        "MODEL",
+        "WORKFLOW",
+        "TASK",
+        "INTENT",
+        "GOAL",
+        "MESSAGE",
+        "PROMPT",
+        "CONTEXT",
+        "MEMORY_STORE",
+        "MEMORY_ENTRY",
+        "RETRIEVAL_QUERY",
+        "KNOWLEDGE_SOURCE",
+        "RETRIEVED_DOCUMENT",
+        "TOOL",
+        "MCP_SERVER",
+        "MCP_RESOURCE",
+        "MCP_PROMPT",
+        "API",
+        "OPERATION",
+        "POLICY",
+        "GUARDRAIL",
+        "AUTHORIZATION_DECISION",
+        "DELEGATION",
+        "CREDENTIAL",
+        "CAPABILITY",
+        "RESOURCE",
+        "STATE_PROPERTY",
+        "STATE_OBSERVATION",
+        "KPI",
+        "ALARM",
+        "INCIDENT",
+        "ARTIFACT",
+        "BUILD",
+        "DEPLOYMENT",
+        "CONTAINER",
+        "WORKLOAD",
+        "QUEUE_TOPIC",
+        "NETWORK_ENDPOINT",
+        "EVIDENCE_SOURCE",
+        "EVIDENCE_RECORD",
+        "CAUSE_CLASS",
+        "REMEDIATION",
+        "VERIFICATION_TEST",
+        "SERVICE",
+        "NETWORK_FUNCTION",
+        "ODA_COMPONENT",
+        "UNKNOWN",
+        "CellSite",
+        "NetworkCell",
+        "Sector",
+        "TrackingArea",
+        "UE_Device",
+        "UE_Session",
+        "NetworkSlice",
+        "SliceSubnet",
+        "SliceIsolationPolicy",
+        "QoS_Flow",
+        "NetworkFunction",
+        "SBI_Transaction",
+        "NRF_Registration",
+        "SCP_Route",
+        "NF_Communication_Pattern",
+        "TransportLink",
+        "PacketSession"
+      ]
+    },
+    "nativeType": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "externalId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "instanceId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provider": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "environment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "namespace": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "domain": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "identityState": {
+      "type": "string",
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "CANDIDATE",
+        "UNRESOLVED",
+        "CONTRADICTED"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "entityKey",
+    "entityType",
+    "attributes",
+    "evidenceRefs",
+    "identityState",
+    "limitations"
+  ],
+  "$defs": {
+    "StringArray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "IdentityState": {
+      "type": "string",
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "CANDIDATE",
+        "UNRESOLVED",
+        "CONTRADICTED"
+      ]
+    },
+    "EventClass": {
+      "type": "string",
+      "enum": [
+        "SOURCE_LIFECYCLE",
+        "INPUT_RECEIVED",
+        "USER_MESSAGE",
+        "AGENT_MESSAGE",
+        "TASK_CREATED",
+        "TASK_STATE_CHANGED",
+        "INTENT_DECLARED",
+        "INTENT_REPORT",
+        "AGENT_STARTED",
+        "AGENT_STOPPED",
+        "MODEL_INVOCATION",
+        "MODEL_RESPONSE",
+        "PROMPT_RENDERED",
+        "CONTEXT_ASSEMBLED",
+        "RETRIEVAL_REQUEST",
+        "RETRIEVAL_RESULT",
+        "RERANK_RESULT",
+        "MEMORY_READ",
+        "MEMORY_WRITE",
+        "TOOL_ADVERTISED",
+        "TOOL_SELECTED",
+        "TOOL_CALL_REQUEST",
+        "TOOL_CALL_RESPONSE",
+        "MCP_REQUEST",
+        "MCP_RESPONSE",
+        "A2A_MESSAGE",
+        "A2A_TASK_UPDATE",
+        "DELEGATION_CREATED",
+        "DELEGATION_CHANGED",
+        "DELEGATION_REVOKED",
+        "HANDOFF",
+        "AUTHORIZATION_REQUEST",
+        "AUTHORIZATION_DECISION",
+        "GUARDRAIL_EVALUATION",
+        "GUARDRAIL_ENFORCEMENT",
+        "API_REQUEST",
+        "API_RESPONSE",
+        "EXECUTION_START",
+        "EXECUTION_RESULT",
+        "STATE_OBSERVATION",
+        "STATE_CHANGE_DECLARED",
+        "KPI_OBSERVATION",
+        "ALARM_RAISED",
+        "ALARM_CLEARED",
+        "CONFIG_CHANGE",
+        "POLICY_CHANGE",
+        "IDENTITY_EVENT",
+        "IAM_GRANT_EVENT",
+        "IAM_REVOKE_EVENT",
+        "SECURITY_FINDING",
+        "AUDIT_EVENT",
+        "EVIDENCE_INTEGRITY_EVENT",
+        "SYSTEM_ERROR",
+        "DEPENDENCY_EVENT",
+        "DEPLOYMENT_EVENT",
+        "UNKNOWN_EVENT"
+      ]
+    },
+    "EventClassAssignment": {
+      "type": "string",
+      "enum": [
+        "DECLARED",
+        "MAPPED",
+        "PROPOSED",
+        "UNKNOWN"
+      ]
+    },
+    "EntityType": {
+      "type": "string",
+      "enum": [
+        "HUMAN_PRINCIPAL",
+        "SERVICE_PRINCIPAL",
+        "ORGANIZATION",
+        "AI_SYSTEM",
+        "AI_AGENT",
+        "AGENT_INSTANCE",
+        "MODEL",
+        "WORKFLOW",
+        "TASK",
+        "INTENT",
+        "GOAL",
+        "MESSAGE",
+        "PROMPT",
+        "CONTEXT",
+        "MEMORY_STORE",
+        "MEMORY_ENTRY",
+        "RETRIEVAL_QUERY",
+        "KNOWLEDGE_SOURCE",
+        "RETRIEVED_DOCUMENT",
+        "TOOL",
+        "MCP_SERVER",
+        "MCP_RESOURCE",
+        "MCP_PROMPT",
+        "API",
+        "OPERATION",
+        "POLICY",
+        "GUARDRAIL",
+        "AUTHORIZATION_DECISION",
+        "DELEGATION",
+        "CREDENTIAL",
+        "CAPABILITY",
+        "RESOURCE",
+        "STATE_PROPERTY",
+        "STATE_OBSERVATION",
+        "KPI",
+        "ALARM",
+        "INCIDENT",
+        "ARTIFACT",
+        "BUILD",
+        "DEPLOYMENT",
+        "CONTAINER",
+        "WORKLOAD",
+        "QUEUE_TOPIC",
+        "NETWORK_ENDPOINT",
+        "EVIDENCE_SOURCE",
+        "EVIDENCE_RECORD",
+        "CAUSE_CLASS",
+        "REMEDIATION",
+        "VERIFICATION_TEST",
+        "SERVICE",
+        "NETWORK_FUNCTION",
+        "ODA_COMPONENT",
+        "UNKNOWN",
+        "CellSite",
+        "NetworkCell",
+        "Sector",
+        "TrackingArea",
+        "UE_Device",
+        "UE_Session",
+        "NetworkSlice",
+        "SliceSubnet",
+        "SliceIsolationPolicy",
+        "QoS_Flow",
+        "NetworkFunction",
+        "SBI_Transaction",
+        "NRF_Registration",
+        "SCP_Route",
+        "NF_Communication_Pattern",
+        "TransportLink",
+        "PacketSession"
+      ]
+    },
+    "RelationType": {
+      "type": "string",
+      "enum": [
+        "REALIZED_BY",
+        "DEPENDS_ON",
+        "HOSTED_ON",
+        "CONNECTED_TO",
+        "PART_OF",
+        "SERVES",
+        "IMPLEMENTS",
+        "CALLS",
+        "PUBLISHES",
+        "SUBSCRIBES_TO",
+        "DELIVERS_TO",
+        "TRIGGERS",
+        "HANDLED_BY",
+        "SCHEDULES",
+        "REQUESTS",
+        "TARGETS",
+        "INVOKES",
+        "APPLIES_TO",
+        "CHANGES",
+        "RESULTS_IN",
+        "AFFECTS",
+        "DEGRADES",
+        "RESTORES",
+        "SERVICE_RELATIONSHIP",
+        "RESOURCE_RELATIONSHIP",
+        "SERVICE_USES_RESOURCE",
+        "RESOURCE_SUPPORTS_SERVICE",
+        "SERVICE_ORDER_REQUESTS_SERVICE",
+        "SERVICE_ORDER_ITEM_TARGETS_RESOURCE",
+        "PRODUCT_OFFERING_REALIZED_BY_SERVICE",
+        "RELATED_PARTY",
+        "SUPPORTING_SERVICE",
+        "RESOURCE_CONTAINS_RESOURCE",
+        "R1_RAPP_TO_SMO",
+        "A1_NON_RT_RIC_TO_NEAR_RT_RIC",
+        "O1_SMO_TO_MANAGED_ELEMENT",
+        "O2_SMO_TO_O_CLOUD",
+        "E2_NEAR_RT_RIC_TO_O_DU",
+        "N1_UE_TO_AMF",
+        "N2_RAN_TO_AMF",
+        "N3_RAN_TO_UPF",
+        "N4_SMF_TO_UPF",
+        "N6_UPF_TO_DN",
+        "N9_UPF_TO_UPF",
+        "EUTRAN_CELL_TO_SECTOR_CARRIER",
+        "NODE_TO_SECTOR_CARRIER",
+        "BASEBAND_TO_RADIO_UNIT",
+        "AGENT_INVOKES_MODEL",
+        "AGENT_USES_TOOL",
+        "AGENT_READS_MEMORY",
+        "AGENT_WRITES_MEMORY",
+        "AGENT_DELEGATES_TO",
+        "AGENT_HANDS_OFF_TO",
+        "AGENT_INVOKES_MCP_SERVER",
+        "PROMPT_INFLUENCES_DECISION",
+        "MODEL_GENERATES_ACTION",
+        "MEMORY_CONTAMINATES_DECISION",
+        "EVIDENCE_DERIVED_FROM",
+        "EVIDENCE_CORROBORATES",
+        "EVIDENCE_CONTRADICTS",
+        "EVIDENCE_SUPERSEDES",
+        "CASE_INCLUDES_EVIDENCE",
+        "TIMELINE_EVENT_PRECEDES",
+        "PACKAGE_DEPENDS_ON",
+        "PACKAGE_VULNERABLE_TO",
+        "BUILD_PRODUCES_ARTIFACT",
+        "ARTIFACT_DEPLOYED_AS",
+        "SBOM_DESCRIBES_PACKAGE",
+        "VEX_ASSERTS_EXPLOITABILITY",
+        "PIPELINE_BUILDS_ARTIFACT",
+        "PIPELINE_RUNS_SCAN",
+        "PIPELINE_DEPLOYS_TO",
+        "COMMIT_TRIGGERS_PIPELINE",
+        "SECRET_USED_IN_PIPELINE",
+        "POD_SCHEDULED_ON_NODE",
+        "SERVICE_ACCOUNT_BOUND_TO",
+        "CONTAINER_MOUNTS_SECRET",
+        "INGRESS_ROUTES_TO_SERVICE",
+        "NETWORK_POLICY_APPLIES_TO_POD",
+        "DELEGATION_SOURCE_TO_TARGET",
+        "AUTHORITY_NARROWING_CHAIN",
+        "ACTION_CLAIM_PROPOSED_BY",
+        "ACTION_CLAIM_AUTHORIZED_BY",
+        "JUSTIFICATION_GAP_EXCEEDS",
+        "CAPABILITY_BOUND_TO",
+        "TASK_ENVELOPE_CONTAINS",
+        "EXECUTION_ENVELOPE_BOUNDED_BY",
+        "ANCHOR_COVERS",
+        "CAUSE_ATTRIBUTED_TO",
+        "AGENTIC_IDENTITY_BELONGS_TO",
+        "OAUTH_CLIENT_BOUND_TO",
+        "SPIFFE_ID_ATTESTED_BY",
+        "DELEGATION_CHAIN_CONTAINS",
+        "SCOPE_REDUCTION_ENFORCED",
+        "AGENT_PROFILE_DECLARES",
+        "TRUST_PROFILE_EVALUATES",
+        "LINEAGE_CHAIN_TRACKS",
+        "UE_SERVED_BY_CELL",
+        "CELL_PART_OF_SITE",
+        "CELL_PART_OF_TRACKING_AREA",
+        "SECTOR_HOSTS_CELL",
+        "SLICE_USES_SUBNET",
+        "SLICE_PROTECTED_BY_ISOLATION",
+        "SLICE_HAS_SLA",
+        "TENANT_OWNS_SLICE",
+        "QOS_FLOW_USES_SLICE",
+        "NF_REGISTERED_WITH_NRF",
+        "SBI_CALL_CONSUMER_TO_PRODUCER",
+        "SCP_ROUTES_TO",
+        "NF_FOLLOWS_PATTERN",
+        "TRANSPORT_LINK_CONNECTS_NODES",
+        "SESSION_CARRIED_BY_TRANSPORT",
+        "UE_USES_QOS_FLOW"
+      ]
+    },
+    "RelationState": {
+      "type": "string",
+      "enum": [
+        "ESTABLISHED",
+        "PARTIAL",
+        "UNKNOWN",
+        "CONTRADICTED",
+        "NOT_ASSESSED",
+        "NOT_APPLICABLE",
+        "PROPOSED"
+      ]
+    },
+    "SourceAuthorityRole": {
+      "type": "string",
+      "enum": [
+        "AUTHORITATIVE_CONTROL_BOUNDARY",
+        "PLATFORM_INSTRUMENTATION",
+        "SERVICE_NATIVE_RECORD",
+        "APPLICATION_TELEMETRY",
+        "EXTERNAL_IMPORTED_RECORD",
+        "DECLARED_CONFIGURATION",
+        "SELF_REPORTED",
+        "UNKNOWN_SOURCE_AUTHORITY"
+      ]
+    },
+    "TimeQuality": {
+      "type": "string",
+      "enum": [
+        "SOURCE_EXACT",
+        "SOURCE_APPROXIMATE",
+        "NORMALIZED_TIMEZONE",
+        "CLOCK_SKEW_SUSPECTED",
+        "MISSING",
+        "CONTRADICTED"
+      ]
+    },
+    "OrderingBasis": {
+      "type": "string",
+      "enum": [
+        "SOURCE_SEQUENCE",
+        "TRACE_PARENT",
+        "EXPLICIT_PREDECESSOR",
+        "MONOTONIC_COUNTER",
+        "EVENT_TIME",
+        "RECEIVE_ORDER",
+        "UNKNOWN"
+      ]
+    },
+    "CauseEstablishmentState": {
+      "type": "string",
+      "enum": [
+        "ESTABLISHED",
+        "CORROBORATED",
+        "SUPPORTED_CANDIDATE",
+        "POSSIBLE",
+        "INSUFFICIENT_EVIDENCE",
+        "CONTRADICTED"
+      ]
+    },
+    "CauseRole": {
+      "type": "string",
+      "enum": [
+        "TRIGGER",
+        "ROOT_MECHANISM",
+        "ENABLING_CONDITION",
+        "CONTRIBUTING_FACTOR",
+        "PROPAGATION_FACTOR",
+        "CONSEQUENCE"
+      ]
+    },
+    "CauseFamily": {
+      "type": "string",
+      "enum": [
+        "GOAL_AND_INSTRUCTION",
+        "PROMPT_AND_CONTEXT",
+        "RETRIEVAL_AND_RAG",
+        "MEMORY",
+        "IDENTITY_AND_AUTHENTICATION",
+        "AUTHORIZATION_AND_PRIVILEGE",
+        "DELEGATION_AND_HANDOFF",
+        "CAPABILITY_AND_TOOL_SURFACE",
+        "MCP_AND_EXTERNAL_TOOLING",
+        "POLICY_AND_GUARDRAIL",
+        "MODEL_AND_PLANNING",
+        "RUNTIME_AND_EXECUTION",
+        "STATE_AND_EFFECT",
+        "DATA_AND_TENANT",
+        "CONFIGURATION_AND_CHANGE",
+        "INFRASTRUCTURE_AND_DEPENDENCY",
+        "SUPPLY_CHAIN",
+        "EVIDENCE_AND_AUDIT",
+        "HUMAN_AND_PROCESS",
+        "EXTERNAL_ADVERSARIAL",
+        "UNKNOWN"
+      ]
+    },
+    "CauseMechanism": {
+      "type": "string",
+      "enum": [
+        "GOAL_OVERRIDE",
+        "INSTRUCTION_CONFLICT",
+        "UNTRUSTED_INSTRUCTION_ACCEPTED",
+        "TASK_SCOPE_MISINTERPRETED",
+        "OBJECTIVE_DRIFT",
+        "DIRECT_PROMPT_INJECTION",
+        "INDIRECT_PROMPT_INJECTION",
+        "CONTEXT_BOUNDARY_FAILURE",
+        "CONTEXT_PRECEDENCE_FAILURE",
+        "SYSTEM_INSTRUCTION_LOSS",
+        "UNTRUSTED_RETRIEVAL_SOURCE",
+        "POISONED_RETRIEVED_CONTENT",
+        "STALE_RETRIEVAL",
+        "WRONG_RETRIEVAL_SCOPE",
+        "RETRIEVAL_AUTHORIZATION_GAP",
+        "RETRIEVAL_RANKING_FAILURE",
+        "MEMORY_SCOPE_VIOLATION",
+        "CROSS_SESSION_MEMORY_USE",
+        "UNTRUSTED_MEMORY_WRITE",
+        "STALE_MEMORY",
+        "MEMORY_POISONING_CANDIDATE",
+        "MEMORY_LINEAGE_LOSS",
+        "UNKNOWN_AGENT_IDENTITY",
+        "IDENTITY_BINDING_MISMATCH",
+        "OAUTH_CLIENT_MAPPING_GAP",
+        "SPIFFE_IDENTITY_MISMATCH",
+        "SERVICE_PRINCIPAL_CONFUSION",
+        "IDENTITY_LINEAGE_BREAK",
+        "POLICY_DECISION_MISSING",
+        "POLICY_DENY_NOT_ENFORCED",
+        "EFFECTIVE_GRANT_EXCEEDS_POLICY",
+        "STANDING_PRIVILEGE_TOO_BROAD",
+        "CREDENTIAL_SCOPE_TOO_BROAD",
+        "TENANT_SCOPE_MISMATCH",
+        "APPROVAL_REFERENCE_MISSING",
+        "DELEGATION_SCOPE_EXPANSION",
+        "DELEGATION_LINEAGE_BREAK",
+        "SCOPE_REDUCTION_NOT_ENFORCED",
+        "DELEGATE_IDENTITY_MISMATCH",
+        "HANDOFF_MISCLASSIFIED_AS_DELEGATION",
+        "DELEGATED_TASK_OUTSIDE_ENVELOPE",
+        "JUSTIFICATION_GAP",
+        "UNDECLARED_TOOL_EXPOSURE",
+        "UNEXPECTED_CAPABILITY_AVAILABLE",
+        "TOOL_SCHEMA_DRIFT",
+        "TOOL_SELECTION_ERROR",
+        "TOOL_ARGUMENT_VALIDATION_GAP",
+        "TOOL_RESULT_TRUST_FAILURE",
+        "DANGEROUS_CAPABILITY_UNGATED",
+        "UNREGISTERED_MCP_SERVER",
+        "MCP_SERVER_IDENTITY_GAP",
+        "MCP_TOOL_SCHEMA_CHANGE",
+        "MCP_AUTHORIZATION_SCOPE_GAP",
+        "MCP_TOOL_RESULT_UNTRUSTED",
+        "MCP_STATE_HANDLE_CONFUSION",
+        "MCP_SUPPLY_CHAIN_CHANGE",
+        "GUARDRAIL_NOT_CONFIGURED",
+        "GUARDRAIL_NOT_EVALUATED",
+        "GUARDRAIL_DECISION_NOT_ISSUED",
+        "GUARDRAIL_ENFORCEMENT_NOT_APPLIED",
+        "POLICY_VERSION_DRIFT",
+        "POLICY_MAPPING_GAP",
+        "CONTROL_ORDERING_FAILURE",
+        "MODEL_OUTPUT_DIVERGENCE",
+        "PLAN_SELECTION_ERROR",
+        "REASONING_CONTEXT_MISMATCH",
+        "MODEL_VERSION_DRIFT",
+        "FALLBACK_MODEL_CHANGE",
+        "NONDETERMINISTIC_OUTPUT_CONTRIBUTOR",
+        "EXECUTION_BOUNDARY_BYPASS",
+        "UNEXPECTED_OPERATION",
+        "TARGET_MISMATCH",
+        "RETRY_OR_LOOP_PROPAGATION",
+        "ASYNC_COMPLETION_MISINTERPRETATION",
+        "ROLLBACK_FAILURE",
+        "RECOVERY_FAILURE",
+        "UNAUTHORIZED_STATE_MUTATION",
+        "EFFECT_OUTSIDE_ENVELOPE",
+        "WRONG_RESOURCE_MUTATION",
+        "STATE_PROPAGATION_FAILURE",
+        "DOWNSTREAM_CONSEQUENCE_AMPLIFICATION",
+        "CROSS_TENANT_SCOPE_FAILURE",
+        "DATA_ACCESS_SCOPE_FAILURE",
+        "DATA_EGRESS_CONTROL_FAILURE",
+        "SENSITIVE_DATA_HANDLING_FAILURE",
+        "TENANT_CONTEXT_LOSS",
+        "CONFIG_DRIFT",
+        "POLICY_CONFIG_DRIFT",
+        "TOOL_CONFIG_DRIFT",
+        "AGENT_CONFIG_DRIFT",
+        "BUILD_VERSION_DRIFT",
+        "DEPLOYMENT_DRIFT",
+        "BASELINE_INCOMPATIBILITY",
+        "DEPENDENCY_FAILURE",
+        "NETWORK_FAILURE",
+        "TIME_SYNC_FAILURE",
+        "QUEUE_FAILURE",
+        "SERVICE_UNAVAILABLE",
+        "CAPACITY_EXHAUSTION",
+        "RATE_LIMIT_FAILURE",
+        "DATABASE_FAILURE",
+        "PACKAGE_CHANGE",
+        "VULNERABLE_DEPENDENCY",
+        "UNVERIFIED_ARTIFACT",
+        "ARTIFACT_HASH_MISMATCH",
+        "PIPELINE_CHANGE",
+        "MODEL_ARTIFACT_CHANGE",
+        "TOOL_PROVIDER_CHANGE",
+        "MISSING_EVIDENCE",
+        "PARTIAL_STREAM",
+        "OUT_OF_ORDER_EVIDENCE",
+        "DUPLICATE_EVIDENCE",
+        "CLOCK_SKEW",
+        "AUDIT_STATE_CONTRADICTION",
+        "SOURCE_CONTRADICTION",
+        "LINEAGE_BREAK",
+        "INTEGRITY_ATTESTATION_FAILURE",
+        "POSSIBLE_TAMPERING",
+        "HUMAN_APPROVAL_ERROR",
+        "HUMAN_OVERRIDDEN_CONTROL",
+        "MISCONFIGURATION",
+        "PROCEDURE_GAP",
+        "CHANGE_MANAGEMENT_GAP",
+        "TRUST_IN_AGENT_OUTPUT",
+        "MALICIOUS_INPUT",
+        "COMPROMISED_EXTERNAL_SOURCE",
+        "COMPROMISED_TOOL_OR_SERVICE",
+        "CREDENTIAL_THEFT",
+        "ATTACK_TECHNIQUE_CANDIDATE",
+        "CAUSE_NOT_ESTABLISHED",
+        "MULTIPLE_PLAUSIBLE_CAUSES",
+        "INSUFFICIENT_EVIDENCE"
+      ]
+    },
+    "MeasurementUnit": {
+      "type": "string",
+      "enum": [
+        "ANGLE_DEGREE",
+        "TIME_MS",
+        "TIME_SECOND",
+        "PERCENTAGE",
+        "PERCENTAGE_POINT",
+        "COUNT",
+        "BYTES",
+        "BITS_PER_SECOND",
+        "DB",
+        "DBM",
+        "CELSIUS",
+        "BOOLEAN",
+        "STRING_ENUM",
+        "UNITLESS"
+      ]
+    },
+    "StateFacet": {
+      "type": "string",
+      "enum": [
+        "REQUESTED_OR_DESIRED_STATE",
+        "INVENTORY_RECORDED_STATE",
+        "ACTIVATION_CONTROL_STATE",
+        "OPERATIONAL_OBSERVED_STATE",
+        "PERFORMANCE_OBSERVED_STATE",
+        "AUDIT_RECORDED_STATE"
+      ]
+    },
+    "AnalysisRunState": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "INGESTING",
+        "INGESTED",
+        "PROFILING",
+        "PROFILED",
+        "MAPPING_PENDING",
+        "MAPPED",
+        "FROZEN",
+        "CORRELATING",
+        "CORRELATED",
+        "DIAGNOSING",
+        "DIAGNOSED",
+        "EXPORTING",
+        "EXPORTED",
+        "FAILED",
+        "CANCELLED"
+      ]
+    },
+    "CorrelationIdKind": {
+      "type": "string",
+      "enum": [
+        "actionCorrelationId",
+        "traceId",
+        "spanId",
+        "parentSpanId",
+        "requestId",
+        "transactionId",
+        "correlationId",
+        "workflowId",
+        "orderId",
+        "serviceOrderId",
+        "intentId",
+        "agentInvocationId",
+        "agentId",
+        "agentInstanceId",
+        "toolInvocationId",
+        "toolCallId",
+        "messageId",
+        "eventId",
+        "resourceId",
+        "serviceId",
+        "principalId",
+        "sessionId",
+        "conversationId",
+        "taskId",
+        "contextId",
+        "jobId",
+        "subscriptionId",
+        "consumerGroup",
+        "brokerOffset",
+        "topicPartitionOffset",
+        "operationId",
+        "monitorId",
+        "auditRecordId",
+        "customChallengeId",
+        "OTHER"
+      ]
+    },
+    "RawRecordRef": {
+      "title": "RawRecordRef",
+      "type": "object",
+      "properties": {
+        "recordRef": {
+          "type": "string"
+        },
+        "artifactId": {
+          "type": "string"
+        },
+        "nativeRecordId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lineStart": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lineEnd": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rowNumber": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "jsonPointer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "byteOffset": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "nativeHash": {
+          "type": "string"
+        },
+        "rawPreviewRedacted": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "recordRef",
+        "artifactId",
+        "nativeHash"
+      ]
+    },
+    "CorrelationIdentifier": {
+      "title": "CorrelationIdentifier",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/CorrelationIdKind"
+        },
+        "value": {
+          "type": "string"
+        },
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "UNTRUSTED_CLIENT_SUPPLIED",
+                "SOURCE_GENERATED",
+                "PRODUCER_GENERATED",
+                "UNKNOWN"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "validationState": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "UNVALIDATED",
+                "FORMAT_VALIDATED",
+                "SOURCE_ATTESTED"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "value"
+      ]
+    },
+    "Measurement": {
+      "title": "Measurement",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "unit": {
+          "$ref": "#/$defs/MeasurementUnit"
+        },
+        "quantityType": {
+          "type": "string"
+        },
+        "nativeValue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalizationBasis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }      },
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit",
+        "quantityType"
+      ]
+    },
+    "StateObservation": {
+      "title": "StateObservation",
+      "type": "object",
+      "properties": {
+        "property": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "measurement": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stateFacet": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StateFacet"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "nativeValue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effectiveAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "priorValue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "priorMeasurement": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "priorEffectiveAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "property",
+        "value"
+      ]
+    },
+    "Operation": {
+      "title": "Operation",
+      "type": "object",
+      "properties": {
+        "nativeOperation": {
+          "type": "string"
+        },
+        "normalizedEffect": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "READ",
+                "CREATE",
+                "UPDATE",
+                "DELETE",
+                "EXECUTE",
+                "EGRESS",
+                "NOTIFY",
+                "WRITE"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "canonicalVerb": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "READ",
+                "CREATE",
+                "UPDATE",
+                "CONFIGURE",
+                "ACTIVATE",
+                "DEACTIVATE",
+                "ROUTE",
+                "SCALE",
+                "RESTART",
+                "FAILOVER",
+                "DELETE",
+                "ROLLBACK"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mappingStatus": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "ESTABLISHED_MAPPING",
+                "PARTIAL_MAPPING",
+                "UNKNOWN_MAPPING",
+                "CONFLICTING_MAPPING"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mappingBasis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "nativeStatus": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lifecycleState": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "REQUESTED",
+                "ACCEPTED",
+                "IN_PROGRESS",
+                "COMPLETED",
+                "FAILED",
+                "UNKNOWN_LIFECYCLE"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "nativeOperation"
+      ]
+    },
+    "ScenarioRef": {
+      "title": "ScenarioRef",
+      "type": "object",
+      "properties": {
+        "scenarioRunId": {
+          "type": "string"
+        },
+        "scenarioLevel": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scenarioSequence": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "bindingBasis": {
+          "type": "string",
+          "enum": [
+            "EXPLICIT",
+            "AUTHORITATIVE_WINDOW",
+            "UNBOUND"
+          ]
+        },
+        "scenarioContractDigest": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "scenarioRunId",
+        "bindingBasis"
+      ]
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Divergence",
+  "type": "object",
+  "properties": {
+    "divergenceId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "comparisonId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "EVIDENCE_DIVERGENCE",
+        "BEHAVIORAL_DIVERGENCE",
+        "AUTHORITY_DIVERGENCE",
+        "CAPABILITY_DIVERGENCE",
+        "EFFECT_DIVERGENCE",
+        "INTEGRITY_CONTRADICTION",
+        "RECOVERY_DIVERGENCE"
+      ]
+    },
+    "dimension": {
+      "type": "string"
+    },
+    "baselineRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "candidateRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "subjectRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "actionGroupRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "orderingBasis": {
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gapRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rootCauseClaimed": {
+      "const": false
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "divergenceId",
+    "analysisRunId",
+    "type",
+    "dimension",
+    "subjectRefs",
+    "actionGroupRefs",
+    "orderingBasis",
+    "evidenceRefs",
+    "gapRefs",
+    "limitations",
+    "rootCauseClaimed"
+  ],
+  "$id": "https://logsense.local/schemas/divergence.schema.json"
+}

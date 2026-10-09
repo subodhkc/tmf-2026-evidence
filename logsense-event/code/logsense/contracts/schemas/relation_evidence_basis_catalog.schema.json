@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Relation Evidence Basis Catalog",
+  "type": "object",
+  "properties": {
+    "catalogId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "bases": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Basis"
+      }
+    },
+    "digest": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "catalogId",
+    "version",
+    "bases",
+    "digest"
+  ],
+  "$defs": {
+    "Basis": {
+      "title": "Relation Evidence Basis",
+      "type": "object",
+      "properties": {
+        "basisId": {
+          "type": "string"
+        },
+        "basisClass": {
+          "type": "string",
+          "enum": [
+            "RUNTIME_NATIVE",
+            "SOURCE_DECLARED",
+            "STATIC_EXACT",
+            "STATIC_CANDIDATE",
+            "CORRELATION_SUPPORT",
+            "STATE_ATTRIBUTION",
+            "LINEAGE_PROVENANCE",
+            "AUTHORITY_BINDING",
+            "AI_PROPOSAL",
+            "WEAK_OR_FORBIDDEN",
+            "OTHER_DETERMINISTIC"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "canPropose": {
+          "type": "boolean"
+        },
+        "canEstablishWhenAllowedByRelation": {
+          "type": "boolean"
+        },
+        "requiresRuntimeEvidence": {
+          "type": "boolean"
+        },
+        "hardNegatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "haiecReferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "basisId",
+        "basisClass",
+        "description",
+        "canPropose",
+        "canEstablishWhenAllowedByRelation",
+        "requiresRuntimeEvidence",
+        "hardNegatives",
+        "haiecReferences",
+        "notes"
+      ]
+    }
+  },
+  "$id": "https://logsense.local/schemas/relation_evidence_basis_catalog.schema.json"
+}

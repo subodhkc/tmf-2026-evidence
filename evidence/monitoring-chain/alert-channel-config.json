@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-10-05T09:30Z",
+  "http": 200,
+  "config": {
+    "config": {
+      "configured": true,
+      "webhookUrl": "https://webhook.site/d57e8ece-38b8-43cb-91bb-9511e02592b7",
+      "webhookEnabled": true,
+      "slackWebhookUrl": null,
+      "slackEnabled": false,
+      "emailEnabled": true,
+      "emailRecipients": [
+        "suvodkc@gmail.com",
+        "kushal.gautam@gmail.com"
+      ],
+      "enabledTriggers": [
+        "AIRISK_FINDING_EMITTED",
+        "THRESHOLD_VIOLATION",
+        "BASELINE_DEVIATION",
+        "GUARDRAIL_CONTRADICTION"
+      ],
+      "enabledSeverities": [
+        "CRITICAL",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "availableTriggers": [
+      "AIRISK_FINDING_EMITTED",
+      "THRESHOLD_VIOLATION",
+      "BASELINE_DEVIATION",
+      "GUARDRAIL_CONTRADICTION"
+    ],
+    "availableSeverities": [
+      "CRITICAL",
+      "HIGH",
+      "MEDIUM",
+      "LOW"
+    ],
+    "webhookSecretConfigured": false
+  }
+}

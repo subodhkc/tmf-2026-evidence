@@ -1,0 +1,12 @@
+{
+  "runId": "C9-PARTIAL",
+  "label": "Control 9 \u2014 missing live window (ILLUSTRATIVE)",
+  "traceIds": [
+    "trace-c9-partial"
+  ],
+  "sessionIds": [
+    "sess-c9-partial"
+  ],
+  "notes": "Bundled deterministic fixture: Ten expected windows, nine observed \u2014 W10 absent. Expected: PARTIAL, coveragePercent 90, W10 listed MISSING_LIVE. A missing window is never zero drift.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

@@ -1,0 +1,8 @@
+{
+  "runId": "C7-BREACH",
+  "label": "Control 7 breach-like measurement run",
+  "traceIds": ["trace-breach-001"],
+  "sessionIds": ["sess-breach-001"],
+  "notes": "Bundled deterministic fixture: authorization event not observed and one declared-gap violation. Measurement fixture only — no FAIL label.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

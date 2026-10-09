@@ -1,0 +1,8 @@
+{
+  "fixtureId": "control7-healthy",
+  "label": "Control 7 — healthy measurement fixture",
+  "description": "10 required expected events, all matched in order; every consecutive-event gap measurable and inside the declared 60s limit. Includes an explicit RUN_STARTED lifecycle record (qualified run-start evidence — runActivity ESTABLISHED). Measurement fixture only — no PASS/FAIL.",
+  "evidenceFiles": ["events.jsonl"],
+  "runFile": "run.json",
+  "manifestFile": "expected.json"
+}

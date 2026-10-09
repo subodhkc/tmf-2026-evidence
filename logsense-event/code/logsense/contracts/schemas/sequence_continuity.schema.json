@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sequence Continuity",
+  "type": "object",
+  "properties": {
+    "continuityId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "sourceRef": {
+      "type": "string"
+    },
+    "sequenceKind": {
+      "type": "string",
+      "enum": [
+        "SEQUENCE_NUMBER",
+        "MONOTONIC_CURSOR",
+        "SOURCE_MANIFEST",
+        "DURABLE_OFFSET",
+        "COLLECTION_BOUNDARY",
+        "UNKNOWN"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "PROVEN_CONTIGUOUS",
+        "PARTIAL",
+        "GAP_DETECTED",
+        "UNKNOWN",
+        "CONTRADICTED"
+      ]
+    },
+    "startValue": {
+      "anyOf": [
+        {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "endValue": {
+      "anyOf": [
+        {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "missingRanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "continuityId",
+    "analysisRunId",
+    "sourceRef",
+    "sequenceKind",
+    "state",
+    "missingRanges",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/sequence_continuity.schema.json"
+}

@@ -1,0 +1,152 @@
+{
+  "$id": "https://logsense.local/schemas/delegated_action_integrity_evaluation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actionGroupRef": {
+      "type": "string"
+    },
+    "dimensions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "codeCapableValue": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "comparison": {
+            "enum": [
+              "MATCHES",
+              "BROADER",
+              "NARROWER",
+              "MISSING",
+              "UNKNOWN"
+            ],
+            "type": "string"
+          },
+          "delegatedValue": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "dimension": {
+            "enum": [
+              "OPERATION",
+              "TARGET",
+              "RESOURCE_SCOPE",
+              "TENANT_SCOPE",
+              "MAGNITUDE",
+              "DURATION",
+              "APPROVAL",
+              "DATA_CLASS",
+              "ENVIRONMENT",
+              "GEOGRAPHY",
+              "CREDENTIAL_CONTEXT"
+            ],
+            "type": "string"
+          },
+          "effectivelyGrantedValue": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidenceRefs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "mediationEvidenceRefs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "observedValue": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pendingBusinessRule": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "dimension",
+          "delegatedValue",
+          "codeCapableValue",
+          "effectivelyGrantedValue",
+          "observedValue",
+          "comparison",
+          "mediationEvidenceRefs",
+          "evidenceRefs",
+          "limitations",
+          "pendingBusinessRule"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "evaluationId": {
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "overallState": {
+      "enum": [
+        "MATCHES",
+        "BROADER",
+        "NARROWER",
+        "MISSING",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "evaluationId",
+    "actionGroupRef",
+    "dimensions",
+    "overallState",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Delegated Action Integrity Evaluation",
+  "type": "object"
+}

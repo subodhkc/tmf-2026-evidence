@@ -1,0 +1,20 @@
+{
+  "causeId": "bad",
+  "causeFamily": "UNKNOWN",
+  "causeMechanism": "CAUSE_NOT_ESTABLISHED",
+  "causeRole": "ROOT_MECHANISM",
+  "establishmentState": "POSSIBLE",
+  "subjectRefs": [],
+  "actionGroupRefs": [],
+  "evidenceRefs": [],
+  "independentLineageFamilies": [],
+  "requiredPredicatesSatisfied": [],
+  "missingPredicates": [],
+  "hardNegativesChecked": [],
+  "alternativeCauseRefs": [],
+  "remediationRefs": [],
+  "verificationRequirementRefs": [],
+  "limitations": [],
+  "generatedBy": "AI_HYPOTHESIS",
+  "canonical": true
+}

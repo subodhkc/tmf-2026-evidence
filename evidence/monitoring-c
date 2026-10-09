@@ -1,0 +1,609 @@
+{
+ "c16_breach": {
+  "result": {
+   "content": [
+    {
+     "type": "text",
+     "text": "{\"ok\":true,\"found\":true,\"resultId\":\"ctr-6d14200872918691f27eee1985b3c329f50ebc01\",\"controlId\":\"ACN-COST-001\",\"runId\":\"fault-1791165466-51ab52\",\"runRole\":null,\"scenarioLabel\":null,\"result\":\"NOT_SATISFIED\",\"controlName\":\"Per-run spend cap\",\"controlVersionRef\":\"c16-v1\",\"thresholdVersionRef\":\"c16-cap-v1\",\"policyId\":\"547f4a67-76eb-4bf3-befb-c1212ae23f81\",\"policyDigest\":\"sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5\",\"evaluatedAt\":\"2026-10-05T02:02:56.241Z\",\"reasonCodes\":[\"SPEND_CAP_EXCEEDED\"],\"evidenceRefs\":[\"event:47ddcb25ccd4405502493f9f:1\",\"event:47ddcb25ccd4405502493f9f:10\",\"event:47ddcb25ccd4405502493f9f:11\",\"event:47ddcb25ccd4405502493f9f:12\",\"event:47ddcb25ccd4405502493f9f:13\",\"event:47ddcb25ccd4405502493f9f:14\",\"event:47ddcb25ccd4405502493f9f:15\",\"event:47ddcb25ccd4405502493f9f:16\",\"event:47ddcb25ccd4405502493f9f:17\",\"event:47ddcb25ccd4405502493f9f:18\",\"event:47ddcb25ccd4405502493f9f:19\",\"event:47ddcb25ccd4405502493f9f:2\",\"event:47ddcb25ccd4405502493f9f:20\",\"event:47ddcb25ccd4405502493f9f:21\",\"event:47ddcb25ccd4405502493f9f:22\",\"event:47ddcb25ccd4405502493f9f:23\",\"event:47ddcb25ccd4405502493f9f:24\",\"event:47ddcb25ccd4405502493f9f:25\",\"event:47ddcb25ccd4405502493f9f:26\",\"event:47ddcb25ccd4405502493f9f:27\",\"event:47ddcb25ccd4405502493f9f:28\",\"event:47ddcb25ccd4405502493f9f:29\",\"event:47ddcb25ccd4405502493f9f:3\",\"event:47ddcb25ccd4405502493f9f:30\",\"event:47ddcb25ccd4405502493f9f:31\",\"event:47ddcb25ccd4405502493f9f:32\",\"event:47ddcb25ccd4405502493f9f:33\",\"event:47ddcb25ccd4405502493f9f:34\",\"event:47ddcb25ccd4405502493f9f:35\",\"event:47ddcb25ccd4405502493f9f:36\",\"event:47ddcb25ccd4405502493f9f:37\",\"event:47ddcb25ccd4405502493f9f:38\",\"event:47ddcb25ccd4405502493f9f:39\",\"event:47ddcb25ccd4405502493f9f:4\",\"event:47ddcb25ccd4405502493f9f:40\",\"event:47ddcb25ccd4405502493f9f:41\",\"event:47ddcb25ccd4405502493f9f:42\",\"event:47ddcb25ccd4405502493f9f:43\",\"event:47ddcb25ccd4405502493f9f:44\",\"event:47ddcb25ccd4405502493f9f:45\",\"event:47ddcb25ccd4405502493f9f:46\",\"event:47ddcb25ccd4405502493f9f:47\",\"event:47ddcb25ccd4405502493f9f:48\",\"event:47ddcb25ccd4405502493f9f:49\",\"event:47ddcb25ccd4405502493f9f:5\",\"event:47ddcb25ccd4405502493f9f:50\",\"event:47ddcb25ccd4405502493f9f:51\",\"event:47ddcb25ccd4405502493f9f:52\",\"event:47ddcb25ccd4405502493f9f:53\",\"event:47ddcb25ccd4405502493f9f:54\",\"event:47ddcb25ccd4405502493f9f:55\",\"event:47ddcb25ccd4405502493f9f:56\",\"event:47ddcb25ccd4405502493f9f:57\",\"event:47ddcb25ccd4405502493f9f:58\",\"event:47ddcb25ccd4405502493f9f:59\",\"event:47ddcb25ccd4405502493f9f:6\",\"event:47ddcb25ccd4405502493f9f:60\",\"event:47ddcb25ccd4405502493f9f:61\",\"event:47ddcb25ccd4405502493f9f:62\",\"event:47ddcb25ccd4405502493f9f:63\",\"event:47ddcb25ccd4405502493f9f:64\",\"event:47ddcb25ccd4405502493f9f:65\",\"event:47ddcb25ccd4405502493f9f:66\",\"event:47ddcb25ccd4405502493f9f:67\",\"event:47ddcb25ccd4405502493f9f:68\",\"event:47ddcb25ccd4405502493f9f:69\",\"event:47ddcb25ccd4405502493f9f:7\",\"event:47ddcb25ccd4405502493f9f:70\",\"event:47ddcb25ccd4405502493f9f:8\",\"event:47ddcb25ccd4405502493f9f:9\"],\"limitations\":[\"POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY\",\"POLICY_TEMPORAL_STATE_BOUNDS_OBSERVED_ACTIVITY_NOT_RUN_START\"],\"excludedEvidence\":{\"pendingRefs\":[],\"foreignRunRefs\":[],\"ambiguousRunRefs\":[],\"unresolvedRunRefs\":[],\"unqualifiedUsageRefs\":[],\"unqualifiedMappingRefs\":[],\"deniedBeforeExecutionRefs\":[],\"failedBeforeExecutionRefs\":[]},\"calculation\":{\"spend\":{\"state\":\"NOT_SATISFIED\",\"hardCapTokens\":60000,\"headroomTokens\":null,\"actualRunTokens\":106829,\"overshootTokens\":46829,\"declaredInputTokens\":104387,\"arithmeticConsistent\":true,\"countedCallsDeclared\":17,\"declaredOutputTokens\":2442,\"recomputedInputTokens\":104387,\"countedCallsRecomputed\":17,\"recomputedOutputTokens\":2442,\"recomputedActualRunTokens\":106829},\"accounting\":{\"countedCalls\":17,\"pendingCalls\":0,\"retryExecutions\":0,\"unexpectedAgents\":[],\"ambiguousRunCalls\":0,\"unresolvedRunCalls\":0,\"participatingAgents\":[\"customer-experience-agent\",\"it-resolution-agent\",\"network-resolution-agent\"],\"missingExpectedAgents\":[],\"providerExecutedCalls\":17,\"unknownExecutionCalls\":0,\"unqualifiedUsageCalls\":0,\"expectedAgentsDeclared\":3,\"expectedAgentsAccounted\":3,\"deniedBeforeExecutionCalls\":0,\"failedBeforeExecutionCalls\":0,\"duplicateTelemetryRecordsSuppressed\":0},\"overCapRunAllowance\":null,\"enforcementActions\":[]},\"bundleId\":\"ls-bundle:c4cc5bc262ffa14fb6066453\",\"haiecContentDigest\":\"sha256:3196266251117be8caa16e93091232832f6de0559bf14f15833ed9b80ffe2f09\",\"analysisRunId\":\"RR16:run:691d1d6d77601de7\",\"measurementDigest\":\"sha256:9598dc82632d4093216a46e149fb14086e17fb3d4d23111fe0eeb1c5cf112c43\",\"measurementState\":\"MEASURED\",\"outputDigest\":\"sha256:4bfcc7b434a6a27255f1d5af0c40737884c7d75afa0085ff3769617181576081\",\"inputDigest\":\"sha256:6d14200872918691f27eee1985b3c329f50ebc01da4add5f3c78c9131ecee44c\"}"
+    }
+   ],
+   "structuredContent": {
+    "ok": true,
+    "found": true,
+    "resultId": "ctr-6d14200872918691f27eee1985b3c329f50ebc01",
+    "controlId": "ACN-COST-001",
+    "runId": "fault-1791165466-51ab52",
+    "runRole": null,
+    "scenarioLabel": null,
+    "result": "NOT_SATISFIED",
+    "controlName": "Per-run spend cap",
+    "controlVersionRef": "c16-v1",
+    "thresholdVersionRef": "c16-cap-v1",
+    "policyId": "547f4a67-76eb-4bf3-befb-c1212ae23f81",
+    "policyDigest": "sha256:944212e6e8ba1a3d727333ae933f7a22ca82cec9cd1d65b35baf948b8622bfe5",
+    "evaluatedAt": "2026-10-05T02:02:56.241Z",
+    "reasonCodes": [
+     "SPEND_CAP_EXCEEDED"
+    ],
+    "evidenceRefs": [
+     "event:47ddcb25ccd4405502493f9f:1",
+     "event:47ddcb25ccd4405502493f9f:10",
+     "event:47ddcb25ccd4405502493f9f:11",
+     "event:47ddcb25ccd4405502493f9f:12",
+     "event:47ddcb25ccd4405502493f9f:13",
+     "event:47ddcb25ccd4405502493f9f:14",
+     "event:47ddcb25ccd4405502493f9f:15",
+     "event:47ddcb25ccd4405502493f9f:16",
+     "event:47ddcb25ccd4405502493f9f:17",
+     "event:47ddcb25ccd4405502493f9f:18",
+     "event:47ddcb25ccd4405502493f9f:19",
+     "event:47ddcb25ccd4405502493f9f:2",
+     "event:47ddcb25ccd4405502493f9f:20",
+     "event:47ddcb25ccd4405502493f9f:21",
+     "event:47ddcb25ccd4405502493f9f:22",
+     "event:47ddcb25ccd4405502493f9f:23",
+     "event:47ddcb25ccd4405502493f9f:24",
+     "event:47ddcb25ccd4405502493f9f:25",
+     "event:47ddcb25ccd4405502493f9f:26",
+     "event:47ddcb25ccd4405502493f9f:27",
+     "event:47ddcb25ccd4405502493f9f:28",
+     "event:47ddcb25ccd4405502493f9f:29",
+     "event:47ddcb25ccd4405502493f9f:3",
+     "event:47ddcb25ccd4405502493f9f:30",
+     "event:47ddcb25ccd4405502493f9f:31",
+     "event:47ddcb25ccd4405502493f9f:32",
+     "event:47ddcb25ccd4405502493f9f:33",
+     "event:47ddcb25ccd4405502493f9f:34",
+     "event:47ddcb25ccd4405502493f9f:35",
+     "event:47ddcb25ccd4405502493f9f:36",
+     "event:47ddcb25ccd4405502493f9f:37",
+     "event:47ddcb25ccd4405502493f9f:38",
+     "event:47ddcb25ccd4405502493f9f:39",
+     "event:47ddcb25ccd4405502493f9f:4",
+     "event:47ddcb25ccd4405502493f9f:40",
+     "event:47ddcb25ccd4405502493f9f:41",
+     "event:47ddcb25ccd4405502493f9f:42",
+     "event:47ddcb25ccd4405502493f9f:43",
+     "event:47ddcb25ccd4405502493f9f:44",
+     "event:47ddcb25ccd4405502493f9f:45",
+     "event:47ddcb25ccd4405502493f9f:46",
+     "event:47ddcb25ccd4405502493f9f:47",
+     "event:47ddcb25ccd4405502493f9f:48",
+     "event:47ddcb25ccd4405502493f9f:49",
+     "event:47ddcb25ccd4405502493f9f:5",
+     "event:47ddcb25ccd4405502493f9f:50",
+     "event:47ddcb25ccd4405502493f9f:51",
+     "event:47ddcb25ccd4405502493f9f:52",
+     "event:47ddcb25ccd4405502493f9f:53",
+     "event:47ddcb25ccd4405502493f9f:54",
+     "event:47ddcb25ccd4405502493f9f:55",
+     "event:47ddcb25ccd4405502493f9f:56",
+     "event:47ddcb25ccd4405502493f9f:57",
+     "event:47ddcb25ccd4405502493f9f:58",
+     "event:47ddcb25ccd4405502493f9f:59",
+     "event:47ddcb25ccd4405502493f9f:6",
+     "event:47ddcb25ccd4405502493f9f:60",
+     "event:47ddcb25ccd4405502493f9f:61",
+     "event:47ddcb25ccd4405502493f9f:62",
+     "event:47ddcb25ccd4405502493f9f:63",
+     "event:47ddcb25ccd4405502493f9f:64",
+     "event:47ddcb25ccd4405502493f9f:65",
+     "event:47ddcb25ccd4405502493f9f:66",
+     "event:47ddcb25ccd4405502493f9f:67",
+     "event:47ddcb25ccd4405502493f9f:68",
+     "event:47ddcb25ccd4405502493f9f:69",
+     "event:47ddcb25ccd4405502493f9f:7",
+     "event:47ddcb25ccd4405502493f9f:70",
+     "event:47ddcb25ccd4405502493f9f:8",
+     "event:47ddcb25ccd4405502493f9f:9"
+    ],
+    "limitations": [
+     "POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY",
+     "POLICY_TEMPORAL_STATE_BOUNDS_OBSERVED_ACTIVITY_NOT_RUN_START"
+    ],
+    "excludedEvidence": {
+     "pendingRefs": [],
+     "foreignRunRefs": [],
+     "ambiguousRunRefs": [],
+     "unresolvedRunRefs": [],
+     "unqualifiedUsageRefs": [],
+     "unqualifiedMappingRefs": [],
+     "deniedBeforeExecutionRefs": [],
+     "failedBeforeExecutionRefs": []
+    },
+    "calculation": {
+     "spend": {
+      "state": "NOT_SATISFIED",
+      "hardCapTokens": 60000,
+      "headroomTokens": null,
+      "actualRunTokens": 106829,
+      "overshootTokens": 46829,
+      "declaredInputTokens": 104387,
+      "arithmeticConsistent": true,
+      "countedCallsDeclared": 17,
+      "declaredOutputTokens": 2442,
+      "recomputedInputTokens": 104387,
+      "countedCallsRecomputed": 17,
+      "recomputedOutputTokens": 2442,
+      "recomputedActualRunTokens": 106829
+     },
+     "accounting": {
+      "countedCalls": 17,
+      "pendingCalls": 0,
+      "retryExecutions": 0,
+      "unexpectedAgents": [],
+      "ambiguousRunCalls": 0,
+      "unresolvedRunCalls": 0,
+      "participatingAgents": [
+       "customer-experience-agent",
+       "it-resolution-agent",
+       "network-resolution-agent"
+      ],
+      "missingExpectedAgents": [],
+      "providerExecutedCalls": 17,
+      "unknownExecutionCalls": 0,
+      "unqualifiedUsageCalls": 0,
+      "expectedAgentsDeclared": 3,
+      "expectedAgentsAccounted": 3,
+      "deniedBeforeExecutionCalls": 0,
+      "failedBeforeExecutionCalls": 0,
+      "duplicateTelemetryRecordsSuppressed": 0
+     },
+     "overCapRunAllowance": null,
+     "enforcementActions": []
+    },
+    "bundleId": "ls-bundle:c4cc5bc262ffa14fb6066453",
+    "haiecContentDigest": "sha256:3196266251117be8caa16e93091232832f6de0559bf14f15833ed9b80ffe2f09",
+    "analysisRunId": "RR16:run:691d1d6d77601de7",
+    "measurementDigest": "sha256:9598dc82632d4093216a46e149fb14086e17fb3d4d23111fe0eeb1c5cf112c43",
+    "measurementState": "MEASURED",
+    "outputDigest": "sha256:4bfcc7b434a6a27255f1d5af0c40737884c7d75afa0085ff3769617181576081",
+    "inputDigest": "sha256:6d14200872918691f27eee1985b3c329f50ebc01da4add5f3c78c9131ecee44c"
+   }
+  },
+  "jsonrpc": "2.0",
+  "id": 1
+ },
+ "c7": {
+  "result": {
+   "content": [
+    {
+     "type": "text",
+     "text": "{\"ok\":true,\"found\":true,\"resultId\":\"ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3\",\"controlId\":\"AIA-ARC-006\",\"runId\":\"fault-1791183213-228329\",\"runRole\":\"C9_INTENDED_BREACH\",\"scenarioLabel\":\"S1-fronthaul-degradation\",\"result\":\"SATISFIED\",\"controlName\":\"Drift and performance\",\"controlVersionRef\":\"aia-arc-006-v1\",\"thresholdVersionRef\":\"c9-duration-thresholds-v2\",\"policyId\":\"346b5f43-58eb-44f8-a74e-45cfde746d74\",\"policyDigest\":\"sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1\",\"evaluatedAt\":\"2026-10-05T06:55:00.861Z\",\"reasonCodes\":[],\"evidenceRefs\":[\"ev-fault-1791183213-228329-start\",\"ev-fault-1791183213-228329-k000\",\"ev-fault-1791183213-228329-k001\",\"ev-fault-1791183213-228329-k002\"],\"limitations\":[\"AGENT_LEVEL_RUN_MEAN_WINDOWS\",\"BASELINE_FROM_CALIBRATION_NOT_ASSESSED\",\"POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY\",\"POLICY_TEMPORAL_GATE_REQUIRES_ASSESSED_ACTIVITY_START\"],\"excludedEvidence\":null,\"calculation\":{\"binding\":{\"unit\":\"ms\",\"state\":\"SATISFIED\",\"metricId\":\"aws.bedrock-agentcore.duration_ms\",\"direction\":\"LOWER_IS_BETTER\",\"exactMatch\":true,\"aggregation\":\"MEAN\",\"baselineRef\":\"c9-baseline:c9-duration-baseline-tmf-modaas@v1\",\"baselineDigest\":\"sha256:8b5c8300e61f48428313b773af33e0e305348ace9215353d21dfc9855089af6b\",\"metricProfileRef\":\"metric-profile:agentcore-invokeagentruntime-duration@v1\",\"mismatchedFields\":[],\"metricProfileDigest\":\"sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9\"},\"compatibility\":{\"blockers\":[],\"unknowns\":[],\"dimensions\":[{\"state\":\"COMPATIBLE\",\"detail\":\"metric identity\",\"dimension\":\"METRIC_ID\"},{\"state\":\"COMPATIBLE\",\"detail\":\"measurement unit\",\"dimension\":\"UNIT\"},{\"state\":\"COMPATIBLE\",\"detail\":\"metric direction\",\"dimension\":\"DIRECTION\"},{\"state\":\"COMPATIBLE\",\"detail\":\"window aggregation\",\"dimension\":\"AGGREGATION\"},{\"state\":\"COMPATIBLE\",\"detail\":\"governed entity scope\",\"dimension\":\"GOVERNED_SCOPE\"},{\"state\":\"COMPATIBLE\",\"detail\":\"window mode / duration / alignment\",\"dimension\":\"WINDOW_SEMANTICS\"},{\"state\":\"COMPATIBLE\",\"detail\":\"baseline captured under this exact profile version\",\"dimension\":\"METRIC_PROFILE\"},{\"state\":\"COMPATIBLE\",\"detail\":\"approved mapping identity/digests\",\"dimension\":\"MAPPING_PROFILE\"},{\"state\":\"COMPATIBLE\",\"detail\":\"source semantic basis\",\"dimension\":\"SOURCE_BASIS\"}],\"overallState\":\"COMPATIBLE\"},\"drift\":{\"state\":\"SATISFIED\",\"expectedWindows\":3,\"coverageComplete\":true,\"violatingWindows\":0,\"comparableWindows\":3,\"arithmeticConsistent\":true,\"violationRatePercent\":0,\"maxRelativeDegradationPercent\":100,\"worstRelativeDegradationWindow\":\"it_resolution_agent\",\"worstRelativeDegradationPercent\":28.46248738364921,\"allowedViolatingWindowRatePercent\":0},\"monitoring\":{\"owner\":\"subodh-kc (participant)\",\"state\":\"ESTABLISHED\",\"alertId\":null,\"declared\":true,\"recipient\":\"sre-oncall@tmf-participant-team\",\"triggeredAt\":null,\"responderRef\":null,\"responseState\":\"NOT_REQUIRED\",\"alertRecipient\":\"sre-oncall@tmf-participant-team\",\"requiredResponse\":\"acknowledge or remediate within the assessed window; silence is recorded\",\"driftValuePercent\":null,\"responseObservedAt\":null,\"triggeredWindowKey\":null,\"responseEvidenceRef\":null,\"thresholdVersionRef\":\"c9-duration-thresholds-v2\"},\"windows\":[{\"unit\":\"ms\",\"violates\":false,\"direction\":\"LOWER_IS_BETTER\",\"liveValue\":6060,\"windowKey\":\"customer_experience_agent\",\"limitations\":[],\"baselineValue\":6781,\"comparisonState\":\"COMPARABLE\",\"declaredRelativeDegradation\":-0.1063265005161481,\"recomputedRelativeDegradation\":-0.1063265005161481,\"declaredRelativeDegradationPercent\":-10.63265005161481,\"recomputedRelativeDegradationPercent\":-10.63265005161481},{\"unit\":\"ms\",\"violates\":false,\"direction\":\"LOWER_IS_BETTER\",\"liveValue\":11455,\"windowKey\":\"it_resolution_agent\",\"limitations\":[],\"baselineValue\":8917,\"comparisonState\":\"COMPARABLE\",\"declaredRelativeDegradation\":0.2846248738364921,\"recomputedRelativeDegradation\":0.2846248738364921,\"declaredRelativeDegradationPercent\":28.46248738364921,\"recomputedRelativeDegradationPercent\":28.46248738364921},{\"unit\":\"ms\",\"violates\":false,\"direction\":\"LOWER_IS_BETTER\",\"liveValue\":11673,\"windowKey\":\"network_resolution_agent\",\"limitations\":[],\"baselineValue\":12141,\"comparisonState\":\"COMPARABLE\",\"declaredRelativeDegradation\":-0.0385470719051149,\"recomputedRelativeDegradation\":-0.0385470719051149,\"declaredRelativeDegradationPercent\":-3.85470719051149,\"recomputedRelativeDegradationPercent\":-3.85470719051149}]},\"bundleId\":\"ls-bundle:c907ca3eec089c858f657220\",\"haiecContentDigest\":\"sha256:0169fbb4937c5f2f6a5b03768d9a43605b779d87fa754dacd8f2d141037defb9\",\"analysisRunId\":\"analysis-fault-1791183213-228329\",\"measurementDigest\":null,\"measurementState\":\"MEASURED\",\"outputDigest\":\"sha256:53521a15998b3147d044eaa50bd2e052f4fb03e2437bb658eae67c8065fa9b4d\",\"inputDigest\":\"sha256:72f8118b60ff1bc4fbc52e0544d10b976808cad3726589a79697def0831b2a7f\"}"
+    }
+   ],
+   "structuredContent": {
+    "ok": true,
+    "found": true,
+    "resultId": "ctr-72f8118b60ff1bc4fbc52e0544d10b976808cad3",
+    "controlId": "AIA-ARC-006",
+    "runId": "fault-1791183213-228329",
+    "runRole": "C9_INTENDED_BREACH",
+    "scenarioLabel": "S1-fronthaul-degradation",
+    "result": "SATISFIED",
+    "controlName": "Drift and performance",
+    "controlVersionRef": "aia-arc-006-v1",
+    "thresholdVersionRef": "c9-duration-thresholds-v2",
+    "policyId": "346b5f43-58eb-44f8-a74e-45cfde746d74",
+    "policyDigest": "sha256:8abea3937e5367f3eac38fcd6350fb8bab5c8c42eff41b493fdcdf574d21bab1",
+    "evaluatedAt": "2026-10-05T06:55:00.861Z",
+    "reasonCodes": [],
+    "evidenceRefs": [
+     "ev-fault-1791183213-228329-start",
+     "ev-fault-1791183213-228329-k000",
+     "ev-fault-1791183213-228329-k001",
+     "ev-fault-1791183213-228329-k002"
+    ],
+    "limitations": [
+     "AGENT_LEVEL_RUN_MEAN_WINDOWS",
+     "BASELINE_FROM_CALIBRATION_NOT_ASSESSED",
+     "POLICY_PRECEDES_MEASUREMENT_SNAPSHOT_ONLY",
+     "POLICY_TEMPORAL_GATE_REQUIRES_ASSESSED_ACTIVITY_START"
+    ],
+    "excludedEvidence": null,
+    "calculation": {
+     "binding": {
+      "unit": "ms",
+      "state": "SATISFIED",
+      "metricId": "aws.bedrock-agentcore.duration_ms",
+      "direction": "LOWER_IS_BETTER",
+      "exactMatch": true,
+      "aggregation": "MEAN",
+      "baselineRef": "c9-baseline:c9-duration-baseline-tmf-modaas@v1",
+      "baselineDigest": "sha256:8b5c8300e61f48428313b773af33e0e305348ace9215353d21dfc9855089af6b",
+      "metricProfileRef": "metric-profile:agentcore-invokeagentruntime-duration@v1",
+      "mismatchedFields": [],
+      "metricProfileDigest": "sha256:0c59d40eb4b9f6b18ce1508238de6999b70e2b14e5efe94a1902a032e94944a9"
+     },
+     "compatibility": {
+      "blockers": [],
+      "unknowns": [],
+      "dimensions": [
+       {
+        "state": "COMPATIBLE",
+        "detail": "metric identity",
+        "dimension": "METRIC_ID"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "measurement unit",
+        "dimension": "UNIT"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "metric direction",
+        "dimension": "DIRECTION"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "window aggregation",
+        "dimension": "AGGREGATION"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "governed entity scope",
+        "dimension": "GOVERNED_SCOPE"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "window mode / duration / alignment",
+        "dimension": "WINDOW_SEMANTICS"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "baseline captured under this exact profile version",
+        "dimension": "METRIC_PROFILE"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "approved mapping identity/digests",
+        "dimension": "MAPPING_PROFILE"
+       },
+       {
+        "state": "COMPATIBLE",
+        "detail": "source semantic basis",
+        "dimension": "SOURCE_BASIS"
+       }
+      ],
+      "overallState": "COMPATIBLE"
+     },
+     "drift": {
+      "state": "SATISFIED",
+      "expectedWindows": 3,
+      "coverageComplete": true,
+      "violatingWindows": 0,
+      "comparableWindows": 3,
+      "arithmeticConsistent": true,
+      "violationRatePercent": 0,
+      "maxRelativeDegradationPercent": 100,
+      "worstRelativeDegradationWindow": "it_resolution_agent",
+      "worstRelativeDegradationPercent": 28.46248738364921,
+      "allowedViolatingWindowRatePercent": 0
+     },
+     "monitoring": {
+      "owner": "subodh-kc (participant)",
+      "state": "ESTABLISHED",
+      "alertId": null,
+      "declared": true,
+      "recipient": "sre-oncall@tmf-participant-team",
+      "triggeredAt": null,
+      "responderRef": null,
+      "responseState": "NOT_REQUIRED",
+      "alertRecipient": "sre-oncall@tmf-participant-team",
+      "requiredResponse": "acknowledge or remediate within the assessed window; silence is recorded",
+      "driftValuePercent": null,
+      "responseObservedAt": null,
+      "triggeredWindowKey": null,
+      "responseEvidenceRef": null,
+      "thresholdVersionRef": "c9-duration-thresholds-v2"
+     },
+     "windows": [
+      {
+       "unit": "ms",
+       "violates": false,
+       "direction": "LOWER_IS_BETTER",
+       "liveValue": 6060,
+       "windowKey": "customer_experience_agent",
+       "limitations": [],
+       "baselineValue": 6781,
+       "comparisonState": "COMPARABLE",
+       "declaredRelativeDegradation": -0.1063265005161481,
+       "recomputedRelativeDegradation": -0.1063265005161481,
+       "declaredRelativeDegradationPercent": -10.63265005161481,
+       "recomputedRelativeDegradationPercent": -10.63265005161481
+      },
+      {
+       "unit": "ms",
+       "violates": false,
+       "direction": "LOWER_IS_BETTER",
+       "liveValue": 11455,
+       "windowKey": "it_resolution_agent",
+       "limitations": [],
+       "baselineValue": 8917,
+       "comparisonState": "COMPARABLE",
+       "declaredRelativeDegradation": 0.2846248738364921,
+       "recomputedRelativeDegradation": 0.2846248738364921,
+       "declaredRelativeDegradationPercent": 28.46248738364921,
+       "recomputedRelativeDegradationPercent": 28.46248738364921
+      },
+      {
+       "unit": "ms",
+       "violates": false,
+       "direction": "LOWER_IS_BETTER",
+       "liveValue": 11673,
+       "windowKey": "network_resolution_agent",
+       "limitations": [],
+       "baselineValue": 12141,
+       "comparisonState": "COMPARABLE",
+       "declaredRelativeDegradation": -0.0385470719051149,
+       "recomputedRelativeDegradation": -0.0385470719051149,
+       "declaredRelativeDegradationPercent": -3.85470719051149,
+       "recomputedRelativeDegradationPercent": -3.85470719051149
+      }
+     ]
+    },
+    "bundleId": "ls-bundle:c907ca3eec089c858f657220",
+    "haiecContentDigest": "sha256:0169fbb4937c5f2f6a5b03768d9a43605b779d87fa754dacd8f2d141037defb9",
+    "analysisRunId": "analysis-fault-1791183213-228329",
+    "measurementDigest": null,
+    "measurementState": "MEASURED",
+    "outputDigest": "sha256:53521a15998b3147d044eaa50bd2e052f4fb03e2437bb658eae67c8065fa9b4d",
+    "inputDigest": "sha256:72f8118b60ff1bc4fbc52e0544d10b976808cad3726589a79697def0831b2a7f"
+   }
+  },
+  "jsonrpc": "2.0",
+  "id": 1
+ },
+ "gov": {
+  "result": {
+   "content": [
+    {
+     "type": "text",
+     "text": "{\"schemaVersion\":\"system-governance-1\",\"organizationId\":\"bdf37694-49f8-4003-ae2b-43580ff6a60e\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"evaluationId\":null,\"basis\":\"CURRENT\",\"projectionHash\":\"67e824483c9f3b65711c19acce290a615f8dcc26f17c7ad3b7423ddd2c021555\",\"envelopes\":[],\"policyBinding\":null,\"delegation\":{\"daiRuleConfirmations\":[]},\"enforcement\":{\"killSwitchBinding\":\"NOT_ESTABLISHED\",\"killSwitchDetail\":\"The kill_switch subsystem exists, but kill_switch_systems carries no aiSystemId binding \u2014 per-system protection cannot be established.\"},\"authority\":{\"available\":true,\"divergences\":[\"NO_CURRENT_ACCEPTED_SOURCE\",\"NO_COMPLETED_ASSURANCE_EVALUATION\",\"NO_APPROVED_OPERATING_ENVELOPE\"],\"evaluatedBasisState\":\"NOT_AVAILABLE\",\"currentPolicyState\":\"NOT_CONFIGURED\"},\"frameworks\":{\"observedMappings\":[],\"catalog\":{\"engineVersion\":\"2.1.0\",\"frameworkCatalogHash\":\"c0ac90a149bb812c\",\"mappingEdgeHash\":\"df38ec0fd248b477\",\"releases\":[{\"frameworkId\":\"OWASP_LLM\",\"release\":\"2026\",\"sourceQualification\":\"PRIMARY_SOURCE\",\"isCurrent\":true},{\"frameworkId\":\"OWASP_LLM\",\"release\":\"2025\",\"sourceQualification\":\"HISTORICAL\",\"isCurrent\":false},{\"frameworkId\":\"OWASP_LLM\",\"release\":\"2023\",\"sourceQualification\":\"HISTORICAL\",\"isCurrent\":false},{\"frameworkId\":\"OWASP_AGENTIC\",\"release\":\"2026\",\"sourceQualification\":\"PRIMARY_SOURCE\",\"isCurrent\":true},{\"frameworkId\":\"NIST_AI_RMF_GENAI\",\"release\":\"600-1\",\"sourceQualification\":\"PRIMARY_SOURCE\",\"isCurrent\":true}],\"quarantinedIds\":[\"AML.T001\",\"AML.T004\",\"AML.T005\"],\"mappingEdgeCount\":27,\"notAssessedEdgeCount\":4},\"evaluationFrozen\":\"NOT_RECORDED\",\"evaluationFrozenDetail\":\"No frozen framework binding exists for this basis \u2014 the crosswalk shown is current-catalog state, not evaluation-time truth.\",\"boundFrameworkBinding\":null,\"frameworkReproducibility\":null},\"findingCount\":0,\"gaps\":[\"Kill Switch enforcement binding is not established \u2014 kill_switch_systems has no AI-system binding field; product existence does not prove this system is protected.\",\"No regulatory mappings (EU AI Act, Colorado AI Act, ISO 42001, ISO 27001, SOC 2) exist in the canonical versioned crosswalk \u2014 those live in separate product surfaces and are not detection-finding mappings.\",\"Crosswalk catalog shown is current-state unless the bound evaluation recorded a frameworkBinding \u2014 check evaluationFrozen; BOUND_DRIFTED means rendered edges differ from evaluation-time truth.\"],\"limitations\":[\"FRAMEWORK_MAPPING != COMPLIANCE \u2014 a mapping edge is an analytical crosswalk, not certification, audit opinion, or accreditation.\",\"CONTROL_CONFIGURED != CONTROL_ENFORCING \u2014 envelope/policy state describes configuration, not runtime enforcement.\",\"CURRENT_POLICY_PACK != HISTORICAL_POLICY_PACK \u2014 policy binding shown is either the exact evaluation binding or the most recent; check the binding field.\",\"Quarantined MITRE ATLAS IDs (AML.T001/T004/T005) are excluded from customer-visible mappings.\"],\"links\":{\"governance\":\"https://www.haiec.com/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/action-map?view=governance\"},\"semantics\":[\"FRAMEWORK_MAPPING != COMPLIANCE \u2014 a crosswalk edge is never certification, audit opinion, or accreditation.\",\"CONTROL_CONFIGURED != CONTROL_ENFORCING \u2014 envelope/policy state is configuration, not runtime enforcement.\",\"KILL_SWITCH_PRODUCT_EXISTS != ASSESSED_SYSTEM_IS_KILL_SWITCH_PROTECTED.\",\"CURRENT_POLICY != EVALUATED_POLICY \u2014 check the policyBinding scope.\"]}"
+    }
+   ],
+   "structuredContent": {
+    "schemaVersion": "system-governance-1",
+    "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+    "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+    "evaluationId": null,
+    "basis": "CURRENT",
+    "projectionHash": "67e824483c9f3b65711c19acce290a615f8dcc26f17c7ad3b7423ddd2c021555",
+    "envelopes": [],
+    "policyBinding": null,
+    "delegation": {
+     "daiRuleConfirmations": []
+    },
+    "enforcement": {
+     "killSwitchBinding": "NOT_ESTABLISHED",
+     "killSwitchDetail": "The kill_switch subsystem exists, but kill_switch_systems carries no aiSystemId binding \u2014 per-system protection cannot be established."
+    },
+    "authority": {
+     "available": true,
+     "divergences": [
+      "NO_CURRENT_ACCEPTED_SOURCE",
+      "NO_COMPLETED_ASSURANCE_EVALUATION",
+      "NO_APPROVED_OPERATING_ENVELOPE"
+     ],
+     "evaluatedBasisState": "NOT_AVAILABLE",
+     "currentPolicyState": "NOT_CONFIGURED"
+    },
+    "frameworks": {
+     "observedMappings": [],
+     "catalog": {
+      "engineVersion": "2.1.0",
+      "frameworkCatalogHash": "c0ac90a149bb812c",
+      "mappingEdgeHash": "df38ec0fd248b477",
+      "releases": [
+       {
+        "frameworkId": "OWASP_LLM",
+        "release": "2026",
+        "sourceQualification": "PRIMARY_SOURCE",
+        "isCurrent": true
+       },
+       {
+        "frameworkId": "OWASP_LLM",
+        "release": "2025",
+        "sourceQualification": "HISTORICAL",
+        "isCurrent": false
+       },
+       {
+        "frameworkId": "OWASP_LLM",
+        "release": "2023",
+        "sourceQualification": "HISTORICAL",
+        "isCurrent": false
+       },
+       {
+        "frameworkId": "OWASP_AGENTIC",
+        "release": "2026",
+        "sourceQualification": "PRIMARY_SOURCE",
+        "isCurrent": true
+       },
+       {
+        "frameworkId": "NIST_AI_RMF_GENAI",
+        "release": "600-1",
+        "sourceQualification": "PRIMARY_SOURCE",
+        "isCurrent": true
+       }
+      ],
+      "quarantinedIds": [
+       "AML.T001",
+       "AML.T004",
+       "AML.T005"
+      ],
+      "mappingEdgeCount": 27,
+      "notAssessedEdgeCount": 4
+     },
+     "evaluationFrozen": "NOT_RECORDED",
+     "evaluationFrozenDetail": "No frozen framework binding exists for this basis \u2014 the crosswalk shown is current-catalog state, not evaluation-time truth.",
+     "boundFrameworkBinding": null,
+     "frameworkReproducibility": null
+    },
+    "findingCount": 0,
+    "gaps": [
+     "Kill Switch enforcement binding is not established \u2014 kill_switch_systems has no AI-system binding field; product existence does not prove this system is protected.",
+     "No regulatory mappings (EU AI Act, Colorado AI Act, ISO 42001, ISO 27001, SOC 2) exist in the canonical versioned crosswalk \u2014 those live in separate product surfaces and are not detection-finding mappings.",
+     "Crosswalk catalog shown is current-state unless the bound evaluation recorded a frameworkBinding \u2014 check evaluationFrozen; BOUND_DRIFTED means rendered edges differ from evaluation-time truth."
+    ],
+    "limitations": [
+     "FRAMEWORK_MAPPING != COMPLIANCE \u2014 a mapping edge is an analytical crosswalk, not certification, audit opinion, or accreditation.",
+     "CONTROL_CONFIGURED != CONTROL_ENFORCING \u2014 envelope/policy state describes configuration, not runtime enforcement.",
+     "CURRENT_POLICY_PACK != HISTORICAL_POLICY_PACK \u2014 policy binding shown is either the exact evaluation binding or the most recent; check the binding field.",
+     "Quarantined MITRE ATLAS IDs (AML.T001/T004/T005) are excluded from customer-visible mappings."
+    ],
+    "links": {
+     "governance": "https://www.haiec.com/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/action-map?view=governance"
+    },
+    "semantics": [
+     "FRAMEWORK_MAPPING != COMPLIANCE \u2014 a crosswalk edge is never certification, audit opinion, or accreditation.",
+     "CONTROL_CONFIGURED != CONTROL_ENFORCING \u2014 envelope/policy state is configuration, not runtime enforcement.",
+     "KILL_SWITCH_PRODUCT_EXISTS != ASSESSED_SYSTEM_IS_KILL_SWITCH_PROTECTED.",
+     "CURRENT_POLICY != EVALUATED_POLICY \u2014 check the policyBinding scope."
+    ]
+   }
+  },
+  "jsonrpc": "2.0",
+  "id": 1
+ },
+ "tele": {
+  "result": {
+   "content": [
+    {
+     "type": "text",
+     "text": "{\"binders\":[{\"binderId\":\"52ec5f04-c01a-4715-ae46-6bef3260b505\",\"adapterId\":\"otlp-http\",\"adapterVersion\":\"otlp-receiver-1.0.0\",\"sourceSystem\":\"otlp\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"active\":true,\"createdAt\":\"2026-10-05T05:41:29.859Z\"},{\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"adapterVersion\":\"1.0.0\",\"sourceSystem\":\"logsense\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"active\":true,\"createdAt\":\"2026-10-05T01:56:30.804Z\"}],\"intake\":{\"totalBatches\":105,\"totalRecords\":7549,\"mostRecentBatch\":{\"batchId\":\"ing-358711d1fece2b602e336398d1008f8bd51ef27867d3a5bc\",\"recordCount\":10,\"createdAt\":\"2026-10-05T10:37:41.441Z\"},\"recentBatches\":[{\"batchId\":\"ing-358711d1fece2b602e336398d1008f8bd51ef27867d3a5bc\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":10,\"createdAt\":\"2026-10-05T10:37:41.441Z\"},{\"batchId\":\"6f7d76b7-99c5-4b73-be77-335a7b2840c9\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:19.489Z\"},{\"batchId\":\"723dac6f-76ff-40fe-b4db-106f99fcee95\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:19.245Z\"},{\"batchId\":\"5b830031-7830-4c7a-a6b9-0239b31ff8f3\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:18.938Z\"},{\"batchId\":\"773ef425-2291-4275-b0f0-b10fd08f775f\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:18.659Z\"},{\"batchId\":\"1de01011-aa60-4eb8-be55-ce225c0deaa4\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:18.421Z\"},{\"batchId\":\"485243aa-2f16-45b6-a732-87bc5f605793\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:18.182Z\"},{\"batchId\":\"b5e3c75d-99b9-4064-9348-b831d954ab68\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:17.946Z\"},{\"batchId\":\"cff63b7f-48ad-4ee6-9ae4-dc05ad1e4e8e\",\"binderId\":\"e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9\",\"adapterId\":\"structured-event-adapter\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:37:17.668Z\"},{\"batchId\":\"85ea3472-ce96-431c-94bb-430b22e5f33f\",\"binderId\":\"52ec5f04-c01a-4715-ae46-6bef3260b505\",\"adapterId\":\"otlp-http\",\"aiSystemId\":\"4043efee-cec6-4007-954b-1f8da2273f35\",\"recordCount\":1,\"createdAt\":\"2026-10-05T10:36:57.486Z\"}]},\"telemetryReadiness\":{\"state\":\"SIGNAL_RECEIVED\",\"binderConfigured\":true,\"systemBound\":true,\"signalReceived\":true,\"latestReceivedAt\":\"2026-10-05T10:37:41.441Z\",\"acceptedBatchCount\":105,\"acceptedRecordCount\":7549,\"nextAction\":\"RUN_NEW_EVALUATION\"},\"limitations\":[\"Counts reflect accepted intake batches \u2014 rejected/quarantined intake is not part of this projection.\",\"Coverage/continuity is UNKNOWN unless the source supplies deterministic continuity evidence.\",\"Telemetry presence != OBSERVED Assurance truth \u2014 only a new Evaluation establishes change.\",\"SIGNAL_RECEIVED != READY / PROVEN / VERIFIED_RUNTIME \u2014 receiving evidence establishes receipt only.\"]}"
+    }
+   ],
+   "structuredContent": {
+    "binders": [
+     {
+      "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+      "adapterId": "otlp-http",
+      "adapterVersion": "otlp-receiver-1.0.0",
+      "sourceSystem": "otlp",
+      "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+      "active": true,
+      "createdAt": "2026-10-05T05:41:29.859Z"
+     },
+     {
+      "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+      "adapterId": "structured-event-adapter",
+      "adapterVersion": "1.0.0",
+      "sourceSystem": "logsense",
+      "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+      "active": true,
+      "createdAt": "2026-10-05T01:56:30.804Z"
+     }
+    ],
+    "intake": {
+     "totalBatches": 105,
+     "totalRecords": 7549,
+     "mostRecentBatch": {
+      "batchId": "ing-358711d1fece2b602e336398d1008f8bd51ef27867d3a5bc",
+      "recordCount": 10,
+      "createdAt": "2026-10-05T10:37:41.441Z"
+     },
+     "recentBatches": [
+      {
+       "batchId": "ing-358711d1fece2b602e336398d1008f8bd51ef27867d3a5bc",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 10,
+       "createdAt": "2026-10-05T10:37:41.441Z"
+      },
+      {
+       "batchId": "6f7d76b7-99c5-4b73-be77-335a7b2840c9",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:19.489Z"
+      },
+      {
+       "batchId": "723dac6f-76ff-40fe-b4db-106f99fcee95",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:19.245Z"
+      },
+      {
+       "batchId": "5b830031-7830-4c7a-a6b9-0239b31ff8f3",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:18.938Z"
+      },
+      {
+       "batchId": "773ef425-2291-4275-b0f0-b10fd08f775f",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:18.659Z"
+      },
+      {
+       "batchId": "1de01011-aa60-4eb8-be55-ce225c0deaa4",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:18.421Z"
+      },
+      {
+       "batchId": "485243aa-2f16-45b6-a732-87bc5f605793",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:18.182Z"
+      },
+      {
+       "batchId": "b5e3c75d-99b9-4064-9348-b831d954ab68",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:17.946Z"
+      },
+      {
+       "batchId": "cff63b7f-48ad-4ee6-9ae4-dc05ad1e4e8e",
+       "binderId": "e349b6c5-a58e-4a4d-8cec-cbadbd1d23b9",
+       "adapterId": "structured-event-adapter",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:37:17.668Z"
+      },
+      {
+       "batchId": "85ea3472-ce96-431c-94bb-430b22e5f33f",
+       "binderId": "52ec5f04-c01a-4715-ae46-6bef3260b505",
+       "adapterId": "otlp-http",
+       "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+       "recordCount": 1,
+       "createdAt": "2026-10-05T10:36:57.486Z"
+      }
+     ]
+    },
+    "telemetryReadiness": {
+     "state": "SIGNAL_RECEIVED",
+     "binderConfigured": true,
+     "systemBound": true,
+     "signalReceived": true,
+     "latestReceivedAt": "2026-10-05T10:37:41.441Z",
+     "acceptedBatchCount": 105,
+     "acceptedRecordCount": 7549,
+     "nextAction": "RUN_NEW_EVALUATION"
+    },
+    "limitations": [
+     "Counts reflect accepted intake batches \u2014 rejected/quarantined intake is not part of this projection.",
+     "Coverage/continuity is UNKNOWN unless the source supplies deterministic continuity evidence.",
+     "Telemetry presence != OBSERVED Assurance truth \u2014 only a new Evaluation establishes change.",
+     "SIGNAL_RECEIVED != READY / PROVEN / VERIFIED_RUNTIME \u2014 receiving evidence establishes receipt only."
+    ]
+   }
+  },
+  "jsonrpc": "2.0",
+  "id": 1
+ }
+}

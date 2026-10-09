@@ -1,0 +1,34 @@
+# Package digest lineage - TM Forum hand-in
+33945915 -> 9e29aa70 -> b136b166 -> 1b05ced8 -> 8e6c761e -> ffb62b4d -> 02e32777 -> e64fdfc3 -> 930aefa5 -> aee4dc1c -> cda74460 -> 6e0baa67 -> 6b02698b -> a474b27b -> 7a0bb5f3
+e64fdfc3  (v11 +organizer kill-switch native exercise: pause->refused/404->recover,
+           cid killswitch-1791200427, 5-record timeline, post-recovery answer)
+
+930aefa5  (v12 superseded, never uploaded)
+aee4dc1c  (v13 superseded, never uploaded: prospective-policy-review artifact,
+           threshold-defense + judge deck math, judge evidence-index relabel,
+           LogSense TM Forum workbench bundle (logsense-event/),
+           organizer kill-switch wording correction)
+cda74460  (v14 superseded, never uploaded: +TMF_FRAMEWORK_CROSSWALK
+           (0 canonical OWASP IDs, honest UNMAPPED) +deck framework appendix)
+6e0baa67  (v15 superseded, never uploaded: C9_JUDGE_FACING_TRUTH_SYNC —
+           stale "C9 UNFROZEN" current-state claims corrected in 01/02 mirrors;
+           C9 assessed result added to judge-nav 2-minute path; pre-freeze C9
+           history preserved and marked SUPERSEDED)
+6b02698b  (v16 SERVICENOW_AICT_LIVE_BINDING_SYNC: FACILITATOR_ACTIVATION_PENDING
+           corrected — connector ACTIVE + ASSUMEROLE_PROVEN (5 CloudTrail events,
+           ServiceNowAictUser -> SgcAictReadOnlyAccessRole, IDE native capture);
+           AICT discovery/incident path honestly NOT_ESTABLISHED; ED-014/ED-029
+           marked SUPERSEDED; +SERVICENOW_AWS_IDENTITY_RECONCILIATION.md and
+           +SERVICENOW_AICT_COVERAGE_MATRIX.md; C7/C9/C16/thresholds untouched)
+a474b27b  (v17 superseded-forward fix: KUSHAL_REVIEW_CARD "open blockers" line
+           still listed ServiceNow AICT activation as pending — corrected to
+           connector ACTIVE/ASSUMEROLE_PROVEN, discovery+incident NOT_ESTABLISHED)
+MANIFEST_SHA256 = 7a0bb5f317f345abffa7cdb1a562cc2c47f41a99f149f32835c4374708b06d05
+
+7a0bb5f3  (v18 JUDGE_VISIBILITY_MATRICES: +TMF_DETECTION_COVERAGE_MATRIX,
+           +TMF_FIVE_PLANE_ASSURANCE_MATRIX, +TMF_CONSEQUENCE_PATH,
+           +TMF_EVIDENCE_QUALITY_MATRIX, +TMF_FINDING_LINEAGE,
+           +TMF_DAI_EVALUATION.json (tmf-dai-c7-negotiation-001 -> UNKNOWN,
+           honest unproven delegation); judge-nav 2-minute path extended;
+           packaged IDE_PULL_AND_VERIFY.md refreshed to current id/count)
+

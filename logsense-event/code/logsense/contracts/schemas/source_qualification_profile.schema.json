@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Qualification Profile",
+  "type": "object",
+  "properties": {
+    "profileId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "sourceAuthorityRole": {
+      "type": "string",
+      "enum": [
+        "AUTHORITATIVE_CONTROL_BOUNDARY",
+        "PLATFORM_INSTRUMENTATION",
+        "SERVICE_NATIVE_RECORD",
+        "APPLICATION_TELEMETRY",
+        "EXTERNAL_IMPORTED_RECORD",
+        "DECLARED_CONFIGURATION",
+        "SELF_REPORTED",
+        "UNKNOWN_SOURCE_AUTHORITY"
+      ]
+    },
+    "sourceRole": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "authorityScope": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "canEstablishClaimClasses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ACTION_REQUESTED",
+          "ACTION_AUTHORIZED",
+          "ACTION_ACCEPTED",
+          "ACTION_APPLIED",
+          "ACTION_CONFIRMED",
+          "POLICY_STATE",
+          "EFFECTIVE_GRANT",
+          "CODE_CAPABILITY",
+          "STATE_OBSERVATION",
+          "STATE_TRANSITION",
+          "RUNTIME_INVOCATION",
+          "IDENTITY_BINDING",
+          "RELATION_DECLARATION",
+          "STREAM_COMPLETENESS",
+          "EVIDENCE_INTEGRITY",
+          "SCENARIO_MEMBERSHIP"
+        ]
+      }
+    },
+    "canSupportClaimClasses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ACTION_REQUESTED",
+          "ACTION_AUTHORIZED",
+          "ACTION_ACCEPTED",
+          "ACTION_APPLIED",
+          "ACTION_CONFIRMED",
+          "POLICY_STATE",
+          "EFFECTIVE_GRANT",
+          "CODE_CAPABILITY",
+          "STATE_OBSERVATION",
+          "STATE_TRANSITION",
+          "RUNTIME_INVOCATION",
+          "IDENTITY_BINDING",
+          "RELATION_DECLARATION",
+          "STREAM_COMPLETENESS",
+          "EVIDENCE_INTEGRITY",
+          "SCENARIO_MEMBERSHIP"
+        ]
+      }
+    },
+    "cannotEstablishClaimClasses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ACTION_REQUESTED",
+          "ACTION_AUTHORIZED",
+          "ACTION_ACCEPTED",
+          "ACTION_APPLIED",
+          "ACTION_CONFIRMED",
+          "POLICY_STATE",
+          "EFFECTIVE_GRANT",
+          "CODE_CAPABILITY",
+          "STATE_OBSERVATION",
+          "STATE_TRANSITION",
+          "RUNTIME_INVOCATION",
+          "IDENTITY_BINDING",
+          "RELATION_DECLARATION",
+          "STREAM_COMPLETENESS",
+          "EVIDENCE_INTEGRITY",
+          "SCENARIO_MEMBERSHIP"
+        ]
+      }
+    },
+    "requiresExactSubjectBinding": {
+      "type": "boolean"
+    },
+    "requiresCurrentness": {
+      "type": "boolean"
+    },
+    "requiresIntegrityState": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requiresCompletenessForClaims": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ACTION_REQUESTED",
+          "ACTION_AUTHORIZED",
+          "ACTION_ACCEPTED",
+          "ACTION_APPLIED",
+          "ACTION_CONFIRMED",
+          "POLICY_STATE",
+          "EFFECTIVE_GRANT",
+          "CODE_CAPABILITY",
+          "STATE_OBSERVATION",
+          "STATE_TRANSITION",
+          "RUNTIME_INVOCATION",
+          "IDENTITY_BINDING",
+          "RELATION_DECLARATION",
+          "STREAM_COMPLETENESS",
+          "EVIDENCE_INTEGRITY",
+          "SCENARIO_MEMBERSHIP"
+        ]
+      }
+    },
+    "lineagePolicy": {
+      "type": "string"
+    },
+    "haiecReferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "profileId",
+    "version",
+    "sourceAuthorityRole",
+    "canEstablishClaimClasses",
+    "canSupportClaimClasses",
+    "cannotEstablishClaimClasses",
+    "requiresExactSubjectBinding",
+    "requiresCurrentness",
+    "requiresIntegrityState",
+    "requiresCompletenessForClaims",
+    "lineagePolicy",
+    "haiecReferences",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/source_qualification_profile.schema.json"
+}

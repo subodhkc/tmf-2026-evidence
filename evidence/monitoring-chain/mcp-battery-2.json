@@ -1,0 +1,731 @@
+{
+  "control_test_query": {
+    "raw": "Input validation error: Invalid arguments for tool haiec_control_test_query: controlId: Invalid option: expected one of \"AIA-LOG-001\"|\"AIA-ARC-006\"|\"ACN-COST-001\", runId: Invalid input: expected string, received undefined",
+    "err": null,
+    "body": ""
+  },
+  "system_evidence": {
+    "schemaVersion": "system-evidence-facets-1",
+    "systemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+    "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+    "facets": [
+      {
+        "key": "supply_chain",
+        "label": "Supply Chain",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "declaredVersion",
+          "observedVersion",
+          "inSbom",
+          "hasKnownVulnerability",
+          "vexContradictsVulnerability",
+          "artifactHash",
+          "recordedArtifactHash",
+          "signed",
+          "registry",
+          "approvedRegistries",
+          "publisherChanged",
+          "newNetworkPermissions",
+          "changeRequestRef"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "model_integrity",
+        "label": "Model Integrity",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "modelVersion",
+          "approvedVersion",
+          "modelHash",
+          "approvedHash",
+          "featureDrift",
+          "outputKlDivergence",
+          "trainingDataSource",
+          "approvedTrainingSources",
+          "inputFingerprint",
+          "outputFingerprint"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "model_usage",
+        "label": "Model Usage & Consumption",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "queryRate",
+          "queryRateThreshold",
+          "consumerId",
+          "consumerRegistered",
+          "predictionVariance",
+          "oodScore"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "infrastructure",
+        "label": "Infrastructure",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "resourceName",
+          "namespace",
+          "verb",
+          "decision"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "api_network",
+        "label": "API / Network",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "method",
+          "path",
+          "statusCode",
+          "destDomain",
+          "queryName"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "iam",
+        "label": "Identity / IAM",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "agentId",
+          "knownToRegistry",
+          "spiffeId",
+          "attestationPresent",
+          "attestationValid",
+          "chainIntact",
+          "declaredScopes",
+          "observedScopes"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "data_access",
+        "label": "Data & Secrets",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "secretName",
+          "accessedBy",
+          "rotationDue",
+          "table",
+          "operation"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "runtime",
+        "label": "Runtime / Telemetry",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "governance",
+        "label": "Governance / Policy",
+        "status": "ABSENT_NOT_ASSESSED",
+        "records": [],
+        "typedRecordCount": 0,
+        "producers": [],
+        "latestObservedAt": null,
+        "missing": [
+          "policyType",
+          "candidateOperation",
+          "nativeOperation"
+        ],
+        "basis": "No class-marked records bind to this system for this facet \u2014 absence is NOT zero events.",
+        "limitations": [
+          "ABSENT_FACET != ZERO_EVENTS \u2014 no typed records were persisted for this facet; nothing is proven about occurrence."
+        ]
+      },
+      {
+        "key": "provenance",
+        "label": "Evidence Provenance",
+        "status": "PRESENT_TYPED",
+        "records": [],
+        "typedRecordCount": 2,
+        "producers": [
+          "saas-inventory"
+        ],
+        "latestObservedAt": "2026-10-05T10:09:36.637Z",
+        "missing": [],
+        "basis": "Every bound evidence row carries producer identity + semantic digest; counts reflect persisted envelope metadata.",
+        "limitations": [
+          "DIGEST != CONTENT \u2014 provenance proves identity/integrity, not truth of content.",
+          "Distinct producer runs: 2"
+        ]
+      }
+    ],
+    "unclassifiedCount": 2,
+    "totalRecordCount": 2,
+    "historicalRecordCount": 0,
+    "basisNote": "Current persisted evidence bound to this system (DIRECT_SYSTEM + asset-bound, incl. historical). Not an evaluated snapshot; evaluationIds per record give exact membership.",
+    "links": {
+      "evidenceFacets": "https://www.haiec.com/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/action-map?view=evidence"
+    },
+    "semantics": [
+      "ABSENT_FACET != ZERO_EVENTS \u2014 absence means no typed records persisted, not that nothing happened.",
+      "NORMALIZED_RECORD_FACT != VERIFIED_FACT \u2014 typed fields are caller-declared source content.",
+      "CURRENT_FACET != EVALUATION_SNAPSHOT \u2014 evaluationIds give exact membership; facets are current persisted state.",
+      "UNCLASSIFIED_RECORD != NO_EVIDENCE \u2014 unmarked records exist but carry no typed facet."
+    ]
+  },
+  "agent_trace_breach": {
+    "schemaVersion": "agent-trace-1.0.0",
+    "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+    "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+    "aiSystemName": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+    "basis": "CURRENT",
+    "topology": {
+      "projectionSchemaVersion": "topology-1.0.0",
+      "sourceVersion": "topology-1.0.0",
+      "projectionScope": "AI_SYSTEM",
+      "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+      "aiSystemId": "4043efee-cec6-4007-954b-1f8da2273f35",
+      "aiSystemName": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+      "primaryTimeBasis": "CURRENT",
+      "projectionHash": "0c0ce6c1d99f52c4e07a6991dd3c8b56289b70485b84205bef95afb33c2fd5d8",
+      "coverage": "NOT_ASSESSED",
+      "mapAvailability": "SOURCE_GAP",
+      "limitations": [
+        "No approved operating envelope configured \u2014 policy plane is not established",
+        "No current accepted static source exists for this AI System \u2014 run a scan via the orchestrator to populate the map"
+      ],
+      "nodes": [
+        {
+          "id": "node:ai_execution:b417abb05b424fc6240ea1a1",
+          "label": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+          "kind": "ai_execution",
+          "subType": "AI_AGENT",
+          "aiReachable": true,
+          "availability": "AVAILABLE",
+          "limitations": []
+        },
+        {
+          "id": "node:evidence:f3696932a48d48e20bbcbd45",
+          "label": "Evidence",
+          "kind": "evidence",
+          "aiReachable": "UNKNOWN",
+          "availability": "AVAILABLE",
+          "limitations": []
+        },
+        {
+          "id": "node:policy:f1ab6c14d084aea817827c90",
+          "label": "Policy not yet defined",
+          "kind": "policy",
+          "subType": "NOT_CONFIGURED",
+          "subTypeLabel": "Policy not yet defined",
+          "aiReachable": "UNKNOWN",
+          "availability": "SOURCE_GAP",
+          "limitations": [
+            "No approved operating envelope configured for this AI System"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge:evidenced_by:514b697cf20a65e1e0a2f370",
+          "source": "node:evidence:f3696932a48d48e20bbcbd45",
+          "target": "node:ai_execution:b417abb05b424fc6240ea1a1",
+          "label": "evidences",
+          "kind": "evidenced_by",
+          "joinBasis": "EXACT_ID",
+          "style": "solid"
+        }
+      ],
+      "currentPolicy": {
+        "state": "NOT_CONFIGURED",
+        "envelopeId": null,
+        "version": null,
+        "approvedBy": null,
+        "approvedAt": null
+      },
+      "actionProofBasis": "NOT_AVAILABLE",
+      "viewState": "CURRENT_SYSTEM_VIEW",
+      "scanInProgress": false,
+      "lenses": [
+        "overview",
+        "system",
+        "action_consequence",
+        "access_authority",
+        "evidence_coverage"
+      ],
+      "zoomLevels": [
+        "summary",
+        "standard",
+        "detail"
+      ]
+    },
+    "nodes": [
+      {
+        "id": "node:ai_execution:b417abb05b424fc6240ea1a1",
+        "label": "TM Forum 2026 \u2014 Supplied Agentic System \u2014 Assessed",
+        "lane": "reasoning_orchestration",
+        "kind": "ai_execution",
+        "lenses": [
+          "paths"
+        ],
+        "basis": "CANONICAL",
+        "state": "AVAILABLE",
+        "mode": "UNKNOWN",
+        "evidenceRefs": [],
+        "limitations": []
+      },
+      {
+        "id": "node:evidence:f3696932a48d48e20bbcbd45",
+        "label": "Evidence",
+        "lane": "runtime_evidence",
+        "kind": "evidence",
+        "lenses": [
+          "evidence"
+        ],
+        "basis": "CANONICAL",
+        "state": "AVAILABLE",
+        "mode": "EVIDENCE",
+        "evidenceRefs": [],
+        "limitations": []
+      },
+      {
+        "id": "node:policy:f1ab6c14d084aea817827c90",
+        "label": "Policy not yet defined",
+        "lane": "guardrails_policy",
+        "kind": "policy",
+        "lenses": [
+          "control",
+          "influence"
+        ],
+        "basis": "CANONICAL",
+        "state": "SOURCE_GAP",
+        "mode": "UNKNOWN",
+        "evidenceRefs": [],
+        "limitations": [
+          "No approved operating envelope configured for this AI System"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "id": "edge:evidenced_by:514b697cf20a65e1e0a2f370",
+        "source": "node:evidence:f3696932a48d48e20bbcbd45",
+        "target": "node:ai_execution:b417abb05b424fc6240ea1a1",
+        "canonicalRelationType": "evidenced_by",
+        "lenses": [
+          "evidence"
+        ],
+        "basis": "EXACT_ID",
+        "elementBasis": "CANONICAL",
+        "state": "ESTABLISHED",
+        "consequential": false,
+        "evidenceRefs": [],
+        "limitations": []
+      }
+    ],
+    "lanes": [
+      {
+        "id": "interaction",
+        "label": "Interaction",
+        "state": "UNAVAILABLE",
+        "nodeIds": [],
+        "note": "No interaction surface is established \u2014 HAIEC cannot show how users or systems reach this AI."
+      },
+      {
+        "id": "identity_authority",
+        "label": "Identity & Authority",
+        "state": "UNAVAILABLE",
+        "nodeIds": [],
+        "note": "Authority is not established \u2014 nothing shows which identity, credential, or grant applies."
+      },
+      {
+        "id": "reasoning_orchestration",
+        "label": "Reasoning & Orchestration",
+        "state": "POPULATED",
+        "nodeIds": [
+          "node:ai_execution:b417abb05b424fc6240ea1a1"
+        ]
+      },
+      {
+        "id": "knowledge_context",
+        "label": "Knowledge & Context",
+        "state": "UNAVAILABLE",
+        "nodeIds": [],
+        "note": "No knowledge source is established \u2014 RAG, memory, and context inputs are unknown."
+      },
+      {
+        "id": "tools_actions",
+        "label": "Tools & Actions",
+        "state": "UNAVAILABLE",
+        "nodeIds": [],
+        "note": "No tool or action evidence is available \u2014 what the system can invoke is not established."
+      },
+      {
+        "id": "data_access_paths",
+        "label": "Data & Access Paths",
+        "state": "UNAVAILABLE",
+        "nodeIds": [],
+        "note": "Data paths are unavailable \u2014 which resources actions can reach is not established."
+      },
+      {
+        "id": "guardrails_policy",
+        "label": "Guardrails & Policy",
+        "state": "UNAVAILABLE",
+        "nodeIds": [
+          "node:policy:f1ab6c14d084aea817827c90"
+        ],
+        "note": "Guardrail and policy state is unavailable \u2014 controls that apply are not established."
+      },
+      {
+        "id": "runtime_evidence",
+        "label": "Runtime & Evidence",
+        "state": "POPULATED",
+        "nodeIds": [
+          "node:evidence:f3696932a48d48e20bbcbd45"
+        ]
+      }
+    ],
+    "lenses": [
+      "influence",
+      "reach",
+      "control",
+      "paths",
+      "consequence",
+      "evidence"
+    ],
+    "authorityPlanes": [
+      {
+        "plane": "REQUESTED",
+        "present": 0,
+        "states": {}
+      },
+      {
+        "plane": "POLICY_AUTHORIZED",
+        "present": 0,
+        "states": {}
+      },
+      {
+        "plane": "EFFECTIVELY_GRANTED",
+        "present": 0,
+        "states": {}
+      },
+      {
+        "plane": "CODE_CAPABLE",
+        "present": 0,
+        "states": {}
+      },
+      {
+        "plane": "OBSERVED",
+        "present": 0,
+        "states": {}
+      }
+    ],
+    "evidenceCoverage": {
+      "configuredClasses": 2,
+      "totalClasses": 7,
+      "classes": [
+        {
+          "id": "source-code",
+          "label": "Source code scan",
+          "tier": "REQUIRED",
+          "establishes": "CODE_CAPABLE: what the source code can technically do.",
+          "state": "MISSING",
+          "detail": "No source repository connected",
+          "caveat": "Establishes what the code is capable of: never observed behavior.",
+          "lastActivityAt": null,
+          "nextAction": {
+            "label": "Connect a repository",
+            "href": "/dashboard/ai-inventory/connect"
+          }
+        },
+        {
+          "id": "telemetry",
+          "label": "Telemetry ingest",
+          "tier": "RECOMMENDED",
+          "establishes": "OBSERVED: what connected runtime evidence recorded.",
+          "state": "CONFIGURED",
+          "detail": "9 ingest credentials or bindings",
+          "caveat": "A scoped token or binder is configuration: not proof that data is flowing.",
+          "lastActivityAt": "2026-10-05T10:07:12.207Z",
+          "nextAction": {
+            "label": "Connect telemetry",
+            "href": "/monitoring/sources/onboard"
+          }
+        },
+        {
+          "id": "iam-policy",
+          "label": "IAM / policy evidence",
+          "tier": "RECOMMENDED",
+          "establishes": "POLICY_AUTHORIZED / EFFECTIVELY_GRANTED: what policy and credentials permit.",
+          "state": "MISSING",
+          "detail": "No credential bound, no policy source declared",
+          "caveat": "Grant evidence shows permitted scope: not observed usage.",
+          "lastActivityAt": null,
+          "nextAction": {
+            "label": "Connect IAM / policy",
+            "href": "/monitoring/iam"
+          }
+        },
+        {
+          "id": "runtime-endpoint",
+          "label": "Runtime endpoint",
+          "tier": "OPTIONAL",
+          "establishes": "OBSERVED: what authorized runtime testing exercised.",
+          "state": "MISSING",
+          "detail": "No runtime endpoint registered",
+          "caveat": "An endpoint enables authorized runtime testing: it does not run tests by itself.",
+          "lastActivityAt": null,
+          "nextAction": {
+            "label": "Configure runtime testing",
+            "href": "/monitoring/runtime-security"
+          }
+        },
+        {
+          "id": "delegation",
+          "label": "Delegation evidence (DAI)",
+          "tier": "OPTIONAL",
+          "establishes": "Delegation path: what was declared as delegated authority.",
+          "state": "MISSING",
+          "detail": "No delegation evidence uploaded",
+          "caveat": "Delegation evidence is org-declared: it documents what was delegated, not what was safe.",
+          "lastActivityAt": null,
+          "nextAction": {
+            "label": "Add delegation evidence",
+            "href": "/monitoring/dai/evidence"
+          }
+        },
+        {
+          "id": "envelope",
+          "label": "Operating envelope",
+          "tier": "OPTIONAL",
+          "establishes": "Evaluated scope: the bounds an ALLOW can be valid within.",
+          "state": "MISSING",
+          "detail": "No operating envelope defined",
+          "caveat": "An approved envelope bounds evaluation scope: it is not enforcement proof.",
+          "lastActivityAt": null,
+          "nextAction": {
+            "label": "Define an envelope",
+            "href": "/monitoring/envelopes"
+          }
+        },
+        {
+          "id": "alerts",
+          "label": "Alert channels",
+          "tier": "OPTIONAL",
+          "establishes": "Notification path: where findings can be delivered.",
+          "state": "CONFIGURED",
+          "detail": "2 active channels",
+          "caveat": "A channel delivers notifications: it does not guarantee detection.",
+          "lastActivityAt": "2026-10-05T09:26:20.946Z",
+          "nextAction": {
+            "label": "Configure alerts",
+            "href": "/monitoring/alerts/rules"
+          }
+        }
+      ]
+    },
+    "declaredFacts": {
+      "submissions": 0,
+      "factCount": 0,
+      "sources": []
+    },
+    "gaps": [
+      {
+        "id": "gap:lane:interaction",
+        "lane": "interaction",
+        "kind": "LANE_EMPTY",
+        "label": "Interaction unavailable",
+        "whyItMatters": "No interaction surface is established \u2014 HAIEC cannot show how users or systems reach this AI.",
+        "resolveBy": {
+          "label": "Connect a repository",
+          "href": "/dashboard/ai-inventory/connect"
+        }
+      },
+      {
+        "id": "gap:lane:identity_authority",
+        "lane": "identity_authority",
+        "kind": "LANE_EMPTY",
+        "label": "Identity & Authority unavailable",
+        "whyItMatters": "Authority is not established \u2014 nothing shows which identity, credential, or grant applies.",
+        "resolveBy": {
+          "label": "Connect IAM / policy",
+          "href": "/monitoring/iam"
+        }
+      },
+      {
+        "id": "gap:lane:knowledge_context",
+        "lane": "knowledge_context",
+        "kind": "LANE_EMPTY",
+        "label": "Knowledge & Context unavailable",
+        "whyItMatters": "No knowledge source is established \u2014 RAG, memory, and context inputs are unknown.",
+        "resolveBy": null
+      },
+      {
+        "id": "gap:lane:tools_actions",
+        "lane": "tools_actions",
+        "kind": "LANE_EMPTY",
+        "label": "Tools & Actions unavailable",
+        "whyItMatters": "No tool or action evidence is available \u2014 what the system can invoke is not established.",
+        "resolveBy": {
+          "label": "Connect a repository",
+          "href": "/dashboard/ai-inventory/connect"
+        }
+      },
+      {
+        "id": "gap:lane:data_access_paths",
+        "lane": "data_access_paths",
+        "kind": "LANE_EMPTY",
+        "label": "Data & Access Paths unavailable",
+        "whyItMatters": "Data paths are unavailable \u2014 which resources actions can reach is not established.",
+        "resolveBy": null
+      },
+      {
+        "id": "gap:lane:guardrails_policy",
+        "lane": "guardrails_policy",
+        "kind": "LANE_EMPTY",
+        "label": "Guardrails & Policy unavailable",
+        "whyItMatters": "Guardrail and policy state is unavailable \u2014 controls that apply are not established.",
+        "resolveBy": {
+          "label": "Define an envelope",
+          "href": "/monitoring/envelopes"
+        }
+      },
+      {
+        "id": "gap:class:source-code",
+        "kind": "EVIDENCE_CLASS_MISSING",
+        "label": "Source code scan: not configured",
+        "whyItMatters": "CODE_CAPABLE: what the source code can technically do.",
+        "resolveBy": {
+          "label": "Connect a repository",
+          "href": "/dashboard/ai-inventory/connect"
+        }
+      },
+      {
+        "id": "gap:class:iam-policy",
+        "kind": "EVIDENCE_CLASS_MISSING",
+        "label": "IAM / policy evidence: not configured",
+        "whyItMatters": "POLICY_AUTHORIZED / EFFECTIVELY_GRANTED: what policy and credentials permit.",
+        "resolveBy": {
+          "label": "Connect IAM / policy",
+          "href": "/monitoring/iam"
+        }
+      },
+      {
+        "id": "gap:class:runtime-endpoint",
+        "kind": "EVIDENCE_CLASS_MISSING",
+        "label": "Runtime endpoint: not configured",
+        "whyItMatters": "OBSERVED: what authorized runtime testing exercised.",
+        "resolveBy": {
+          "label": "Configure runtime testing",
+          "href": "/monitoring/runtime-security"
+        }
+      },
+      {
+        "id": "gap:class:delegation",
+        "kind": "EVIDENCE_CLASS_MISSING",
+        "label": "Delegation evidence (DAI): not configured",
+        "whyItMatters": "Delegation path: what was declared as delegated authority.",
+        "resolveBy": {
+          "label": "Add delegation evidence",
+          "href": "/monitoring/dai/evidence"
+        }
+      },
+      {
+        "id": "gap:class:envelope",
+        "kind": "EVIDENCE_CLASS_MISSING",
+        "label": "Operating envelope: not configured",
+        "whyItMatters": "Evaluated scope: the bounds an ALLOW can be valid within.",
+        "resolveBy": {
+          "label": "Define an envelope",
+          "href": "/monitoring/envelopes"
+        }
+      },
+      {
+        "id": "gap:nodes-unavailable",
+        "kind": "NODE_UNAVAILABLE",
+        "label": "1 mapped element unavailable",
+        "whyItMatters": "Unavailable elements are first-class truth \u2014 they mark where evidence did not reach, not absence of behavior.",
+        "resolveBy": null
+      }
+    ],
+    "evidenceRefs": [],
+    "limitations": [
+      "No approved operating envelope configured \u2014 policy plane is not established",
+      "No current accepted static source exists for this AI System \u2014 run a scan via the orchestrator to populate the map",
+      "Enforcement state is not claimed unless a canonical enforcement binding exists \u2014 configured controls are not shown as enforcing.",
+      "Evidence coverage is a configured-state count: CONFIGURED never means evidence is flowing or that any evaluation passed."
+    ],
+    "generatedAt": "2026-10-05T10:32:56.892Z",
+    "projectionHash": "f9b9c2b0c5b5860acada93d7ccb3372b4ecc9d241ae526e69efabf4844c74097",
+    "links": {
+      "trace": "https://www.haiec.com/dashboard/ai-inventory/systems/4043efee-cec6-4007-954b-1f8da2273f35/action-map?view=trace"
+    },
+    "semantics": [
+      "DECLARED != ESTABLISHED \u2014 IDE/MCP facts show workflow context, never established truth.",
+      "CONFIGURED != FLOWING \u2014 evidence coverage is configured-state only.",
+      "CURRENT != EVALUATION_SNAPSHOT \u2014 evaluation basis is frozen to the exact evaluationId.",
+      "ENFORCEMENT is never inferred \u2014 UNKNOWN means no canonical enforcement binding was established."
+    ]
+  },
+  "summary": {
+    "raw": "Input validation error: Invalid arguments for tool haiec_get_summary: evaluationId: Invalid input: expected string, received undefined",
+    "err": null,
+    "body": ""
+  }
+}

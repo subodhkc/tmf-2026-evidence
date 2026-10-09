@@ -1,0 +1,273 @@
+{
+  "packId": "logsense-source-qualification-pack",
+  "version": "0.1.0",
+  "profiles": [
+    {
+      "profileId": "sq-authoritative-boundary",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "AUTHORITATIVE_CONTROL_BOUNDARY",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [
+        "ACTION_AUTHORIZED",
+        "ACTION_APPLIED",
+        "STATE_TRANSITION"
+      ],
+      "canSupportClaimClasses": [
+        "ACTION_REQUESTED",
+        "ACTION_ACCEPTED",
+        "ACTION_CONFIRMED",
+        "STATE_OBSERVATION"
+      ],
+      "cannotEstablishClaimClasses": [
+        "CODE_CAPABILITY"
+      ],
+      "requiresExactSubjectBinding": true,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    },
+    {
+      "profileId": "sq-platform-instrumentation",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "PLATFORM_INSTRUMENTATION",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [
+        "STATE_OBSERVATION",
+        "RUNTIME_INVOCATION"
+      ],
+      "canSupportClaimClasses": [
+        "ACTION_REQUESTED",
+        "ACTION_ACCEPTED",
+        "ACTION_APPLIED",
+        "ACTION_CONFIRMED",
+        "STATE_TRANSITION"
+      ],
+      "cannotEstablishClaimClasses": [
+        "ACTION_AUTHORIZED",
+        "EFFECTIVE_GRANT"
+      ],
+      "requiresExactSubjectBinding": true,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    },
+    {
+      "profileId": "sq-service-native",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "SERVICE_NATIVE_RECORD",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [
+        "STATE_OBSERVATION",
+        "RELATION_DECLARATION"
+      ],
+      "canSupportClaimClasses": [
+        "ACTION_ACCEPTED",
+        "STATE_TRANSITION",
+        "IDENTITY_BINDING"
+      ],
+      "cannotEstablishClaimClasses": [
+        "ACTION_AUTHORIZED",
+        "EFFECTIVE_GRANT"
+      ],
+      "requiresExactSubjectBinding": true,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    },
+    {
+      "profileId": "sq-application-telemetry",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "APPLICATION_TELEMETRY",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [
+        "ACTION_REQUESTED"
+      ],
+      "canSupportClaimClasses": [
+        "ACTION_ACCEPTED",
+        "RUNTIME_INVOCATION",
+        "STATE_OBSERVATION"
+      ],
+      "cannotEstablishClaimClasses": [
+        "ACTION_AUTHORIZED",
+        "ACTION_APPLIED",
+        "ACTION_CONFIRMED",
+        "EFFECTIVE_GRANT"
+      ],
+      "requiresExactSubjectBinding": true,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    },
+    {
+      "profileId": "sq-declared-config",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "DECLARED_CONFIGURATION",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [
+        "POLICY_STATE",
+        "RELATION_DECLARATION"
+      ],
+      "canSupportClaimClasses": [
+        "CODE_CAPABILITY",
+        "IDENTITY_BINDING"
+      ],
+      "cannotEstablishClaimClasses": [
+        "ACTION_APPLIED",
+        "ACTION_CONFIRMED"
+      ],
+      "requiresExactSubjectBinding": false,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    },
+    {
+      "profileId": "sq-external-import",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "EXTERNAL_IMPORTED_RECORD",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [],
+      "canSupportClaimClasses": [
+        "STATE_OBSERVATION",
+        "RELATION_DECLARATION",
+        "RUNTIME_INVOCATION"
+      ],
+      "cannotEstablishClaimClasses": [
+        "ACTION_AUTHORIZED",
+        "EFFECTIVE_GRANT"
+      ],
+      "requiresExactSubjectBinding": true,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    },
+    {
+      "profileId": "sq-self-reported",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "SELF_REPORTED",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [],
+      "canSupportClaimClasses": [
+        "ACTION_REQUESTED",
+        "RELATION_DECLARATION"
+      ],
+      "cannotEstablishClaimClasses": [
+        "ACTION_AUTHORIZED",
+        "ACTION_APPLIED",
+        "ACTION_CONFIRMED",
+        "EFFECTIVE_GRANT"
+      ],
+      "requiresExactSubjectBinding": false,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    },
+    {
+      "profileId": "sq-unknown",
+      "version": "0.1.0",
+      "sourceAuthorityRole": "UNKNOWN_SOURCE_AUTHORITY",
+      "sourceRole": null,
+      "authorityScope": null,
+      "canEstablishClaimClasses": [],
+      "canSupportClaimClasses": [],
+      "cannotEstablishClaimClasses": [
+        "ACTION_REQUESTED",
+        "ACTION_AUTHORIZED",
+        "ACTION_ACCEPTED",
+        "ACTION_APPLIED",
+        "ACTION_CONFIRMED",
+        "POLICY_STATE",
+        "EFFECTIVE_GRANT",
+        "CODE_CAPABILITY",
+        "STATE_OBSERVATION",
+        "STATE_TRANSITION",
+        "RUNTIME_INVOCATION",
+        "IDENTITY_BINDING",
+        "RELATION_DECLARATION",
+        "STREAM_COMPLETENESS",
+        "EVIDENCE_INTEGRITY",
+        "SCENARIO_MEMBERSHIP"
+      ],
+      "requiresExactSubjectBinding": false,
+      "requiresCurrentness": true,
+      "requiresIntegrityState": [],
+      "requiresCompletenessForClaims": [],
+      "lineagePolicy": "LINEAGE_RECORDED_AND_NOT_SELF_ELEVATING",
+      "haiecReferences": [
+        "lib/evidence/environment-binder.ts",
+        "lib/assurance/action-witness.ts"
+      ],
+      "limitations": [
+        "CLAIM_SCOPED_PROFILE_REQUIRES_SOURCE_SPECIFIC_BINDING"
+      ]
+    }
+  ],
+  "haiecReference": [
+    "lib/evidence/environment-binder.ts",
+    "lib/evidence/adapter-manifest.ts",
+    "lib/assurance/action-witness.ts"
+  ],
+  "digest": "c64de15fe2a750d26f6b40430ee8fea16f61ccf771999abf7d2030470f2da04b"
+}

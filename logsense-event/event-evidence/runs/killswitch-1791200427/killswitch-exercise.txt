@@ -1,0 +1,70 @@
+=== PRE-STATE ===
+{
+ "paused": false,
+ "phase": "Approved",
+ "conditions": {
+  "OwnedByComponent": "True",
+  "IdentityProvisioned": "True",
+  "DependentAPIProvisioned": "False",
+  "EgressAllowlisted": "True",
+  "ApprovalRequired": "False",
+  "AgentgatewayRouteProgrammed": "True",
+  "ModelGrantsProjected": "True",
+  "Provisioned": "True",
+  "RegistryRegistered": "True",
+  "TMF639Projected": "False",
+  "IstioPerAssetProvisioned": "True",
+  "ObservedPathRead": "False",
+  "ReconcilePaused": "True",
+  "RegistryPauseProjected": "True"
+ }
+}
+modelconfig.oda.tmforum.org/nemotron-nano-9b patched
+paused=true=== ASK (paused) CID=killswitch-1791200427 ===
+usage: ask_agent.py [-h] [--cid CID] [--traceparent TRACEPARENT]
+                    [--namespace NAMESPACE]
+                    agent question
+ask_agent.py: error: unrecognized arguments: --correlation-id killswitch-1791200427
+export CID=killswitch-1791200427
+
+it-resolution-agent  ·  refused
+------------------------------------------------------------------------
+refused at gateway: http_status=404
+------------------------------------------------------------------------
+disposition:    refused
+correlation_id: killswitch-1791200427
+next:           score-run.py killswitch-1791200427   # evidence for this run
+=== UNPAUSE ===
+modelconfig.oda.tmforum.org/nemotron-nano-9b patched
+modelconfig.oda.tmforum.org/nemotron-nano-9b condition met
+paused=false RouteProgrammed=True=== TIMELINE ===
+AUDIT TRAIL -- 5 records
+================================================================
+ 1. [2026-10-05T11:41:02Z] INTENT | actor=it-resolution-agent | step=4
+    correlation_id=killswitch-1791200427
+    trace_id=0098e9971a1e4502a30a9a994f3b33dd it analysis via governed model 'nemotron-nano-9b'; tool runbook-lookup
+ 2. [2026-10-05T11:41:03Z] MODEL-REQUEST-INTENT | actor=it-resolution-agent | step=5
+    correlation_id=killswitch-1791200427
+    {"client_request_id": "ceea8b23036343448518ffce85a18e8b", "method": "POST", "model_alias": "nemotron-nano-9b", "model_turn_id": "36a688c231b4402aa38823ce0429e447", "path": "/v1/chat/completions", "tra
+ 3. [2026-10-05T11:41:03Z] MODEL-REQUEST-RESULT | actor=it-resolution-agent | step=5
+    correlation_id=killswitch-1791200427
+    {"action_id": null, "action_id_present": false, "client_request_id": "ceea8b23036343448518ffce85a18e8b", "finish_reasons": [], "guardrail_outcome": "NOT_REPORTED", "http_status": 404, "model_alias": "
+ 4. [2026-10-05T11:41:03Z] INVOCATION | actor=it-resolution-agent | step=5
+    correlation_id=killswitch-1791200427
+    trace_id=0098e9971a1e4502a30a9a994f3b33dd refused at gateway: http_status=404 model=nemotron-nano-9b body="Error code: 404 - {'error': {'message': 'Model not found', 'type': 'invalid_request_error', '
+ 5. [2026-10-05T11:41:03Z] RESULT-INSPECTION | actor=it-resolution-agent | step=6
+    correlation_id=killswitch-1791200427
+    disposition=refused, no model output
+=== POST-RECOVERY ASK ===
+export CID=killswitch-1791200427-recover
+
+it-resolution-agent  ·  answer
+------------------------------------------------------------------------
+The runbook lookup found no direct information on ModelConfig approval
+processes. This may require consulting AWS documentation or internal
+workflows. Would you like me to search AWS docs for ModelConfig approval
+details?
+------------------------------------------------------------------------
+disposition:    undetermined
+correlation_id: killswitch-1791200427-recover
+next:           score-run.py killswitch-1791200427-recover   # evidence for this run

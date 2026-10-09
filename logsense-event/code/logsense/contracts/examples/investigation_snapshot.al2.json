@@ -1,0 +1,61 @@
+{
+  "snapshotId": "snap-al2",
+  "caseId": "case-atp",
+  "evidenceSetId": "es-al2",
+  "analysisRunId": "run-phase55-001",
+  "createdAt": "2026-09-27T17:00:00Z",
+  "entityRefs": [
+    "entity-agent-b",
+    "entity-cell-17"
+  ],
+  "eventRefs": [
+    "event-request",
+    "event-deny",
+    "event-api-200",
+    "event-state"
+  ],
+  "sourceRefs": [
+    "src-agent",
+    "src-policy",
+    "src-api",
+    "src-kpi"
+  ],
+  "correlationGroupRefs": [
+    "cg-trace-001"
+  ],
+  "actionGroupRefs": [
+    "ag-change-tilt-001"
+  ],
+  "relationEvaluationRefs": [
+    "rel-agent-tool"
+  ],
+  "stateTransitionRefs": [
+    "trans-cell-tilt"
+  ],
+  "detectionSignalRefs": [
+    "sig-a1-scope"
+  ],
+  "contradictionRefs": [
+    "con-audit-state"
+  ],
+  "divergenceRefs": [
+    "div-authority"
+  ],
+  "timelineEventRefs": [
+    "tl-request",
+    "tl-deny",
+    "tl-state"
+  ],
+  "fivePlaneCoverageRefs": [
+    "fp-change-tilt"
+  ],
+  "actionLifecycleCoverageRefs": [
+    "al-change-tilt"
+  ],
+  "gapRefs": [
+    "gap-effective-grant"
+  ],
+  "duplicateGroupRefs": [],
+  "digest": "sha256:snap-al2",
+  "limitations": []
+}

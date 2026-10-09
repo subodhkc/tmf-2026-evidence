@@ -1,0 +1,580 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/cause-rule.schema.json",
+  "title": "Cause Rule v1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ruleId",
+    "version",
+    "causeFamily",
+    "causeMechanism",
+    "title",
+    "scope",
+    "ruleClass",
+    "defaultCauseRole",
+    "requiredPredicates",
+    "anyOfPredicates",
+    "forbiddenPredicates",
+    "hardNegatives",
+    "corroborators",
+    "temporalConstraints",
+    "identityConstraints",
+    "expectedStateRequirements",
+    "detectionSignalRefs",
+    "relationRefs",
+    "gapTypes",
+    "alternativeMechanisms",
+    "haiecReferences",
+    "outputTemplate",
+    "remediationRefs",
+    "verificationRequirements",
+    "establishmentPolicy",
+    "enabled"
+  ],
+  "properties": {
+    "ruleId": {
+      "type": "string",
+      "pattern": "^CR-[A-Z0-9-]+-[0-9]{3}$"
+    },
+    "version": {
+      "type": "string"
+    },
+    "causeFamily": {
+      "type": "string",
+      "enum": [
+        "GOAL_AND_INSTRUCTION",
+        "PROMPT_AND_CONTEXT",
+        "RETRIEVAL_AND_RAG",
+        "MEMORY",
+        "IDENTITY_AND_AUTHENTICATION",
+        "AUTHORIZATION_AND_PRIVILEGE",
+        "DELEGATION_AND_HANDOFF",
+        "CAPABILITY_AND_TOOL_SURFACE",
+        "MCP_AND_EXTERNAL_TOOLING",
+        "POLICY_AND_GUARDRAIL",
+        "MODEL_AND_PLANNING",
+        "RUNTIME_AND_EXECUTION",
+        "STATE_AND_EFFECT",
+        "DATA_AND_TENANT",
+        "CONFIGURATION_AND_CHANGE",
+        "INFRASTRUCTURE_AND_DEPENDENCY",
+        "SUPPLY_CHAIN",
+        "EVIDENCE_AND_AUDIT",
+        "HUMAN_AND_PROCESS",
+        "EXTERNAL_ADVERSARIAL",
+        "UNKNOWN"
+      ]
+    },
+    "causeMechanism": {
+      "type": "string",
+      "enum": [
+        "GOAL_OVERRIDE",
+        "INSTRUCTION_CONFLICT",
+        "UNTRUSTED_INSTRUCTION_ACCEPTED",
+        "TASK_SCOPE_MISINTERPRETED",
+        "OBJECTIVE_DRIFT",
+        "DIRECT_PROMPT_INJECTION",
+        "INDIRECT_PROMPT_INJECTION",
+        "CONTEXT_BOUNDARY_FAILURE",
+        "CONTEXT_PRECEDENCE_FAILURE",
+        "SYSTEM_INSTRUCTION_LOSS",
+        "UNTRUSTED_RETRIEVAL_SOURCE",
+        "POISONED_RETRIEVED_CONTENT",
+        "STALE_RETRIEVAL",
+        "WRONG_RETRIEVAL_SCOPE",
+        "RETRIEVAL_AUTHORIZATION_GAP",
+        "RETRIEVAL_RANKING_FAILURE",
+        "MEMORY_SCOPE_VIOLATION",
+        "CROSS_SESSION_MEMORY_USE",
+        "UNTRUSTED_MEMORY_WRITE",
+        "STALE_MEMORY",
+        "MEMORY_POISONING_CANDIDATE",
+        "MEMORY_LINEAGE_LOSS",
+        "UNKNOWN_AGENT_IDENTITY",
+        "IDENTITY_BINDING_MISMATCH",
+        "OAUTH_CLIENT_MAPPING_GAP",
+        "SPIFFE_IDENTITY_MISMATCH",
+        "SERVICE_PRINCIPAL_CONFUSION",
+        "IDENTITY_LINEAGE_BREAK",
+        "POLICY_DECISION_MISSING",
+        "POLICY_DENY_NOT_ENFORCED",
+        "EFFECTIVE_GRANT_EXCEEDS_POLICY",
+        "STANDING_PRIVILEGE_TOO_BROAD",
+        "CREDENTIAL_SCOPE_TOO_BROAD",
+        "TENANT_SCOPE_MISMATCH",
+        "APPROVAL_REFERENCE_MISSING",
+        "DELEGATION_SCOPE_EXPANSION",
+        "DELEGATION_LINEAGE_BREAK",
+        "SCOPE_REDUCTION_NOT_ENFORCED",
+        "DELEGATE_IDENTITY_MISMATCH",
+        "HANDOFF_MISCLASSIFIED_AS_DELEGATION",
+        "DELEGATED_TASK_OUTSIDE_ENVELOPE",
+        "JUSTIFICATION_GAP",
+        "UNDECLARED_TOOL_EXPOSURE",
+        "UNEXPECTED_CAPABILITY_AVAILABLE",
+        "TOOL_SCHEMA_DRIFT",
+        "TOOL_SELECTION_ERROR",
+        "TOOL_ARGUMENT_VALIDATION_GAP",
+        "TOOL_RESULT_TRUST_FAILURE",
+        "DANGEROUS_CAPABILITY_UNGATED",
+        "UNREGISTERED_MCP_SERVER",
+        "MCP_SERVER_IDENTITY_GAP",
+        "MCP_TOOL_SCHEMA_CHANGE",
+        "MCP_AUTHORIZATION_SCOPE_GAP",
+        "MCP_TOOL_RESULT_UNTRUSTED",
+        "MCP_STATE_HANDLE_CONFUSION",
+        "MCP_SUPPLY_CHAIN_CHANGE",
+        "GUARDRAIL_NOT_CONFIGURED",
+        "GUARDRAIL_NOT_EVALUATED",
+        "GUARDRAIL_DECISION_NOT_ISSUED",
+        "GUARDRAIL_ENFORCEMENT_NOT_APPLIED",
+        "POLICY_VERSION_DRIFT",
+        "POLICY_MAPPING_GAP",
+        "CONTROL_ORDERING_FAILURE",
+        "MODEL_OUTPUT_DIVERGENCE",
+        "PLAN_SELECTION_ERROR",
+        "REASONING_CONTEXT_MISMATCH",
+        "MODEL_VERSION_DRIFT",
+        "FALLBACK_MODEL_CHANGE",
+        "NONDETERMINISTIC_OUTPUT_CONTRIBUTOR",
+        "EXECUTION_BOUNDARY_BYPASS",
+        "UNEXPECTED_OPERATION",
+        "TARGET_MISMATCH",
+        "RETRY_OR_LOOP_PROPAGATION",
+        "ASYNC_COMPLETION_MISINTERPRETATION",
+        "ROLLBACK_FAILURE",
+        "RECOVERY_FAILURE",
+        "UNAUTHORIZED_STATE_MUTATION",
+        "EFFECT_OUTSIDE_ENVELOPE",
+        "WRONG_RESOURCE_MUTATION",
+        "STATE_PROPAGATION_FAILURE",
+        "DOWNSTREAM_CONSEQUENCE_AMPLIFICATION",
+        "CROSS_TENANT_SCOPE_FAILURE",
+        "DATA_ACCESS_SCOPE_FAILURE",
+        "DATA_EGRESS_CONTROL_FAILURE",
+        "SENSITIVE_DATA_HANDLING_FAILURE",
+        "TENANT_CONTEXT_LOSS",
+        "CONFIG_DRIFT",
+        "POLICY_CONFIG_DRIFT",
+        "TOOL_CONFIG_DRIFT",
+        "AGENT_CONFIG_DRIFT",
+        "BUILD_VERSION_DRIFT",
+        "DEPLOYMENT_DRIFT",
+        "BASELINE_INCOMPATIBILITY",
+        "DEPENDENCY_FAILURE",
+        "NETWORK_FAILURE",
+        "TIME_SYNC_FAILURE",
+        "QUEUE_FAILURE",
+        "SERVICE_UNAVAILABLE",
+        "CAPACITY_EXHAUSTION",
+        "RATE_LIMIT_FAILURE",
+        "DATABASE_FAILURE",
+        "PACKAGE_CHANGE",
+        "VULNERABLE_DEPENDENCY",
+        "UNVERIFIED_ARTIFACT",
+        "ARTIFACT_HASH_MISMATCH",
+        "PIPELINE_CHANGE",
+        "MODEL_ARTIFACT_CHANGE",
+        "TOOL_PROVIDER_CHANGE",
+        "MISSING_EVIDENCE",
+        "PARTIAL_STREAM",
+        "OUT_OF_ORDER_EVIDENCE",
+        "DUPLICATE_EVIDENCE",
+        "CLOCK_SKEW",
+        "AUDIT_STATE_CONTRADICTION",
+        "SOURCE_CONTRADICTION",
+        "LINEAGE_BREAK",
+        "INTEGRITY_ATTESTATION_FAILURE",
+        "POSSIBLE_TAMPERING",
+        "HUMAN_APPROVAL_ERROR",
+        "HUMAN_OVERRIDDEN_CONTROL",
+        "MISCONFIGURATION",
+        "PROCEDURE_GAP",
+        "CHANGE_MANAGEMENT_GAP",
+        "TRUST_IN_AGENT_OUTPUT",
+        "MALICIOUS_INPUT",
+        "COMPROMISED_EXTERNAL_SOURCE",
+        "COMPROMISED_TOOL_OR_SERVICE",
+        "CREDENTIAL_THEFT",
+        "ATTACK_TECHNIQUE_CANDIDATE",
+        "CAUSE_NOT_ESTABLISHED",
+        "MULTIPLE_PLAUSIBLE_CAUSES",
+        "INSUFFICIENT_EVIDENCE"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "ruleClass": {
+      "type": "string",
+      "enum": [
+        "TRIGGER",
+        "SYSTEM_MECHANISM",
+        "ENABLING_CONDITION",
+        "PROPAGATION",
+        "EVIDENCE_LIMITATION",
+        "CONSEQUENCE"
+      ]
+    },
+    "defaultCauseRole": {
+      "type": "string",
+      "enum": [
+        "TRIGGER",
+        "ROOT_MECHANISM",
+        "ENABLING_CONDITION",
+        "CONTRIBUTING_FACTOR",
+        "PROPAGATION_FACTOR",
+        "CONSEQUENCE"
+      ]
+    },
+    "requiredPredicates": {
+      "type": "array",
+      "items": {
+        "$ref": "cause-predicate.schema.json"
+      }
+    },
+    "anyOfPredicates": {
+      "type": "array",
+      "items": {
+        "$ref": "cause-predicate.schema.json"
+      }
+    },
+    "forbiddenPredicates": {
+      "type": "array",
+      "items": {
+        "$ref": "cause-predicate.schema.json"
+      }
+    },
+    "hardNegatives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "corroborators": {
+      "type": "array",
+      "items": {
+        "$ref": "cause-predicate.schema.json"
+      }
+    },
+    "temporalConstraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "identityConstraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expectedStateRequirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "detectionSignalRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relationRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gapTypes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "IDENTITY_UNRESOLVED",
+          "ACTOR_UNRESOLVED",
+          "RESOURCE_UNRESOLVED",
+          "TOOL_UNRESOLVED",
+          "SOURCE_ROLE_UNKNOWN",
+          "SOURCE_AUTHORITY_UNKNOWN",
+          "SOURCE_LINEAGE_UNKNOWN",
+          "TIMESTAMP_MISSING",
+          "TIMEZONE_UNKNOWN",
+          "CLOCK_DOMAIN_UNKNOWN",
+          "CORRELATION_ID_MISSING",
+          "CORRELATION_AMBIGUOUS",
+          "ACTION_IDENTITY_INCOMPLETE",
+          "OPERATION_UNMAPPED",
+          "RESULT_UNMAPPED",
+          "STATE_FACET_UNKNOWN",
+          "UNIT_UNKNOWN",
+          "EXPECTED_STATE_MISSING",
+          "POLICY_EVIDENCE_MISSING",
+          "AUTHORIZATION_EVIDENCE_MISSING",
+          "EFFECTIVE_GRANT_MISSING",
+          "CODE_CAPABILITY_MISSING",
+          "EXECUTION_EVIDENCE_MISSING",
+          "EFFECT_CONFIRMATION_MISSING",
+          "STREAM_COMPLETENESS_UNKNOWN",
+          "BASELINE_INSUFFICIENT",
+          "BASELINE_INCOMPATIBLE",
+          "RELATION_UNESTABLISHED",
+          "CAUSE_MECHANISM_INCOMPLETE",
+          "ALTERNATIVE_CAUSES_UNRESOLVED",
+          "UNSUPPORTED_FORMAT",
+          "PARSER_PARTIAL",
+          "SCHEMA_MAPPING_PENDING",
+          "TENANT_CONTEXT_LOSS",
+          "SOURCE_QUALIFICATION_UNKNOWN",
+          "TEMPORAL_ALIGNMENT_UNCERTAIN",
+          "DUPLICATE_RECORD_AMBIGUOUS",
+          "ACTION_SCOPE_UNRESOLVED",
+          "SOURCE_CLAIM_NOT_QUALIFIED"
+        ]
+      }
+    },
+    "alternativeMechanisms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "GOAL_OVERRIDE",
+          "INSTRUCTION_CONFLICT",
+          "UNTRUSTED_INSTRUCTION_ACCEPTED",
+          "TASK_SCOPE_MISINTERPRETED",
+          "OBJECTIVE_DRIFT",
+          "DIRECT_PROMPT_INJECTION",
+          "INDIRECT_PROMPT_INJECTION",
+          "CONTEXT_BOUNDARY_FAILURE",
+          "CONTEXT_PRECEDENCE_FAILURE",
+          "SYSTEM_INSTRUCTION_LOSS",
+          "UNTRUSTED_RETRIEVAL_SOURCE",
+          "POISONED_RETRIEVED_CONTENT",
+          "STALE_RETRIEVAL",
+          "WRONG_RETRIEVAL_SCOPE",
+          "RETRIEVAL_AUTHORIZATION_GAP",
+          "RETRIEVAL_RANKING_FAILURE",
+          "MEMORY_SCOPE_VIOLATION",
+          "CROSS_SESSION_MEMORY_USE",
+          "UNTRUSTED_MEMORY_WRITE",
+          "STALE_MEMORY",
+          "MEMORY_POISONING_CANDIDATE",
+          "MEMORY_LINEAGE_LOSS",
+          "UNKNOWN_AGENT_IDENTITY",
+          "IDENTITY_BINDING_MISMATCH",
+          "OAUTH_CLIENT_MAPPING_GAP",
+          "SPIFFE_IDENTITY_MISMATCH",
+          "SERVICE_PRINCIPAL_CONFUSION",
+          "IDENTITY_LINEAGE_BREAK",
+          "POLICY_DECISION_MISSING",
+          "POLICY_DENY_NOT_ENFORCED",
+          "EFFECTIVE_GRANT_EXCEEDS_POLICY",
+          "STANDING_PRIVILEGE_TOO_BROAD",
+          "CREDENTIAL_SCOPE_TOO_BROAD",
+          "TENANT_SCOPE_MISMATCH",
+          "APPROVAL_REFERENCE_MISSING",
+          "DELEGATION_SCOPE_EXPANSION",
+          "DELEGATION_LINEAGE_BREAK",
+          "SCOPE_REDUCTION_NOT_ENFORCED",
+          "DELEGATE_IDENTITY_MISMATCH",
+          "HANDOFF_MISCLASSIFIED_AS_DELEGATION",
+          "DELEGATED_TASK_OUTSIDE_ENVELOPE",
+          "JUSTIFICATION_GAP",
+          "UNDECLARED_TOOL_EXPOSURE",
+          "UNEXPECTED_CAPABILITY_AVAILABLE",
+          "TOOL_SCHEMA_DRIFT",
+          "TOOL_SELECTION_ERROR",
+          "TOOL_ARGUMENT_VALIDATION_GAP",
+          "TOOL_RESULT_TRUST_FAILURE",
+          "DANGEROUS_CAPABILITY_UNGATED",
+          "UNREGISTERED_MCP_SERVER",
+          "MCP_SERVER_IDENTITY_GAP",
+          "MCP_TOOL_SCHEMA_CHANGE",
+          "MCP_AUTHORIZATION_SCOPE_GAP",
+          "MCP_TOOL_RESULT_UNTRUSTED",
+          "MCP_STATE_HANDLE_CONFUSION",
+          "MCP_SUPPLY_CHAIN_CHANGE",
+          "GUARDRAIL_NOT_CONFIGURED",
+          "GUARDRAIL_NOT_EVALUATED",
+          "GUARDRAIL_DECISION_NOT_ISSUED",
+          "GUARDRAIL_ENFORCEMENT_NOT_APPLIED",
+          "POLICY_VERSION_DRIFT",
+          "POLICY_MAPPING_GAP",
+          "CONTROL_ORDERING_FAILURE",
+          "MODEL_OUTPUT_DIVERGENCE",
+          "PLAN_SELECTION_ERROR",
+          "REASONING_CONTEXT_MISMATCH",
+          "MODEL_VERSION_DRIFT",
+          "FALLBACK_MODEL_CHANGE",
+          "NONDETERMINISTIC_OUTPUT_CONTRIBUTOR",
+          "EXECUTION_BOUNDARY_BYPASS",
+          "UNEXPECTED_OPERATION",
+          "TARGET_MISMATCH",
+          "RETRY_OR_LOOP_PROPAGATION",
+          "ASYNC_COMPLETION_MISINTERPRETATION",
+          "ROLLBACK_FAILURE",
+          "RECOVERY_FAILURE",
+          "UNAUTHORIZED_STATE_MUTATION",
+          "EFFECT_OUTSIDE_ENVELOPE",
+          "WRONG_RESOURCE_MUTATION",
+          "STATE_PROPAGATION_FAILURE",
+          "DOWNSTREAM_CONSEQUENCE_AMPLIFICATION",
+          "CROSS_TENANT_SCOPE_FAILURE",
+          "DATA_ACCESS_SCOPE_FAILURE",
+          "DATA_EGRESS_CONTROL_FAILURE",
+          "SENSITIVE_DATA_HANDLING_FAILURE",
+          "TENANT_CONTEXT_LOSS",
+          "CONFIG_DRIFT",
+          "POLICY_CONFIG_DRIFT",
+          "TOOL_CONFIG_DRIFT",
+          "AGENT_CONFIG_DRIFT",
+          "BUILD_VERSION_DRIFT",
+          "DEPLOYMENT_DRIFT",
+          "BASELINE_INCOMPATIBILITY",
+          "DEPENDENCY_FAILURE",
+          "NETWORK_FAILURE",
+          "TIME_SYNC_FAILURE",
+          "QUEUE_FAILURE",
+          "SERVICE_UNAVAILABLE",
+          "CAPACITY_EXHAUSTION",
+          "RATE_LIMIT_FAILURE",
+          "DATABASE_FAILURE",
+          "PACKAGE_CHANGE",
+          "VULNERABLE_DEPENDENCY",
+          "UNVERIFIED_ARTIFACT",
+          "ARTIFACT_HASH_MISMATCH",
+          "PIPELINE_CHANGE",
+          "MODEL_ARTIFACT_CHANGE",
+          "TOOL_PROVIDER_CHANGE",
+          "MISSING_EVIDENCE",
+          "PARTIAL_STREAM",
+          "OUT_OF_ORDER_EVIDENCE",
+          "DUPLICATE_EVIDENCE",
+          "CLOCK_SKEW",
+          "AUDIT_STATE_CONTRADICTION",
+          "SOURCE_CONTRADICTION",
+          "LINEAGE_BREAK",
+          "INTEGRITY_ATTESTATION_FAILURE",
+          "POSSIBLE_TAMPERING",
+          "HUMAN_APPROVAL_ERROR",
+          "HUMAN_OVERRIDDEN_CONTROL",
+          "MISCONFIGURATION",
+          "PROCEDURE_GAP",
+          "CHANGE_MANAGEMENT_GAP",
+          "TRUST_IN_AGENT_OUTPUT",
+          "MALICIOUS_INPUT",
+          "COMPROMISED_EXTERNAL_SOURCE",
+          "COMPROMISED_TOOL_OR_SERVICE",
+          "CREDENTIAL_THEFT",
+          "ATTACK_TECHNIQUE_CANDIDATE",
+          "CAUSE_NOT_ESTABLISHED",
+          "MULTIPLE_PLAUSIBLE_CAUSES",
+          "INSUFFICIENT_EVIDENCE"
+        ]
+      }
+    },
+    "haiecReferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "reason"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outputTemplate": {
+      "type": "string"
+    },
+    "remediationRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verificationRequirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "establishmentPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowEstablished",
+        "requireAllRequiredPredicates",
+        "requireAnyOfWhenPresent",
+        "requireNoForbiddenPredicates",
+        "requireQualifiedIdentity",
+        "requireQualifiedOrdering",
+        "detectionOnlyMaximumState",
+        "missingMaterialPredicateMaximumState",
+        "corroboratedIndependentLineages"
+      ],
+      "properties": {
+        "allowEstablished": {
+          "type": "boolean"
+        },
+        "requireAllRequiredPredicates": {
+          "type": "boolean"
+        },
+        "requireAnyOfWhenPresent": {
+          "type": "boolean"
+        },
+        "requireNoForbiddenPredicates": {
+          "type": "boolean"
+        },
+        "requireQualifiedIdentity": {
+          "type": "boolean"
+        },
+        "requireQualifiedOrdering": {
+          "type": "boolean"
+        },
+        "detectionOnlyMaximumState": {
+          "type": "string",
+          "enum": [
+            "POSSIBLE",
+            "SUPPORTED_CANDIDATE",
+            "INSUFFICIENT_EVIDENCE"
+          ]
+        },
+        "missingMaterialPredicateMaximumState": {
+          "type": "string",
+          "enum": [
+            "SUPPORTED_CANDIDATE",
+            "POSSIBLE",
+            "INSUFFICIENT_EVIDENCE"
+          ]
+        },
+        "corroboratedIndependentLineages": {
+          "type": "integer",
+          "minimum": 2
+        }
+      }
+    },
+    "enabled": {
+      "type": "boolean"
+    }
+  }
+}

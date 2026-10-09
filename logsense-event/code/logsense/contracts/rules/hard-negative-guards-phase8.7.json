@@ -1,0 +1,669 @@
+{
+  "contractVersion": "8.7",
+  "guards": [
+    {
+      "guardId": "HN87-001",
+      "category": "ACTION_STATE",
+      "antecedent": "HTTP_200",
+      "forbiddenConclusion": "ACTION_APPLIED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "HTTP_200 does not, by itself, establish ACTION_APPLIED.",
+      "severity": "CRITICAL"
+    },
+    {
+      "guardId": "HN87-002",
+      "category": "ACTION_STATE",
+      "antecedent": "API_ACCEPTED",
+      "forbiddenConclusion": "EFFECT_CONFIRMED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "API_ACCEPTED does not, by itself, establish EFFECT_CONFIRMED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-003",
+      "category": "ACTION_STATE",
+      "antecedent": "TOOL_REGISTRATION",
+      "forbiddenConclusion": "TOOL_EXECUTION",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "TOOL_REGISTRATION does not, by itself, establish TOOL_EXECUTION.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-004",
+      "category": "ACTION_STATE",
+      "antecedent": "USER_QUERY",
+      "forbiddenConclusion": "PROMPT_INJECTION",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "USER_QUERY does not, by itself, establish PROMPT_INJECTION.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-005",
+      "category": "ACTION_STATE",
+      "antecedent": "INSTRUCTION_LIKE",
+      "forbiddenConclusion": "ATTACK",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "INSTRUCTION_LIKE does not, by itself, establish ATTACK.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-006",
+      "category": "AUTHORITY_MEDIATION",
+      "antecedent": "HANDOFF",
+      "forbiddenConclusion": "DELEGATION",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "HANDOFF does not, by itself, establish DELEGATION.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-007",
+      "category": "ACTION_STATE",
+      "antecedent": "DISPLAY_NAME",
+      "forbiddenConclusion": "IDENTITY",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "DISPLAY_NAME does not, by itself, establish IDENTITY.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-008",
+      "category": "EVIDENCE_EPISTEMIC",
+      "antecedent": "SOURCE_COUNT",
+      "forbiddenConclusion": "SOURCE_INDEPENDENCE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "SOURCE_COUNT does not, by itself, establish SOURCE_INDEPENDENCE.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-009",
+      "category": "CAUSALITY",
+      "antecedent": "RAW_TIMESTAMP_ORDER",
+      "forbiddenConclusion": "CAUSAL_ORDER",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "RAW_TIMESTAMP_ORDER does not, by itself, establish CAUSAL_ORDER.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-010",
+      "category": "CAUSALITY",
+      "antecedent": "DIVERGENCE",
+      "forbiddenConclusion": "ROOT_CAUSE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "DIVERGENCE does not, by itself, establish ROOT_CAUSE.",
+      "severity": "CRITICAL"
+    },
+    {
+      "guardId": "HN87-011",
+      "category": "CAUSALITY",
+      "antecedent": "EARLIEST_TRUST_BREAK",
+      "forbiddenConclusion": "ROOT_CAUSE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "EARLIEST_TRUST_BREAK does not, by itself, establish ROOT_CAUSE.",
+      "severity": "CRITICAL"
+    },
+    {
+      "guardId": "HN87-012",
+      "category": "CAUSALITY",
+      "antecedent": "RUNTIME_CORRELATION",
+      "forbiddenConclusion": "CAUSAL_PROOF",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "RUNTIME_CORRELATION does not, by itself, establish CAUSAL_PROOF.",
+      "severity": "CRITICAL"
+    },
+    {
+      "guardId": "HN87-013",
+      "category": "CAUSALITY",
+      "antecedent": "KPI_CHANGE_NEAR_ACTION",
+      "forbiddenConclusion": "ACTION_CAUSED_KPI_CHANGE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "KPI_CHANGE_NEAR_ACTION does not, by itself, establish ACTION_CAUSED_KPI_CHANGE.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-014",
+      "category": "AUTHORITY_MEDIATION",
+      "antecedent": "ARGUMENT_PROVENANCE",
+      "forbiddenConclusion": "AUTHORIZATION",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "ARGUMENT_PROVENANCE does not, by itself, establish AUTHORIZATION.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-015",
+      "category": "CONTEXT_INFLUENCE",
+      "antecedent": "AI_TOOL_INPUT",
+      "forbiddenConclusion": "MODEL_SELECTED_VALUE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "AI_TOOL_INPUT does not, by itself, establish MODEL_SELECTED_VALUE.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-016",
+      "category": "DEFERRED_EXECUTION",
+      "antecedent": "SCHEDULED",
+      "forbiddenConclusion": "EXECUTED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "SCHEDULED does not, by itself, establish EXECUTED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-017",
+      "category": "DEFERRED_EXECUTION",
+      "antecedent": "QUEUE_WRITE",
+      "forbiddenConclusion": "QUEUE_CONSUMED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "QUEUE_WRITE does not, by itself, establish QUEUE_CONSUMED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-018",
+      "category": "DEFERRED_EXECUTION",
+      "antecedent": "PERSISTENCE_CREATION",
+      "forbiddenConclusion": "FUTURE_EXECUTION",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "PERSISTENCE_CREATION does not, by itself, establish FUTURE_EXECUTION.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-019",
+      "category": "AUTHORITY_MEDIATION",
+      "antecedent": "CREATION_AUTHORITY",
+      "forbiddenConclusion": "EXECUTION_AUTHORITY",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "CREATION_AUTHORITY does not, by itself, establish EXECUTION_AUTHORITY.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-020",
+      "category": "DEFERRED_EXECUTION",
+      "antecedent": "RETRY_CONFIGURED",
+      "forbiddenConclusion": "RETRY_OCCURRED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "RETRY_CONFIGURED does not, by itself, establish RETRY_OCCURRED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-021",
+      "category": "DEFERRED_EXECUTION",
+      "antecedent": "REPLAY_CAPABLE",
+      "forbiddenConclusion": "REPLAY_OBSERVED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "REPLAY_CAPABLE does not, by itself, establish REPLAY_OBSERVED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-022",
+      "category": "AUTHORITY_MEDIATION",
+      "antecedent": "REQUIRES_CONFIRMATION_TRUE",
+      "forbiddenConclusion": "CONFIRMATION_ENFORCED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "REQUIRES_CONFIRMATION_TRUE does not, by itself, establish CONFIRMATION_ENFORCED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-023",
+      "category": "ACTION_STATE",
+      "antecedent": "APPROVAL_AFTER_EFFECT",
+      "forbiddenConclusion": "ENFORCED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "APPROVAL_AFTER_EFFECT does not, by itself, establish ENFORCED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-024",
+      "category": "AUTHORITY_MEDIATION",
+      "antecedent": "POLICY_DENY",
+      "forbiddenConclusion": "BLOCKED_EFFECT",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "POLICY_DENY does not, by itself, establish BLOCKED_EFFECT.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-025",
+      "category": "ACTION_STATE",
+      "antecedent": "DOCUMENTED_NON_EXECUTION",
+      "forbiddenConclusion": "CAPABILITY_ABSENT",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "DOCUMENTED_NON_EXECUTION does not, by itself, establish CAPABILITY_ABSENT.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-026",
+      "category": "EVIDENCE_EPISTEMIC",
+      "antecedent": "INTEGRITY",
+      "forbiddenConclusion": "COMPLETENESS",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "INTEGRITY does not, by itself, establish COMPLETENESS.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-027",
+      "category": "EVIDENCE_EPISTEMIC",
+      "antecedent": "ORPHAN_REF",
+      "forbiddenConclusion": "MISSING_EVIDENCE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "ORPHAN_REF does not, by itself, establish MISSING_EVIDENCE.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-028",
+      "category": "EVIDENCE_EPISTEMIC",
+      "antecedent": "FRONTIER",
+      "forbiddenConclusion": "FINDING",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "FRONTIER does not, by itself, establish FINDING.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-029",
+      "category": "EVIDENCE_EPISTEMIC",
+      "antecedent": "REMOVED_FROM_OBSERVED_SET",
+      "forbiddenConclusion": "PROVEN_ABSENCE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "REMOVED_FROM_OBSERVED_SET does not, by itself, establish PROVEN_ABSENCE.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-030",
+      "category": "EVIDENCE_EPISTEMIC",
+      "antecedent": "ANALYZED_EMPTY",
+      "forbiddenConclusion": "NOT_ANALYZED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "ANALYZED_EMPTY does not, by itself, establish NOT_ANALYZED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-031",
+      "category": "CONTEXT_INFLUENCE",
+      "antecedent": "RETRIEVED",
+      "forbiddenConclusion": "MODEL_USED",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "RETRIEVED does not, by itself, establish MODEL_USED.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-032",
+      "category": "CONTEXT_INFLUENCE",
+      "antecedent": "USER_CONTROLLED",
+      "forbiddenConclusion": "MALICIOUS",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "USER_CONTROLLED does not, by itself, establish MALICIOUS.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-033",
+      "category": "ACTION_STATE",
+      "antecedent": "PERSISTENT_INFLUENCE",
+      "forbiddenConclusion": "OBSERVED_POISONING",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "PERSISTENT_INFLUENCE does not, by itself, establish OBSERVED_POISONING.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-034",
+      "category": "CONTEXT_INFLUENCE",
+      "antecedent": "MEMORY_WRITE",
+      "forbiddenConclusion": "MEMORY_READ",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "MEMORY_WRITE does not, by itself, establish MEMORY_READ.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-035",
+      "category": "AUTHORITY_MEDIATION",
+      "antecedent": "CONTEXT_TRANSFER",
+      "forbiddenConclusion": "AUTHORITY_TRANSFER",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "CONTEXT_TRANSFER does not, by itself, establish AUTHORITY_TRANSFER.",
+      "severity": "CRITICAL"
+    },
+    {
+      "guardId": "HN87-036",
+      "category": "MAPPING_ADAPTER",
+      "antecedent": "AI_PROPOSAL",
+      "forbiddenConclusion": "CANONICAL_MAPPING",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "AI_PROPOSAL does not, by itself, establish CANONICAL_MAPPING.",
+      "severity": "CRITICAL"
+    },
+    {
+      "guardId": "HN87-037",
+      "category": "MAPPING_ADAPTER",
+      "antecedent": "ADAPTER_RELATION_CANDIDATE",
+      "forbiddenConclusion": "ESTABLISHED_RELATION",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "ADAPTER_RELATION_CANDIDATE does not, by itself, establish ESTABLISHED_RELATION.",
+      "severity": "CRITICAL"
+    },
+    {
+      "guardId": "HN87-038",
+      "category": "EVIDENCE_EPISTEMIC",
+      "antecedent": "HUMAN_DISPOSITION",
+      "forbiddenConclusion": "EVIDENCE_STATE",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "HUMAN_DISPOSITION does not, by itself, establish EVIDENCE_STATE.",
+      "severity": "HIGH"
+    },
+    {
+      "guardId": "HN87-039",
+      "category": "MAPPING_ADAPTER",
+      "antecedent": "FRAMEWORK_MAPPING",
+      "forbiddenConclusion": "CERTIFICATION",
+      "requiredEvidenceToCrossBoundary": [
+        "Qualified evidence from the canonical owner that directly establishes the forbidden conclusion."
+      ],
+      "appliesTo": [
+        "DETERMINISTIC_VALIDATOR",
+        "REPORT",
+        "AI_INVESTIGATOR"
+      ],
+      "benchmarkRefs": [],
+      "rationale": "FRAMEWORK_MAPPING does not, by itself, establish CERTIFICATION.",
+      "severity": "HIGH"
+    }
+  ],
+  "registryId": "logsense.phase8.7.hard-negatives"
+}

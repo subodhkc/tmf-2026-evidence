@@ -1,0 +1,26 @@
+{
+  "fixtureId": "control16-pass",
+  "control": "ACN-COST-001",
+  "label": "Control 16 \u2014 three-agent pass-like reconciliation",
+  "description": "Three participating agents, all provider-executed calls carry qualified usage, one genuine retry (attempt 2) and one duplicate telemetry record. Includes an explicit RUN_STARTED lifecycle record (qualified run-start evidence \u2014 runActivity ESTABLISHED; call startedAt/completedAt remain call-level evidence only). Expected: MEASURED, exact ActualRunTokens, retry counted, duplicate suppressed. Measurement fixture only \u2014 no cap verdict.",
+  "evidenceFiles": [
+    "usage.jsonl"
+  ],
+  "runFile": "run.json",
+  "expectedAgentIds": [
+    "planner-agent",
+    "executor-agent",
+    "verifier-agent"
+  ],
+  "tokenAccountingProfile": {
+    "profileId": "fixture-token-accounting/c16-v1",
+    "version": "1.0",
+    "inputTokenSourceField": "inputTokens",
+    "outputTokenSourceField": "outputTokens",
+    "totalTokenSourceField": "totalTokens",
+    "basis": "FIXTURE_DECLARED_CANONICAL_TOKEN_FIELDS",
+    "limitations": [
+      "SYNTHETIC_CONTROLLED_EVIDENCE"
+    ]
+  }
+}

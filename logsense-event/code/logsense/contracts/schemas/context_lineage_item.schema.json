@@ -1,0 +1,104 @@
+{
+  "$id": "https://logsense.local/schemas/context_lineage_item.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contextItemRef": {
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "explicitlyReferenced": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "influenceState": {
+      "type": "string"
+    },
+    "integrityState": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "modelVisible": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mutability": {
+      "type": "string"
+    },
+    "origin": {
+      "enum": [
+        "USER_INPUT",
+        "SYSTEM_INSTRUCTION",
+        "DEVELOPER_INSTRUCTION",
+        "RAG",
+        "MEMORY",
+        "TOOL_OUTPUT",
+        "API_DATA",
+        "FILE_MEDIA",
+        "AGENT_MESSAGE",
+        "APPLICATION_STATE",
+        "STATIC_CONFIGURATION",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "retrievedAt": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sourceAuthority": {
+      "type": "string"
+    },
+    "temporalBasis": {
+      "type": "string"
+    },
+    "validationState": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "contextItemRef",
+    "origin",
+    "sourceAuthority",
+    "mutability",
+    "validationState",
+    "integrityState",
+    "temporalBasis",
+    "modelVisible",
+    "explicitlyReferenced",
+    "influenceState",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Context Lineage Item",
+  "type": "object"
+}

@@ -1,0 +1,787 @@
+{
+  "catalogId": "logsense-relation-evidence-basis-catalog",
+  "version": "0.1.0",
+  "bases": [
+    {
+      "basisId": "ADAPTER_DECLARED_RELATION",
+      "basisClass": "SOURCE_DECLARED",
+      "description": "Adapter Declared Relation",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "AI_MAPPING_PROPOSAL",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Ai Mapping Proposal",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "AI_PROPOSAL_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Ai Proposal Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "ATTESTATION_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Attestation Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "AUTHORIZATION_BINDING",
+      "basisClass": "AUTHORITY_BINDING",
+      "description": "Authorization Binding",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "BOUND_AUTHORITY_RECORD",
+      "basisClass": "AUTHORITY_BINDING",
+      "description": "Bound Authority Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "BUILD_PROVENANCE",
+      "basisClass": "LINEAGE_PROVENANCE",
+      "description": "Build Provenance",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "CASE_ANALYSIS",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Case Analysis",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "CAUSE_RULE_OUTPUT",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Cause Rule Output",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "CHAIN_OF_CUSTODY",
+      "basisClass": "LINEAGE_PROVENANCE",
+      "description": "Chain Of Custody",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "COMPARABLE_CLAIM_ANALYSIS",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Comparable Claim Analysis",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "CONFIG_MAPPING",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Config Mapping",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "CORRELATION_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Correlation Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "CORRELATION_SUPPORTED",
+      "basisClass": "CORRELATION_SUPPORT",
+      "description": "Correlation Supported",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "DECLARED_DELEGATION_HINT",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Declared Delegation Hint",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "DERIVATION_MANIFEST",
+      "basisClass": "LINEAGE_PROVENANCE",
+      "description": "Derivation Manifest",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "DISPLAY_NAME_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Display Name Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "DOMAIN_NATIVE_RELATION",
+      "basisClass": "SOURCE_DECLARED",
+      "description": "Domain Native Relation",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "DOMAIN_SCHEMA_MAPPING",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Domain Schema Mapping",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "EVENT_CONTRADICTION_PROJECTION",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Event Contradiction Projection",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "EXACT_ENDPOINT_JOIN",
+      "basisClass": "STATIC_EXACT",
+      "description": "Exact Endpoint Join",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "EXPLICIT_CASE_MEMBERSHIP",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Explicit Case Membership",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "EXPLICIT_DECISION_PROVENANCE_RECORD",
+      "basisClass": "LINEAGE_PROVENANCE",
+      "description": "Explicit Decision Provenance Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "EXPLICIT_DELEGATION_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Explicit Delegation Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "EXPLICIT_ORDERING_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Explicit Ordering Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "EXPLICIT_PREDECESSOR",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Explicit Predecessor",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "FREE_TEXT_SIMILARITY_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Free Text Similarity Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "HANDOFF_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Handoff Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "IDENTITY_MAPPING_HINT",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Identity Mapping Hint",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "IDENTITY_REGISTRY_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Identity Registry Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "INGESTED_AT_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Ingested At Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "INGESTION_TIME_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Ingestion Time Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "INVENTORY_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Inventory Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "K8S_CONFIG_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "K8S Config Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "MANIFEST_MAPPING",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Manifest Mapping",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "MESSAGE_PASSING_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Message Passing Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "OPERATION_STATE_ATTRIBUTION_BOUND",
+      "basisClass": "STATE_ATTRIBUTION",
+      "description": "Operation State Attribution Bound",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "PIPELINE_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Pipeline Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "PLATFORM_INVENTORY_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Platform Inventory Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "PRODUCER_DECLARED_EFFECT",
+      "basisClass": "STATE_ATTRIBUTION",
+      "description": "Producer Declared Effect",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "PROTOCOL_NATIVE_RUNTIME_RECORD",
+      "basisClass": "RUNTIME_NATIVE",
+      "description": "Protocol Native Runtime Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": true,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "QUALIFIED_SAME_CLOCK_EVENT_TIME",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Qualified Same Clock Event Time",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "RECEIVED_AT_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Received At Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "RUNTIME_INVOCATION_RECORD",
+      "basisClass": "RUNTIME_NATIVE",
+      "description": "Runtime Invocation Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": true,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "SBOM_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Sbom Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "SCHEMA_MAPPING",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Schema Mapping",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "SERVICE_CALL_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Service Call Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "SOURCE_NATIVE_RELATION",
+      "basisClass": "SOURCE_DECLARED",
+      "description": "Source Native Relation",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "SOURCE_SEQUENCE",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Source Sequence",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "STATE_DELTA",
+      "basisClass": "STATE_ATTRIBUTION",
+      "description": "State Delta",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "STATIC_DECLARATION",
+      "basisClass": "STATIC_CANDIDATE",
+      "description": "Static Declaration",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "STATIC_ENDPOINT_CANDIDATE",
+      "basisClass": "STATIC_CANDIDATE",
+      "description": "Static Endpoint Candidate",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "STATIC_EXACT_RELATION",
+      "basisClass": "STATIC_EXACT",
+      "description": "Static Exact Relation",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "STATIC_REGISTRY",
+      "basisClass": "STATIC_CANDIDATE",
+      "description": "Static Registry",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "TARGET_MATCH_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Target Match Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "TIMESTAMP_PROXIMITY_ONLY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Timestamp Proximity Only",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "TOPOLOGY_DECLARATION",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Topology Declaration",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "TRACE_PARENT",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Trace Parent",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "TRACE_PROXIMITY",
+      "basisClass": "WEAK_OR_FORBIDDEN",
+      "description": "Trace Proximity",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": false,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    },
+    {
+      "basisId": "VEX_RECORD",
+      "basisClass": "OTHER_DETERMINISTIC",
+      "description": "Vex Record",
+      "canPropose": true,
+      "canEstablishWhenAllowedByRelation": true,
+      "requiresRuntimeEvidence": false,
+      "hardNegatives": [],
+      "haiecReferences": [
+        "lib/evidence/semantic-relation-projection.ts"
+      ],
+      "notes": []
+    }
+  ],
+  "digest": "1d781d9fcea8cf26e7adc219e826e0b1e4cfa01637f455592f3044349f0e8bac"
+}

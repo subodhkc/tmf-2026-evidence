@@ -1,0 +1,103 @@
+{
+  "$id": "https://logsense.local/schemas/adapter_qualification_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "adapterId": {
+      "type": "string"
+    },
+    "adapterVersion": {
+      "type": "string"
+    },
+    "canonicalPromotionAllowed": {
+      "type": "boolean"
+    },
+    "deterministicMapping": {
+      "type": "boolean"
+    },
+    "formatFamily": {
+      "type": "string"
+    },
+    "knownLimitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "lastValidatedAgainstContractVersion": {
+      "type": "string"
+    },
+    "mayEmitRelationCandidates": {
+      "type": "boolean"
+    },
+    "producerIdentity": {
+      "type": "string"
+    },
+    "qualificationBasis": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "qualificationState": {
+      "enum": [
+        "QUALIFIED",
+        "CONDITIONALLY_QUALIFIED",
+        "EXPERIMENTAL",
+        "OPAQUE_PRESERVATION",
+        "REJECTED"
+      ],
+      "type": "string"
+    },
+    "schemaProfiles": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "semanticProfiles": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "supportedFields": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "unsupportedFields": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "validatedFixtureRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "adapterId",
+    "adapterVersion",
+    "formatFamily",
+    "schemaProfiles",
+    "semanticProfiles",
+    "qualificationState",
+    "qualificationBasis",
+    "validatedFixtureRefs",
+    "producerIdentity",
+    "supportedFields",
+    "unsupportedFields",
+    "knownLimitations",
+    "deterministicMapping",
+    "mayEmitRelationCandidates",
+    "canonicalPromotionAllowed",
+    "lastValidatedAgainstContractVersion"
+  ],
+  "title": "Adapter Qualification Record",
+  "type": "object"
+}

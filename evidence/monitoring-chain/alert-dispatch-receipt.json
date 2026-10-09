@@ -1,0 +1,21 @@
+{
+  "alertId": "alert-test-50018638-828f-4f19-ba4b-fa601d3945ee",
+  "ruleId": "rule-tmf-threshold-violation",
+  "triggeredBy": "test-finding",
+  "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+  "channelsAttempted": [
+    "WEBHOOK",
+    "EMAIL"
+  ],
+  "channelsSucceeded": [
+    "WEBHOOK",
+    "EMAIL"
+  ],
+  "severity": "HIGH",
+  "firedAt": "2026-10-05T09:26:29.658Z",
+  "fired": true,
+  "deduplicated": false,
+  "rateLimited": false,
+  "capturedVia": "POST /api/alerts/test response + AlertEvent (evidence.status=alert_event)",
+  "note": "synthetic self-test through production dispatch path; labeled TEST_ALERT/SYNTHETIC_NOT_OBSERVED"
+}

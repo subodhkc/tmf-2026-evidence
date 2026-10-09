@@ -1,0 +1,143 @@
+{
+  "$defs": {
+    "IngestResultState": {
+      "enum": [
+        "PARSED",
+        "PARTIAL",
+        "OPAQUE_UNPARSED",
+        "FAILED"
+      ],
+      "title": "IngestResultState",
+      "type": "string"
+    },
+    "SourceRole": {
+      "enum": [
+        "AGENT_TRACE",
+        "MODEL_TRACE",
+        "TOOL_TRACE",
+        "MCP_TRACE",
+        "A2A_TRACE",
+        "API_TRANSACTION",
+        "POLICY",
+        "GUARDRAIL",
+        "IDENTITY_IAM",
+        "CONFIGURATION",
+        "APPLICATION_LOG",
+        "PLATFORM_LOG",
+        "AUDIT_LOG",
+        "NETWORK_LOG",
+        "K8S_AUDIT",
+        "ALARM",
+        "KPI_METRIC",
+        "STATE_SNAPSHOT",
+        "TOPOLOGY",
+        "SUPPLY_CHAIN",
+        "STATIC_SCAN",
+        "SOURCE_CODE_ARCHIVE",
+        "DOCUMENTATION",
+        "SCENARIO_SPECIFICATION",
+        "UNKNOWN"
+      ],
+      "title": "SourceRole",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "ingestResultId": {
+      "title": "Ingestresultid",
+      "type": "string"
+    },
+    "artifactId": {
+      "title": "Artifactid",
+      "type": "string"
+    },
+    "state": {
+      "$ref": "#/$defs/IngestResultState"
+    },
+    "adapterId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Adapterid"
+    },
+    "adapterVersion": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Adapterversion"
+    },
+    "recordCount": {
+      "minimum": 0,
+      "title": "Recordcount",
+      "type": "integer"
+    },
+    "parsedRecordCount": {
+      "minimum": 0,
+      "title": "Parsedrecordcount",
+      "type": "integer"
+    },
+    "failedRecordCount": {
+      "minimum": 0,
+      "title": "Failedrecordcount",
+      "type": "integer"
+    },
+    "schemaProfileRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Schemaprofileref"
+    },
+    "sourceRoleCandidates": {
+      "items": {
+        "$ref": "#/$defs/SourceRole"
+      },
+      "title": "Sourcerolecandidates",
+      "type": "array"
+    },
+    "failureRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Failurerefs",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "ingestResultId",
+    "artifactId",
+    "state",
+    "recordCount",
+    "parsedRecordCount",
+    "failedRecordCount"
+  ],
+  "title": "ArtifactIngestResult",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/artifact_ingest_result.schema.json"
+}

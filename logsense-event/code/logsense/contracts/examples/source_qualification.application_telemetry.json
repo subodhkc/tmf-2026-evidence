@@ -1,0 +1,21 @@
+{
+  "qualificationId": "sq-res-001",
+  "analysisRunId": "run-phase55-001",
+  "sourceRef": "src-app",
+  "profileId": "sq-application-telemetry",
+  "claimClass": "ACTION_APPLIED",
+  "decision": "CANNOT_ESTABLISH",
+  "subjectBinding": "EXACT",
+  "evidenceRefs": [
+    "ev-http-200"
+  ],
+  "gapRefs": [
+    "gap-applied"
+  ],
+  "basis": [
+    "APPLICATION_TELEMETRY_CEILING"
+  ],
+  "limitations": [
+    "HTTP_200_NOT_ACTION_APPLIED"
+  ]
+}

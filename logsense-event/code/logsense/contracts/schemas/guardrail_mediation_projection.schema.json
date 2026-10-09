@@ -1,0 +1,150 @@
+{
+  "$id": "https://logsense.local/schemas/guardrail_mediation_projection.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actionGroupRef": {
+      "type": "string"
+    },
+    "actionTimeRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "approvedArgumentDigest": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "argumentIdentityPreserved": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "confirmationCompleted": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "confirmationPresented": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "decision": {
+      "type": "string"
+    },
+    "decisionTimeRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "denyBranchBlockedAction": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "executedArgumentDigest": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "guardrailRef": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "mediationEvidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "mediationId": {
+      "type": "string"
+    },
+    "ordering": {
+      "enum": [
+        "BEFORE_EFFECT",
+        "AFTER_EFFECT",
+        "SAME_BOUNDARY_UNRESOLVED",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "requirementDeclared": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "mediationId",
+    "actionGroupRef",
+    "guardrailRef",
+    "requirementDeclared",
+    "confirmationPresented",
+    "confirmationCompleted",
+    "decision",
+    "decisionTimeRef",
+    "actionTimeRef",
+    "ordering",
+    "denyBranchBlockedAction",
+    "approvedArgumentDigest",
+    "executedArgumentDigest",
+    "argumentIdentityPreserved",
+    "mediationEvidenceRefs",
+    "limitations"
+  ],
+  "title": "Guardrail Mediation Projection",
+  "type": "object"
+}

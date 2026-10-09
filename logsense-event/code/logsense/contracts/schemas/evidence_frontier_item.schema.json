@@ -1,0 +1,78 @@
+{
+  "$id": "https://logsense.local/schemas/evidence_frontier_item.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "createdFromSnapshot": {
+      "type": "string"
+    },
+    "currentEvidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "frontierId": {
+      "type": "string"
+    },
+    "missingFact": {
+      "type": "string"
+    },
+    "priority": {
+      "enum": [
+        "CRITICAL",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ],
+      "type": "string"
+    },
+    "proposedTestRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "state": {
+      "enum": [
+        "OPEN",
+        "TEST_DEFINED",
+        "EVIDENCE_COLLECTED",
+        "CLOSED",
+        "CONTRADICTED",
+        "SUPERSEDED"
+      ],
+      "type": "string"
+    },
+    "subjectRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "verificationRequirement": {
+      "type": "string"
+    },
+    "whyNeeded": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "frontierId",
+    "subjectRefs",
+    "missingFact",
+    "whyNeeded",
+    "currentEvidenceRefs",
+    "verificationRequirement",
+    "proposedTestRef",
+    "priority",
+    "createdFromSnapshot",
+    "state"
+  ],
+  "title": "Evidence Frontier Item",
+  "type": "object"
+}

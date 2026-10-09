@@ -1,0 +1,910 @@
+{
+  "version": "0.1.0",
+  "profiles": [
+    {
+      "profileId": "sem.agent-action.v1",
+      "version": "0.1.0",
+      "name": "Agent action trace",
+      "sourceRoles": [
+        "AGENT_TRACE"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "TOOL_CALL_REQUEST",
+          "basis": "agent/action record"
+        }
+      ],
+      "fieldBindings": [
+        {
+          "sourcePath": "ts",
+          "targetPath": "eventTime",
+          "transform": "RFC3339_NORMALIZE",
+          "required": false
+        },
+        {
+          "sourcePath": "action",
+          "targetPath": "operation.nativeOperation",
+          "transform": "IDENTITY",
+          "required": false
+        }
+      ],
+      "entityRules": [
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "agent_id",
+            "agent",
+            "principal"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "cell_id",
+            "target",
+            "resource",
+            "target_id"
+          ],
+          "namePath": "target_name",
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "actionCorrelationId",
+          "kind": "actionCorrelationId"
+        },
+        {
+          "sourcePath": "requestId",
+          "kind": "requestId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+      "limitations": []
+    },
+    {
+      "profileId": "sem.api-transaction.v1",
+      "version": "0.1.0",
+      "name": "API transaction",
+      "sourceRoles": [
+        "API_TRANSACTION"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1",
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "API_RESPONSE",
+          "basis": "request/response transaction"
+        }
+      ],
+      "fieldBindings": [
+        {
+          "sourcePath": "timestamp",
+          "targetPath": "eventTime",
+          "transform": "RFC3339_NORMALIZE",
+          "required": false
+        },
+        {
+          "sourcePath": "operation",
+          "targetPath": "operation.nativeOperation",
+          "transform": "IDENTITY",
+          "required": false
+        }
+      ],
+      "entityRules": [
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "actor",
+            "principal",
+            "agent"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "target",
+            "resource"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "request_id",
+          "kind": "requestId"
+        },
+        {
+          "sourcePath": "requestId",
+          "kind": "requestId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+      "limitations": [
+        "HTTP_STATUS_NEVER_ESTABLISHES_ACTION_APPLIED"
+      ]
+    },
+    {
+      "profileId": "sem.policy.v1",
+      "version": "0.1.0",
+      "name": "Policy/config snapshot",
+      "sourceRoles": [
+        "POLICY"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.json.v1",
+        "syntax.yaml.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "UNKNOWN_EVENT",
+          "basis": "policy snapshot, not change event"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "P1",
+          "entityType": "POLICY",
+          "idPaths": [
+            "policy_id",
+            "policy"
+          ],
+          "namePath": null,
+          "role": "subject"
+        },
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "agent_id",
+            "agent"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "resource",
+            "authorized_resource"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+      "limitations": [
+        "POLICY_EXISTS_NE_POLICY_EVALUATED"
+      ]
+    },
+    {
+      "profileId": "sem.state.v1",
+      "version": "0.1.0",
+      "name": "State/KPI snapshot",
+      "sourceRoles": [
+        "STATE_SNAPSHOT",
+        "KPI_METRIC"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "STATE_OBSERVATION",
+          "basis": "state/metric row"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "cell_id",
+            "slice_id",
+            "resource"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+      "limitations": [
+        "STATE_CHANGE_REQUIRES_PAIRED_OBSERVATIONS"
+      ]
+    },
+    {
+      "profileId": "sem.guardrail.v1",
+      "version": "0.1.0",
+      "name": "Guardrail decision",
+      "sourceRoles": [
+        "GUARDRAIL"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.jsonl.v1",
+        "syntax.json.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "GUARDRAIL_EVALUATION",
+          "basis": "explicit decision field"
+        }
+      ],
+      "fieldBindings": [
+        {
+          "sourcePath": "decision",
+          "targetPath": "result.decision",
+          "transform": "IDENTITY",
+          "required": true
+        }
+      ],
+      "entityRules": [
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "agent_id",
+            "agent"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "target",
+            "resource"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "actionCorrelationId",
+          "kind": "actionCorrelationId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "AUTHORITATIVE_CONTROL_BOUNDARY",
+      "limitations": [
+        "DECISION_NE_ENFORCEMENT"
+      ]
+    },
+    {
+      "profileId": "sem.platform-execution.v1",
+      "version": "0.1.0",
+      "name": "Platform execution",
+      "sourceRoles": [
+        "PLATFORM_LOG"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.kvlog.v1",
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "EXECUTION_RESULT",
+          "basis": "platform execution state"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "actor",
+            "agent"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "target",
+            "resource"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "correlation",
+          "kind": "actionCorrelationId"
+        },
+        {
+          "sourcePath": "actionCorrelationId",
+          "kind": "actionCorrelationId"
+        },
+        {
+          "sourcePath": "requestId",
+          "kind": "requestId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+      "limitations": []
+    },
+    {
+      "profileId": "sem.a2a-task.v1",
+      "version": "0.1.0",
+      "name": "A2A task/message",
+      "sourceRoles": [
+        "A2A_TRACE"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "A2A_TASK_UPDATE",
+          "basis": "task/context identifiers"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "S1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "sourceAgent"
+          ],
+          "namePath": null,
+          "role": "source-agent"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "targetAgent"
+          ],
+          "namePath": null,
+          "role": "target-agent"
+        },
+        {
+          "ruleId": "R1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "target"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "taskId",
+          "kind": "taskId"
+        },
+        {
+          "sourcePath": "contextId",
+          "kind": "contextId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+      "limitations": [
+        "A2A_TASK_NE_AUTHORITY_DELEGATION"
+      ]
+    },
+    {
+      "profileId": "sem.delegation.v1",
+      "version": "0.1.0",
+      "name": "Delegation envelope",
+      "sourceRoles": [
+        "CONFIGURATION"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.json.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "DELEGATION_CREATED",
+          "basis": "explicit delegation object"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "S1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "sourceAgent"
+          ],
+          "namePath": null,
+          "role": "delegator"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "targetAgent"
+          ],
+          "namePath": null,
+          "role": "delegate"
+        }
+      ],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [
+        {
+          "relationType": "AGENT_DELEGATES_TO",
+          "sourceRole": "delegator",
+          "targetRole": "delegate",
+          "basis": "explicit delegation fields"
+        }
+      ],
+      "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+      "limitations": []
+    },
+    {
+      "profileId": "sem.iam-effective.v1",
+      "version": "0.1.0",
+      "name": "Effective IAM grant",
+      "sourceRoles": [
+        "IDENTITY_IAM"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1",
+        "syntax.json.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "IAM_GRANT_EVENT",
+          "basis": "effective IAM row"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "P1",
+          "entityType": "SERVICE_PRINCIPAL",
+          "idPaths": [
+            "principal"
+          ],
+          "namePath": null,
+          "role": "principal"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "target"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "AUTHORITATIVE_CONTROL_BOUNDARY",
+      "limitations": []
+    },
+    {
+      "profileId": "sem.tool-trace.v1",
+      "version": "0.1.0",
+      "name": "Tool execution trace",
+      "sourceRoles": [
+        "TOOL_TRACE"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.kvlog.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "TOOL_CALL_RESPONSE",
+          "basis": "tool/result record"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "agent"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "TL1",
+          "entityType": "TOOL",
+          "idPaths": [
+            "tool"
+          ],
+          "namePath": null,
+          "role": "tool"
+        },
+        {
+          "ruleId": "T1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "target"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "task",
+          "kind": "taskId"
+        },
+        {
+          "sourcePath": "actionCorrelationId",
+          "kind": "actionCorrelationId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [
+        {
+          "relationType": "AGENT_USES_TOOL",
+          "sourceRole": "actor",
+          "targetRole": "tool",
+          "basis": "runtime tool field"
+        }
+      ],
+      "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+      "limitations": [
+        "TOOL_RESULT_MAY_REQUIRE_PLATFORM_STATE_FOR_APPLIED_EFFECT"
+      ]
+    },
+    {
+      "profileId": "sem.conversation.v1",
+      "version": "0.1.0",
+      "name": "Conversation messages",
+      "sourceRoles": [
+        "AGENT_TRACE"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "U",
+          "eventClass": "USER_MESSAGE",
+          "basis": "role=user",
+          "when": {
+            "role": "user"
+          }
+        },
+        {
+          "ruleId": "A",
+          "eventClass": "AGENT_MESSAGE",
+          "basis": "role=assistant",
+          "when": {
+            "role": "assistant"
+          }
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+      "limitations": [
+        "MESSAGE_TEXT_NE_ATTACK"
+      ]
+    },
+    {
+      "profileId": "sem.model-trace.v1",
+      "version": "0.1.0",
+      "name": "Model output trace",
+      "sourceRoles": [
+        "MODEL_TRACE"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "MODEL_RESPONSE",
+          "basis": "model turn record"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "agent_id"
+          ],
+          "namePath": null,
+          "role": "actor"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "turn_id",
+          "kind": "correlationId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+      "limitations": []
+    },
+    {
+      "profileId": "sem.tool-inventory.v1",
+      "version": "0.1.0",
+      "name": "Tool inventory",
+      "sourceRoles": [
+        "CONFIGURATION"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.json.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "TOOL_ADVERTISED",
+          "basis": "declared tool inventory"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "A1",
+          "entityType": "AI_AGENT",
+          "idPaths": [
+            "agent"
+          ],
+          "namePath": null,
+          "role": "actor"
+        }
+      ],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+      "limitations": [
+        "TOOL_ADVERTISED_NE_TOOL_EXECUTED"
+      ]
+    },
+    {
+      "profileId": "sem.application-log.v1",
+      "version": "0.1.0",
+      "name": "Application log",
+      "sourceRoles": [
+        "APPLICATION_LOG"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.kvlog.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "API_RESPONSE",
+          "basis": "accepted/request log pattern"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "APPLICATION_TELEMETRY",
+      "limitations": [
+        "APPLICATION_LOG_NE_APPLIED_EFFECT"
+      ]
+    },
+    {
+      "profileId": "sem.clock-sync.v1",
+      "version": "0.1.0",
+      "name": "Clock synchronization",
+      "sourceRoles": [
+        "CONFIGURATION"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.json.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "EVIDENCE_INTEGRITY_EVENT",
+          "basis": "clock sync record"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "PLATFORM_INSTRUMENTATION",
+      "limitations": [
+        "CLOCK_OFFSET_USED_ONLY_WITH_EXPLICIT_BASIS"
+      ]
+    },
+    {
+      "profileId": "sem.inventory.v1",
+      "version": "0.1.0",
+      "name": "Entity inventory",
+      "sourceRoles": [
+        "TOPOLOGY"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "SOURCE_LIFECYCLE",
+          "basis": "inventory snapshot"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "S1",
+          "entityType": "NetworkSlice",
+          "idPaths": [
+            "slice_id"
+          ],
+          "namePath": "display_name",
+          "role": "resource"
+        }
+      ],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+      "limitations": [
+        "INVENTORY_PRESENCE_NE_RUNTIME_EXISTENCE"
+      ]
+    },
+    {
+      "profileId": "sem.db-audit.v1",
+      "version": "0.1.0",
+      "name": "Database audit",
+      "sourceRoles": [
+        "AUDIT_LOG"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.csv.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "AUDIT_EVENT",
+          "basis": "DB audit row"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [
+        {
+          "ruleId": "P1",
+          "entityType": "SERVICE_PRINCIPAL",
+          "idPaths": [
+            "principal"
+          ],
+          "namePath": null,
+          "role": "actor"
+        },
+        {
+          "ruleId": "R1",
+          "entityType": "RESOURCE",
+          "idPaths": [
+            "resource"
+          ],
+          "namePath": null,
+          "role": "target"
+        }
+      ],
+      "correlationRules": [
+        {
+          "sourcePath": "request_id",
+          "kind": "requestId"
+        }
+      ],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "SERVICE_NATIVE_RECORD",
+      "limitations": []
+    },
+    {
+      "profileId": "sem.tenant-map.v1",
+      "version": "0.1.0",
+      "name": "Tenant/resource map",
+      "sourceRoles": [
+        "CONFIGURATION"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.json.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "SOURCE_LIFECYCLE",
+          "basis": "tenant map snapshot"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "DECLARED_CONFIGURATION",
+      "limitations": []
+    },
+    {
+      "profileId": "sem.forwarded-copy.v1",
+      "version": "0.1.0",
+      "name": "Forwarded SIEM copy",
+      "sourceRoles": [
+        "AUDIT_LOG"
+      ],
+      "syntaxAdapterIds": [
+        "syntax.jsonl.v1"
+      ],
+      "eventClassRules": [
+        {
+          "ruleId": "E1",
+          "eventClass": "AUDIT_EVENT",
+          "basis": "forwarded record"
+        }
+      ],
+      "fieldBindings": [],
+      "entityRules": [],
+      "correlationRules": [],
+      "stateRules": [],
+      "relationProposalRules": [],
+      "sourceAuthorityCandidate": "EXTERNAL_IMPORTED_RECORD",
+      "limitations": [
+        "FORWARDED_COPY_RETAINS_SOURCE_LINEAGE"
+      ]
+    }
+  ],
+  "limitations": [
+    "DETERMINISTIC_PROFILE_MAPPINGS_ONLY",
+    "AI_MAY_PROPOSE_NEW_PROFILE_BUT_NOT_APPLY_CANONICALLY"
+  ]
+}

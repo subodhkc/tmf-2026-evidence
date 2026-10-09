@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Identity Resolution Rule",
+  "type": "object",
+  "properties": {
+    "ruleId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string",
+      "enum": [
+        "EXACT_NATIVE_ID",
+        "COMPOSITE_IDENTITY",
+        "PROTOCOL_NATIVE_BINDING",
+        "APPROVED_ALIAS",
+        "SOURCE_DECLARED_EQUIVALENCE"
+      ]
+    },
+    "entityTypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requiredMatchFields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requiredScopeFields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbiddenMatchBases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputState": {
+      "type": "string",
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "CANDIDATE",
+        "UNRESOLVED",
+        "CONTRADICTED"
+      ]
+    },
+    "hardNegatives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "haiecReferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "ruleId",
+    "version",
+    "method",
+    "entityTypes",
+    "requiredMatchFields",
+    "requiredScopeFields",
+    "forbiddenMatchBases",
+    "outputState",
+    "hardNegatives",
+    "haiecReferences",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/identity_resolution_rule.schema.json"
+}

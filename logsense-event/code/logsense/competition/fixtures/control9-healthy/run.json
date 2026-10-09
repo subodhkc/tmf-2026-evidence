@@ -1,0 +1,12 @@
+{
+  "runId": "C9-HEALTHY",
+  "label": "Control 9 \u2014 healthy measurement (ILLUSTRATIVE)",
+  "traceIds": [
+    "trace-c9-healthy"
+  ],
+  "sessionIds": [
+    "sess-c9-healthy"
+  ],
+  "notes": "Bundled deterministic fixture: Ten windows all close to the 0.900 baseline. Expected: MEASURED, 100% coverage, every window COMPARABLE. Not a SATISFIED claim \u2014 HAIEC owns the verdict.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

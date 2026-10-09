@@ -1,0 +1,74 @@
+{
+  "$defs": {
+    "ScenarioSequenceMember": {
+      "additionalProperties": false,
+      "properties": {
+        "evidenceSetId": {
+          "title": "Evidencesetid",
+          "type": "string"
+        },
+        "scenarioLevel": {
+          "title": "Scenariolevel",
+          "type": "string"
+        },
+        "scenarioSequence": {
+          "minimum": 0,
+          "title": "Scenariosequence",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "evidenceSetId",
+        "scenarioLevel",
+        "scenarioSequence"
+      ],
+      "title": "ScenarioSequenceMember",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "sequenceId": {
+      "title": "Sequenceid",
+      "type": "string"
+    },
+    "caseId": {
+      "title": "Caseid",
+      "type": "string"
+    },
+    "scenarioRunId": {
+      "title": "Scenariorunid",
+      "type": "string"
+    },
+    "states": {
+      "items": {
+        "$ref": "#/$defs/ScenarioSequenceMember"
+      },
+      "title": "States",
+      "type": "array"
+    },
+    "orderingBasis": {
+      "const": "EXPLICIT",
+      "default": "EXPLICIT",
+      "title": "Orderingbasis",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "sequenceId",
+    "caseId",
+    "scenarioRunId",
+    "states"
+  ],
+  "title": "ScenarioSequence",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/scenario_sequence.schema.json"
+}

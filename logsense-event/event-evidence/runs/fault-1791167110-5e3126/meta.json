@@ -1,0 +1,50 @@
+{
+  "cid": "fault-1791167110-5e3126",
+  "traceId": "07d6bc416b7e46ebb1e128f0ff031b82",
+  "capturedAt": "2026-10-05T02:28:11.630521+00:00",
+  "artifacts": {
+    "audit_records.jsonl": {
+      "count": 28,
+      "sha256": "6e6728f5764a14fe9c5ec95ea961cb968490aebf6f4572b5c15970562fe3d6c3"
+    },
+    "timeline.txt": {
+      "bytes": 8889,
+      "sha256": "332f391740341d8f776f83083fe218f658c6c931eb2fe6fbf017d477e88cfc14"
+    },
+    "modaas_evidence.jsonl": {
+      "count": 22,
+      "group": "/modaas/evidence",
+      "sha256": "c76ba54aa38fa093df1ef452e2f33caf0d55314f20eb2463f08f851b35400b4c"
+    },
+    "gateway_run.log": {
+      "count": 0,
+      "group": "/aws/modaas/gateway",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "agentcore_customer.jsonl": {
+      "count": 12,
+      "group": "/aws/bedrock-agentcore/runtimes/customer_experience_agent-FoE4C35iYV-DEFAULT",
+      "sha256": "db5a315d816eb3adcc93ebbf0e41da6de20ce6ce0160af7afbd769554b61ba30"
+    },
+    "agentcore_it.jsonl": {
+      "count": 12,
+      "group": "/aws/bedrock-agentcore/runtimes/it_resolution_agent-OxT4r3BXvu-DEFAULT",
+      "sha256": "dfc4d6bd41ddb246b97b75c1fedb890fa7e5ddf26bc8e3993bf142e7fc2ec742"
+    },
+    "agentcore_network.jsonl": {
+      "count": 22,
+      "group": "/aws/bedrock-agentcore/runtimes/network_resolution_agent-5uSMf0CrfV-DEFAULT",
+      "sha256": "6e3e5fc1bd8b275c719c0a055b2864e4b2b0728ce0eaba5b6405c5862c8d10e2"
+    },
+    "aws_spans_cid.jsonl": {
+      "count": 22,
+      "group": "aws/spans",
+      "sha256": "0109627d3f17457c42a8491ed4c62b1fc02e32c45c1ec5a0b1f81c642550a20e"
+    },
+    "aws_spans_trace.jsonl": {
+      "count": 42,
+      "group": "aws/spans",
+      "sha256": "e0ed351e3b90ad8a03a2891914af10cfa5b57ce627479612e3558ff3e1ae2535"
+    }
+  }
+}

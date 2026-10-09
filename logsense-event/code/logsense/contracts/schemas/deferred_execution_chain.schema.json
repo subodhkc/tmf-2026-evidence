@@ -1,0 +1,126 @@
+{
+  "$id": "https://logsense.local/schemas/deferred_execution_chain.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "argumentPreservationState": {
+      "enum": [
+        "PRESERVED",
+        "TRANSFORMED",
+        "PARTIAL",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "creationActionRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "creationAuthorityRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "creationContextRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "executionActionRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "executionAuthorityRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "executionContextRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "replayRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "retryRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "scheduledOrQueuedRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "creationActionRef",
+    "creationContextRef",
+    "creationAuthorityRef",
+    "scheduledOrQueuedRef",
+    "executionActionRef",
+    "executionContextRef",
+    "executionAuthorityRef",
+    "replayRefs",
+    "retryRefs",
+    "argumentPreservationState",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Deferred Execution Chain",
+  "type": "object"
+}

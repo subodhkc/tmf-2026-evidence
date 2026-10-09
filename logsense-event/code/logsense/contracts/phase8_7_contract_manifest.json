@@ -1,0 +1,40 @@
+{
+  "contractVersion": "8.7",
+  "hardNegativeGuardCount": 39,
+  "hardNegativeRegistry": "hard-negative-guards-phase8.7.json",
+  "materialization": "NEW_FROM_FROZEN_PROSE",
+  "nonGoals": [
+    "no runtime analyzer implementation",
+    "no deterministic report implementation",
+    "no AI investigator",
+    "no UI/API/MCP",
+    "no Phase 20 adapters"
+  ],
+  "schemaCount": 21,
+  "schemas": {
+    "action_argument_provenance.schema.json": "3aed6b74312bbe614c19d209f996579e2cce0db12d8db12a2f09de11e35ca610",
+    "adapter_qualification_record.schema.json": "a90993843cdda8a1a1fcc52293a855c0b3ed39d1d289706a67d608ceb76acd08",
+    "analysis_perimeter_identity.schema.json": "7b018fc61380d1cd0300d53c8d55c71a395851227a8964ae2a421672c080783c",
+    "context_lineage_item.schema.json": "84c3e1e7f6b3f4a522a1fd8f320100f30f7e29def8875dbd4d05eab67fdc8868",
+    "deferred_execution_chain.schema.json": "b859f7ff6be14a976a74ea9295fe36485c3470b3656ad245077e4113473d5177",
+    "delegated_action_integrity_evaluation.schema.json": "1e3b2f1f7a39a95c3b1e32c17b7a8cce70d86bb509bfdb20264fddafd7b11ebe",
+    "effect_envelope_assessment.schema.json": "810a76b01b87a74a59ef31e62bbfbe483514b2434198c0e8ec89ed8bc8087e6f",
+    "evidence_card.schema.json": "9939f9a9f7efc7fcbd2f743a4b5e39f0d2f13a8a9f7bebf64fb32978de498c0a",
+    "evidence_frontier_item.schema.json": "cc60ac998f46d3821cf1ba474567da3725ca2df93e3b99f8e03e3dff4ceac132",
+    "execution_archetype_projection.schema.json": "c8abe5c5d0e4441e6e9c71aa9fcafca880b7c78630c1a697a727ee0f3fe1ebcf",
+    "forensic_claim.schema.json": "3d9c5425a6749eb9063d5809db1d634bdbc02957436e23c832812cca7bc8c390",
+    "frontier_closure_record.schema.json": "f5476fb786194f1bc928f5f03c66cc5bce7aae8dcdec3e74c4a4d35496e7fef8",
+    "guardrail_mediation_projection.schema.json": "5af00d5ea1365da4e74c0cbac2809a849acad12bea8c5dfd68148e51c2db5ea3",
+    "hard_negative_guard_registry.schema.json": "07f65f59cc9bd553b1be70d9154a5982659f2c876a14b206242e0a9f57e09a3c",
+    "investigation_insight.schema.json": "fc1e28077f57f92be135eeccbbc39a83654c1da466573369ca18701547f62cae",
+    "investigation_session.schema.json": "c5165ba7e9da7e83deb07eaf37def094de0b943283eccdb9ba19a6a25f6acc5f",
+    "investigation_story.schema.json": "cbc65cea9ad2711f86345ffad1aee661dcdc8feea6649ec6f2b76bea066753b5",
+    "planner_executor_boundary.schema.json": "4a751807bffcdcf1c25c73e996af426876d8484c984489d88c2f515a1127e432",
+    "principal_continuity.schema.json": "6c8ba7b4d31033b95ba063be5b5b91df7c0282bfe677249ecd4630c86523a5f3",
+    "recovery_projection.schema.json": "f8d3d3813f49e3f9314826b6f44b0ebdf9dbd2246f3aa8fc2a3ab7c58dc2a56e",
+    "trust_break_candidate.schema.json": "1e28b067d6b32548dbc658e001fa1b232f5e8bcbcc9ad1c81fae53fc228143e8"
+  },
+  "semanticAuthority": "Phase 8.7 controls these additive projections; Phase 2-7 owners remain canonical truth owners.",
+  "sourceDocumentId": "11tCG5MCY-jhacWcviycWqFkUWX3DeS46vj4fL8R4XXA",
+  "sourceDocumentTitle": "LogSense Phase 8.7 \u2014 Final Semantic Closure & Contract Freeze"
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Investigation Snapshot",
+  "type": "object",
+  "properties": {
+    "snapshotId": {
+      "type": "string"
+    },
+    "caseId": {
+      "type": "string"
+    },
+    "evidenceSetId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "entityRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "eventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "correlationGroupRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "actionGroupRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relationEvaluationRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stateTransitionRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "detectionSignalRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contradictionRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "divergenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "timelineEventRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fivePlaneCoverageRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "actionLifecycleCoverageRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gapRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duplicateGroupRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "digest": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "snapshotId",
+    "caseId",
+    "evidenceSetId",
+    "analysisRunId",
+    "createdAt",
+    "entityRefs",
+    "eventRefs",
+    "sourceRefs",
+    "correlationGroupRefs",
+    "actionGroupRefs",
+    "relationEvaluationRefs",
+    "stateTransitionRefs",
+    "detectionSignalRefs",
+    "contradictionRefs",
+    "divergenceRefs",
+    "timelineEventRefs",
+    "fivePlaneCoverageRefs",
+    "actionLifecycleCoverageRefs",
+    "gapRefs",
+    "duplicateGroupRefs",
+    "digest",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/investigation_snapshot.schema.json"
+}

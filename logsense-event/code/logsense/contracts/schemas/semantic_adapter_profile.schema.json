@@ -1,0 +1,287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/semantic_adapter_profile.schema.json",
+  "title": "Semantic Adapter Profile",
+  "type": "object",
+  "properties": {
+    "profileId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "sourceRoles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "AGENT_TRACE",
+          "MODEL_TRACE",
+          "TOOL_TRACE",
+          "MCP_TRACE",
+          "A2A_TRACE",
+          "API_TRANSACTION",
+          "POLICY",
+          "GUARDRAIL",
+          "IDENTITY_IAM",
+          "CONFIGURATION",
+          "APPLICATION_LOG",
+          "PLATFORM_LOG",
+          "AUDIT_LOG",
+          "NETWORK_LOG",
+          "K8S_AUDIT",
+          "ALARM",
+          "KPI_METRIC",
+          "STATE_SNAPSHOT",
+          "TOPOLOGY",
+          "SUPPLY_CHAIN",
+          "STATIC_SCAN",
+          "SOURCE_CODE_ARCHIVE",
+          "DOCUMENTATION",
+          "SCENARIO_SPECIFICATION",
+          "UNKNOWN"
+        ]
+      }
+    },
+    "syntaxAdapterIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "eventClassRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ruleId",
+          "eventClass",
+          "basis"
+        ],
+        "properties": {
+          "ruleId": {
+            "type": "string"
+          },
+          "eventClass": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string"
+          },
+          "when": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "fieldBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sourcePath",
+          "targetPath",
+          "transform"
+        ],
+        "properties": {
+          "sourcePath": {
+            "type": "string"
+          },
+          "targetPath": {
+            "type": "string"
+          },
+          "transform": {
+            "type": "string",
+            "enum": [
+              "IDENTITY",
+              "TRIM",
+              "LOWERCASE",
+              "UPPERCASE",
+              "TYPE_PARSE",
+              "RFC3339_NORMALIZE",
+              "EPOCH_SECONDS",
+              "EPOCH_MILLISECONDS",
+              "ENUM_MAP",
+              "REGEX_CAPTURE",
+              "JSON_PATH",
+              "LOOKUP_TABLE",
+              "UNIT_NORMALIZE",
+              "CONCAT_IDENTITY_PARTS"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "config": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "entityRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ruleId",
+          "entityType",
+          "idPaths"
+        ],
+        "properties": {
+          "ruleId": {
+            "type": "string"
+          },
+          "entityType": {
+            "type": "string"
+          },
+          "idPaths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "namePath": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "role": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "correlationRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sourcePath",
+          "kind"
+        ],
+        "properties": {
+          "sourcePath": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "stateRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "property",
+          "valuePath"
+        ],
+        "properties": {
+          "property": {
+            "type": "string"
+          },
+          "valuePath": {
+            "type": "string"
+          },
+          "subjectPath": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "relationProposalRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relationType",
+          "sourceRole",
+          "targetRole"
+        ],
+        "properties": {
+          "relationType": {
+            "type": "string"
+          },
+          "sourceRole": {
+            "type": "string"
+          },
+          "targetRole": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sourceAuthorityCandidate": {
+      "type": "string",
+      "enum": [
+        "AUTHORITATIVE_CONTROL_BOUNDARY",
+        "PLATFORM_INSTRUMENTATION",
+        "SERVICE_NATIVE_RECORD",
+        "APPLICATION_TELEMETRY",
+        "EXTERNAL_IMPORTED_RECORD",
+        "DECLARED_CONFIGURATION",
+        "SELF_REPORTED",
+        "UNKNOWN_SOURCE_AUTHORITY"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "profileId",
+    "version",
+    "name",
+    "sourceRoles",
+    "syntaxAdapterIds",
+    "eventClassRules",
+    "fieldBindings",
+    "entityRules",
+    "correlationRules",
+    "stateRules",
+    "relationProposalRules",
+    "sourceAuthorityCandidate",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

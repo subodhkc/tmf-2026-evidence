@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Relation Condition Catalog",
+  "type": "object",
+  "properties": {
+    "catalogId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Condition"
+      }
+    },
+    "digest": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "catalogId",
+    "version",
+    "conditions",
+    "digest"
+  ],
+  "$defs": {
+    "Condition": {
+      "title": "Relation Condition",
+      "type": "object",
+      "properties": {
+        "conditionId": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "evaluatorKind": {
+          "type": "string",
+          "enum": [
+            "REFERENCE_STATE",
+            "IDENTITY_CHECK",
+            "SCOPE_CHECK",
+            "LINEAGE_CHECK",
+            "ORDERING_CHECK",
+            "COMPARABILITY_CHECK",
+            "SOURCE_QUALIFICATION_CHECK",
+            "CUSTOM_DETERMINISTIC"
+          ]
+        },
+        "inputObjectTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "failureGapType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "IDENTITY_UNRESOLVED",
+                "ACTOR_UNRESOLVED",
+                "RESOURCE_UNRESOLVED",
+                "TOOL_UNRESOLVED",
+                "SOURCE_ROLE_UNKNOWN",
+                "SOURCE_AUTHORITY_UNKNOWN",
+                "SOURCE_LINEAGE_UNKNOWN",
+                "TIMESTAMP_MISSING",
+                "TIMEZONE_UNKNOWN",
+                "CLOCK_DOMAIN_UNKNOWN",
+                "CORRELATION_ID_MISSING",
+                "CORRELATION_AMBIGUOUS",
+                "ACTION_IDENTITY_INCOMPLETE",
+                "OPERATION_UNMAPPED",
+                "RESULT_UNMAPPED",
+                "STATE_FACET_UNKNOWN",
+                "UNIT_UNKNOWN",
+                "EXPECTED_STATE_MISSING",
+                "POLICY_EVIDENCE_MISSING",
+                "AUTHORIZATION_EVIDENCE_MISSING",
+                "EFFECTIVE_GRANT_MISSING",
+                "CODE_CAPABILITY_MISSING",
+                "EXECUTION_EVIDENCE_MISSING",
+                "EFFECT_CONFIRMATION_MISSING",
+                "STREAM_COMPLETENESS_UNKNOWN",
+                "BASELINE_INSUFFICIENT",
+                "BASELINE_INCOMPATIBLE",
+                "RELATION_UNESTABLISHED",
+                "CAUSE_MECHANISM_INCOMPLETE",
+                "ALTERNATIVE_CAUSES_UNRESOLVED",
+                "UNSUPPORTED_FORMAT",
+                "PARSER_PARTIAL",
+                "SCHEMA_MAPPING_PENDING",
+                "TENANT_CONTEXT_LOSS",
+                "SOURCE_QUALIFICATION_UNKNOWN",
+                "TEMPORAL_ALIGNMENT_UNCERTAIN",
+                "DUPLICATE_RECORD_AMBIGUOUS",
+                "ACTION_SCOPE_UNRESOLVED",
+                "SOURCE_CLAIM_NOT_QUALIFIED"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "hardNegatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "haiecReferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "conditionId",
+        "description",
+        "evaluatorKind",
+        "inputObjectTypes",
+        "hardNegatives",
+        "haiecReferences",
+        "notes"
+      ]
+    }
+  },
+  "$id": "https://logsense.local/schemas/relation_condition_catalog.schema.json"
+}

@@ -1,0 +1,152 @@
+{
+  "$defs": {
+    "GapStatus": {
+      "enum": [
+        "OPEN",
+        "PARTIALLY_CLOSED",
+        "CLOSED",
+        "NOT_APPLICABLE"
+      ],
+      "title": "GapStatus",
+      "type": "string"
+    },
+    "GapType": {
+      "enum": [
+        "IDENTITY_UNRESOLVED",
+        "ACTOR_UNRESOLVED",
+        "RESOURCE_UNRESOLVED",
+        "TOOL_UNRESOLVED",
+        "SOURCE_ROLE_UNKNOWN",
+        "SOURCE_AUTHORITY_UNKNOWN",
+        "SOURCE_LINEAGE_UNKNOWN",
+        "TIMESTAMP_MISSING",
+        "TIMEZONE_UNKNOWN",
+        "CLOCK_DOMAIN_UNKNOWN",
+        "CORRELATION_ID_MISSING",
+        "CORRELATION_AMBIGUOUS",
+        "ACTION_IDENTITY_INCOMPLETE",
+        "OPERATION_UNMAPPED",
+        "RESULT_UNMAPPED",
+        "STATE_FACET_UNKNOWN",
+        "UNIT_UNKNOWN",
+        "EXPECTED_STATE_MISSING",
+        "POLICY_EVIDENCE_MISSING",
+        "AUTHORIZATION_EVIDENCE_MISSING",
+        "EFFECTIVE_GRANT_MISSING",
+        "CODE_CAPABILITY_MISSING",
+        "EXECUTION_EVIDENCE_MISSING",
+        "EFFECT_CONFIRMATION_MISSING",
+        "STREAM_COMPLETENESS_UNKNOWN",
+        "BASELINE_INSUFFICIENT",
+        "BASELINE_INCOMPATIBLE",
+        "RELATION_UNESTABLISHED",
+        "CAUSE_MECHANISM_INCOMPLETE",
+        "ALTERNATIVE_CAUSES_UNRESOLVED",
+        "UNSUPPORTED_FORMAT",
+        "PARSER_PARTIAL",
+        "SCHEMA_MAPPING_PENDING",
+        "TENANT_CONTEXT_LOSS",
+        "SOURCE_QUALIFICATION_UNKNOWN",
+        "TEMPORAL_ALIGNMENT_UNCERTAIN",
+        "DUPLICATE_RECORD_AMBIGUOUS",
+        "ACTION_SCOPE_UNRESOLVED",
+        "SOURCE_CLAIM_NOT_QUALIFIED"
+      ],
+      "title": "GapType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "gapId": {
+      "title": "Gapid",
+      "type": "string"
+    },
+    "gapType": {
+      "$ref": "#/$defs/GapType"
+    },
+    "evidenceSetId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Evidencesetid"
+    },
+    "comparisonId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Comparisonid"
+    },
+    "subjectRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Subjectrefs",
+      "type": "array"
+    },
+    "actionGroupRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Actiongrouprefs",
+      "type": "array"
+    },
+    "blocks": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Blocks",
+      "type": "array"
+    },
+    "whyItMatters": {
+      "title": "Whyitmatters",
+      "type": "string"
+    },
+    "acceptableEvidence": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Acceptableevidence",
+      "type": "array"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidencerefs",
+      "type": "array"
+    },
+    "status": {
+      "$ref": "#/$defs/GapStatus",
+      "default": "OPEN"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "gapId",
+    "gapType",
+    "whyItMatters"
+  ],
+  "title": "GapFinding",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/gap_finding.schema.json"
+}

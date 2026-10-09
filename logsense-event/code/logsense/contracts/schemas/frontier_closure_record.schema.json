@@ -1,0 +1,60 @@
+{
+  "$id": "https://logsense.local/schemas/frontier_closure_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "closedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "closureReason": {
+      "type": "string"
+    },
+    "closureState": {
+      "enum": [
+        "CLOSED",
+        "DOCUMENTED_NON_EXECUTION",
+        "STILL_OPEN",
+        "CONTRADICTED"
+      ],
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "frontierId": {
+      "type": "string"
+    },
+    "newSnapshotRef": {
+      "type": "string"
+    },
+    "priorSnapshotRef": {
+      "type": "string"
+    },
+    "testRunRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "frontierId",
+    "priorSnapshotRef",
+    "testRunRef",
+    "closureState",
+    "evidenceRefs",
+    "closureReason",
+    "newSnapshotRef",
+    "closedAt"
+  ],
+  "title": "Frontier Closure Record",
+  "type": "object"
+}

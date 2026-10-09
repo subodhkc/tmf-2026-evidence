@@ -1,0 +1,7 @@
+{
+  "runId": "C16-EVIDFAIL",
+  "label": "Control 16 evidence-failure run",
+  "traceIds": ["trace-c16-evidfail"],
+  "sessionIds": ["sess-c16-evidfail"],
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

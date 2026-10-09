@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/identity_resolution_result.schema.json",
+  "title": "Identity Resolution Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["resolutionId","analysisRunId","inputEntityRefs","resolvedEntityRef","state","ruleId","basis","evidenceRefs","conflictRefs","limitations"],
+  "properties": {
+    "resolutionId": {"type":"string"},
+    "analysisRunId": {"type":"string"},
+    "inputEntityRefs": {"type":"array","minItems":2,"items":{"type":"string"}},
+    "resolvedEntityRef": {"type":["string","null"]},
+    "state": {"enum":["EXACT","PARTIAL","CANDIDATE","UNRESOLVED","CONTRADICTED"]},
+    "ruleId": {"type":["string","null"]},
+    "basis": {"type":"array","items":{"type":"string"}},
+    "evidenceRefs": {"type":"array","items":{"type":"string"}},
+    "conflictRefs": {"type":"array","items":{"type":"string"}},
+    "limitations": {"type":"array","items":{"type":"string"}}
+  }
+}

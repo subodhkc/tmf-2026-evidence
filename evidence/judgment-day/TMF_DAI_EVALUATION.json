@@ -1,0 +1,62 @@
+{
+  "evaluationId": "tmf-dai-c7-negotiation-001",
+  "actionGroupRef": "tmf-modaa-s-it-to-network-agent-negotiation",
+  "dimensions": [
+    {
+      "dimension": "OPERATION",
+      "delegatedValue": "negotiate+execute network remediation action on peer network agent",
+      "codeCapableValue": null,
+      "effectivelyGrantedValue": null,
+      "observedValue": null,
+      "comparison": "UNKNOWN",
+      "mediationEvidenceRefs": [],
+      "evidenceRefs": [
+        "evidence/judgment-day/event-decision-finding-log.md#ED-029",
+        "evidence/judgment-day/CHECKPOINTS.md",
+        "event-evidence/register.yaml#c7-coverage"
+      ],
+      "limitations": [
+        "SUPPLIED_IMAGE_NO_A2A_PRIMITIVE",
+        "CODE_CAPABLE_COMPARISON_UNKNOWN",
+        "EFFECTIVELY_GRANTED_COMPARISON_UNKNOWN",
+        "OBSERVED_COMPARISON_UNKNOWN"
+      ],
+      "pendingBusinessRule": null
+    },
+    {
+      "dimension": "TARGET",
+      "delegatedValue": [
+        "network_resolution_agent"
+      ],
+      "codeCapableValue": null,
+      "effectivelyGrantedValue": null,
+      "observedValue": null,
+      "comparison": "UNKNOWN",
+      "mediationEvidenceRefs": [],
+      "evidenceRefs": [
+        "event-evidence/run-ids.txt"
+      ],
+      "limitations": [
+        "NO_NEGOTIATION_RECORD_IN_ANY_SOURCE",
+        "CODE_CAPABLE_COMPARISON_UNKNOWN",
+        "EFFECTIVELY_GRANTED_COMPARISON_UNKNOWN",
+        "OBSERVED_COMPARISON_UNKNOWN"
+      ],
+      "pendingBusinessRule": null
+    }
+  ],
+  "overallState": "UNKNOWN",
+  "evidenceRefs": [
+    "evidence/security-findings/iam-authority-matrix.json",
+    "logsense-event/event-evidence/register.yaml",
+    "evidence/judgment-day/event-decision-finding-log.md#ED-029",
+    "evidence/judgment-day/CHECKPOINTS.md",
+    "event-evidence/register.yaml#c7-coverage",
+    "event-evidence/run-ids.txt"
+  ],
+  "limitations": [
+    "PARTICIPANT_SCOPE_READ_ONLY",
+    "DAI_EVALUATES_AUTHORITY_DIMENSION_INTEGRITY_NOT_EVENT_PRESENCE",
+    "C7_NEGOTIATION_GAP_OPEN_BUT_DISCLOSED"
+  ]
+}

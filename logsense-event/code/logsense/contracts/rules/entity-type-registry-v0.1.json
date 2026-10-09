@@ -1,0 +1,1608 @@
+{
+  "registryId": "logsense-entity-type-registry",
+  "version": "0.1.0",
+  "entries": [
+    {
+      "entityType": "HUMAN_PRINCIPAL",
+      "parentCategory": "HUMAN_PRINCIPAL",
+      "joinCompatibilityGroup": "HUMAN_PRINCIPAL",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "SERVICE_PRINCIPAL",
+      "parentCategory": "SERVICE_PRINCIPAL",
+      "joinCompatibilityGroup": "SERVICE_PRINCIPAL",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "ORGANIZATION",
+      "parentCategory": "ORGANIZATION",
+      "joinCompatibilityGroup": "ORGANIZATION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "AI_SYSTEM",
+      "parentCategory": "AI_SYSTEM",
+      "joinCompatibilityGroup": "AI_SYSTEM",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "AI_SYSTEM",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "AI_AGENT",
+      "parentCategory": "AI_AGENT",
+      "joinCompatibilityGroup": "AI_AGENT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "AGENT_INSTANCE",
+      "parentCategory": "AGENT_INSTANCE",
+      "joinCompatibilityGroup": "AGENT_INSTANCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": true,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "MODEL",
+      "parentCategory": "MODEL",
+      "joinCompatibilityGroup": "MODEL",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "WORKFLOW",
+      "parentCategory": "WORKFLOW",
+      "joinCompatibilityGroup": "WORKFLOW",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "TASK",
+      "parentCategory": "TASK",
+      "joinCompatibilityGroup": "TASK",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "INTENT",
+      "parentCategory": "INTENT",
+      "joinCompatibilityGroup": "INTENT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "INTENT",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "GOAL",
+      "parentCategory": "GOAL",
+      "joinCompatibilityGroup": "GOAL",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "MESSAGE",
+      "parentCategory": "MESSAGE",
+      "joinCompatibilityGroup": "MESSAGE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "PROMPT",
+      "parentCategory": "PROMPT",
+      "joinCompatibilityGroup": "PROMPT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "CONTEXT",
+      "parentCategory": "CONTEXT",
+      "joinCompatibilityGroup": "CONTEXT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "MEMORY_STORE",
+      "parentCategory": "MEMORY_STORE",
+      "joinCompatibilityGroup": "MEMORY_STORE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "MEMORY_ENTRY",
+      "parentCategory": "MEMORY_ENTRY",
+      "joinCompatibilityGroup": "MEMORY_ENTRY",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "RETRIEVAL_QUERY",
+      "parentCategory": "RETRIEVAL_QUERY",
+      "joinCompatibilityGroup": "RETRIEVAL_QUERY",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "KNOWLEDGE_SOURCE",
+      "parentCategory": "KNOWLEDGE_SOURCE",
+      "joinCompatibilityGroup": "KNOWLEDGE_SOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "RETRIEVED_DOCUMENT",
+      "parentCategory": "RETRIEVED_DOCUMENT",
+      "joinCompatibilityGroup": "RETRIEVED_DOCUMENT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "TOOL",
+      "parentCategory": "TOOL",
+      "joinCompatibilityGroup": "TOOL",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "MCP_SERVER",
+      "parentCategory": "MCP_SERVER",
+      "joinCompatibilityGroup": "MCP_SERVER",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "MCP_RESOURCE",
+      "parentCategory": "MCP_RESOURCE",
+      "joinCompatibilityGroup": "MCP_RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "MCP_PROMPT",
+      "parentCategory": "MCP_PROMPT",
+      "joinCompatibilityGroup": "MCP_PROMPT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "API",
+      "parentCategory": "API",
+      "joinCompatibilityGroup": "API",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "API",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "OPERATION",
+      "parentCategory": "OPERATION",
+      "joinCompatibilityGroup": "OPERATION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "POLICY",
+      "parentCategory": "POLICY",
+      "joinCompatibilityGroup": "POLICY",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "POLICY",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "GUARDRAIL",
+      "parentCategory": "GUARDRAIL",
+      "joinCompatibilityGroup": "GUARDRAIL",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "AUTHORIZATION_DECISION",
+      "parentCategory": "AUTHORIZATION_DECISION",
+      "joinCompatibilityGroup": "AUTHORIZATION_DECISION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "DELEGATION",
+      "parentCategory": "DELEGATION",
+      "joinCompatibilityGroup": "DELEGATION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "CREDENTIAL",
+      "parentCategory": "CREDENTIAL",
+      "joinCompatibilityGroup": "CREDENTIAL",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "CAPABILITY",
+      "parentCategory": "CAPABILITY",
+      "joinCompatibilityGroup": "CAPABILITY",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "RESOURCE",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "STATE_PROPERTY",
+      "parentCategory": "STATE_PROPERTY",
+      "joinCompatibilityGroup": "STATE_PROPERTY",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "STATE_OBSERVATION",
+      "parentCategory": "STATE_OBSERVATION",
+      "joinCompatibilityGroup": "STATE_OBSERVATION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "KPI",
+      "parentCategory": "KPI",
+      "joinCompatibilityGroup": "KPI",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "ALARM",
+      "parentCategory": "ALARM",
+      "joinCompatibilityGroup": "ALARM",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "ALARM",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "INCIDENT",
+      "parentCategory": "INCIDENT",
+      "joinCompatibilityGroup": "INCIDENT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "INCIDENT",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "ARTIFACT",
+      "parentCategory": "ARTIFACT",
+      "joinCompatibilityGroup": "ARTIFACT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "BUILD",
+      "parentCategory": "BUILD",
+      "joinCompatibilityGroup": "BUILD",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "DEPLOYMENT",
+      "parentCategory": "DEPLOYMENT",
+      "joinCompatibilityGroup": "DEPLOYMENT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": true,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "CONTAINER",
+      "parentCategory": "CONTAINER",
+      "joinCompatibilityGroup": "CONTAINER",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": true,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "WORKLOAD",
+      "parentCategory": "WORKLOAD",
+      "joinCompatibilityGroup": "WORKLOAD",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": true,
+      "haiecTargetType": "WORKLOAD",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "QUEUE_TOPIC",
+      "parentCategory": "QUEUE_TOPIC",
+      "joinCompatibilityGroup": "QUEUE_TOPIC",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "NETWORK_ENDPOINT",
+      "parentCategory": "NETWORK_ENDPOINT",
+      "joinCompatibilityGroup": "NETWORK_ENDPOINT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "EVIDENCE_SOURCE",
+      "parentCategory": "EVIDENCE_SOURCE",
+      "joinCompatibilityGroup": "EVIDENCE_SOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "EVIDENCE_RECORD",
+      "parentCategory": "EVIDENCE_RECORD",
+      "joinCompatibilityGroup": "EVIDENCE_RECORD",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "CAUSE_CLASS",
+      "parentCategory": "CAUSE_CLASS",
+      "joinCompatibilityGroup": "CAUSE_CLASS",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "REMEDIATION",
+      "parentCategory": "REMEDIATION",
+      "joinCompatibilityGroup": "REMEDIATION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "VERIFICATION_TEST",
+      "parentCategory": "VERIFICATION_TEST",
+      "joinCompatibilityGroup": "VERIFICATION_TEST",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "SERVICE",
+      "parentCategory": "SERVICE",
+      "joinCompatibilityGroup": "SERVICE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "SERVICE",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "NETWORK_FUNCTION",
+      "parentCategory": "NETWORK_FUNCTION",
+      "joinCompatibilityGroup": "NETWORK_FUNCTION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "NETWORK_FUNCTION",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "ODA_COMPONENT",
+      "parentCategory": "ODA_COMPONENT",
+      "joinCompatibilityGroup": "ODA_COMPONENT",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "ODA_COMPONENT",
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "UNKNOWN",
+      "parentCategory": "UNKNOWN",
+      "joinCompatibilityGroup": "UNKNOWN",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": null,
+      "localOnly": false,
+      "notes": []
+    },
+    {
+      "entityType": "CellSite",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "NetworkCell",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "Sector",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "TrackingArea",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "UE_Device",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "UE_Session",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": true,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "NetworkSlice",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "SliceSubnet",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "SliceIsolationPolicy",
+      "parentCategory": "POLICY",
+      "joinCompatibilityGroup": "POLICY",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "POLICY",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "QoS_Flow",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "NetworkFunction",
+      "parentCategory": "NETWORK_FUNCTION",
+      "joinCompatibilityGroup": "NETWORK_FUNCTION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "NETWORK_FUNCTION",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "SBI_Transaction",
+      "parentCategory": "NETWORK_FUNCTION",
+      "joinCompatibilityGroup": "NETWORK_FUNCTION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "NETWORK_FUNCTION",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "NRF_Registration",
+      "parentCategory": "NETWORK_FUNCTION",
+      "joinCompatibilityGroup": "NETWORK_FUNCTION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "NETWORK_FUNCTION",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "SCP_Route",
+      "parentCategory": "NETWORK_FUNCTION",
+      "joinCompatibilityGroup": "NETWORK_FUNCTION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "NETWORK_FUNCTION",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "NF_Communication_Pattern",
+      "parentCategory": "NETWORK_FUNCTION",
+      "joinCompatibilityGroup": "NETWORK_FUNCTION",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "NETWORK_FUNCTION",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "TransportLink",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": false,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    },
+    {
+      "entityType": "PacketSession",
+      "parentCategory": "RESOURCE",
+      "joinCompatibilityGroup": "RESOURCE",
+      "identityComponents": [
+        "provider",
+        "environment",
+        "domain",
+        "namespace",
+        "externalId",
+        "instanceId"
+      ],
+      "requiredExactKeys": [
+        "externalId"
+      ],
+      "allowedAliasKeys": [
+        "externalId"
+      ],
+      "instanceScoped": true,
+      "haiecTargetType": "RESOURCE",
+      "localOnly": true,
+      "notes": []
+    }
+  ],
+  "digest": "31d4e2008afb80b0e59dc11f9eb094ff75fc43f30d5afb2450fede43c6b8aa79"
+}

@@ -1,0 +1,9 @@
+LogSense (Enterprise-AI-Forensic-Log-Analyzer-), vendored UNMODIFIED from src/logsense.
+Source repo : git@github.com:subodhkc/Enterprise-AI-Forensic-Log-Analyzer-.git
+Commit      : 0122cf7 (2026-10-03, "Merge pull request #93 from subodhkc/feat/c79-producer-source-facts")
+Version     : 2.0.0rc1 (the frozen event release named in the live-state doc)
+License     : MIT (declared in the project's pyproject.toml)
+Why         : tmf_assess.py runs LogSense headless to build the Competition Evidence Bundles that HAIEC reads. This copy lets the
+              kit work from the zip alone. It is put on the path by setup.sh (a .pth file); it is never imported by tmf_assess.py itself.
+Drift       : if LogSense moves on, replace this folder from the repo and update this file. tests/test_handover.py compares it
+              with a sibling checkout at the same commit.

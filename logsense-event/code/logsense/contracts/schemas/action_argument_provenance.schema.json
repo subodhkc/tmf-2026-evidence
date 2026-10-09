@@ -1,0 +1,87 @@
+{
+  "$id": "https://logsense.local/schemas/action_argument_provenance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actionGroupRef": {
+      "type": "string"
+    },
+    "argumentName": {
+      "type": "string"
+    },
+    "canonicalRole": {
+      "type": "string"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "observedValueDigest": {
+      "type": "string"
+    },
+    "origin": {
+      "enum": [
+        "USER_INPUT",
+        "AI_TOOL_INPUT",
+        "MODEL_OUTPUT",
+        "RAG_CONTEXT",
+        "MEMORY",
+        "TOOL_OUTPUT",
+        "CONFIGURATION",
+        "ENVIRONMENT",
+        "LITERAL",
+        "POLICY",
+        "DEFAULT",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "originRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "preservedAcrossBoundary": {
+      "enum": [
+        "YES",
+        "NO",
+        "PARTIAL",
+        "UNKNOWN"
+      ],
+      "type": "string"
+    },
+    "transformationChain": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "actionGroupRef",
+    "argumentName",
+    "canonicalRole",
+    "observedValueDigest",
+    "origin",
+    "originRef",
+    "transformationChain",
+    "preservedAcrossBoundary",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Action Argument Provenance",
+  "type": "object"
+}

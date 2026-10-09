@@ -1,0 +1,21 @@
+{
+  "fixtureId": "control16-evidence-failure",
+  "control": "ACN-COST-001",
+  "label": "Control 16 \u2014 executed call missing usage",
+  "description": "One provider-executed call has qualified usage; a second provider-executed call lacks token usage. Expected: PARTIAL, actualRunTokens null, missingUsageCalls > 0.",
+  "evidenceFiles": [
+    "usage.jsonl"
+  ],
+  "runFile": "run.json",
+  "tokenAccountingProfile": {
+    "profileId": "fixture-token-accounting/c16-v1",
+    "version": "1.0",
+    "inputTokenSourceField": "inputTokens",
+    "outputTokenSourceField": "outputTokens",
+    "totalTokenSourceField": "totalTokens",
+    "basis": "FIXTURE_DECLARED_CANONICAL_TOKEN_FIELDS",
+    "limitations": [
+      "SYNTHETIC_CONTROLLED_EVIDENCE"
+    ]
+  }
+}

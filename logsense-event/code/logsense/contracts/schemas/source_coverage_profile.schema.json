@@ -1,0 +1,178 @@
+{
+  "$defs": {
+    "SourceRole": {
+      "enum": [
+        "AGENT_TRACE",
+        "MODEL_TRACE",
+        "TOOL_TRACE",
+        "MCP_TRACE",
+        "A2A_TRACE",
+        "API_TRANSACTION",
+        "POLICY",
+        "GUARDRAIL",
+        "IDENTITY_IAM",
+        "CONFIGURATION",
+        "APPLICATION_LOG",
+        "PLATFORM_LOG",
+        "AUDIT_LOG",
+        "NETWORK_LOG",
+        "K8S_AUDIT",
+        "ALARM",
+        "KPI_METRIC",
+        "STATE_SNAPSHOT",
+        "TOPOLOGY",
+        "SUPPLY_CHAIN",
+        "STATIC_SCAN",
+        "SOURCE_CODE_ARCHIVE",
+        "DOCUMENTATION",
+        "SCENARIO_SPECIFICATION",
+        "UNKNOWN"
+      ],
+      "title": "SourceRole",
+      "type": "string"
+    },
+    "StreamCompletenessState": {
+      "enum": [
+        "PROVEN_COMPLETE",
+        "PARTIAL",
+        "UNKNOWN",
+        "BROKEN"
+      ],
+      "title": "StreamCompletenessState",
+      "type": "string"
+    },
+    "TimeWindow": {
+      "additionalProperties": false,
+      "properties": {
+        "startTime": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Starttime"
+        },
+        "endTime": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Endtime"
+        }
+      },
+      "title": "TimeWindow",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "coverageProfileId": {
+      "title": "Coverageprofileid",
+      "type": "string"
+    },
+    "evidenceSetId": {
+      "title": "Evidencesetid",
+      "type": "string"
+    },
+    "sourceRolesObserved": {
+      "items": {
+        "$ref": "#/$defs/SourceRole"
+      },
+      "title": "Sourcerolesobserved",
+      "type": "array"
+    },
+    "sourceRolesExpected": {
+      "items": {
+        "$ref": "#/$defs/SourceRole"
+      },
+      "title": "Sourcerolesexpected",
+      "type": "array"
+    },
+    "sourceRoleCounts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Sourcerolecounts",
+      "type": "object"
+    },
+    "artifactCount": {
+      "minimum": 0,
+      "title": "Artifactcount",
+      "type": "integer"
+    },
+    "recordCount": {
+      "minimum": 0,
+      "title": "Recordcount",
+      "type": "integer"
+    },
+    "parsedRecordCount": {
+      "minimum": 0,
+      "title": "Parsedrecordcount",
+      "type": "integer"
+    },
+    "failedRecordCount": {
+      "minimum": 0,
+      "title": "Failedrecordcount",
+      "type": "integer"
+    },
+    "timeCoverage": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TimeWindow"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "completenessState": {
+      "$ref": "#/$defs/StreamCompletenessState",
+      "default": "UNKNOWN"
+    },
+    "completenessBasisRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Completenessbasisrefs",
+      "type": "array"
+    },
+    "unsupportedArtifactRefs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unsupportedartifactrefs",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "coverageProfileId",
+    "evidenceSetId",
+    "artifactCount",
+    "recordCount",
+    "parsedRecordCount",
+    "failedRecordCount"
+  ],
+  "title": "SourceCoverageProfile",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/source_coverage_profile.schema.json"
+}

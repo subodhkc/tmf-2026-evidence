@@ -1,0 +1,5 @@
+policy_id: tilt-v1
+agent_id: agent-ran
+operation: changeTilt
+resource: cell-17
+max_delta_deg: 2

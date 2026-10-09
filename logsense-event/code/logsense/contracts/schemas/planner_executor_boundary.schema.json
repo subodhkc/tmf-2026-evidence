@@ -1,0 +1,100 @@
+{
+  "$id": "https://logsense.local/schemas/planner_executor_boundary.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "argumentRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "authorityRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "boundaryRef": {
+      "type": "string"
+    },
+    "constraintRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "contextRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidenceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "executorRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "objectiveRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "plannerRef": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "transformedRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "unresolvedRefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "boundaryRef",
+    "plannerRef",
+    "executorRef",
+    "objectiveRefs",
+    "constraintRefs",
+    "contextRefs",
+    "argumentRefs",
+    "authorityRefs",
+    "transformedRefs",
+    "unresolvedRefs",
+    "evidenceRefs",
+    "limitations"
+  ],
+  "title": "Planner Executor Boundary",
+  "type": "object"
+}

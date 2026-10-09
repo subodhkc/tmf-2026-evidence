@@ -1,0 +1,158 @@
+AUDIT TRAIL -- 52 records
+================================================================
+ 1. [2026-10-05T01:57:57Z] INTENT | actor=customer-experience-agent | step=1
+    correlation_id=fault-1791165466-51ab52
+    trace_id=4a40a407657847e09e7c52d752e7f2f0 customer analysis via governed model 'nemotron-super-120b'; tool customer-records
+ 2. [2026-10-05T01:57:58Z] MODEL-REQUEST-INTENT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "49a0997e253041f287183548e155d15f", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "ff06b08f8ef14093ad2c891ce21a4939", "path": "/v1/chat/completions", "
+ 3. [2026-10-05T01:58:00Z] MODEL-REQUEST-RESULT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "baf34c83-7e51-44de-9c46-f3508ced264d", "action_id_present": true, "client_request_id": "49a0997e253041f287183548e155d15f", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+ 4. [2026-10-05T01:58:01Z] MODEL-REQUEST-INTENT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "dd25d93019f64e51bdb3824338b59b84", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "63cdf6df8db940bab2f6b34c48322aa6", "path": "/v1/chat/completions", "
+ 5. [2026-10-05T01:58:03Z] MODEL-REQUEST-RESULT | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "e70101ab-1cbd-4168-8b4b-8cade277fb12", "action_id_present": true, "client_request_id": "dd25d93019f64e51bdb3824338b59b84", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+ 6. [2026-10-05T01:58:03Z] TOOL-INVOCATION | actor=customer-experience-agent | step=1.5
+    correlation_id=fault-1791165466-51ab52
+    actor=customer-experience-agent tool=customer-records correlation_id=fault-1791165466-51ab52 trace_id=4a40a407657847e09e7c52d752e7f2f0 result_summary=Based on the customer records lookup for site SITE
+ 7. [2026-10-05T01:58:03Z] INVOCATION | actor=customer-experience-agent | step=2
+    correlation_id=fault-1791165466-51ab52
+    trace_id=4a40a407657847e09e7c52d752e7f2f0 governed call via alias nemotron-super-120b: http_status=200
+ 8. [2026-10-05T01:58:03Z] RESULT-INSPECTION | actor=customer-experience-agent | step=3
+    correlation_id=fault-1791165466-51ab52
+    disposition=auto-resolve, decision="Based on the customer records lookup for site SITE-DEN-12, here are the 3 short bullet points summarizing the impacted customers:\n\n- **Impacted customers**: 5 ent
+ 9. [2026-10-05T01:58:16Z] INTENT | actor=it-resolution-agent | step=4
+    correlation_id=fault-1791165466-51ab52
+    trace_id=494a887b575144df962837722ee799fe it analysis via governed model 'nemotron-nano-9b'; tool runbook-lookup
+10. [2026-10-05T01:58:17Z] MODEL-REQUEST-INTENT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "070471f5611b4f5d8abbaa58f634f6c1", "method": "POST", "model_alias": "nemotron-nano-9b", "model_turn_id": "d51bb81cfb1948c6880c9f90cdf8344e", "path": "/v1/chat/completions", "tra
+11. [2026-10-05T01:58:18Z] MODEL-REQUEST-RESULT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "99b7650e-4755-4251-b47d-cf4039306e01", "action_id_present": true, "client_request_id": "070471f5611b4f5d8abbaa58f634f6c1", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+12. [2026-10-05T01:58:26Z] MODEL-REQUEST-INTENT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "235f3eac5b244cf48ea38b93b523b65b", "method": "POST", "model_alias": "nemotron-nano-9b", "model_turn_id": "e3b8f998494a4dbc84cf7140fc1bb539", "path": "/v1/chat/completions", "tra
+13. [2026-10-05T01:58:28Z] MODEL-REQUEST-RESULT | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "ed0f0e8b-fb41-473c-876f-046251660b86", "action_id_present": true, "client_request_id": "235f3eac5b244cf48ea38b93b523b65b", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+14. [2026-10-05T01:58:28Z] TOOL-INVOCATION | actor=it-resolution-agent | step=4.5
+    correlation_id=fault-1791165466-51ab52
+    actor=it-resolution-agent tool=runbook-lookup correlation_id=fault-1791165466-51ab52 trace_id=494a887b575144df962837722ee799fe result_summary=- **Incident disposition**: Auto-resolved based on custome
+15. [2026-10-05T01:58:28Z] INVOCATION | actor=it-resolution-agent | step=5
+    correlation_id=fault-1791165466-51ab52
+    trace_id=494a887b575144df962837722ee799fe governed call via alias nemotron-nano-9b: http_status=200
+16. [2026-10-05T01:58:28Z] RESULT-INSPECTION | actor=it-resolution-agent | step=6
+    correlation_id=fault-1791165466-51ab52
+    disposition=auto-resolve, decision='- **Incident disposition**: Auto-resolved based on customer records analysis and runbook lookup.  \n- **Action taken**: Identified DU-DEN-12-A as the root cause (4.
+17. [2026-10-05T01:58:37Z] INTENT | actor=network-resolution-agent | step=7
+    correlation_id=fault-1791165466-51ab52
+    trace_id=2f0209ccf37d41b187a51c250ba87318 network analysis via governed model 'nemotron-super-120b'; tool network-twin
+18. [2026-10-05T01:58:38Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "6092c8c7c5904721b24986d090427bca", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "b9aa1d881bf94380884794b8218a0917", "path": "/v1/chat/completions", "
+19. [2026-10-05T01:58:39Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "a83492cd-4e11-4605-a95f-da00cb8d3f1c", "action_id_present": true, "client_request_id": "6092c8c7c5904721b24986d090427bca", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+20. [2026-10-05T01:58:40Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "0642fe4374de4be18ce09c1d5c0a0aa0", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "3c80f16558eb497e93a21d4c999f9f5e", "path": "/v1/chat/completions", "
+21. [2026-10-05T01:58:41Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "b9dc6e3a-e115-46a4-9ad0-e669809c9b29", "action_id_present": true, "client_request_id": "0642fe4374de4be18ce09c1d5c0a0aa0", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+22. [2026-10-05T01:58:42Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "9e4b9d1429bd42df9a8819e8a4322d7a", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "fb5b7083f2584e04abe0837e7e7b9f37", "path": "/v1/chat/completions", "
+23. [2026-10-05T01:58:43Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "977901f2-7b5b-4739-bd5f-e7b32bf0b2c1", "action_id_present": true, "client_request_id": "9e4b9d1429bd42df9a8819e8a4322d7a", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+24. [2026-10-05T01:58:43Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "3d5b1084e3674f46b6b119d69f957138", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "063cfd46cb894bea8f4f8b9e79935748", "path": "/v1/chat/completions", "
+25. [2026-10-05T01:58:45Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "cfd04420-89d4-4966-ac02-39ed59e8951e", "action_id_present": true, "client_request_id": "3d5b1084e3674f46b6b119d69f957138", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+26. [2026-10-05T01:58:45Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "7e0d07d0a6cd41d18e02ac9c2085c2a7", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "836ec0562a414f61a284d5ca855d54b3", "path": "/v1/chat/completions", "
+27. [2026-10-05T01:58:47Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "6998f7e8-d6e8-44a4-aca0-8cdae52fb1ce", "action_id_present": true, "client_request_id": "7e0d07d0a6cd41d18e02ac9c2085c2a7", "finish_reasons": ["stop"], "guardrail_outcome": "NOT_REPORTED
+28. [2026-10-05T01:58:47Z] TOOL-INVOCATION | actor=network-resolution-agent | step=7.5
+    correlation_id=fault-1791165466-51ab52
+    actor=network-resolution-agent tool=network-twin correlation_id=fault-1791165466-51ab52 trace_id=2f0209ccf37d41b187a51c250ba87318 result_summary=- Probable root cause: Fronthaul degradation at SITE-DE
+29. [2026-10-05T01:58:47Z] INVOCATION | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    trace_id=2f0209ccf37d41b187a51c250ba87318 governed call via alias nemotron-super-120b: http_status=200
+30. [2026-10-05T01:58:47Z] RESULT-INSPECTION | actor=network-resolution-agent | step=9
+    correlation_id=fault-1791165466-51ab52
+    disposition=auto-resolve, decision='- Probable root cause: Fronthaul degradation at SITE-DEN-12 (scenario S1-fronthaul-degradation) causing 4.2% packet loss and elevated latency (31 ms p95) on DU-DEN-
+31. [2026-10-05T01:58:58Z] INTENT | actor=network-resolution-agent | step=7
+    correlation_id=fault-1791165466-51ab52
+    trace_id=0a25ea53b0a74280bcd0b52df6d0f00f network analysis via governed model 'nemotron-super-120b'; tool network-twin
+32. [2026-10-05T01:58:59Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "d990c3dc935e4dbba5519d47f4b6e0d2", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "90e40a0d08974ccd8baf00ea3f1935b1", "path": "/v1/chat/completions", "
+33. [2026-10-05T01:59:01Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "1f4f80d2-1466-4a9e-b49c-b2e0082aa7b4", "action_id_present": true, "client_request_id": "d990c3dc935e4dbba5519d47f4b6e0d2", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+34. [2026-10-05T01:59:01Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "6703d772bf92473c9cb0e7322436def8", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "90dd918cb51c415eb995bd96f19a261d", "path": "/v1/chat/completions", "
+35. [2026-10-05T01:59:03Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "854baa2d-ad58-4091-b513-322faa356bf2", "action_id_present": true, "client_request_id": "6703d772bf92473c9cb0e7322436def8", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+36. [2026-10-05T01:59:03Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "7dbd95c9ea7a4d96abdb515e233a679e", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "15327f2bdf574bcf943952d1408b53a2", "path": "/v1/chat/completions", "
+37. [2026-10-05T01:59:05Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "288adeb2-ff69-4b80-b28f-a4957928e1f0", "action_id_present": true, "client_request_id": "7dbd95c9ea7a4d96abdb515e233a679e", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+38. [2026-10-05T01:59:05Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "da90778e50924deeaeb2bf1b674974a5", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "e4bc6ad899ff4ce6b868f19c3e03c550", "path": "/v1/chat/completions", "
+39. [2026-10-05T01:59:06Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "01daa81f-44cb-4f9a-a944-88469e6abed7", "action_id_present": true, "client_request_id": "da90778e50924deeaeb2bf1b674974a5", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+40. [2026-10-05T01:59:14Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "a830b4587908438dbf25f1bb2844b58f", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "7fa13bb8ef9d4683b249dbaab49b3178", "path": "/v1/chat/completions", "
+41. [2026-10-05T01:59:19Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "529074e1-25f5-4271-be8c-07f9e062e706", "action_id_present": true, "client_request_id": "a830b4587908438dbf25f1bb2844b58f", "finish_reasons": ["length"], "guardrail_outcome": "NOT_REPORT
+42. [2026-10-05T01:59:19Z] INVOCATION | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    trace_id=0a25ea53b0a74280bcd0b52df6d0f00f refused at gateway: http_status=500 model=nemotron-super-120b body='Model stopped generating due to maximum token limit. The partial message has been added to
+43. [2026-10-05T01:59:19Z] RESULT-INSPECTION | actor=network-resolution-agent | step=9
+    correlation_id=fault-1791165466-51ab52
+    disposition=refused, no model output
+44. [2026-10-05T01:59:31Z] INTENT | actor=network-resolution-agent | step=7
+    correlation_id=fault-1791165466-51ab52
+    trace_id=3a7ebcc31ff040fa8fb582441c5484d1 network analysis via governed model 'nemotron-super-120b'; tool network-twin
+45. [2026-10-05T01:59:31Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "d393e979cf1d4e128462a477babea3f2", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "cf97c373d3e846fd9142dc582c1aef4b", "path": "/v1/chat/completions", "
+46. [2026-10-05T01:59:33Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "979f9c03-8f21-4eab-a2cc-c441fc2fdbb9", "action_id_present": true, "client_request_id": "d393e979cf1d4e128462a477babea3f2", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+47. [2026-10-05T01:59:33Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "75693610e20045409b35b32845ed95d9", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "e6e4e3ef0d344ece9830593920d900da", "path": "/v1/chat/completions", "
+48. [2026-10-05T01:59:36Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "edf04f7f-91ca-4e4a-995c-cea9d5f853a1", "action_id_present": true, "client_request_id": "75693610e20045409b35b32845ed95d9", "finish_reasons": ["tool_calls"], "guardrail_outcome": "NOT_RE
+49. [2026-10-05T01:59:39Z] MODEL-REQUEST-INTENT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"client_request_id": "5fa96c6e0bd04cdd98b3cdbd7fd6979d", "method": "POST", "model_alias": "nemotron-super-120b", "model_turn_id": "c6f3d55b4d594705878e11e399fd4793", "path": "/v1/chat/completions", "
+50. [2026-10-05T01:59:43Z] MODEL-REQUEST-RESULT | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    {"action_id": "f3f0ed8b-07b6-4f07-9ec4-66b2a4470c53", "action_id_present": true, "client_request_id": "5fa96c6e0bd04cdd98b3cdbd7fd6979d", "finish_reasons": ["length"], "guardrail_outcome": "NOT_REPORT
+51. [2026-10-05T01:59:43Z] INVOCATION | actor=network-resolution-agent | step=8
+    correlation_id=fault-1791165466-51ab52
+    trace_id=3a7ebcc31ff040fa8fb582441c5484d1 refused at gateway: http_status=500 model=nemotron-super-120b body='Model stopped generating due to maximum token limit. The partial message has been added to
+52. [2026-10-05T01:59:44Z] RESULT-INSPECTION | actor=network-resolution-agent | step=9
+    correlation_id=fault-1791165466-51ab52
+    disposition=refused, no model output

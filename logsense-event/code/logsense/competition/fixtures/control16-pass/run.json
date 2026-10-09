@@ -1,0 +1,8 @@
+{
+  "runId": "C16-PASS",
+  "label": "Control 16 pass-like reference run",
+  "traceIds": ["trace-c16-pass"],
+  "sessionIds": ["sess-c16-pass"],
+  "notes": "Bundled deterministic fixture: three agents, one retry, one duplicate telemetry record.",
+  "source": "BUILTIN_COMPETITION_FIXTURE"
+}

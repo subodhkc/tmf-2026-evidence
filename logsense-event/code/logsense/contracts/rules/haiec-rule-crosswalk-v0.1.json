@@ -1,0 +1,1110 @@
+{
+  "version": "0.1.0",
+  "reviewedMainSha": "8d261ec9ac46ee4be85490a113b15c667d0a33ee",
+  "rules": [
+    {
+      "causeRuleId": "CR-AUTH-001",
+      "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+      "causeMechanism": "POLICY_DENY_NOT_ENFORCED",
+      "detectionSignalRefs": [
+        "AR-12"
+      ],
+      "relationRefs": [
+        "ACTION_CLAIM_AUTHORIZED_BY",
+        "CHANGES"
+      ],
+      "gapTypes": [
+        "EFFECT_CONFIRMATION_MISSING",
+        "ACTION_IDENTITY_INCOMPLETE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts",
+        "lib/assurance/guardrail-decision-transition.ts",
+        "lib/evidence/event-contradiction-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-AUTH-002",
+      "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+      "causeMechanism": "EFFECTIVE_GRANT_EXCEEDS_POLICY",
+      "detectionSignalRefs": [
+        "AR-54",
+        "AR-63",
+        "AR-65"
+      ],
+      "relationRefs": [
+        "AUTHORITY_NARROWING_CHAIN",
+        "EXECUTION_ENVELOPE_BOUNDED_BY"
+      ],
+      "gapTypes": [
+        "AUTHORIZATION_EVIDENCE_MISSING",
+        "EFFECTIVE_GRANT_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/runtime-principal-binding.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-AUTH-003",
+      "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+      "causeMechanism": "CREDENTIAL_SCOPE_TOO_BROAD",
+      "detectionSignalRefs": [
+        "AR-65"
+      ],
+      "relationRefs": [
+        "CAPABILITY_BOUND_TO",
+        "TASK_ENVELOPE_CONTAINS"
+      ],
+      "gapTypes": [
+        "EFFECTIVE_GRANT_MISSING",
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/evidence/identity-continuity.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-AUTH-004",
+      "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+      "causeMechanism": "STANDING_PRIVILEGE_TOO_BROAD",
+      "detectionSignalRefs": [
+        "AR-65",
+        "ID-010"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "EFFECTIVE_GRANT_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/identity-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-AUTH-005",
+      "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+      "causeMechanism": "APPROVAL_REFERENCE_MISSING",
+      "detectionSignalRefs": [
+        "AR-12"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "AUTHORIZATION_EVIDENCE_MISSING",
+        "STREAM_COMPLETENESS_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "docs/architecture/U4-DIAGNOSTIC-METHODOLOGY-1.1.md",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-POLICY-001",
+      "causeFamily": "POLICY_AND_GUARDRAIL",
+      "causeMechanism": "GUARDRAIL_NOT_EVALUATED",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "POLICY_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/guardrail-decision-transition.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-POLICY-002",
+      "causeFamily": "POLICY_AND_GUARDRAIL",
+      "causeMechanism": "GUARDRAIL_ENFORCEMENT_NOT_APPLIED",
+      "detectionSignalRefs": [],
+      "relationRefs": [
+        "ACTION_CLAIM_AUTHORIZED_BY"
+      ],
+      "gapTypes": [
+        "EXECUTION_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts",
+        "lib/assurance/guardrail-decision-transition.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-POLICY-003",
+      "causeFamily": "POLICY_AND_GUARDRAIL",
+      "causeMechanism": "CONTROL_ORDERING_FAILURE",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "TIMESTAMP_MISSING",
+        "CLOCK_DOMAIN_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts",
+        "lib/assurance/guardrail-decision-transition.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DELEG-001",
+      "causeFamily": "DELEGATION_AND_HANDOFF",
+      "causeMechanism": "DELEGATION_SCOPE_EXPANSION",
+      "detectionSignalRefs": [
+        "AR-54",
+        "DEL-001",
+        "DEL-007"
+      ],
+      "relationRefs": [
+        "AGENT_DELEGATES_TO",
+        "DELEGATION_SOURCE_TO_TARGET",
+        "TASK_ENVELOPE_CONTAINS"
+      ],
+      "gapTypes": [
+        "RELATION_UNESTABLISHED",
+        "AUTHORIZATION_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/delegation-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DELEG-002",
+      "causeFamily": "DELEGATION_AND_HANDOFF",
+      "causeMechanism": "DELEGATION_LINEAGE_BREAK",
+      "detectionSignalRefs": [
+        "AR-56",
+        "AR-62"
+      ],
+      "relationRefs": [
+        "DELEGATION_CHAIN_CONTAINS",
+        "LINEAGE_CHAIN_TRACKS"
+      ],
+      "gapTypes": [
+        "SOURCE_LINEAGE_UNKNOWN",
+        "RELATION_UNESTABLISHED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/delegation-detector.ts",
+        "lib/ai-security/detectors/identity-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DELEG-003",
+      "causeFamily": "DELEGATION_AND_HANDOFF",
+      "causeMechanism": "SCOPE_REDUCTION_NOT_ENFORCED",
+      "detectionSignalRefs": [
+        "AR-63",
+        "ID-005"
+      ],
+      "relationRefs": [
+        "SCOPE_REDUCTION_ENFORCED",
+        "AUTHORITY_NARROWING_CHAIN"
+      ],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/identity-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DELEG-004",
+      "causeFamily": "DELEGATION_AND_HANDOFF",
+      "causeMechanism": "DELEGATE_IDENTITY_MISMATCH",
+      "detectionSignalRefs": [
+        "AR-61",
+        "AR-62"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/runtime-principal-binding.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DELEG-005",
+      "causeFamily": "DELEGATION_AND_HANDOFF",
+      "causeMechanism": "JUSTIFICATION_GAP",
+      "detectionSignalRefs": [
+        "AR-58",
+        "DEL-008"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "EXPECTED_STATE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/delegation-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-ID-001",
+      "causeFamily": "IDENTITY_AND_AUTHENTICATION",
+      "causeMechanism": "UNKNOWN_AGENT_IDENTITY",
+      "detectionSignalRefs": [
+        "AR-59",
+        "ID-001"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/identity-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-ID-002",
+      "causeFamily": "IDENTITY_AND_AUTHENTICATION",
+      "causeMechanism": "IDENTITY_BINDING_MISMATCH",
+      "detectionSignalRefs": [
+        "AR-61",
+        "AR-65"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/evidence/identity-continuity.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-ID-003",
+      "causeFamily": "IDENTITY_AND_AUTHENTICATION",
+      "causeMechanism": "OAUTH_CLIENT_MAPPING_GAP",
+      "detectionSignalRefs": [
+        "AR-60",
+        "ID-002"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/identity-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-ID-004",
+      "causeFamily": "IDENTITY_AND_AUTHENTICATION",
+      "causeMechanism": "SPIFFE_IDENTITY_MISMATCH",
+      "detectionSignalRefs": [
+        "AR-61",
+        "ID-003"
+      ],
+      "relationRefs": [
+        "SPIFFE_ID_ATTESTED_BY"
+      ],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/identity-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-ID-005",
+      "causeFamily": "IDENTITY_AND_AUTHENTICATION",
+      "causeMechanism": "IDENTITY_LINEAGE_BREAK",
+      "detectionSignalRefs": [
+        "AR-62"
+      ],
+      "relationRefs": [
+        "LINEAGE_CHAIN_TRACKS"
+      ],
+      "gapTypes": [
+        "SOURCE_LINEAGE_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/identity-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TOOL-001",
+      "causeFamily": "CAPABILITY_AND_TOOL_SURFACE",
+      "causeMechanism": "UNDECLARED_TOOL_EXPOSURE",
+      "detectionSignalRefs": [
+        "AR-26",
+        "MCP-001",
+        "AI-002"
+      ],
+      "relationRefs": [
+        "AGENT_USES_TOOL"
+      ],
+      "gapTypes": [
+        "TOOL_UNRESOLVED",
+        "AUTHORIZATION_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/detection-rule-catalog.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TOOL-002",
+      "causeFamily": "CAPABILITY_AND_TOOL_SURFACE",
+      "causeMechanism": "DANGEROUS_CAPABILITY_UNGATED",
+      "detectionSignalRefs": [
+        "AR-19",
+        "AR-26"
+      ],
+      "relationRefs": [
+        "CAPABILITY_BOUND_TO"
+      ],
+      "gapTypes": [
+        "POLICY_EVIDENCE_MISSING",
+        "AUTHORIZATION_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/capability-fact-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-MCP-001",
+      "causeFamily": "MCP_AND_EXTERNAL_TOOLING",
+      "causeMechanism": "UNREGISTERED_MCP_SERVER",
+      "detectionSignalRefs": [
+        "AR-26",
+        "MCP-002"
+      ],
+      "relationRefs": [
+        "AGENT_INVOKES_MCP_SERVER"
+      ],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-MCP-002",
+      "causeFamily": "MCP_AND_EXTERNAL_TOOLING",
+      "causeMechanism": "MCP_TOOL_SCHEMA_CHANGE",
+      "detectionSignalRefs": [
+        "AR-26",
+        "MCP-003"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "BASELINE_INCOMPATIBLE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-MCP-003",
+      "causeFamily": "MCP_AND_EXTERNAL_TOOLING",
+      "causeMechanism": "MCP_AUTHORIZATION_SCOPE_GAP",
+      "detectionSignalRefs": [
+        "AR-29",
+        "AR-54"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "AUTHORIZATION_EVIDENCE_MISSING",
+        "EFFECTIVE_GRANT_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-PROMPT-001",
+      "causeFamily": "PROMPT_AND_CONTEXT",
+      "causeMechanism": "DIRECT_PROMPT_INJECTION",
+      "detectionSignalRefs": [
+        "AR-22"
+      ],
+      "relationRefs": [
+        "PROMPT_INFLUENCES_DECISION",
+        "MODEL_GENERATES_ACTION"
+      ],
+      "gapTypes": [
+        "RELATION_UNESTABLISHED",
+        "CAUSE_MECHANISM_INCOMPLETE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts",
+        "lib/evidence/evidence-contract.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-PROMPT-002",
+      "causeFamily": "GOAL_AND_INSTRUCTION",
+      "causeMechanism": "UNTRUSTED_INSTRUCTION_ACCEPTED",
+      "detectionSignalRefs": [
+        "AR-22",
+        "AR-23",
+        "AR-57"
+      ],
+      "relationRefs": [
+        "PROMPT_INFLUENCES_DECISION",
+        "MODEL_GENERATES_ACTION"
+      ],
+      "gapTypes": [
+        "CAUSE_MECHANISM_INCOMPLETE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-RAG-001",
+      "causeFamily": "RETRIEVAL_AND_RAG",
+      "causeMechanism": "UNTRUSTED_RETRIEVAL_SOURCE",
+      "detectionSignalRefs": [
+        "AR-23",
+        "RAG-001"
+      ],
+      "relationRefs": [
+        "PROMPT_INFLUENCES_DECISION"
+      ],
+      "gapTypes": [
+        "CAUSE_MECHANISM_INCOMPLETE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-RAG-002",
+      "causeFamily": "RETRIEVAL_AND_RAG",
+      "causeMechanism": "WRONG_RETRIEVAL_SCOPE",
+      "detectionSignalRefs": [
+        "AR-23",
+        "RAG-004"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-MEM-001",
+      "causeFamily": "MEMORY",
+      "causeMechanism": "MEMORY_SCOPE_VIOLATION",
+      "detectionSignalRefs": [
+        "AR-24",
+        "MEM-002"
+      ],
+      "relationRefs": [
+        "AGENT_READS_MEMORY",
+        "AGENT_WRITES_MEMORY"
+      ],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-MEM-002",
+      "causeFamily": "MEMORY",
+      "causeMechanism": "CROSS_SESSION_MEMORY_USE",
+      "detectionSignalRefs": [
+        "AR-04",
+        "AR-24"
+      ],
+      "relationRefs": [
+        "AGENT_READS_MEMORY"
+      ],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-RUNTIME-001",
+      "causeFamily": "RUNTIME_AND_EXECUTION",
+      "causeMechanism": "EXECUTION_BOUNDARY_BYPASS",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "EXECUTION_EVIDENCE_MISSING",
+        "POLICY_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts",
+        "lib/assurance/guardrail-decision-transition.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-RUNTIME-002",
+      "causeFamily": "RUNTIME_AND_EXECUTION",
+      "causeMechanism": "ASYNC_COMPLETION_MISINTERPRETATION",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "EXECUTION_EVIDENCE_MISSING",
+        "EFFECT_CONFIRMATION_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-RUNTIME-003",
+      "causeFamily": "RUNTIME_AND_EXECUTION",
+      "causeMechanism": "RETRY_OR_LOOP_PROPAGATION",
+      "detectionSignalRefs": [
+        "AR-28",
+        "AR-11"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "BASELINE_INSUFFICIENT"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/ai-security/rules/agent-detection-rules.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-STATE-001",
+      "causeFamily": "STATE_AND_EFFECT",
+      "causeMechanism": "UNAUTHORIZED_STATE_MUTATION",
+      "detectionSignalRefs": [],
+      "relationRefs": [
+        "CHANGES"
+      ],
+      "gapTypes": [
+        "AUTHORIZATION_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/action-witness.ts",
+        "lib/evidence/state-transition-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-STATE-002",
+      "causeFamily": "STATE_AND_EFFECT",
+      "causeMechanism": "EFFECT_OUTSIDE_ENVELOPE",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "UNIT_UNKNOWN",
+        "EXPECTED_STATE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/effect-envelope-comparison.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-STATE-003",
+      "causeFamily": "STATE_AND_EFFECT",
+      "causeMechanism": "WRONG_RESOURCE_MUTATION",
+      "detectionSignalRefs": [],
+      "relationRefs": [
+        "TARGETS",
+        "CHANGES"
+      ],
+      "gapTypes": [
+        "RESOURCE_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/evidence/forensic-case-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-STATE-004",
+      "causeFamily": "RUNTIME_AND_EXECUTION",
+      "causeMechanism": "ROLLBACK_FAILURE",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "EFFECT_CONFIRMATION_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DATA-001",
+      "causeFamily": "DATA_AND_TENANT",
+      "causeMechanism": "CROSS_TENANT_SCOPE_FAILURE",
+      "detectionSignalRefs": [
+        "AR-17",
+        "AR-42"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED",
+        "TENANT_CONTEXT_LOSS"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DATA-002",
+      "causeFamily": "DATA_AND_TENANT",
+      "causeMechanism": "DATA_EGRESS_CONTROL_FAILURE",
+      "detectionSignalRefs": [
+        "AR-20",
+        "AR-27",
+        "AR-80"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "EXPECTED_STATE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-exfiltration-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-DATA-003",
+      "causeFamily": "DATA_AND_TENANT",
+      "causeMechanism": "SENSITIVE_DATA_HANDLING_FAILURE",
+      "detectionSignalRefs": [
+        "AR-27"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "CAUSE_MECHANISM_INCOMPLETE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-CONFIG-001",
+      "causeFamily": "CONFIGURATION_AND_CHANGE",
+      "causeMechanism": "CONFIG_DRIFT",
+      "detectionSignalRefs": [
+        "DRIFT-001",
+        "DRIFT-002",
+        "DRIFT-003",
+        "DRIFT-004"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "BASELINE_INCOMPATIBLE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-CONFIG-002",
+      "causeFamily": "CONFIGURATION_AND_CHANGE",
+      "causeMechanism": "POLICY_CONFIG_DRIFT",
+      "detectionSignalRefs": [
+        "AR-31",
+        "AR-34",
+        "AR-46",
+        "DRIFT-001"
+      ],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-a1-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-MODEL-001",
+      "causeFamily": "MODEL_AND_PLANNING",
+      "causeMechanism": "MODEL_VERSION_DRIFT",
+      "detectionSignalRefs": [
+        "AR-47"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "BASELINE_INCOMPATIBLE"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/aml-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-MODEL-002",
+      "causeFamily": "MODEL_AND_PLANNING",
+      "causeMechanism": "NONDETERMINISTIC_OUTPUT_CONTRIBUTOR",
+      "detectionSignalRefs": [
+        "AR-53",
+        "AML-009"
+      ],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/aml-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-SUPPLY-001",
+      "causeFamily": "SUPPLY_CHAIN",
+      "causeMechanism": "ARTIFACT_HASH_MISMATCH",
+      "detectionSignalRefs": [
+        "AR-68",
+        "AR-74"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "IDENTITY_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-supply-chain-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-SUPPLY-002",
+      "causeFamily": "SUPPLY_CHAIN",
+      "causeMechanism": "PACKAGE_CHANGE",
+      "detectionSignalRefs": [
+        "AR-66",
+        "AR-76"
+      ],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-SUPPLY-003",
+      "causeFamily": "SUPPLY_CHAIN",
+      "causeMechanism": "UNVERIFIED_ARTIFACT",
+      "detectionSignalRefs": [
+        "AR-68",
+        "AR-75",
+        "AR-78"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "SOURCE_LINEAGE_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-supply-chain-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-EVID-001",
+      "causeFamily": "EVIDENCE_AND_AUDIT",
+      "causeMechanism": "AUDIT_STATE_CONTRADICTION",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "ALTERNATIVE_CAUSES_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/evidence/event-contradiction-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-EVID-002",
+      "causeFamily": "EVIDENCE_AND_AUDIT",
+      "causeMechanism": "PARTIAL_STREAM",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "STREAM_COMPLETENESS_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/evidence/stream-continuity-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-EVID-003",
+      "causeFamily": "EVIDENCE_AND_AUDIT",
+      "causeMechanism": "CLOCK_SKEW",
+      "detectionSignalRefs": [
+        "TIME-002",
+        "TIME-003",
+        "TIME-004",
+        "TIME-005"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "CLOCK_DOMAIN_UNKNOWN",
+        "TIMEZONE_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-EVID-004",
+      "causeFamily": "EVIDENCE_AND_AUDIT",
+      "causeMechanism": "SOURCE_CONTRADICTION",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "ALTERNATIVE_CAUSES_UNRESOLVED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/evidence/event-contradiction-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-EVID-005",
+      "causeFamily": "EVIDENCE_AND_AUDIT",
+      "causeMechanism": "POSSIBLE_TAMPERING",
+      "detectionSignalRefs": [
+        "AR-68",
+        "AR-74",
+        "AR-75"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "SOURCE_LINEAGE_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/evidence/event-contradiction-projection.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-INFRA-001",
+      "causeFamily": "INFRASTRUCTURE_AND_DEPENDENCY",
+      "causeMechanism": "DEPENDENCY_FAILURE",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [
+        "RELATION_UNESTABLISHED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-INFRA-002",
+      "causeFamily": "INFRASTRUCTURE_AND_DEPENDENCY",
+      "causeMechanism": "QUEUE_FAILURE",
+      "detectionSignalRefs": [
+        "MSG-003",
+        "MSG-004",
+        "MSG-005",
+        "MSG-006"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "RELATION_UNESTABLISHED"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-INFRA-003",
+      "causeFamily": "INFRASTRUCTURE_AND_DEPENDENCY",
+      "causeMechanism": "RATE_LIMIT_FAILURE",
+      "detectionSignalRefs": [
+        "API-004",
+        "AR-40",
+        "AR-44",
+        "AR-51"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "BASELINE_INSUFFICIENT"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-HUMAN-001",
+      "causeFamily": "HUMAN_AND_PROCESS",
+      "causeMechanism": "HUMAN_OVERRIDDEN_CONTROL",
+      "detectionSignalRefs": [],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts",
+        "lib/assurance/guardrail-decision-transition.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-HUMAN-002",
+      "causeFamily": "HUMAN_AND_PROCESS",
+      "causeMechanism": "CHANGE_MANAGEMENT_GAP",
+      "detectionSignalRefs": [
+        "DRIFT-001",
+        "AR-34",
+        "CICD-001"
+      ],
+      "relationRefs": [],
+      "gapTypes": [
+        "STREAM_COMPLETENESS_UNKNOWN"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-A1-001",
+      "causeFamily": "CONFIGURATION_AND_CHANGE",
+      "causeMechanism": "POLICY_MAPPING_GAP",
+      "detectionSignalRefs": [
+        "AR-35",
+        "RAPP-A1-005"
+      ],
+      "relationRefs": [
+        "A1_NON_RT_RIC_TO_NEAR_RT_RIC"
+      ],
+      "gapTypes": [
+        "AUTHORIZATION_EVIDENCE_MISSING"
+      ],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-a1-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-SBI-001",
+      "causeFamily": "RUNTIME_AND_EXECUTION",
+      "causeMechanism": "TARGET_MISMATCH",
+      "detectionSignalRefs": [        "AR-39",
+        "SBI-005"
+      ],
+      "relationRefs": [
+        "SBI_CALL_CONSUMER_TO_PRODUCER",
+        "SCP_ROUTES_TO"
+      ],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/sbi-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-SLICE-001",
+      "causeFamily": "DATA_AND_TENANT",
+      "causeMechanism": "TENANT_SCOPE_MISMATCH",
+      "detectionSignalRefs": [
+        "AR-42"
+      ],
+      "relationRefs": [
+        "SLICE_PROTECTED_BY_ISOLATION",
+        "QOS_FLOW_USES_SLICE"
+      ],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/slice-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-TOWER-001",
+      "causeFamily": "STATE_AND_EFFECT",
+      "causeMechanism": "TARGET_MISMATCH",
+      "detectionSignalRefs": [
+        "AR-69",
+        "AR-72",
+        "AR-73"
+      ],
+      "relationRefs": [
+        "UE_SERVED_BY_CELL",
+        "CELL_PART_OF_SITE"
+      ],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/tower-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-RAPP-SC-001",
+      "causeFamily": "SUPPLY_CHAIN",
+      "causeMechanism": "UNVERIFIED_ARTIFACT",
+      "detectionSignalRefs": [
+        "AR-74",
+        "AR-75",
+        "AR-78"
+      ],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-supply-chain-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-RAPP-EX-001",
+      "causeFamily": "DATA_AND_TENANT",
+      "causeMechanism": "DATA_EGRESS_CONTROL_FAILURE",
+      "detectionSignalRefs": [
+        "AR-80",
+        "AR-82"
+      ],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-exfiltration-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-RAPP-LM-001",
+      "causeFamily": "AUTHORIZATION_AND_PRIVILEGE",
+      "causeMechanism": "EFFECTIVE_GRANT_EXCEEDS_POLICY",
+      "detectionSignalRefs": [
+        "AR-85",
+        "AR-86"
+      ],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/rapp-lateral-movement-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    },
+    {
+      "causeRuleId": "CR-TEL-AML-001",
+      "causeFamily": "MODEL_AND_PLANNING",
+      "causeMechanism": "MODEL_VERSION_DRIFT",
+      "detectionSignalRefs": [
+        "AR-47"
+      ],
+      "relationRefs": [],
+      "gapTypes": [],
+      "haiecReferencePaths": [
+        "lib/ai-security/detectors/aml-detector.ts",
+        "lib/ai-security/risk-registry/hard-negative-registry.ts"
+      ]
+    }
+  ]
+}

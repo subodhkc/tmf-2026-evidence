@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logsense.local/schemas/identity_resolution_pack.schema.json",
+  "title": "Identity Resolution Rule Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packId",
+    "version",
+    "rules",
+    "digest"
+  ],
+  "properties": {
+    "packId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://logsense.local/schemas/identity_resolution_rule.schema.json"
+      }
+    },
+    "digest": {
+      "type": "string"
+    }
+  }
+}

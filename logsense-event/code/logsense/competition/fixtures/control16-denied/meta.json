@@ -1,0 +1,21 @@
+{
+  "fixtureId": "control16-denied",
+  "control": "ACN-COST-001",
+  "label": "Control 16 \u2014 denied before execution",
+  "description": "One executed call plus one request proven denied before provider execution. Expected: MEASURED, deniedBeforeExecutionCalls = 1, denied call contributes zero and is not missing usage.",
+  "evidenceFiles": [
+    "usage.jsonl"
+  ],
+  "runFile": "run.json",
+  "tokenAccountingProfile": {
+    "profileId": "fixture-token-accounting/c16-v1",
+    "version": "1.0",
+    "inputTokenSourceField": "inputTokens",
+    "outputTokenSourceField": "outputTokens",
+    "totalTokenSourceField": "totalTokens",
+    "basis": "FIXTURE_DECLARED_CANONICAL_TOKEN_FIELDS",
+    "limitations": [
+      "SYNTHETIC_CONTROLLED_EVIDENCE"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Qualification Result",
+  "type": "object",
+  "properties": {
+    "qualificationId": {
+      "type": "string"
+    },
+    "analysisRunId": {
+      "type": "string"
+    },
+    "sourceRef": {
+      "type": "string"
+    },
+    "profileId": {
+      "type": "string"
+    },
+    "claimClass": {
+      "type": "string",
+      "enum": [
+        "ACTION_REQUESTED",
+        "ACTION_AUTHORIZED",
+        "ACTION_ACCEPTED",
+        "ACTION_APPLIED",
+        "ACTION_CONFIRMED",
+        "POLICY_STATE",
+        "EFFECTIVE_GRANT",
+        "CODE_CAPABILITY",
+        "STATE_OBSERVATION",
+        "STATE_TRANSITION",
+        "RUNTIME_INVOCATION",
+        "IDENTITY_BINDING",
+        "RELATION_DECLARATION",
+        "STREAM_COMPLETENESS",
+        "EVIDENCE_INTEGRITY",
+        "SCENARIO_MEMBERSHIP"
+      ]
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "CAN_ESTABLISH",
+        "CAN_SUPPORT",
+        "CANNOT_ESTABLISH",
+        "UNKNOWN"
+      ]
+    },
+    "subjectBinding": {
+      "type": "string",
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "NONE",
+        "UNKNOWN"
+      ]
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gapRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "basis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "qualificationId",
+    "analysisRunId",
+    "sourceRef",
+    "profileId",
+    "claimClass",
+    "decision",
+    "subjectBinding",
+    "evidenceRefs",
+    "gapRefs",
+    "basis",
+    "limitations"
+  ],
+  "$id": "https://logsense.local/schemas/source_qualification_result.schema.json"
+}

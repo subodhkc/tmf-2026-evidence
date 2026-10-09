@@ -1,0 +1,32 @@
+{
+  "alertId": "alert-test-5e7f7b96-1608-4b17-b8d3-2fc8c5fae291",
+  "ruleId": "tmf-human-governance-monitoring-test",
+  "triggeredBy": "test-finding",
+  "organizationId": "bdf37694-49f8-4003-ae2b-43580ff6a60e",
+  "channelsAttempted": [
+    "WEBHOOK",
+    "EMAIL"
+  ],
+  "channelsSucceeded": [
+    "WEBHOOK",
+    "EMAIL"
+  ],
+  "severity": "HIGH",
+  "firedAt": "2026-10-05T09:51:24.243Z",
+  "fired": true,
+  "recipients": [
+    "suvodkc@gmail.com",
+    "kushal.gautam@gmail.com",
+    "e.munguia.tapia@accenture.com",
+    "vatalari@amazon.com",
+    "alexander.dmytriiev@servicenow.com",
+    "catalystsops@tmforum.org"
+  ],
+  "syntheticFlag": [
+    "TEST_ALERT",
+    "SYNTHETIC_NOT_OBSERVED"
+  ],
+  "purpose": "TM Forum Hackathon \u2014 Human Governance / Monitoring Test \u2014 Team: Agentic AI Proof Graph - HAIEC",
+  "senderAttribution": "Subodh Kc \u2014 Agentic AI Proof Graph - HAIEC",
+  "note": "payload text is fixed by /api/alerts/test schema (labeled synthetic); explanatory context in HUMAN_GOVERNANCE_TEST_NOTICE.md"
+}

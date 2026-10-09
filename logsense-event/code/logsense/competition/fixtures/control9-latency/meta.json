@@ -1,0 +1,68 @@
+{
+  "fixtureId": "control9-latency",
+  "control": "AIA-ARC-006",
+  "label": "Control 9 \u2014 lower-is-better latency (ILLUSTRATIVE)",
+  "description": "Five windows of example.latency (ms, LOWER_IS_BETTER); W03 reports 120 against a 100ms baseline: (120-100)/100 = 0.20 = 20% relative degradation. Proves the engine is not tied to success-rate semantics.",
+  "evidenceFiles": [
+    "kpi.jsonl"
+  ],
+  "runFile": "run.json",
+  "metricProfile": {
+    "profileSchemaVersion": "kpi-metric-profile/0.1",
+    "profileId": "example-p95-latency",
+    "profileVersion": 1,
+    "metricId": "example.latency",
+    "displayName": "Example P95 Latency",
+    "unit": "ms",
+    "direction": "LOWER_IS_BETTER",
+    "aggregation": "P95",
+    "governedScope": {
+      "type": "LOGICAL_ENTITY",
+      "id": "scope-1"
+    },
+    "valueSource": {
+      "field": "kpiValue",
+      "metricNameField": "kpiName",
+      "unitField": "unit",
+      "scopeIdField": "scopeId"
+    },
+    "timestampSource": "ts",
+    "windowDefinition": {
+      "mode": "SOURCE_WINDOWED",
+      "windowKeyField": "windowId",
+      "expectedWindowKeys": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05"
+      ]
+    },
+    "zeroBaselineRule": "RELATIVE_UNAVAILABLE",
+    "createdAt": "2026-10-01T00:00:00Z",
+    "sourceBasis": "ILLUSTRATIVE_LOWER_IS_BETTER",
+    "limitations": [
+      "ILLUSTRATIVE_EXAMPLE_REPLACE_BEFORE_ASSESSED_USE"
+    ]
+  },
+  "baseline": {
+    "baselineId": "c9-latency-baseline",
+    "baselineVersion": 1,
+    "basis": "KNOWN_GOOD_RUN",
+    "baselineMode": "FIXED_REFERENCE_VALUE",
+    "metricId": "example.latency",
+    "unit": "ms",
+    "direction": "LOWER_IS_BETTER",
+    "aggregation": "P95",
+    "valueBasis": "EXPLICIT_DECLARED",
+    "sourceRunId": "C9-CALIBRATION",
+    "evidenceRefs": [
+      "calibration-run:C9-CALIBRATION"
+    ],
+    "limitations": [
+      "ILLUSTRATIVE_EXAMPLE_REPLACE_BEFORE_ASSESSED_USE",
+      "LOGSENSE_DESCRIPTIVE_BASELINE_NE_HAIEC_GOVERNING_BASELINE"
+    ],
+    "value": 100
+  }
+}
