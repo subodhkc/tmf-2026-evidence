@@ -1,9 +1,11 @@
 # HAIEC — TM Forum 2026 Agentic Assurance Evidence Pack
 
-Byte-identical, integrity-verified copy of the HAIEC evidence package submitted
-for the **TM Forum 2026 Agentic Assurance** competition, built and exercised
-inside the AWS Workshop IDE (participant-sanctioned `team-evidence-*` S3
-namespace).
+Publisher-identified, integrity-verifiable copy of the HAIEC evidence package
+prepared during the **TM Forum 2026 Agentic Assurance** competition, built and
+exercised inside the AWS Workshop IDE (participant-sanctioned `team-evidence-*`
+S3 namespace). The published artifact's relationship to the organizer-held
+submission is a separate provenance question; no organizer upload receipt is
+included in this repository.
 
 This repository exists so the submission can be cited as a stable public
 reference (e.g., from the ISAF research paper and related publications).
@@ -18,9 +20,10 @@ reference (e.g., from the ISAF research paper and related publications).
 | Assessed system | TM Forum MoDaaS agentic environment (AWS workshop) |
 
 The original tarball and its `.sha256` sidecar are attached to the
-[Releases](../../releases) section. Every file under `evidence/`,
-`logsense-event/`, and the root package files is byte-identical to the
-submitted artifact — `sha256sum -c MANIFEST.sha256` must report 506/506 OK.
+[Releases](../../releases) section. The 506 manifest-listed paths in the frozen tagged tree have a published
+byte-for-byte verification route — `sha256sum -c MANIFEST.sha256` is expected
+to report 506/506 OK on an unmodified checkout. Passing this check validates
+the archived Git bytes against the manifest, not organizer hand-in identity.
 
 ## Verify integrity
 
@@ -55,6 +58,17 @@ sha256sum haiec-package-final-7a0bb5f3.tar.gz
 - `security_findings` are organizer-owned environment findings, documented —
   not remediated — as part of the assurance scope.
 - All limitations in `register.yaml` and `gap-list.md` are part of the record.
+
+## Verification and known errata
+
+- [Archive-versus-organizer submission provenance](SUBMISSION_PROVENANCE_AND_VERIFICATION.md)
+- [C7 source catalog crosswalk erratum](C7_CROSSWALK_ERRATUM.md)
+- [Read-only frozen evidence verifier](scripts/verify_frozen_evidence.py) —
+  run from a fresh checkout of the current branch with `python3 scripts/verify_frozen_evidence.py`.
+  These additions are **post-event editorial/verification materials**, not files
+  in the original `v7a0bb5f3` tag or competition submission.
+- The separate October 6 C7 remediation and C9 pass/breach evidence concerns a
+  different participant-system scope; those later records are not in the original tag.
 
 ## License
 
